@@ -390,21 +390,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-20
+                    2021-12-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    46.5k
+                    47k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    182 分
+                    184 分
                 </div>
                 
 
@@ -1284,7 +1284,7 @@ int main(void)
     printf("MONTHLY AVERAGES:\n\n");
     printf(" Jan  Feb  Mar  Apr  May  Jun  Jul  Aug  Sep  Oct ");
     printf(" Nov  Dec\n");
-                                                
+                                                    
     for (month = 0; month &lt; MONTHS; month++)
     {             // for each month, sum rainfall over years
         for (year = 0, subtot =0; year &lt; YEARS; year++)
@@ -1292,7 +1292,7 @@ int main(void)
         printf("%4.1f ", subtot/YEARS);
     }
     printf("\n");
-                                                
+                                                    
     return 0;
 }
 </code></pre>
@@ -1363,7 +1363,7 @@ int main(void)
     
     answer = sump(marbles, marbles + SIZE);
     printf("The total number of marbles is %ld.\n", answer);
-                                                
+                                                    
     return 0;
 }
 
@@ -1377,7 +1377,7 @@ int sump(int * start, int * end)
         total += *start; // add value to total
         start++;         // advance pointer to next element
     }
-                                                
+                                                    
     return total;
 }
 </code></pre>
@@ -1461,7 +1461,7 @@ int main(void)
      printf("    **zippo = %d\n", **zippo);
      printf("      zippo[2][1] = %d\n", zippo[2][1]);
      printf("*(*(zippo+2) + 1) = %d\n", *(*(zippo + 2) + 1));
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -1498,7 +1498,7 @@ int main(void)
      printf("    **pz = %d\n", **pz);
      printf("      pz[2][1] = %d\n", pz[2][1]);
      printf("*(*(pz+2) + 1) = %d\n", *(*(pz + 2) +   &gt;     1));
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -1577,7 +1577,7 @@ int main(void)
      sum_rows(junk, ROWS);
      sum_cols(junk, ROWS);
      printf("Sum of all elements = %d\n", sum2d(junk, ROWS));
-                                            
+                                                
      return 0;
 }
 
@@ -1620,7 +1620,7 @@ int sum2d(int ar[][COLS], int rows)
      for (r = 0; r &lt; rows; r++)
           for (c = 0; c &lt; COLS; c++)
                tot += ar[r][c];
-                                            
+                                                
      return tot;
 }
 </code></pre>
@@ -1844,7 +1844,7 @@ int main(void)
      printf("%s\n", copy);
      printf("mesg = %s; &amp;mesg = %p; value = %p\n", mesg, &amp;mesg, mesg);
      printf("copy = %s; &amp;copy = %p; value = %p\n", copy, &amp;copy, copy);
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -1895,7 +1895,7 @@ int main(void)
      printf("%s\n", words);
      puts(words);
      puts("Done.");
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -1940,7 +1940,7 @@ int main(void)
      puts(words);
      fputs(words, stdout);
      puts("Done.");
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -1979,7 +1979,7 @@ int main(void)
      while (fgets(words, STLEN, stdin) != NULL &amp;&amp; words[0] != '\n')
           fputs(words, stdout);
      puts("Done.");
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -2137,7 +2137,7 @@ int main(void)
      printf("Please enter 2 names.\n");
      count = scanf("%5s %10s", name1, name2);
      printf("I read the %d names %s and %s.\n", count, name1, name2);
-                                            
+                                                
      return 0
 }
 </code></pre>
@@ -2182,7 +2182,7 @@ int main(void)
      puts(str2);
      puts(&amp;str1[5]);  //puts后面需要跟的是一个地址 字符串的起始地址
      puts(str2 + 4);
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -2524,7 +2524,7 @@ int main(int argc, char *argv [])
      for (count = 1; count &lt; argc; count++)
           printf("%d: %s\n", count, argv[count]);
      printf("\n");
-                                            
+                                                
      return 0;
 }
 </code></pre>
@@ -4701,6 +4701,119 @@ pf<span class="token operator">-&gt;</span>scores<span class="token punctuation"
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="148-把结构内容保存到文件中"><a class="markdownIt-Anchor" href="#148-把结构内容保存到文件中">#</a> 14.8 把结构内容保存到文件中</h4>
 <p>存储在一个结构中的整套信息称为<strong>记录</strong>，单独的项被称为<strong>字段</strong></p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAXAUTL</span> <span class="token expression"><span class="token number">40</span></span></span>
+<span class="token keyword">struct</span> <span class="token class-name">book</span> <span class="token punctuation">{</span>
+     <span class="token keyword">char</span> title<span class="token punctuation">[</span>MAXTITL<span class="token punctuation">]</span><span class="token punctuation">;</span>
+     <span class="token keyword">char</span> author<span class="token punctuation">[</span>MAXAUTL<span class="token punctuation">]</span><span class="token punctuation">;</span>
+     <span class="token keyword">float</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">fprintf</span><span class="token punctuation">(</span>pbooks<span class="token punctuation">,</span> <span class="token string">"%s %s %.2f\n"</span><span class="token punctuation">,</span> primer<span class="token punctuation">.</span>title<span class="token punctuation">,</span>primer<span class="token punctuation">.</span>author<span class="token punctuation">,</span> primer<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>primer<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">book</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> pbooks<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="1481-保存结构的程序示例"><a class="markdownIt-Anchor" href="#1481-保存结构的程序示例">#</a> 14.8.1  保存结构的程序示例</h5>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">/* booksave.c -- 在文件中保存结构中的内容 */</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAXTITL</span>  <span class="token expression"><span class="token number">40</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAXAUTL</span>  <span class="token expression"><span class="token number">40</span></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAXBKS</span>   <span class="token expression"><span class="token number">10</span>             </span><span class="token comment">/* 最大书籍数量 */</span></span>
+<span class="token keyword">char</span> <span class="token operator">*</span> <span class="token function">s_gets</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> st<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">struct</span> <span class="token class-name">book</span> <span class="token punctuation">{</span>                   <span class="token comment">/* 建立 book 模板 */</span>
+     <span class="token keyword">char</span> title<span class="token punctuation">[</span>MAXTITL<span class="token punctuation">]</span><span class="token punctuation">;</span>
+     <span class="token keyword">char</span> author<span class="token punctuation">[</span>MAXAUTL<span class="token punctuation">]</span><span class="token punctuation">;</span>
+     <span class="token keyword">float</span> value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+     <span class="token keyword">struct</span> <span class="token class-name">book</span> library<span class="token punctuation">[</span>MAXBKS<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">/* 结构数组  */</span>
+     <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+     <span class="token keyword">int</span> index<span class="token punctuation">,</span> filecount<span class="token punctuation">;</span>
+     FILE <span class="token operator">*</span> pbooks<span class="token punctuation">;</span>
+     <span class="token keyword">int</span> size <span class="token operator">=</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">book</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>pbooks <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span><span class="token string">"book.dat"</span><span class="token punctuation">,</span> <span class="token string">"a+b"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+          <span class="token function">fputs</span><span class="token punctuation">(</span><span class="token string">"Can't open book.dat file\n"</span><span class="token punctuation">,</span> <span class="token constant">stderr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+
+     <span class="token function">rewind</span><span class="token punctuation">(</span>pbooks<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">/* 定位到文件开始 */</span>
+     <span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> MAXBKS <span class="token operator">&amp;&amp;</span>  <span class="token function">fread</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">,</span> size<span class="token punctuation">,</span>
+          <span class="token number">1</span><span class="token punctuation">,</span> pbooks<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+               <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Current contents of book.dat:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s by %s: $%.2f\n"</span><span class="token punctuation">,</span> library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+               library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">.</span>author<span class="token punctuation">,</span> library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          count<span class="token operator">++</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     filecount <span class="token operator">=</span> count<span class="token punctuation">;</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> MAXBKS<span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+          <span class="token function">fputs</span><span class="token punctuation">(</span><span class="token string">"The book.dat file is full."</span><span class="token punctuation">,</span> <span class="token constant">stderr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+
+     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Please add new book titles."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Press [enter] at the start of a line to stop."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">while</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> MAXBKS <span class="token operator">&amp;&amp;</span> <span class="token function">s_gets</span><span class="token punctuation">(</span>library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">,</span> MAXTITL<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span>
+          <span class="token operator">&amp;&amp;</span> library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+          <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Now enter the author."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">s_gets</span><span class="token punctuation">(</span>library<span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">.</span>author<span class="token punctuation">,</span> MAXAUTL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Now enter the value."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%f"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>library<span class="token punctuation">[</span>count<span class="token operator">++</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+               <span class="token keyword">continue</span><span class="token punctuation">;</span>            <span class="token comment">/* 清理输入行  */</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">&lt;</span> MAXBKS<span class="token punctuation">)</span>
+               <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Enter the next title."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+
+     <span class="token keyword">if</span> <span class="token punctuation">(</span>count <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+          <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Here is the list of your books:"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> index <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> index<span class="token operator">++</span><span class="token punctuation">)</span>
+               <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%s by %s: $%.2f\n"</span><span class="token punctuation">,</span> library<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token punctuation">,</span>
+               library<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>author<span class="token punctuation">,</span> library<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">fwrite</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>library<span class="token punctuation">[</span>filecount<span class="token punctuation">]</span><span class="token punctuation">,</span> size<span class="token punctuation">,</span> count <span class="token operator">-</span> filecount<span class="token punctuation">,</span>
+               pbooks<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token keyword">else</span>
+          <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"No books? Too bad.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">"Bye.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token function">fclose</span><span class="token punctuation">(</span>pbooks<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">char</span> <span class="token operator">*</span> <span class="token function">s_gets</span><span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">*</span> st<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+     <span class="token keyword">char</span> <span class="token operator">*</span> ret_val<span class="token punctuation">;</span>
+     <span class="token keyword">char</span> <span class="token operator">*</span> find<span class="token punctuation">;</span>
+
+     ret_val <span class="token operator">=</span> <span class="token function">fgets</span><span class="token punctuation">(</span>st<span class="token punctuation">,</span> n<span class="token punctuation">,</span> <span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span>ret_val<span class="token punctuation">)</span>
+     <span class="token punctuation">{</span>
+          find <span class="token operator">=</span> <span class="token function">strchr</span><span class="token punctuation">(</span>st<span class="token punctuation">,</span> <span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 查找换行符</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>find<span class="token punctuation">)</span>                <span class="token comment">// 如果地址不是 NULL，</span>
+               <span class="token operator">*</span>find <span class="token operator">=</span> <span class="token string">'\0'</span><span class="token punctuation">;</span>            <span class="token comment">// 在此处放置一个空字符</span>
+          <span class="token keyword">else</span>
+               <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+                    <span class="token keyword">continue</span><span class="token punctuation">;</span>        <span class="token comment">// 清理输入行</span>
+     <span class="token punctuation">}</span>
+     <span class="token keyword">return</span> ret_val<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="149-链式结构"><a class="markdownIt-Anchor" href="#149-链式结构">#</a> 14.9 链式结构</h4>
+<p>结构可以创建新的数据形式，包括队列，二叉树，堆，哈希表，图标。许多这样的结构都由<strong>链式结构</strong>组成</p>
+<h4 id="1410-联合简介"><a class="markdownIt-Anchor" href="#1410-联合简介">#</a> 14.10 联合简介</h4>
+<p><strong>联合</strong>是一种数据类型，能在同一个内存空间中存储不同的数据类型</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">union</span> hold <span class="token punctuation">{</span>
+     <span class="token keyword">int</span> digit<span class="token punctuation">;</span>
+     <span class="token keyword">double</span> bigfl<span class="token punctuation">;</span>
+     <span class="token keyword">char</span> letter<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">//带标记的联合模板</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -5210,7 +5323,7 @@ pf<span class="token operator">-&gt;</span>scores<span class="token punctuation"
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">69.7k</span>&nbsp;字
+                class="white-color">70.2k</span>&nbsp;字
             
             
             
