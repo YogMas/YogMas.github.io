@@ -1,0 +1,290 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>YogMas学习站 • Posts by &#34;语言&#34; category</title>
+        <link>http://yogmas-wang.top</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
+        <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0800</lastBuildDate>
+        <category>Css</category>
+        <category>C语言</category>
+        <category>Html</category>
+        <category>Javascript</category>
+        <category>icoding答案</category>
+        <category>操作系统</category>
+        <category>机器学习</category>
+        <category>python</category>
+        <item>
+            <guid isPermalink="true">http://yogmas-wang.top/2022/07/10/python/</guid>
+            <title>python</title>
+            <link>http://yogmas-wang.top/2022/07/10/python/</link>
+            <category>python</category>
+            <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h1&gt;
+&lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt;  on 2022/7/08&lt;/p&gt;
+&lt;h2 id=&#34;变量和字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量和字符串&#34;&gt;#&lt;/a&gt; 变量和字符串&lt;/h2&gt;
+&lt;h3 id=&#34;变量&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量&#34;&gt;#&lt;/a&gt; 变量&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;变量名由字母，数字和下划线组成&lt;/li&gt;
+&lt;li&gt;不能以数字开头&lt;/li&gt;
+&lt;li&gt;区分大小写&lt;/li&gt;
+&lt;li&gt;python3 变量名支持中文字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;变量值交换:  &lt;code&gt;x,y = y,x&lt;/code&gt; (python)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;_&lt;/code&gt; 单独一个下划线可以用来表示临时变量&lt;/p&gt;
+&lt;h3 id=&#34;字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串&#34;&gt;#&lt;/a&gt; 字符串&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单引号模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双引号模式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;三引号模式 (三单或三双都可)- 长字符串&lt;/p&gt;
+&lt;p&gt;在长字符串中不需要运用换行符进行换行，代码中的换行就相当于换行符&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;单引号和双引号互相灵活应用，防止冲突&lt;/p&gt;
+&lt;p&gt;冲突不可避免的时候可以使用转义字符&lt;/p&gt;
+&lt;h4 id=&#34;转义字符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#转义字符&#34;&gt;#&lt;/a&gt; 转义字符&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/j0bPlq&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/08/j0bPlq.png&#34; alt=&#34;转义字符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原始字符串：在字符串前面加上一个 &lt;code&gt;r&lt;/code&gt;  表示该字符串是原始字符串，这样在此字符串中就不会产生转义字符&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;D:\three\two\one\now&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#\t \t \o \n 将会被当成转义字符输出&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;r&#34;D:\three\two\one\now&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#将会按照原始字符串输出&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;\&lt;/code&gt;  不能放在字符串的末尾&lt;/p&gt;
+&lt;h4 id=&#34;字符串的加法和乘法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串的加法和乘法&#34;&gt;#&lt;/a&gt; 字符串的加法和乘法&lt;/h4&gt;
+&lt;p&gt;字符串是&lt;strong&gt;文本&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;字符串的加法就是对文本进行拼接&lt;/li&gt;
+&lt;li&gt;字符串的乘法就是对文本就行复制粘贴&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运算符&#34;&gt;#&lt;/a&gt; 运算符&lt;/h3&gt;
+&lt;h4 id=&#34;比较运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#比较运算符&#34;&gt;#&lt;/a&gt; 比较运算符&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/j0bHN4&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/08/j0bHN4.png&#34; alt=&#34;比较运算符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;逻辑运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#逻辑运算符&#34;&gt;#&lt;/a&gt; 逻辑运算符&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/jfd6KO&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/14/jfd6KO.png&#34; alt=&#34;逻辑运算符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;python 的操作数支持真值运算，如果给到的是两个数，那么最后得到的就不会是 &lt;code&gt;True&lt;/code&gt;  和 &lt;code&gt;False&lt;/code&gt;  而是一个数&lt;/p&gt;
+&lt;h4 id=&#34;运算符优先级&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运算符优先级&#34;&gt;#&lt;/a&gt; 运算符优先级&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/jfwlee&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/14/jfwlee.png&#34; alt=&#34;运算符优先级&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;短路逻辑运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#短路逻辑运算&#34;&gt;#&lt;/a&gt; 短路逻辑运算&lt;/h4&gt;
+&lt;p&gt;从左往右，当第一个操作数的值无法确定逻辑运算的结果时，才对第二个操作数进行求值&lt;/p&gt;
+&lt;p&gt;eg: 3 or 4 = 3     3 and 4 = 4          0 and 3 = 0&lt;/p&gt;
+&lt;h4 id=&#34;is运算符同一性运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#is运算符同一性运算符&#34;&gt;#&lt;/a&gt; is 运算符 (同一性运算符)&lt;/h4&gt;
+&lt;p&gt;检验两个元素是否指向同一个对象&lt;/p&gt;
+&lt;h2 id=&#34;python模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python模块&#34;&gt;#&lt;/a&gt; python 模块&lt;/h2&gt;
+&lt;h3 id=&#34;随机数-random&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#随机数-random&#34;&gt;#&lt;/a&gt; 随机数 random&lt;/h3&gt;
+&lt;p&gt;import random&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;random.randint(x,y)&lt;/li&gt;
+&lt;li&gt;random.getstate () 获取随机数种子&lt;/li&gt;
+&lt;li&gt;random.setstate (x) 设置随机数种子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;十进制-decimal&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#十进制-decimal&#34;&gt;#&lt;/a&gt; 十进制 decimal&lt;/h3&gt;
+&lt;p&gt;用于精确计算浮点数的相加&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a = decimal.Decimal(’ 0.1 &#39;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数字类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数字类型&#34;&gt;#&lt;/a&gt; 数字类型&lt;/h2&gt;
+&lt;h3 id=&#34;整数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数&#34;&gt;#&lt;/a&gt; 整数&lt;/h3&gt;
+&lt;p&gt;python 的整数长度不受限制有&lt;strong&gt;无限大的精度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整数相除会产生浮点数的结果&lt;/p&gt;
+&lt;h3 id=&#34;浮点数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮点数&#34;&gt;#&lt;/a&gt; 浮点数&lt;/h3&gt;
+&lt;p&gt;浮点数具有精度上的误差  精确计算查看上文&lt;strong&gt; decimal&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;eg. 0.1 + 0.2 != 0.3&lt;/p&gt;
+&lt;p&gt;浮点数也可以用可以用科学计数法来表示&lt;/p&gt;
+&lt;p&gt;eg 5e-05&lt;/p&gt;
+&lt;h3 id=&#34;复数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#复数&#34;&gt;#&lt;/a&gt; 复数&lt;/h3&gt;
+&lt;p&gt;x + yj&lt;/p&gt;
+&lt;p&gt;x 是实部，y 是虚部&lt;/p&gt;
+&lt;p&gt;复数的实部和虚部都是以浮点数的形式存储的&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;x.real 获取实部数值&lt;/li&gt;
+&lt;li&gt;x.imag 获取虚部数值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数字运算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数字运算&#34;&gt;#&lt;/a&gt; 数字运算&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/jgpCct&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/12/jgpCct.png&#34; alt=&#34;数字运算&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;//&lt;/code&gt; (地板除): 将除法的结果向下取整&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;divmod&lt;/code&gt;  (内置函数): &lt;code&gt;divmod(x,y)&lt;/code&gt;  返回 &lt;code&gt;x//y&lt;/code&gt; , &lt;code&gt;x%y&lt;/code&gt; , 等于求出商和 余数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;abs()&lt;/code&gt; : 返回绝对值，传入复数，返回&lt;strong&gt;复数的模&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pow(x,y,z)&lt;/code&gt; : &lt;code&gt;pow(x,y,z)&lt;/code&gt; =x**y %z&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;布尔类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#布尔类型&#34;&gt;#&lt;/a&gt; 布尔类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;空字符串是 False, 其他全是 True&lt;/li&gt;
+&lt;li&gt;0 是 False 其他都是 True&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/jfdmDg&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/14/jfdmDg.png&#34; alt=&#34;布尔&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Fraction(0,1)&lt;/code&gt;  表示分子是 0, 分母是 1 的分数&lt;/p&gt;
+&lt;p&gt;布尔类型就是特殊的整数类型&lt;/p&gt;
+&lt;p&gt;True = 1,False = 0&lt;/p&gt;
+&lt;h2 id=&#34;分支与循环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分支与循环&#34;&gt;#&lt;/a&gt; 分支与循环&lt;/h2&gt;
+&lt;h3 id=&#34;分支&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分支&#34;&gt;#&lt;/a&gt; 分支&lt;/h3&gt;
+&lt;h4 id=&#34;if语句&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#if语句&#34;&gt;#&lt;/a&gt; if 语句&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; 判断语句&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    执行语句
+&lt;span class=&#34;token keyword&#34;&gt;elif&lt;/span&gt; 判断语句&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    执行语句
+&lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    执行语句&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;条件表达式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#条件表达式&#34;&gt;#&lt;/a&gt; 条件表达式&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;执行语句 if 判断语句 else 执行语句&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;可以用小括号将多行的代码括起来表示这是一行代码&lt;/p&gt;
+&lt;h3 id=&#34;循环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#循环&#34;&gt;#&lt;/a&gt; 循环&lt;/h3&gt;
+&lt;h4 id=&#34;while循环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#while循环&#34;&gt;#&lt;/a&gt; while 循环&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; condition&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; 
+    statement
+&lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+   &lt;span class=&#34;token comment&#34;&gt;#else可以不用,else在while条件不成立的时候执行,当while是由于break语句跳出的时候不执行,适用于区分任务连续完成和中断的情况&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt;  语句用于跳出循环&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;continue&lt;/code&gt;  用于结束本次循环，继续判断下一次循环的条件，相当于直接跳到本次循环体的最后一句代码的后面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt;  和 &lt;code&gt;continue&lt;/code&gt;  都只能跳出一层循环体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;for循环&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#for循环&#34;&gt;#&lt;/a&gt; for 循环&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; 变量 &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; 可迭代对象&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    statement&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;range函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#range函数&#34;&gt;#&lt;/a&gt;  &lt;code&gt;range&lt;/code&gt;  函数&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;range(stop)&lt;/code&gt;  生成从 **[0,stop)** 的整数序列&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;range(start,stop)&lt;/code&gt;  生成从 **[start,stop)** 的整数数列&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;range(start,stop,step)&lt;/code&gt;  生成从 **[start,stop)&lt;strong&gt; 的整数数列，可以指定&lt;/strong&gt; step** 跨度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表&#34;&gt;#&lt;/a&gt; 列表&lt;/h2&gt;
+&lt;p&gt;python 的列表可以容纳不同数据类型的数据&lt;/p&gt;
+&lt;p&gt;列表是可变的，字符串是不可变的&lt;/p&gt;
+&lt;h3 id=&#34;创建列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建列表&#34;&gt;#&lt;/a&gt; 创建列表&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[1,2,3,4,5,&#34;勇敢的sam&#34;]&lt;/code&gt;  使用中括号创建列表&lt;/li&gt;
+&lt;li&gt;利用列表推导式:  &lt;code&gt;S = [ [0] * 3 for i in range(3)]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;访问列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#访问列表&#34;&gt;#&lt;/a&gt; 访问列表&lt;/h3&gt;
+&lt;p&gt;采用&lt;strong&gt;下标索引&lt;/strong&gt;访问列表，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正向访问:python 的下标索引从&lt;strong&gt; 0&lt;/strong&gt; 开始，依次递增&lt;/li&gt;
+&lt;li&gt;逆向访问:python 下标索引可以从后往前访问，从 **-1** 开始依次递减&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;列表切片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表切片&#34;&gt;#&lt;/a&gt; 列表切片&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Name[start:end]&lt;/code&gt;  从 &lt;code&gt;Name[start]&lt;/code&gt;  到 &lt;code&gt;Name[end-1]&lt;/code&gt;  的列表元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name[:end]&lt;/code&gt;  从头到 &lt;code&gt;Name[end -1]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name[start:]&lt;/code&gt;  从 &lt;code&gt;Name[start]&lt;/code&gt;  到列表末尾&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name[:]&lt;/code&gt;  表示列表中的全部元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name[start:end:step]&lt;/code&gt;  可以设置 step 跨度值，当 step 为负值的时候，表示从列表最后一个元素开始倒着输出&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name[::-1]&lt;/code&gt; : 直接将列表反转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;列表的多种方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表的多种方法&#34;&gt;#&lt;/a&gt; 列表的多种方法&lt;/h3&gt;
+&lt;h4 id=&#34;增加&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#增加&#34;&gt;#&lt;/a&gt; 增加&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Name.append()&lt;/code&gt; : 在列表的末尾添加指定元素，但是每次只能添加一个元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name.extend()&lt;/code&gt; : 在列表的末尾添加一个可迭代对象，与 &lt;code&gt;append&lt;/code&gt;  相比可以同时添加多个元素&lt;/li&gt;
+&lt;li&gt;通过切片实现:
+&lt;ul&gt;
+&lt;li&gt;实现 &lt;code&gt;append()&lt;/code&gt; : Name[len(Name):] = XXX&lt;/li&gt;
+&lt;li&gt;实现  &lt;code&gt;extend()&lt;/code&gt; :Name[len(Name):] = [x,y,z]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name.insert(x,y)&lt;/code&gt; :x 为待插入的位置，y 为待插入的元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;删除&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#删除&#34;&gt;#&lt;/a&gt; 删除&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Name.remove(元素值)&lt;/code&gt; : 指定删除一个元素
+&lt;ol&gt;
+&lt;li&gt;如果列表中有多个相同元素 只会删除第一个元素&lt;/li&gt;
+&lt;li&gt;如果元素不存在，程序则会报错&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name.pop(下标索引值)&lt;/code&gt; : 删除下标索引值上的元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name.clear()&lt;/code&gt; : 直接清空列表中的所有元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;修改&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改&#34;&gt;#&lt;/a&gt; 修改&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Name[下标索引值] = X&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name.sort()&lt;/code&gt; : 将列表从小到大进行排序 在括号中加上 &lt;code&gt;reverse = True&lt;/code&gt; , 就可以实现从大到下排序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Name.reverse()&lt;/code&gt; : 将列表中的元素顺序进行翻转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;查找&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查找&#34;&gt;#&lt;/a&gt; 查找&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Name.count(元素值)&lt;/code&gt; : 查找某个元素值在列表中有多少个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Name.index(元素值,start,end)&lt;/code&gt; : 查找 start 到 end 区间某个元素的下标索引值，有多个值时返回第一个&lt;/p&gt;
+&lt;p&gt;eg:  &lt;code&gt;Name[Name.index(&#34;zzz&#34;)] = &#34;zgg&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Name.copy()&lt;/code&gt; : 对列表进行拷贝&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;计算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算&#34;&gt;#&lt;/a&gt; 计算&lt;/h4&gt;
+&lt;p&gt;加法：将两个列表中的元素进行拼接&lt;/p&gt;
+&lt;p&gt;乘法：将一个列表中的元素重复若干次&lt;/p&gt;
+&lt;h3 id=&#34;嵌套列表多维列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#嵌套列表多维列表&#34;&gt;#&lt;/a&gt; 嵌套列表 (多维列表)&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;[[x,y,z],[a,b,c],[e,f,d]]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;相同的列表元素，python 也会开辟不同的空间来存储列表元素，因为列表是可变的&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;A  &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+    A&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;深拷贝与浅拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#深拷贝与浅拷贝&#34;&gt;#&lt;/a&gt; 深拷贝与浅拷贝&lt;/h3&gt;
+&lt;p&gt;变量的赋值 仅仅是将存储内容的地址引用到变量上&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;
+b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a 
+a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;
+b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; ? &lt;span class=&#34;token comment&#34;&gt;#b会等于[1,1,3] 并不是将数据复制了过去,而是将这一团数据的引用给了b,本质上还是同一个存储数据的地方&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;浅拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浅拷贝&#34;&gt;#&lt;/a&gt; 浅拷贝&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Name.copy()&lt;/code&gt; : 列表的 copy 方法&lt;/li&gt;
+&lt;li&gt;先导入 copy 模块  &lt;code&gt;y = copy.copy(x)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;应用列表切片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;深拷贝&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#深拷贝&#34;&gt;#&lt;/a&gt; 深拷贝&lt;/h4&gt;
+&lt;p&gt;浅拷贝只会拷贝最外层，拷贝内层数据的时候也只会拷贝引用，所以对于嵌套列表等等就需要深拷贝来进行拷贝&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先导入 copy 模块  &lt;code&gt;y = copy.deepcopy(x)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;列表推导式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表推导式&#34;&gt;#&lt;/a&gt; 列表推导式&lt;/h3&gt;
+&lt;p&gt;列表推导式的效率比循环语句一般会快上一倍左右&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;[expression for target in iterable]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[expresssion for target in iterable if condition]&lt;/code&gt;  先执行 for 语句，然后进行 if 语句的判断，最后进行插入&lt;/li&gt;
+&lt;li&gt;列表推导式的嵌套: &lt;code&gt;[expression for target in iterable1 for target in iterable2 for target in iterable3]&lt;/code&gt;  嵌套中放在前面的是外层前套，从前往后依次嵌套&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;ord()&lt;/code&gt; : 内置函数，将字符转化为对应的编码&lt;/p&gt;
+&lt;h2 id=&#34;元组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#元组&#34;&gt;#&lt;/a&gt; 元组&lt;/h2&gt;
+&lt;p&gt;元组拥有列表的性质，且元组不可修改、&lt;/p&gt;
+&lt;p&gt;元组中的元素不可变，但是元组的元素如果是可变的列表，我们可以修改列表中的值&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;a = (1,2,3,4,5)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;没有元组推导式的存在&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;520&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#此时x是int变量&lt;/span&gt;
+x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;520&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#此时x是只有一个元素的元组&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;打包和解包&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包和解包&#34;&gt;#&lt;/a&gt; 打包和解包&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-python&#34; data-language=&#34;python&#34;&gt;&lt;code class=&#34;language-python&#34;&gt;code &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;123&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;sam&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;zgg&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#打包&lt;/span&gt;
+x&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;y&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;z &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; code &lt;span class=&#34;token comment&#34;&gt;#解包 左侧变量数量必须等于右侧的元素数量&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;字符串-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串-2&#34;&gt;#&lt;/a&gt; 字符串&lt;/h2&gt;
+&lt;p&gt;字符串是不可改变的&lt;/p&gt;
+&lt;h3 id=&#34;字符串方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串方法&#34;&gt;#&lt;/a&gt; 字符串方法&lt;/h3&gt;
+&lt;p&gt;因为字符串不可变，所以下列方法的实质是按照规则生成新的字符串再重新赋值&lt;/p&gt;
+&lt;h4 id=&#34;更改大小写字母&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#更改大小写字母&#34;&gt;#&lt;/a&gt; 更改大小写字母&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x.capitalize()&lt;/code&gt; : 首字母变成大写，其他变成小写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.casefold()&lt;/code&gt; : 将所有字符串变成小写，可以处理多语言&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.title()&lt;/code&gt; : 字符串中&lt;strong&gt;每个单词&lt;/strong&gt;的首字母变成大写，其他的变成小写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.swapcase()&lt;/code&gt; : 进行大小写字母的翻转&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.upper()&lt;/code&gt; : 所有字母变成大写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.lower()&lt;/code&gt; : 所有字母变成小写，只能处理英语&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;左中右对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#左中右对齐&#34;&gt;#&lt;/a&gt; 左中右对齐&lt;/h4&gt;
+&lt;p&gt;拥有参数 &lt;code&gt;width&lt;/code&gt;  代表填充过后的字符串长度，如果该参数小于原字符串的长度，就会输出原字符串&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;fillchar&lt;/code&gt; : 填充字符&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;x.center(width,fillchar):&lt;/code&gt;  实现居中，默认用空格填充&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.ljust(width,fillchar)&lt;/code&gt; : 实现左对齐，默认用空格填充&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.rjust(width,fillchar)&lt;/code&gt; : 实现右对齐，默认用空格填充&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x.zfill(width,fillchar)&lt;/code&gt; : 实现左对齐，默认用 &lt;code&gt;0&lt;/code&gt;  填充&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
