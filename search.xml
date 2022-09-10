@@ -117,31 +117,6 @@
     
     
     <entry>
-      <title>Html-first</title>
-      <link href="/2021/11/06/html-shang/"/>
-      <url>/2021/11/06/html-shang/</url>
-      
-        <content type="html"><![CDATA[<h1 id="html上"><a class="markdownIt-Anchor" href="#html上">#</a> Html (上)</h1><h3 id="the-article-from-yogmas-also-sam"><a class="markdownIt-Anchor" href="#the-article-from-yogmas-also-sam">#</a> the article from yogmas also sam</h3><h4 id="1基本架构"><a class="markdownIt-Anchor" href="#1基本架构">#</a> 1. 基本架构</h4><blockquote><pre><code>&lt;html&gt; &lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; </code></pre></blockquote><h4 id="2html标签"><a class="markdownIt-Anchor" href="#2html标签">#</a> 2.html 标签</h4><h6 id="标题标签"><a class="markdownIt-Anchor" href="#标题标签">#</a> 标题标签</h6><blockquote><pre><code>&lt;h1&gt;&lt;/h1&gt;   ……  &lt;h6&gt;&lt;/h6&gt;</code></pre></blockquote><p>一共六级标题，文字加粗，由大到小依次减小。<br><strong>大多数标签都是成对存在的，只有少数例如 br 的单标签</strong></p><h6 id="段落和换行标签"><a class="markdownIt-Anchor" href="#段落和换行标签">#</a> 段落和换行标签</h6><blockquote><pre><code>&lt;p&gt;&lt;/p&gt;&lt;/br&gt;</code></pre></blockquote><p>p 标签会自动换行，不用添加 br</p><h6 id="文本格式化标签"><a class="markdownIt-Anchor" href="#文本格式化标签">#</a> 文本格式化标签</h6><blockquote><pre><code>&lt;strong&gt;加粗&lt;/strong&gt; 或者 &lt;b&gt;加粗&lt;/b&gt;&lt;em&gt;倾斜&lt;/em&gt; 或者 &lt;i&gt;倾斜&lt;/i&gt;&lt;del&gt;删除线&lt;/del&gt; 或者 &lt;s&gt;删除线&lt;/s&gt;&lt;ins&gt;下划线&lt;/ins&gt; 或者 &lt;u&gt;下划线&lt;/u&gt;</code></pre></blockquote><h6 id="div和span标签"><a class="markdownIt-Anchor" href="#div和span标签">#</a> div 和 span 标签</h6><blockquote><pre><code>&lt;span&gt;&lt;/span&gt;</code></pre></blockquote><p>形象来说 div 是一个大盒子，span 通常是用来放在大盒子里面的小盒子（后期 div 在页面构造中非常常用)</p><h6 id="图像标签"><a class="markdownIt-Anchor" href="#图像标签">#</a> 图像标签</h6><blockquote><pre><code>&lt;img src="路径" alt="图片不显示时显示出来的" title="鼠标放在图片上面显示出来的文字" width="" height="" border=""&gt;</code></pre></blockquote><p>在后期使用的 width,height,border, 都会放入<strong> css</strong> 中来运行使用不会单独列入 img 中<br>图像标签的路径<br> 1. 同一级路径<br> eg:(img.jpg)<br> 2. 下一级路径<br> eg:(images/img.jpg)<br> 3. 绝对路径<br> eg:(C:\Users\apple\Desktop\ 前端基础第一天 - HTML\ 案例 \img.jpg)<br>eg：(<a href="http://www.itcast.cn/2018czgw/images/logo.png">http://www.itcast.cn/2018czgw/images/logo.png</a>)<br><a href="https://imgtu.com/i/IQmLi8"><img src="https://z3.ax1x.com/2021/11/06/IQmLi8.png" alt="IQmLi8.png"></a></p><h6 id="超链接标签"><a class="markdownIt-Anchor" href="#超链接标签">#</a> 超链接标签</h6><blockquote><pre><code>&lt;a href="链接"&gt;LOL&lt;/a&gt;</code></pre><p>LOL 可以以图片文字等等代替，点击就可以跳转到 href 所在的链接</p></blockquote><p>可以添加的元素：target=“X”<br>X 包括_self (覆盖当前页面)<br> 和_blank 重新启动新的页面<br>链接分类<br> 1. 内部链接：存放在你网站前端的链接也就是你写前端时电脑里面的链接<br> 2. 外部链接：例如 http 这类的其他网站的链接<br> 3. 空链接：当你还没有链接可以填时，留出空位用 #代替<br> 4. 下载链接：通常是以.zip 结尾的压缩包<br><a href="https://imgtu.com/i/IQC8kd"><img src="https://z3.ax1x.com/2021/11/06/IQC8kd.png" alt="IQC8kd.png"></a></p><h6 id="锚点定位"><a class="markdownIt-Anchor" href="#锚点定位">#</a> 锚点定位</h6><p>由两个相互呼应的标签组成<br>可以从页面的一个地方跳转到当前页面的另外一个地方</p><blockquote><pre><code>&lt;a href="#ID"&gt;&lt;/a&gt;&lt;h3 id="ID"&gt;</code></pre></blockquote><p>ID 可以写成任何你定义的名称<br> h3 并不是固定的，可以换成任意标签<br>当你点击 a 中携带的元素或标签时你将会跳转到拥有 id=“” 且和 a 相同 id 的标签这</p><h6 id="注释标签和特殊字符"><a class="markdownIt-Anchor" href="#注释标签和特殊字符">#</a> 注释标签和特殊字符</h6><blockquote><pre><code>&lt;!-- 注释内容 --&gt; &lt;用&amp;lt  &gt;用&amp;gt；(由于&lt;&gt;符号在html中的特殊性)</code></pre></blockquote><p>特殊内容可以用 ctrl+l 快速注释</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Html </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Css-second</title>
       <link href="/2021/11/06/css2/"/>
       <url>/2021/11/06/css2/</url>
@@ -159,6 +134,31 @@
         <tags>
             
             <tag> Css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Html-first</title>
+      <link href="/2021/11/06/html-shang/"/>
+      <url>/2021/11/06/html-shang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="html上"><a class="markdownIt-Anchor" href="#html上">#</a> Html (上)</h1><h3 id="the-article-from-yogmas-also-sam"><a class="markdownIt-Anchor" href="#the-article-from-yogmas-also-sam">#</a> the article from yogmas also sam</h3><h4 id="1基本架构"><a class="markdownIt-Anchor" href="#1基本架构">#</a> 1. 基本架构</h4><blockquote><pre><code>&lt;html&gt; &lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt; </code></pre></blockquote><h4 id="2html标签"><a class="markdownIt-Anchor" href="#2html标签">#</a> 2.html 标签</h4><h6 id="标题标签"><a class="markdownIt-Anchor" href="#标题标签">#</a> 标题标签</h6><blockquote><pre><code>&lt;h1&gt;&lt;/h1&gt;   ……  &lt;h6&gt;&lt;/h6&gt;</code></pre></blockquote><p>一共六级标题，文字加粗，由大到小依次减小。<br><strong>大多数标签都是成对存在的，只有少数例如 br 的单标签</strong></p><h6 id="段落和换行标签"><a class="markdownIt-Anchor" href="#段落和换行标签">#</a> 段落和换行标签</h6><blockquote><pre><code>&lt;p&gt;&lt;/p&gt;&lt;/br&gt;</code></pre></blockquote><p>p 标签会自动换行，不用添加 br</p><h6 id="文本格式化标签"><a class="markdownIt-Anchor" href="#文本格式化标签">#</a> 文本格式化标签</h6><blockquote><pre><code>&lt;strong&gt;加粗&lt;/strong&gt; 或者 &lt;b&gt;加粗&lt;/b&gt;&lt;em&gt;倾斜&lt;/em&gt; 或者 &lt;i&gt;倾斜&lt;/i&gt;&lt;del&gt;删除线&lt;/del&gt; 或者 &lt;s&gt;删除线&lt;/s&gt;&lt;ins&gt;下划线&lt;/ins&gt; 或者 &lt;u&gt;下划线&lt;/u&gt;</code></pre></blockquote><h6 id="div和span标签"><a class="markdownIt-Anchor" href="#div和span标签">#</a> div 和 span 标签</h6><blockquote><pre><code>&lt;span&gt;&lt;/span&gt;</code></pre></blockquote><p>形象来说 div 是一个大盒子，span 通常是用来放在大盒子里面的小盒子（后期 div 在页面构造中非常常用)</p><h6 id="图像标签"><a class="markdownIt-Anchor" href="#图像标签">#</a> 图像标签</h6><blockquote><pre><code>&lt;img src="路径" alt="图片不显示时显示出来的" title="鼠标放在图片上面显示出来的文字" width="" height="" border=""&gt;</code></pre></blockquote><p>在后期使用的 width,height,border, 都会放入<strong> css</strong> 中来运行使用不会单独列入 img 中<br>图像标签的路径<br> 1. 同一级路径<br> eg:(img.jpg)<br> 2. 下一级路径<br> eg:(images/img.jpg)<br> 3. 绝对路径<br> eg:(C:\Users\apple\Desktop\ 前端基础第一天 - HTML\ 案例 \img.jpg)<br>eg：(<a href="http://www.itcast.cn/2018czgw/images/logo.png">http://www.itcast.cn/2018czgw/images/logo.png</a>)<br><a href="https://imgtu.com/i/IQmLi8"><img src="https://z3.ax1x.com/2021/11/06/IQmLi8.png" alt="IQmLi8.png"></a></p><h6 id="超链接标签"><a class="markdownIt-Anchor" href="#超链接标签">#</a> 超链接标签</h6><blockquote><pre><code>&lt;a href="链接"&gt;LOL&lt;/a&gt;</code></pre><p>LOL 可以以图片文字等等代替，点击就可以跳转到 href 所在的链接</p></blockquote><p>可以添加的元素：target=“X”<br>X 包括_self (覆盖当前页面)<br> 和_blank 重新启动新的页面<br>链接分类<br> 1. 内部链接：存放在你网站前端的链接也就是你写前端时电脑里面的链接<br> 2. 外部链接：例如 http 这类的其他网站的链接<br> 3. 空链接：当你还没有链接可以填时，留出空位用 #代替<br> 4. 下载链接：通常是以.zip 结尾的压缩包<br><a href="https://imgtu.com/i/IQC8kd"><img src="https://z3.ax1x.com/2021/11/06/IQC8kd.png" alt="IQC8kd.png"></a></p><h6 id="锚点定位"><a class="markdownIt-Anchor" href="#锚点定位">#</a> 锚点定位</h6><p>由两个相互呼应的标签组成<br>可以从页面的一个地方跳转到当前页面的另外一个地方</p><blockquote><pre><code>&lt;a href="#ID"&gt;&lt;/a&gt;&lt;h3 id="ID"&gt;</code></pre></blockquote><p>ID 可以写成任何你定义的名称<br> h3 并不是固定的，可以换成任意标签<br>当你点击 a 中携带的元素或标签时你将会跳转到拥有 id=“” 且和 a 相同 id 的标签这</p><h6 id="注释标签和特殊字符"><a class="markdownIt-Anchor" href="#注释标签和特殊字符">#</a> 注释标签和特殊字符</h6><blockquote><pre><code>&lt;!-- 注释内容 --&gt; &lt;用&amp;lt  &gt;用&amp;gt；(由于&lt;&gt;符号在html中的特殊性)</code></pre></blockquote><p>特殊内容可以用 ctrl+l 快速注释</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Html </tag>
             
         </tags>
       
