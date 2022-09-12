@@ -1,24 +1,373 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>YogMas学习站 • Posts by &#34;语言&#34; category</title>
-        <link>http://yogmas-wang.top</link>
-        <description></description>
+        <title>S1m • Posts by &#34;语言&#34; category</title>
+        <link>http://s1mwxl.cn</link>
+        <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
-        <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0800</lastBuildDate>
+        <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate>
         <category>C语言</category>
         <category>python</category>
         <category>Css</category>
         <category>Html</category>
-        <category>操作系统</category>
-        <category>Javascript</category>
-        <category>icoding答案</category>
         <category>机器学习</category>
+        <category>操作系统</category>
+        <category>icoding答案</category>
+        <category>Javascript</category>
+        <category>java</category>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2022/07/10/python/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2022/09/13/java/</guid>
+            <title>java</title>
+            <link>http://s1mwxl.cn/2022/09/13/java/</link>
+            <category>java</category>
+            <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;java&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h1&gt;
+&lt;p&gt;软件工程课程中 java 学习的记录&lt;/p&gt;
+&lt;h2 id=&#34;java开发&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java开发&#34;&gt;#&lt;/a&gt; Java 开发&lt;/h2&gt;
+&lt;p&gt;java 是面向对象语言&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86.png&#34; alt=&#34;java编译原理&#34;&gt;&lt;/p&gt;
+&lt;p&gt;java 语言具有两种机制:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;虚拟机机制 (JVM): 保证 java 程序的跨平台特性&lt;/li&gt;
+&lt;li&gt;垃圾回收机制：保证 java 更安全，更高效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;java虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java虚拟机&#34;&gt;#&lt;/a&gt; java 虚拟机&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E8%99%9A%E6%8B%9F%E6%9C%BA.png&#34; alt=&#34;java虚拟机&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;java(&lt;strong&gt;j&lt;/strong&gt;ava &lt;strong&gt;v&lt;/strong&gt;isual &lt;strong&gt;M&lt;/strong&gt;achine) 虚拟机是可运行 java 字节码的虚拟计算机系统&lt;/li&gt;
+&lt;li&gt;使用 java 语言编写的程序，实际上是运行在 JVM 之上&lt;/li&gt;
+&lt;li&gt;JVM 有一个解释器组件，可以实现 Java 字节码和操作系统的通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png&#34; alt=&#34;java虚拟机运行过程&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;运行环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运行环境&#34;&gt;#&lt;/a&gt; 运行环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下载 JDK 包，并配置系统环境&lt;/li&gt;
+&lt;li&gt;Eclipse 开发环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java程序基本结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java程序基本结构&#34;&gt;#&lt;/a&gt; Java 程序基本结构&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;database&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;//包声明语句&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;applet&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;App&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//任意数量的引入语句&lt;/span&gt;
+    
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;HelloWorld&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;//一个源文件至多有一个public的class声明 且public类名要与文件名相同&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HelloWorld&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;包声明package&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#包声明package&#34;&gt;#&lt;/a&gt; 包声明:package&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;包是类和接口的集合，即为类库&lt;/li&gt;
+&lt;li&gt;在一个源程序中，只能有一个包声明语句，且是程序的第一条语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;引入语句import&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引入语句import&#34;&gt;#&lt;/a&gt; 引入语句:import&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;程序编译时，会将需要的在引入语句中的类引入到程序中&lt;/li&gt;
+&lt;li&gt;import 的两种形式
+&lt;ol&gt;
+&lt;li&gt;import 包名。类名&lt;/li&gt;
+&lt;li&gt;import 包名.*    * 表示全部&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;类和接口声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类和接口声明&#34;&gt;#&lt;/a&gt; 类和接口声明&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;类和接口是程序的基本组成单元&lt;/li&gt;
+&lt;li&gt;类是由成员变量和成员方法组成，表示了对象的基本属性和行为&lt;/li&gt;
+&lt;li&gt;接口表现了对象所具有的行为规范&lt;/li&gt;
+&lt;li&gt;源程序中至少有一个类或接口创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注释&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注释&#34;&gt;#&lt;/a&gt; 注释&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;//&lt;/code&gt; ：由 &lt;code&gt;//&lt;/code&gt;  开始到行末为注释内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/*  */&lt;/code&gt; ：两者之间为注释内容，可以多行注释&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/**    */&lt;/code&gt; ：文档注释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A.png&#34; alt=&#34;文档注释&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;java基础语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java基础语法&#34;&gt;#&lt;/a&gt; Java 基础语法&lt;/h2&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据类型&#34;&gt;#&lt;/a&gt; 数据类型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B1.png&#34; alt=&#34;数据类型1&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;简单数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简单数据类型&#34;&gt;#&lt;/a&gt; 简单数据类型&lt;/h4&gt;
+&lt;h4 id=&#34;简单数据类型-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简单数据类型-2&#34;&gt;#&lt;/a&gt; &lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png&#34; alt=&#34;简单数据类型&#34;&gt;&lt;/h4&gt;
+&lt;p&gt;Java 中的数值类型都是有符号的，使用最高位来表示数据的正负号&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;//基本数据类型声明&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;short&lt;/span&gt; si &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;k &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;99&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;long&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; ch &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;J&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; chc &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;中&#39;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;float&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3.1415926f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; d &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1.04E-5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; s &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; “信息工程”&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;整数数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数数据类型&#34;&gt;#&lt;/a&gt; 整数数据类型&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;int 是经常使用的，碰见较大的数用 long&lt;/li&gt;
+&lt;li&gt;byte,shrot 主要用于特定的场合，如占用大量存储空间的大数组或者底层的 文件处理等&lt;/li&gt;
+&lt;li&gt;java 中有三种进制表示整数:
+&lt;ol&gt;
+&lt;li&gt;十进制:  x = 678&lt;/li&gt;
+&lt;li&gt;八进制:   x = &lt;strong&gt;0&lt;/strong&gt;456   前面加&lt;strong&gt; 0&lt;/strong&gt; 表示为八进制&lt;/li&gt;
+&lt;li&gt;十六进制: x = &lt;strong&gt;0x&lt;/strong&gt;a9b1   前面加&lt;strong&gt; 0x&lt;/strong&gt; 表示为十六进制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;浮点数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮点数据类型&#34;&gt;#&lt;/a&gt; 浮点数据类型&lt;/h5&gt;
+&lt;p&gt;浮点型表示有小数部分的数值，包括 float 型和 double 型。这两种数据类型全部为有符号数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;浮点型默认为 double 型&lt;/li&gt;
+&lt;li&gt;使用 float 型，必须添加后缀 F 或者 f&lt;/li&gt;
+&lt;li&gt;double 型，可以添加后缀 D 或者 d, 也可以不添加&lt;/li&gt;
+&lt;li&gt;没有后缀时，默认为 double 型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;char型数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#char型数据类型&#34;&gt;#&lt;/a&gt; char 型数据类型&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;char 型用来表示字符。每个 char 型变量占两个字节。在 Java 中，字符的编码是采用 Unicode 编码。&lt;/li&gt;
+&lt;li&gt;Unicode 编码字符是用 16 位无符号整数表示，有 216 个可能值，即 0～65 535。可以表示世界上的大部分文字语言中的字符。&lt;/li&gt;
+&lt;li&gt;char 类型数据被表示为用一对单引号包含的单个字符 例:  &lt;code&gt;char ch = &#39;a&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;boolean型数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#boolean型数据类型&#34;&gt;#&lt;/a&gt; boolean 型数据类型&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean 只有两个取值 true 和 false 即 真和假&lt;/li&gt;
+&lt;li&gt;在 C++ 中用数值或指针可以代替 boolean 值，0 相当于 false，非 0 相当于 true。&lt;/li&gt;
+&lt;li&gt;在 Java 中没有这样的规定，&lt;strong&gt;boolean 型的值不能与任何其他基本类型的值进行转换代替&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;引用数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引用数据类型&#34;&gt;#&lt;/a&gt; 引用数据类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;引用数据类型声明变量时，不会为变量分配存储空间，因为他们声明的是数据的引用，不是数据本身，需要用&lt;strong&gt; new 运算符&lt;/strong&gt;来为引用类型的变量分配存储空间&lt;/li&gt;
+&lt;li&gt;引用：类似与 C++ 中的指针，又不同与指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;基本数据类型值间的转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本数据类型值间的转换&#34;&gt;#&lt;/a&gt; 基本数据类型值间的转换&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;自动转换&lt;/li&gt;
+&lt;li&gt;强制类型转换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;自动转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自动转换&#34;&gt;#&lt;/a&gt; 自动转换&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;从低到高的顺序转换&lt;/li&gt;
+&lt;li&gt;优先关系为:byte,short,char-&amp;gt; int -&amp;gt; long -&amp;gt; float -&amp;gt; double&lt;/li&gt;
+&lt;li&gt;不同数据类型先转换成同一数据类型，再进行运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.png&#34; alt=&#34;自动类型转换&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;强制类型转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#强制类型转换&#34;&gt;#&lt;/a&gt; 强制类型转换&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Demo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; y&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;34.56&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;11.2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 丢失精度&lt;/span&gt;
+	y &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 提高精度&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;x=&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;y=&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; y&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;变量类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量类型&#34;&gt;#&lt;/a&gt; 变量类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;局部变量&lt;/li&gt;
+&lt;li&gt;实例变量 (全局变量)&lt;/li&gt;
+&lt;li&gt;类变量 (静态变量):  &lt;code&gt;static&lt;/code&gt;  关键字声明&lt;/li&gt;
+&lt;li&gt;实例变量和类变量统称为成员变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与 C++ 变量类似 略&lt;/p&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运算符&#34;&gt;#&lt;/a&gt; 运算符&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E8%BF%90%E7%AE%97%E7%AC%A6.png&#34; alt=&#34;java运算符&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;位运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#位运算符&#34;&gt;#&lt;/a&gt; 位运算符&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png&#34; alt=&#34;java位运算符&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;右移位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#右移位&#34;&gt;#&lt;/a&gt; 右移位&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%8F%B3%E7%A7%BB%E4%BD%8D.png&#34; alt=&#34;右移位&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;左移位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#左移位&#34;&gt;#&lt;/a&gt; 左移位&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%B7%A6%E7%A7%BB%E4%BD%8D.png&#34; alt=&#34;左移位&#34;&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Test&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 60 = 0011 1100 */&lt;/span&gt; 
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 13 = 0000 1101 */&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 12 = 0000 1100 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;amp; b = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 61 = 0011 1101 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a | b = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;^&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 49 = 0011 0001 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a ^ b = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;~&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/*-61 = 1100 0011 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;~a = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 240 = 1111 0000 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;lt;&amp;lt; 2 = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 15 = 1111 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;gt;&amp;gt; 2 = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 15 = 0000 1111 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;gt;&amp;gt;&amp;gt; 2 = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token comment&#34;&gt;/*
+编译结果
+a &amp;amp; b = 12
+a | b = 61
+a ^ b = 49
+~a = -61
+a &amp;lt;&amp;lt; 2 = 240
+a &amp;gt;&amp;gt; 15
+a &amp;gt;&amp;gt;&amp;gt; 15
+*/&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;条件运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#条件运算符&#34;&gt;#&lt;/a&gt; 条件运算符&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;variable x = (expression) ? value if true : value if false&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;流程控制语句&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#流程控制语句&#34;&gt;#&lt;/a&gt; 流程控制语句&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;if switch while for do while&lt;/code&gt;  与 C++ 类似 略&lt;/p&gt;
+&lt;h3 id=&#34;数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组&#34;&gt;#&lt;/a&gt; 数组&lt;/h3&gt;
+&lt;p&gt;原理与 C++ 类似，声明方法不同&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;声明数组  &lt;code&gt;int[] a;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;分配空间   &lt;code&gt;a = new int[5];&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;赋值:  &lt;code&gt;a[0] = 3;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;处理数据:  &lt;code&gt;a[0] = a[0] * 10;&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1，2 步可以合并为  &lt;code&gt;数据类型[ ] 数组名 = new 数据类型[大小] ;&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;赋值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#赋值&#34;&gt;#&lt;/a&gt; 赋值&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;边声明边赋值 (静态初始化)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%95%B0%E7%BB%84%E9%9D%99%E6%80%81%E8%B5%8B%E5%80%BC.png&#34; alt=&#34;数组静态赋值&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态从键盘边录入边赋值&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;数组边界&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组边界&#34;&gt;#&lt;/a&gt; 数组边界&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;数组类中有唯一的成员变量：length，用来表示数组的长度，即数组元素的个数。&lt;/li&gt;
+&lt;li&gt;与 C、C++ 中不同，Java 对数组元素要进行越界检查，若发生越界访问，则会抛出一个异常&lt;/li&gt;
+&lt;li&gt;使用 new 创建数组对象时，自动给 length 赋值，数组一旦创建完毕，length 就确定下来， 除非重新使用 new 创建新的数组对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;二维数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二维数组&#34;&gt;#&lt;/a&gt; 二维数组&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;类型名[][] 数组名=new 类型名[][]；&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;二维数组的每一维大小允许不同&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; intArray&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;数组变量是引用变量，简单的用 = 复制数组，只是将引用进行了复制，并没有对数组的元素进行复制&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8%E6%8B%B7%E8%B4%9D.png&#34; alt=&#34;数组引用拷贝&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用 clone () 方法进行深拷贝&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//使用clone方法&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; group1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;170&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; group2&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; group1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+…&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于二位数组 clone 方法也无法深拷贝，只有对二维数组中的每一个元素使用 clone 才能进行深拷贝&lt;/p&gt;
+&lt;h3 id=&#34;字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串&#34;&gt;#&lt;/a&gt; 字符串&lt;/h3&gt;
+&lt;p&gt;JAVA 字符串分为两类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String: 在程序中不会被改变长度的不变字符串&lt;/li&gt;
+&lt;li&gt;StringBuffer: 是在程序中会被 改变长度的可变字符串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;创建字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建字符串&#34;&gt;#&lt;/a&gt; 创建字符串&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;String str=new（&#34;This is a String&#34;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String str=&#34;This is a String&#34;;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StringDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; site &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;www.uestc.edu.cn&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; len &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; site&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;电子科大域名长度 : &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; len &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;创建格式化字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建格式化字符串&#34;&gt;#&lt;/a&gt; 创建格式化字符串&lt;/h5&gt;
+&lt;p&gt;采用 &lt;code&gt;printf()&lt;/code&gt;  和  &lt;code&gt;format()&lt;/code&gt;  方法&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;浮点型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;%f, 整型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;
+&lt;span class=&#34;token string&#34;&gt;&#34; %d, 字符串变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;is %s&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; floatVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; intVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; stringVar&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; fs &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;浮点型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;%f, 整型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; 
+&lt;span class=&#34;token string&#34;&gt;&#34; %d, 字符串变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; %s&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; floatVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; intVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; stringVar&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;静态方法 &lt;code&gt;format()&lt;/code&gt;  返回一个 String 对象而不是 PrintStream 对象。&lt;/p&gt;
+&lt;p&gt;所以 &lt;code&gt;format()&lt;/code&gt;  能用来创建可复用的格式化字符串，而不仅仅是用于 一次打印输出。&lt;/p&gt;
+&lt;h4 id=&#34;字符串的连接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串的连接&#34;&gt;#&lt;/a&gt; 字符串的连接&lt;/h4&gt;
+&lt;p&gt;字符串可以通过 “+” 连接，基本数据类型与字符串进行 “+” 操作，一般也会自动转换为字符串。&lt;/p&gt;
+&lt;h4 id=&#34;函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;str.length()&lt;/code&gt; : 得到 string 的长度&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.indexof(subString,startIndex)&lt;/code&gt; : 确定字符串中指定字符或子字符串在给定字符串的位置，substring 为子字符串，从下标 startIndex 开始查找，返回 substring 首字母的在 str 中的下标&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lastIndexOf(subString)&lt;/code&gt; : 从后往前查找&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.equals(String)&lt;/code&gt; : 判断两个字符串是否相等&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.charAt(索引值)&lt;/code&gt; : 得到指定位置的字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.getChars(int a,int b,char s[],startindex)&lt;/code&gt; : 得到字符串的一部字符串，下标 [a,b) 中的字符串复制到 s 数组中，从 s 数组中的 startindex 开始记录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.substring(start,end)&lt;/code&gt; : 截取下标索引为 [start,end) 内的子字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.replace(a,b)&lt;/code&gt; : 将字符串中的 a 用 b 来代替&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.concat(string)&lt;/code&gt; : 将两个字符串合并&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.toUpperCase()&lt;/code&gt; : 字符串全部转换成大写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.toLowerCase()&lt;/code&gt; : 字符串全部转换成小写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.trim()&lt;/code&gt; : 将开头和结尾处的空格去掉&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String.valueOf(x)&lt;/code&gt; : 将任何类型的数据对象 x 转换成字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String strArr[] = str.split(&#34;_&#34;);&lt;/code&gt; : 将字符串进行分隔，分隔结果储存在数组中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;可变字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可变字符串&#34;&gt;#&lt;/a&gt; 可变字符串&lt;/h4&gt;
+&lt;p&gt;修改可变字符串的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在字符串后面追加：用 append () 方法将各种对象加入到字符串中。&lt;/li&gt;
+&lt;li&gt;在字符串中间插入：用 insert () 方法。&lt;/li&gt;
+&lt;li&gt;改变某个位置所在的字符，用 setCharAt () 方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt; str&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Thisis a String&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+str&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;insert&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;test &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;str&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//输出： Thisis a test String&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt; sb &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;aaaaaa&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+sb&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setCharAt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;‘b’&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// sb 的值 aabaaa&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;sb&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;日期和时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#日期和时间&#34;&gt;#&lt;/a&gt; 日期和时间&lt;/h3&gt;
+&lt;p&gt;java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数 来实例化 Date 对象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个构造函数使用当前日期和时间来初始化对象。 &lt;code&gt;Date()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;第二个构造函数接收一个参数，该参数是从 1970 年 1 月 1 日起的毫秒数。 &lt;code&gt;Date(long millisec)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;获取当前时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取当前时间&#34;&gt;#&lt;/a&gt; 获取当前时间&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;DateDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token comment&#34;&gt;// 初始化 Date 对象&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; date &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token comment&#34;&gt;// 使用 toString() 函数显示日期时间&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;格式化日期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#格式化日期&#34;&gt;#&lt;/a&gt; 格式化日期&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 SimpleDateFormat 格式化日期&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; 
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;DateDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; dNow &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;SimpleDateFormat&lt;/span&gt; ft &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;SimpleDateFormat&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;E yyyy.MM.dd &#39;at&#39; hh:mm:ss a zzz&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Current Date: &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; ft&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dNow&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 		&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;token comment&#34;&gt;//yyyy 是公元年，MM 是月份，dd 是日期，HH:mm:ss 是时、分、秒。&lt;/span&gt;
+        &lt;span class=&#34;token comment&#34;&gt;//SimpleDateFormat 允许选择任何自定义日期时间格式.&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;使用 printf 格式化日期&lt;br&gt;
+ printf 方法可以很轻松地格式化时间和日期。使用两个字母格式，它以 % t 开头并且 以下面表格中的一个字母结尾&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaprintf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F.png&#34; alt=&#34;printf格式化日期&#34;&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;DateDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; date &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 初始化 Date 对象&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;全部日期和时间信息: %tc%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//c的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;年-月-日格式: %tF%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//f的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;月/日/年格式: %tD%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//d的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HH:MM:SS PM格式(12时制):%tr%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//r的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HH:MM:SS格式(24时制): %tT%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//t的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HH:MM格式(24时制): %tR&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//R的使用&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaprintf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F%E7%BB%93%E6%9E%9C.png&#34; alt=&#34;printf格式化日期结果&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mwxl.cn/2022/07/10/python/</guid>
             <title>python</title>
-            <link>http://yogmas-wang.top/2022/07/10/python/</link>
+            <link>http://s1mwxl.cn/2022/07/10/python/</link>
             <category>python</category>
             <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h1&gt;

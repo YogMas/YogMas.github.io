@@ -1,81 +1,373 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>YogMas学习站</title>
-        <link>http://yogmas-wang.top</link>
-        <description></description>
+        <title>S1m</title>
+        <link>http://s1mwxl.cn</link>
+        <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
-        <pubDate>Sun, 17 Jul 2022 14:05:06 +0800</pubDate>
-        <lastBuildDate>Sun, 17 Jul 2022 14:05:06 +0800</lastBuildDate>
+        <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate>
         <category>C语言</category>
         <category>python</category>
         <category>Css</category>
         <category>Html</category>
-        <category>操作系统</category>
-        <category>Javascript</category>
-        <category>icoding答案</category>
         <category>机器学习</category>
+        <category>操作系统</category>
+        <category>icoding答案</category>
+        <category>Javascript</category>
+        <category>java</category>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2022/07/17/zong-she-zuo-ye/</guid>
-            <title></title>
-            <link>http://yogmas-wang.top/2022/07/17/zong-she-zuo-ye/</link>
-            <pubDate>Sun, 17 Jul 2022 14:05:06 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;综设作业&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#综设作业&#34;&gt;#&lt;/a&gt; 综设作业&lt;/h1&gt;
-&lt;h2 id=&#34;第一周&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一周&#34;&gt;#&lt;/a&gt; 第一周&lt;/h2&gt;
-&lt;h3 id=&#34;什么是云端服务&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是云端服务&#34;&gt;#&lt;/a&gt; 什么是&lt;strong&gt;云端服务&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/jInrkT&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/17/jInrkT.jpg&#34; alt=&#34;云端服务示意图&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+            <guid isPermalink="true">http://s1mwxl.cn/2022/09/13/java/</guid>
+            <title>java</title>
+            <link>http://s1mwxl.cn/2022/09/13/java/</link>
+            <category>java</category>
+            <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;java&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h1&gt;
+&lt;p&gt;软件工程课程中 java 学习的记录&lt;/p&gt;
+&lt;h2 id=&#34;java开发&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java开发&#34;&gt;#&lt;/a&gt; Java 开发&lt;/h2&gt;
+&lt;p&gt;java 是面向对象语言&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86.png&#34; alt=&#34;java编译原理&#34;&gt;&lt;/p&gt;
+&lt;p&gt;java 语言具有两种机制:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;云端服务用白话文讲就是 “网络服务”。凡是运用网络沟通多台手机或计算机设备的运算工作，或是透过&lt;strong&gt;网络联机&lt;/strong&gt;取得由远程主机提供的服务等，都可以算是一种云端服务&lt;/li&gt;
-&lt;li&gt;云端服务的&lt;u&gt;好处&lt;/u&gt;
+&lt;li&gt;虚拟机机制 (JVM): 保证 java 程序的跨平台特性&lt;/li&gt;
+&lt;li&gt;垃圾回收机制：保证 java 更安全，更高效&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;java虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java虚拟机&#34;&gt;#&lt;/a&gt; java 虚拟机&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E8%99%9A%E6%8B%9F%E6%9C%BA.png&#34; alt=&#34;java虚拟机&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;java(&lt;strong&gt;j&lt;/strong&gt;ava &lt;strong&gt;v&lt;/strong&gt;isual &lt;strong&gt;M&lt;/strong&gt;achine) 虚拟机是可运行 java 字节码的虚拟计算机系统&lt;/li&gt;
+&lt;li&gt;使用 java 语言编写的程序，实际上是运行在 JVM 之上&lt;/li&gt;
+&lt;li&gt;JVM 有一个解释器组件，可以实现 Java 字节码和操作系统的通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BF%90%E8%A1%8C%E8%BF%87%E7%A8%8B.png&#34; alt=&#34;java虚拟机运行过程&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;运行环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运行环境&#34;&gt;#&lt;/a&gt; 运行环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;下载 JDK 包，并配置系统环境&lt;/li&gt;
+&lt;li&gt;Eclipse 开发环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;java程序基本结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java程序基本结构&#34;&gt;#&lt;/a&gt; Java 程序基本结构&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;database&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;//包声明语句&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;applet&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;App&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//任意数量的引入语句&lt;/span&gt;
+    
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;HelloWorld&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;//一个源文件至多有一个public的class声明 且public类名要与文件名相同&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HelloWorld&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;包声明package&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#包声明package&#34;&gt;#&lt;/a&gt; 包声明:package&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;包是类和接口的集合，即为类库&lt;/li&gt;
+&lt;li&gt;在一个源程序中，只能有一个包声明语句，且是程序的第一条语句&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;引入语句import&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引入语句import&#34;&gt;#&lt;/a&gt; 引入语句:import&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;程序编译时，会将需要的在引入语句中的类引入到程序中&lt;/li&gt;
+&lt;li&gt;import 的两种形式
 &lt;ol&gt;
-&lt;li&gt;有了虚拟化的技术，企业放在云端的资料备份及备援将会得到相当程度的保障&lt;/li&gt;
-&lt;li&gt;透过网络让各分公司能够及时取得服务&lt;/li&gt;
-&lt;li&gt;加快整体公司的营运效率&lt;/li&gt;
-&lt;li&gt;迅速做出决策&lt;/li&gt;
+&lt;li&gt;import 包名。类名&lt;/li&gt;
+&lt;li&gt;import 包名.*    * 表示全部&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;什么是单体架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是单体架构&#34;&gt;#&lt;/a&gt; 什么是&lt;strong&gt;单体架构&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/jInqcd&#34;&gt;&lt;img src=&#34;https://s1.ax1x.com/2022/07/17/jInqcd.png&#34; alt=&#34;单体架构&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;类和接口声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类和接口声明&#34;&gt;#&lt;/a&gt; 类和接口声明&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;在软件设计的时候经常提到和使用经典的 3 层模型，即&lt;strong&gt;表现层&lt;/strong&gt;（用于直接和用户交互，也称为交互层，通常是网页、UI 等），&lt;strong&gt;业务逻辑层&lt;/strong&gt;（即业务逻辑处理层，例如用户输入的信息要经过业务逻辑层的处理后，才能展现给用户。），&lt;strong&gt;数据访问层&lt;/strong&gt;（用于操作数据库，用户在表示层会产生大量的数据，通过数据访问层对数据库进行读写操作。）。虽然在软件设计中划分了 3 层模型，但是对业务场景没有划分，一个典型的单体架构就是将所有的业务场景的表现层，业务逻辑层，数据访问层放在一个工程中最终经过编译，打包，部署在一台服务器上。&lt;/li&gt;
-&lt;li&gt;好处：便于管理，所有代码都在同一个项目当中&lt;/li&gt;
-&lt;li&gt;坏处:
+&lt;li&gt;类和接口是程序的基本组成单元&lt;/li&gt;
+&lt;li&gt;类是由成员变量和成员方法组成，表示了对象的基本属性和行为&lt;/li&gt;
+&lt;li&gt;接口表现了对象所具有的行为规范&lt;/li&gt;
+&lt;li&gt;源程序中至少有一个类或接口创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注释&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注释&#34;&gt;#&lt;/a&gt; 注释&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;//&lt;/code&gt; ：由 &lt;code&gt;//&lt;/code&gt;  开始到行末为注释内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/*  */&lt;/code&gt; ：两者之间为注释内容，可以多行注释&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/**    */&lt;/code&gt; ：文档注释&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A.png&#34; alt=&#34;文档注释&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;java基础语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java基础语法&#34;&gt;#&lt;/a&gt; Java 基础语法&lt;/h2&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据类型&#34;&gt;#&lt;/a&gt; 数据类型&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B1.png&#34; alt=&#34;数据类型1&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;简单数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简单数据类型&#34;&gt;#&lt;/a&gt; 简单数据类型&lt;/h4&gt;
+&lt;h4 id=&#34;简单数据类型-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简单数据类型-2&#34;&gt;#&lt;/a&gt; &lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png&#34; alt=&#34;简单数据类型&#34;&gt;&lt;/h4&gt;
+&lt;p&gt;Java 中的数值类型都是有符号的，使用最高位来表示数据的正负号&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;//基本数据类型声明&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;short&lt;/span&gt; si &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;k &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;99&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;long&lt;/span&gt; l &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;123456789&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; ch &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;J&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; chc &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;中&#39;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;float&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3.1415926f&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; d &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1.04E-5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; s &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; “信息工程”&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;整数数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数数据类型&#34;&gt;#&lt;/a&gt; 整数数据类型&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;int 是经常使用的，碰见较大的数用 long&lt;/li&gt;
+&lt;li&gt;byte,shrot 主要用于特定的场合，如占用大量存储空间的大数组或者底层的 文件处理等&lt;/li&gt;
+&lt;li&gt;java 中有三种进制表示整数:
 &lt;ol&gt;
-&lt;li&gt;项目过于臃肿 - 当大大小小的功能模块都集中在同一项目的时候，整个项目必然会变的臃肿，让开发者难以维护&lt;/li&gt;
-&lt;li&gt;资源无法隔离 - 整个单体系统各个功能模块都依赖于同样的数据库，内存等资源，一旦某个功能模块对资源使用不当，整个系统都会被拖垮。&lt;/li&gt;
-&lt;li&gt;无法灵活扩展 - 当系统的访问量越来越大的时候，单个系统固然可以进行水平扩展，部署在多台机器上组成集群：&lt;/li&gt;
+&lt;li&gt;十进制:  x = 678&lt;/li&gt;
+&lt;li&gt;八进制:   x = &lt;strong&gt;0&lt;/strong&gt;456   前面加&lt;strong&gt; 0&lt;/strong&gt; 表示为八进制&lt;/li&gt;
+&lt;li&gt;十六进制: x = &lt;strong&gt;0x&lt;/strong&gt;a9b1   前面加&lt;strong&gt; 0x&lt;/strong&gt; 表示为十六进制&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;什么是微服务架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是微服务架构&#34;&gt;#&lt;/a&gt; 什么是微服务架构&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/345552079&#34;&gt;什么是微服务架构？ - 知乎 (zhihu.com)&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;浮点数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮点数据类型&#34;&gt;#&lt;/a&gt; 浮点数据类型&lt;/h5&gt;
+&lt;p&gt;浮点型表示有小数部分的数值，包括 float 型和 double 型。这两种数据类型全部为有符号数&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;微服务是将原来一体化架构拆分，微服务是每个模块由单个程序组成，能够方便迭代，以及机构专业化，数据层只提供数据，个性化只排序，上层组织数据返回给客户端，微服务能实现横向以及纵向拆分。并且可以每个模块根据流量进行扩展，流量小的可以减少计算资源投入，并且可以根据计算密集型，内存消耗性，io 型进行不同处理。&lt;/li&gt;
-&lt;li&gt;大概标准:
+&lt;li&gt;浮点型默认为 double 型&lt;/li&gt;
+&lt;li&gt;使用 float 型，必须添加后缀 F 或者 f&lt;/li&gt;
+&lt;li&gt;double 型，可以添加后缀 D 或者 d, 也可以不添加&lt;/li&gt;
+&lt;li&gt;没有后缀时，默认为 double 型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;char型数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#char型数据类型&#34;&gt;#&lt;/a&gt; char 型数据类型&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;char 型用来表示字符。每个 char 型变量占两个字节。在 Java 中，字符的编码是采用 Unicode 编码。&lt;/li&gt;
+&lt;li&gt;Unicode 编码字符是用 16 位无符号整数表示，有 216 个可能值，即 0～65 535。可以表示世界上的大部分文字语言中的字符。&lt;/li&gt;
+&lt;li&gt;char 类型数据被表示为用一对单引号包含的单个字符 例:  &lt;code&gt;char ch = &#39;a&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;boolean型数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#boolean型数据类型&#34;&gt;#&lt;/a&gt; boolean 型数据类型&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;boolean 只有两个取值 true 和 false 即 真和假&lt;/li&gt;
+&lt;li&gt;在 C++ 中用数值或指针可以代替 boolean 值，0 相当于 false，非 0 相当于 true。&lt;/li&gt;
+&lt;li&gt;在 Java 中没有这样的规定，&lt;strong&gt;boolean 型的值不能与任何其他基本类型的值进行转换代替&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;引用数据类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引用数据类型&#34;&gt;#&lt;/a&gt; 引用数据类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;引用数据类型声明变量时，不会为变量分配存储空间，因为他们声明的是数据的引用，不是数据本身，需要用&lt;strong&gt; new 运算符&lt;/strong&gt;来为引用类型的变量分配存储空间&lt;/li&gt;
+&lt;li&gt;引用：类似与 C++ 中的指针，又不同与指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;基本数据类型值间的转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本数据类型值间的转换&#34;&gt;#&lt;/a&gt; 基本数据类型值间的转换&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;自动转换&lt;/li&gt;
+&lt;li&gt;强制类型转换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;自动转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自动转换&#34;&gt;#&lt;/a&gt; 自动转换&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;从低到高的顺序转换&lt;/li&gt;
+&lt;li&gt;优先关系为:byte,short,char-&amp;gt; int -&amp;gt; long -&amp;gt; float -&amp;gt; double&lt;/li&gt;
+&lt;li&gt;不同数据类型先转换成同一数据类型，再进行运算&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2.png&#34; alt=&#34;自动类型转换&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;强制类型转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#强制类型转换&#34;&gt;#&lt;/a&gt; 强制类型转换&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Demo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; y&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;34.56&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;11.2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 丢失精度&lt;/span&gt;
+	y &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 提高精度&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;x=&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;y=&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; y&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;变量类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量类型&#34;&gt;#&lt;/a&gt; 变量类型&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;局部变量&lt;/li&gt;
+&lt;li&gt;实例变量 (全局变量)&lt;/li&gt;
+&lt;li&gt;类变量 (静态变量):  &lt;code&gt;static&lt;/code&gt;  关键字声明&lt;/li&gt;
+&lt;li&gt;实例变量和类变量统称为成员变量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与 C++ 变量类似 略&lt;/p&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运算符&#34;&gt;#&lt;/a&gt; 运算符&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E8%BF%90%E7%AE%97%E7%AC%A6.png&#34; alt=&#34;java运算符&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;位运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#位运算符&#34;&gt;#&lt;/a&gt; 位运算符&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javajava%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6.png&#34; alt=&#34;java位运算符&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;右移位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#右移位&#34;&gt;#&lt;/a&gt; 右移位&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%8F%B3%E7%A7%BB%E4%BD%8D.png&#34; alt=&#34;右移位&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;左移位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#左移位&#34;&gt;#&lt;/a&gt; 左移位&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%B7%A6%E7%A7%BB%E4%BD%8D.png&#34; alt=&#34;左移位&#34;&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Test&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 60 = 0011 1100 */&lt;/span&gt; 
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;13&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 13 = 0000 1101 */&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 12 = 0000 1100 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;amp; b = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 61 = 0011 1101 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a | b = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;^&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 49 = 0011 0001 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a ^ b = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;~&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/*-61 = 1100 0011 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;~a = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 240 = 1111 0000 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;lt;&amp;lt; 2 = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 15 = 1111 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;gt;&amp;gt; 2 = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;/* 15 = 0000 1111 */&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;a &amp;gt;&amp;gt;&amp;gt; 2 = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; c &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token comment&#34;&gt;/*
+编译结果
+a &amp;amp; b = 12
+a | b = 61
+a ^ b = 49
+~a = -61
+a &amp;lt;&amp;lt; 2 = 240
+a &amp;gt;&amp;gt; 15
+a &amp;gt;&amp;gt;&amp;gt; 15
+*/&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;条件运算符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#条件运算符&#34;&gt;#&lt;/a&gt; 条件运算符&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;variable x = (expression) ? value if true : value if false&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;流程控制语句&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#流程控制语句&#34;&gt;#&lt;/a&gt; 流程控制语句&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;if switch while for do while&lt;/code&gt;  与 C++ 类似 略&lt;/p&gt;
+&lt;h3 id=&#34;数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组&#34;&gt;#&lt;/a&gt; 数组&lt;/h3&gt;
+&lt;p&gt;原理与 C++ 类似，声明方法不同&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;分布式服务组成的系统&lt;/li&gt;
-&lt;li&gt;按照业务而不是技术来划分组织&lt;/li&gt;
-&lt;li&gt;做有生命的产品而不是项目&lt;/li&gt;
-&lt;li&gt;自动化运维（DevOps）&lt;/li&gt;
-&lt;li&gt;容错&lt;/li&gt;
-&lt;li&gt;快速演化&lt;/li&gt;
+&lt;li&gt;声明数组  &lt;code&gt;int[] a;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;分配空间   &lt;code&gt;a = new int[5];&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;赋值:  &lt;code&gt;a[0] = 3;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;处理数据:  &lt;code&gt;a[0] = a[0] * 10;&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;1，2 步可以合并为  &lt;code&gt;数据类型[ ] 数组名 = new 数据类型[大小] ;&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;赋值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#赋值&#34;&gt;#&lt;/a&gt; 赋值&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;边声明边赋值 (静态初始化)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%95%B0%E7%BB%84%E9%9D%99%E6%80%81%E8%B5%8B%E5%80%BC.png&#34; alt=&#34;数组静态赋值&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态从键盘边录入边赋值&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;什么是互联网应用的cs模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是互联网应用的cs模式&#34;&gt;#&lt;/a&gt; 什么是&lt;strong&gt;互联网应用的 C/S 模式&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;C/S 模式就是指客户端 / 服务器模式，是&lt;strong&gt;计算机软件协同工作&lt;/strong&gt;的一种模式。&lt;/p&gt;
-&lt;p&gt;C/S （Client/Server，客户机 / 服务器）模式又称 C/S 结构，是 20 世纪 80 年代末逐步成长起来的一种模式，是软件系统体系结构的一种。C/S 结构的关键在于功能的分布，一些功能放在前端机（即客户机）上执行，另一些功能放在后端机（即服务器）上执行。功能的分布在于减少计算机系统的各种瓶颈问题。C/S 模式简单地讲就是基于企业内部网络的应用系统。与 B/S（Browser/Server，浏览器 / 服务器）模式相比，C/S 模式的应用系统最大的好处是不依赖企业外网环境，即无论企业是否能够上网，都不影响应用。&lt;/p&gt;
-&lt;p&gt;C／S 是一种分布式系统结构，它基于简单的请求／应答协议，在 C／S 模式下，服务器只集中管理数据，而计算任务分散在客户机上，客户机和服务器之间通过网络协议来进行通讯。p 客户机向服务器发出数据请求，服务器将数据传送给客户机进行计算，这种模式的优点充分利用了客户机的性能，使计算能力大大提高。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;简单来说 C/S 就是需要在本地下载客户端的那种&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;cs模式与云服务有什么关系&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cs模式与云服务有什么关系&#34;&gt;#&lt;/a&gt; C/S 模式与云服务有什么关系？&lt;/h3&gt;
-&lt;p&gt;C/S 模式与云服务联合，可以将数据放在云端进行管理，同时分散在客户机上的计算任务也可以利用云端的资源进行处理，减小了客户机和服务器的负担&lt;/p&gt;
+&lt;h4 id=&#34;数组边界&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数组边界&#34;&gt;#&lt;/a&gt; 数组边界&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;数组类中有唯一的成员变量：length，用来表示数组的长度，即数组元素的个数。&lt;/li&gt;
+&lt;li&gt;与 C、C++ 中不同，Java 对数组元素要进行越界检查，若发生越界访问，则会抛出一个异常&lt;/li&gt;
+&lt;li&gt;使用 new 创建数组对象时，自动给 length 赋值，数组一旦创建完毕，length 就确定下来， 除非重新使用 new 创建新的数组对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;二维数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二维数组&#34;&gt;#&lt;/a&gt; 二维数组&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;类型名[][] 数组名=new 类型名[][]；&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;二维数组的每一维大小允许不同&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; intArray&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+a&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;数组变量是引用变量，简单的用 = 复制数组，只是将引用进行了复制，并没有对数组的元素进行复制&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8%E6%8B%B7%E8%B4%9D.png&#34; alt=&#34;数组引用拷贝&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用 clone () 方法进行深拷贝&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//使用clone方法&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; group1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;170&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; group2&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; group1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;clone&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+…&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对于二位数组 clone 方法也无法深拷贝，只有对二维数组中的每一个元素使用 clone 才能进行深拷贝&lt;/p&gt;
+&lt;h3 id=&#34;字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串&#34;&gt;#&lt;/a&gt; 字符串&lt;/h3&gt;
+&lt;p&gt;JAVA 字符串分为两类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;String: 在程序中不会被改变长度的不变字符串&lt;/li&gt;
+&lt;li&gt;StringBuffer: 是在程序中会被 改变长度的可变字符串&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;创建字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建字符串&#34;&gt;#&lt;/a&gt; 创建字符串&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;String str=new（&#34;This is a String&#34;);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String str=&#34;This is a String&#34;;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StringDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; site &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;www.uestc.edu.cn&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; len &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; site&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;电子科大域名长度 : &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; len &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;创建格式化字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建格式化字符串&#34;&gt;#&lt;/a&gt; 创建格式化字符串&lt;/h5&gt;
+&lt;p&gt;采用 &lt;code&gt;printf()&lt;/code&gt;  和  &lt;code&gt;format()&lt;/code&gt;  方法&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;浮点型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;%f, 整型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;
+&lt;span class=&#34;token string&#34;&gt;&#34; %d, 字符串变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;is %s&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; floatVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; intVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; stringVar&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; fs &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;浮点型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;%f, 整型变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; 
+&lt;span class=&#34;token string&#34;&gt;&#34; %d, 字符串变量的值为 &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; %s&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; floatVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; intVar&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; stringVar&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;静态方法 &lt;code&gt;format()&lt;/code&gt;  返回一个 String 对象而不是 PrintStream 对象。&lt;/p&gt;
+&lt;p&gt;所以 &lt;code&gt;format()&lt;/code&gt;  能用来创建可复用的格式化字符串，而不仅仅是用于 一次打印输出。&lt;/p&gt;
+&lt;h4 id=&#34;字符串的连接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符串的连接&#34;&gt;#&lt;/a&gt; 字符串的连接&lt;/h4&gt;
+&lt;p&gt;字符串可以通过 “+” 连接，基本数据类型与字符串进行 “+” 操作，一般也会自动转换为字符串。&lt;/p&gt;
+&lt;h4 id=&#34;函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#函数&#34;&gt;#&lt;/a&gt; 函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;str.length()&lt;/code&gt; : 得到 string 的长度&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.indexof(subString,startIndex)&lt;/code&gt; : 确定字符串中指定字符或子字符串在给定字符串的位置，substring 为子字符串，从下标 startIndex 开始查找，返回 substring 首字母的在 str 中的下标&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;lastIndexOf(subString)&lt;/code&gt; : 从后往前查找&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.equals(String)&lt;/code&gt; : 判断两个字符串是否相等&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.charAt(索引值)&lt;/code&gt; : 得到指定位置的字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.getChars(int a,int b,char s[],startindex)&lt;/code&gt; : 得到字符串的一部字符串，下标 [a,b) 中的字符串复制到 s 数组中，从 s 数组中的 startindex 开始记录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.substring(start,end)&lt;/code&gt; : 截取下标索引为 [start,end) 内的子字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.replace(a,b)&lt;/code&gt; : 将字符串中的 a 用 b 来代替&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.concat(string)&lt;/code&gt; : 将两个字符串合并&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.toUpperCase()&lt;/code&gt; : 字符串全部转换成大写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.toLowerCase()&lt;/code&gt; : 字符串全部转换成小写&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str.trim()&lt;/code&gt; : 将开头和结尾处的空格去掉&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String.valueOf(x)&lt;/code&gt; : 将任何类型的数据对象 x 转换成字符串&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;String strArr[] = str.split(&#34;_&#34;);&lt;/code&gt; : 将字符串进行分隔，分隔结果储存在数组中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;可变字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可变字符串&#34;&gt;#&lt;/a&gt; 可变字符串&lt;/h4&gt;
+&lt;p&gt;修改可变字符串的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在字符串后面追加：用 append () 方法将各种对象加入到字符串中。&lt;/li&gt;
+&lt;li&gt;在字符串中间插入：用 insert () 方法。&lt;/li&gt;
+&lt;li&gt;改变某个位置所在的字符，用 setCharAt () 方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt; str&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Thisis a String&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+str&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;insert&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;9&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;test &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;str&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//输出： Thisis a test String&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt; sb &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StringBuffer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;aaaaaa&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+sb&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setCharAt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;‘b’&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// sb 的值 aabaaa&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;sb&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;日期和时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#日期和时间&#34;&gt;#&lt;/a&gt; 日期和时间&lt;/h3&gt;
+&lt;p&gt;java.util 包提供了 Date 类来封装当前的日期和时间。 Date 类提供两个构造函数 来实例化 Date 对象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个构造函数使用当前日期和时间来初始化对象。 &lt;code&gt;Date()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;第二个构造函数接收一个参数，该参数是从 1970 年 1 月 1 日起的毫秒数。 &lt;code&gt;Date(long millisec)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;获取当前时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取当前时间&#34;&gt;#&lt;/a&gt; 获取当前时间&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;DateDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token comment&#34;&gt;// 初始化 Date 对象&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; date &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token comment&#34;&gt;// 使用 toString() 函数显示日期时间&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;格式化日期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#格式化日期&#34;&gt;#&lt;/a&gt; 格式化日期&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 SimpleDateFormat 格式化日期&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; 
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;DateDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; dNow &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;SimpleDateFormat&lt;/span&gt; ft &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;SimpleDateFormat&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;E yyyy.MM.dd &#39;at&#39; hh:mm:ss a zzz&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Current Date: &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; ft&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dNow&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 		&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;token comment&#34;&gt;//yyyy 是公元年，MM 是月份，dd 是日期，HH:mm:ss 是时、分、秒。&lt;/span&gt;
+        &lt;span class=&#34;token comment&#34;&gt;//SimpleDateFormat 允许选择任何自定义日期时间格式.&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;使用 printf 格式化日期&lt;br&gt;
+ printf 方法可以很轻松地格式化时间和日期。使用两个字母格式，它以 % t 开头并且 以下面表格中的一个字母结尾&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaprintf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F.png&#34; alt=&#34;printf格式化日期&#34;&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;DateDemo&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; date &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 初始化 Date 对象&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;全部日期和时间信息: %tc%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//c的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;年-月-日格式: %tF%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//f的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;月/日/年格式: %tD%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//d的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HH:MM:SS PM格式(12时制):%tr%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//r的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HH:MM:SS格式(24时制): %tT%n&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//t的使用&lt;/span&gt;
+&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;HH:MM格式(24时制): %tR&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;date&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//R的使用&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaprintf%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F%E7%BB%93%E6%9E%9C.png&#34; alt=&#34;printf格式化日期结果&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2022/07/10/c/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2022/07/10/c/</guid>
             <title>C++</title>
-            <link>http://yogmas-wang.top/2022/07/10/c/</link>
+            <link>http://s1mwxl.cn/2022/07/10/c/</link>
             <category>C语言</category>
             <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;c&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c&#34;&gt;#&lt;/a&gt; C++&lt;/h1&gt;
@@ -126,9 +418,9 @@ return 0; //返回语句 结束函数
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2022/07/10/python/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2022/07/10/python/</guid>
             <title>python</title>
-            <link>http://yogmas-wang.top/2022/07/10/python/</link>
+            <link>http://s1mwxl.cn/2022/07/10/python/</link>
             <category>python</category>
             <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h1&gt;
@@ -764,9 +1056,9 @@ squareY &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/18/dian-ke-icoding/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/18/dian-ke-icoding/</guid>
             <title>电科icoding答案</title>
-            <link>http://yogmas-wang.top/2021/11/18/dian-ke-icoding/</link>
+            <link>http://s1mwxl.cn/2021/11/18/dian-ke-icoding/</link>
             <category>icoding答案</category>
             <pubDate>Thu, 18 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;c语言-icoding答案&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言-icoding答案&#34;&gt;#&lt;/a&gt; C 语言 - icoding 答案&lt;/h1&gt;
@@ -1736,256 +2028,9 @@ Largest word: light&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/css1/</guid>
-            <title>Css-first</title>
-            <link>http://yogmas-wang.top/2021/11/06/css1/</link>
-            <category>Css</category>
-            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1css基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css基本架构&#34;&gt;#&lt;/a&gt; 1.css 基本架构&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
-&amp;lt;head&amp;gt;
-&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;
- &amp;lt;/head&amp;gt;
- &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
- &amp;lt;/html&amp;gt;
- style为css放置位置
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;前期学习先将 css 放置在 html 文件夹里面后期会单独利用 css 文件来写 css&lt;/p&gt;
-&lt;h4 id=&#34;2选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2选择器&#34;&gt;#&lt;/a&gt; 2. 选择器&lt;/h4&gt;
-&lt;h6 id=&#34;标签选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标签选择器&#34;&gt;#&lt;/a&gt; 标签选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;选择器 {样式}&lt;br&gt;
- 给谁改样式 {改什么样式}&lt;br&gt;
-eg.p { color: red;&lt;br&gt;
-font-size: 12px; }&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;标签选择器为大类选择，同一类标签全部都会被 css 修改&lt;/p&gt;
-&lt;h6 id=&#34;类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类选择器&#34;&gt;#&lt;/a&gt; 类选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;.id {} 
-eg .red {color:red;}
-&amp;lt;# class=&#34;id&#34;&amp;gt;  &amp;lt;/#&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里的 ID 还需要与 html 中的 class 相互匹配 #可以替换成任何你想选择的类别 id 可以替换成任何你命名的字母或者单词&lt;br&gt;
-&lt;strong&gt;类选择器口诀：样式点定义  结构类 (class) 调用  一个或多个 开发最常用&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmbIf&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmbIf.png&#34; alt=&#34;IQmbIf.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 同时类选择器可以有多个 ID 都会起作用 中间用空格隔开 例如&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmHdP&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmHdP.png&#34; alt=&#34;IQmHdP.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;id选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#id选择器&#34;&gt;#&lt;/a&gt; id 选择器&lt;/h6&gt;
-&lt;p&gt;id 选择器与类选择器相似，不过 ID 选择器只能使用一次 并且一个 ID 只能调用一次&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;#ID {}
-&amp;lt;XX id=&#34;&#34;&amp;gt;  &amp;lt;/XX&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;通配符选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#通配符选择器&#34;&gt;#&lt;/a&gt; 通配符选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;* { }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通配符 简而言之就是对所有元素和类都有作用，后期主要用来先去除掉浏览器自身所带的一些 css 属性方便我们后续进行 css 操作&lt;/p&gt;
-&lt;h4 id=&#34;3css字体属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3css字体属性&#34;&gt;#&lt;/a&gt; 3.CSS 字体属性&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQmjzQ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmjzQ.png&#34; alt=&#34;IQmjzQ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;字体系列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体系列&#34;&gt;#&lt;/a&gt; 字体系列&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-family:’   &#39;;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通常会根据团队的要求来确定书写的字体 一般来说是微软雅黑也就是 microsoft YaHei 当然也可以有其他的一系列字体&lt;br&gt;
-比如在后期的&lt;strong&gt;字体图标&lt;/strong&gt;中就需要修改 font-family&lt;/p&gt;
-&lt;h6 id=&#34;字体大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体大小&#34;&gt;#&lt;/a&gt; 字体大小&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-size:;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;顾名思义，是修改字体的大小，不过需要注意的是这后面不能跟单独的数字 这样是没有效果的 需要跟单位 px&lt;/p&gt;
-&lt;h6 id=&#34;字体粗细&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体粗细&#34;&gt;#&lt;/a&gt; 字体粗细&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-weight:  ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里需要谨记 2 个数字&lt;br&gt;
- 700: 加粗&lt;br&gt;
- 400: 正常大小&lt;br&gt;
- font-weight 后面跟数字，可以根据需要来进行调整 不过一般都是 700 和 400 之间切换&lt;/p&gt;
-&lt;h6 id=&#34;文字样式风格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字样式风格&#34;&gt;#&lt;/a&gt; 文字样式风格&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-style: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一般运用的都 italic (倾斜) 和 normal (正常) 两种&lt;br&gt;
-实际运用场景：&lt;br&gt;
-1. 用来修改需要倾斜的汉字&lt;br&gt;
- 2. 当没有标签可用时，可以用 em 倾斜标签先将汉字包括，在通过 font-style:normal；将倾斜属性去掉&lt;/p&gt;
-&lt;h6 id=&#34;字体复合属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体复合属性&#34;&gt;#&lt;/a&gt; 字体复合属性&lt;/h6&gt;
-&lt;p&gt;通过简写的方式来节约代码 (不过有顺序要求)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;font: font-style  font-weight  font-size/line-height  font-family;
-eg:font: italic 700 16px &#39;Microsoft yahei&#39;;
- 前面两个可以省略，但是后面连个一定要写
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;4文本外观属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4文本外观属性&#34;&gt;#&lt;/a&gt; 4. 文本外观属性&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQn9Zq&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQn9Zq.png&#34; alt=&#34;IQn9Zq.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#颜色&#34;&gt;#&lt;/a&gt; 颜色&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;color: &#34;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里 color 后面所带有 4 种写法&lt;br&gt;
- 1. 直接加颜色例如 red,blue&lt;br&gt;
-2. 加颜色编号，主要这里 #必须加例如 #123456 (常用) 后期通常会用吸色笔 然后负值颜色编号&lt;br&gt;
- 3.rgb (X,X,X) 三色的搭配&lt;br&gt;
- 4.rgba (X,X,X,G) 这个主要是用来设置颜色的透明度 G 取值从 0~1&lt;br&gt;
- 用来设置颜色的透明度&lt;/p&gt;
-&lt;h6 id=&#34;文字对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字对齐&#34;&gt;#&lt;/a&gt; 文字对齐&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;text-align: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;设置文字的对齐方式，&lt;br&gt;
-left,center,right&lt;/p&gt;
-&lt;h6 id=&#34;装饰文本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#装饰文本&#34;&gt;#&lt;/a&gt; 装饰文本&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;text-deroration: ;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可加元素:&lt;br&gt;
-line-through 删除线&lt;br&gt;
- overline 上划线&lt;br&gt;
-&lt;strong&gt; none&lt;/strong&gt; (常用) 通常用来配合通配符选择器来取消 a 的下划线&lt;/p&gt;
-&lt;h6 id=&#34;文本缩进&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本缩进&#34;&gt;#&lt;/a&gt; 文本缩进&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;text-indent: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;后面添加数据时需要注意单位 用像素 (px) 或者 em (一个汉字所占的大小)&lt;/p&gt;
-&lt;h6 id=&#34;行间距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行间距&#34;&gt;#&lt;/a&gt; 行间距&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;line-height: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;也需要加 px&lt;br&gt;
- 后期通常使 line-height 和 height 相等，来使文字垂直对齐&lt;/p&gt;
-&lt;h4 id=&#34;5style样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5style样式表&#34;&gt;#&lt;/a&gt; 5.style 样式表&lt;/h4&gt;
-&lt;h6 id=&#34;内部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#内部样式表&#34;&gt;#&lt;/a&gt; 内部样式表&lt;/h6&gt;
-&lt;p&gt;也就是我们最开始介绍，直到现在一直在使用的加到 style 里面的 css 属性&lt;/p&gt;
-&lt;h6 id=&#34;行内样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内样式表&#34;&gt;#&lt;/a&gt; 行内样式表&lt;/h6&gt;
-&lt;p&gt;直接加在 html 标签中的样式表&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; 例如: &amp;lt;div style=&#34;&#34;;&amp;gt; &amp;lt;/div&amp;gt;
- 不常使用，会使html标签显得臃肿
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;外部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#外部样式表&#34;&gt;#&lt;/a&gt; 外部样式表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&#34;&#34;; href=&#34;文件地址&#34;;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;另建一个.css 文件，在另外一个文件中书写 css 属性&lt;br&gt;
-再通过在 style 中书写 link 将其引入&lt;/p&gt;
-&lt;h4 id=&#34;6vscode中使用emmet语法快速书写代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6vscode中使用emmet语法快速书写代码&#34;&gt;#&lt;/a&gt; 6.vscode 中使用 emmet 语法快速书写代码&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnSLn&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnSLn.png&#34; alt=&#34;IQnSLn.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;7选择器拓展&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7选择器拓展&#34;&gt;#&lt;/a&gt; 7. 选择器拓展&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnZQJ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnZQJ.png&#34; alt=&#34;IQnZQJ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;后代选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后代选择器&#34;&gt;#&lt;/a&gt; 后代选择器&lt;/h6&gt;
-&lt;p&gt;顾名思义就是将大元素中包括的小元素提取出来，这里通过列子来展示&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnCd0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnCd0.png&#34; alt=&#34;IQnCd0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;子元素选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#子元素选择器&#34;&gt;#&lt;/a&gt; 子元素选择器&lt;/h6&gt;
-&lt;p&gt;例如上面的 ol li 变成 ol&amp;gt;li 就只对 ol 中的下一级 li 有用也就是他的儿子，而他的下下级，也就是孙子则不起作用&lt;/p&gt;
-&lt;h6 id=&#34;并集选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#并集选择器&#34;&gt;#&lt;/a&gt; 并集选择器&lt;/h6&gt;
-&lt;p&gt;在标签和标签中间用逗号连接，这样就可以达到同时对两个盒子都起作用的效果&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;例如 div,p,li {}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;需要注意的是最后一个选择器不需要加逗号&lt;/p&gt;
-&lt;h6 id=&#34;链接伪类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#链接伪类选择器&#34;&gt;#&lt;/a&gt; 链接伪类选择器&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqEWt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqEWt.png&#34; alt=&#34;IJqEWt.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;X:GGGG {}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;X 可以是你的选择器中的任何&lt;br&gt;
-：后面可以添加 4 中元素 (其中 hover 最经常使用)：&lt;br&gt;
-link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
- visited: 访问过的链接，把点击过的链接选择出来&lt;br&gt;
- hover: 当鼠标经过时&lt;br&gt;
- active: 鼠标点击但是还未弹起来时&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmxMj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmxMj.png&#34; alt=&#34;IQmxMj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;focus选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#focus选择器&#34;&gt;#&lt;/a&gt; focus 选择器&lt;/h6&gt;
-&lt;p&gt;把获得光标的 input 选择显示出来&lt;br&gt;
-下面是代码，可以通过自己运行来进行查看&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnPoV&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnPoV.png&#34; alt=&#34;IQnPoV.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;8元素显示模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8元素显示模式&#34;&gt;#&lt;/a&gt; 8. 元素显示模式&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqmy8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqmy8.png&#34; alt=&#34;IJqmy8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;块级元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#块级元素&#34;&gt;#&lt;/a&gt; 块级元素&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnkJU&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnkJU.png&#34; alt=&#34;IQnkJU.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;行内元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内元素&#34;&gt;#&lt;/a&gt; 行内元素&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnAWF&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnAWF.png&#34; alt=&#34;IQnAWF.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;行内块元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内块元素&#34;&gt;#&lt;/a&gt; 行内块元素&lt;/h6&gt;
-&lt;p&gt;特殊情况，同时具有块级元素和行内元素的特点，可以进行的大小设置，也可以书写汉字，但是大小会随着汉字的多少而改变&lt;/p&gt;
-&lt;h6 id=&#34;元素显示模式转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#元素显示模式转换&#34;&gt;#&lt;/a&gt; 元素显示模式转换&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; display:   ;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;inline: 行内元素&lt;br&gt;
- block: 块级元素&lt;br&gt;
- inline-block: 行内块元素&lt;br&gt;
-&lt;strong&gt;学到这里去做一下小米侧边栏试试吧&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;单行文字垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单行文字垂直居中&#34;&gt;#&lt;/a&gt; 单行文字垂直居中&lt;/h6&gt;
-&lt;p&gt;也就是上面和大家提及过的，这里让 height 和 line-height 相同即可&lt;/p&gt;
-&lt;h4 id=&#34;9背景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9背景&#34;&gt;#&lt;/a&gt; 9. 背景&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6dHA&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6dHA.png&#34; alt=&#34;IQ6dHA.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景颜色&#34;&gt;#&lt;/a&gt; 背景颜色&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-color: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;后面的元素参照前面 color 属性&lt;/p&gt;
-&lt;h6 id=&#34;背景图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景图片&#34;&gt;#&lt;/a&gt; 背景图片&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-image: url (链接 / 地址)；&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;背景平铺&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景平铺&#34;&gt;#&lt;/a&gt; 背景平铺&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-repeat: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;no-repeat (常用): 不平铺&lt;br&gt;
- repeat (默认): 平铺&lt;br&gt;
- repeat-x: 沿着 X 轴平铺&lt;br&gt;
- repeat-y: 沿着 Y 轴平铺&lt;br&gt;
-&lt;strong&gt;背景图片会压住背景颜色&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnFiT&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnFiT.png&#34; alt=&#34;IQnFiT.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景位置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景位置&#34;&gt;#&lt;/a&gt; 背景位置&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-position: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;left top center right bottom&lt;br&gt;
- 也可以用 right center 等同时使用 但是有几点需要注意&lt;br&gt;
- 1. 如果是方位名词  right center 和 center right 效果是等价的 跟顺序没有关系&lt;br&gt;
- 2. 当有参数省略时，并且不全是方位名字时，例如 right top ,&lt;br&gt;
- 省略 right，此时 top 会自动顶部对齐，而省略的会被判定为水平居中&lt;br&gt;
-省略 top，则会被判定为垂直居中&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnEz4&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnEz4.png&#34; alt=&#34;IQnEz4.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 也可以用具体的数据来进行移动，主要用于精灵图&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQney9&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQney9.png&#34; alt=&#34;IQney9.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 需要注意的时，html 的 X 轴向右，而 y 轴是向下的，需要向反方向移动时可以添加负号&lt;/p&gt;
-&lt;h6 id=&#34;背景固定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景固定&#34;&gt;#&lt;/a&gt; 背景固定&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;backgrounf-attachment: fixed;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;将背景图片固定，这样滑动鼠标滚轮时，背景图片会一直存在于网页上，并不会滑走&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnmLR&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnmLR.png&#34; alt=&#34;IQnmLR.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景属性复合写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景属性复合写法&#34;&gt;#&lt;/a&gt; 背景属性复合写法&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6tje&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6tje.png&#34; alt=&#34;IQ6tje.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景半透明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景半透明&#34;&gt;#&lt;/a&gt; 背景半透明&lt;/h6&gt;
-&lt;p&gt;主要这个不是放在 background-color 中&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background: rgba(X,X,X,X);&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/css2/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/css2/</guid>
             <title>Css-second</title>
-            <link>http://yogmas-wang.top/2021/11/06/css2/</link>
+            <link>http://s1mwxl.cn/2021/11/06/css2/</link>
             <category>Css</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
@@ -2355,9 +2400,9 @@ content:’’;&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/html-shang/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/html-shang/</guid>
             <title>Html-first</title>
-            <link>http://yogmas-wang.top/2021/11/06/html-shang/</link>
+            <link>http://s1mwxl.cn/2021/11/06/html-shang/</link>
             <category>Html</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
@@ -2452,9 +2497,256 @@ X 包括_self (覆盖当前页面)&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/html-xia/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/css1/</guid>
+            <title>Css-first</title>
+            <link>http://s1mwxl.cn/2021/11/06/css1/</link>
+            <category>Css</category>
+            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1css基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css基本架构&#34;&gt;#&lt;/a&gt; 1.css 基本架构&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
+&amp;lt;head&amp;gt;
+&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+ style为css放置位置
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前期学习先将 css 放置在 html 文件夹里面后期会单独利用 css 文件来写 css&lt;/p&gt;
+&lt;h4 id=&#34;2选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2选择器&#34;&gt;#&lt;/a&gt; 2. 选择器&lt;/h4&gt;
+&lt;h6 id=&#34;标签选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标签选择器&#34;&gt;#&lt;/a&gt; 标签选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;选择器 {样式}&lt;br&gt;
+ 给谁改样式 {改什么样式}&lt;br&gt;
+eg.p { color: red;&lt;br&gt;
+font-size: 12px; }&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;标签选择器为大类选择，同一类标签全部都会被 css 修改&lt;/p&gt;
+&lt;h6 id=&#34;类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类选择器&#34;&gt;#&lt;/a&gt; 类选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;.id {} 
+eg .red {color:red;}
+&amp;lt;# class=&#34;id&#34;&amp;gt;  &amp;lt;/#&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里的 ID 还需要与 html 中的 class 相互匹配 #可以替换成任何你想选择的类别 id 可以替换成任何你命名的字母或者单词&lt;br&gt;
+&lt;strong&gt;类选择器口诀：样式点定义  结构类 (class) 调用  一个或多个 开发最常用&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmbIf&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmbIf.png&#34; alt=&#34;IQmbIf.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 同时类选择器可以有多个 ID 都会起作用 中间用空格隔开 例如&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmHdP&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmHdP.png&#34; alt=&#34;IQmHdP.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;id选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#id选择器&#34;&gt;#&lt;/a&gt; id 选择器&lt;/h6&gt;
+&lt;p&gt;id 选择器与类选择器相似，不过 ID 选择器只能使用一次 并且一个 ID 只能调用一次&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;#ID {}
+&amp;lt;XX id=&#34;&#34;&amp;gt;  &amp;lt;/XX&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;通配符选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#通配符选择器&#34;&gt;#&lt;/a&gt; 通配符选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;* { }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通配符 简而言之就是对所有元素和类都有作用，后期主要用来先去除掉浏览器自身所带的一些 css 属性方便我们后续进行 css 操作&lt;/p&gt;
+&lt;h4 id=&#34;3css字体属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3css字体属性&#34;&gt;#&lt;/a&gt; 3.CSS 字体属性&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQmjzQ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmjzQ.png&#34; alt=&#34;IQmjzQ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;字体系列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体系列&#34;&gt;#&lt;/a&gt; 字体系列&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-family:’   &#39;;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通常会根据团队的要求来确定书写的字体 一般来说是微软雅黑也就是 microsoft YaHei 当然也可以有其他的一系列字体&lt;br&gt;
+比如在后期的&lt;strong&gt;字体图标&lt;/strong&gt;中就需要修改 font-family&lt;/p&gt;
+&lt;h6 id=&#34;字体大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体大小&#34;&gt;#&lt;/a&gt; 字体大小&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-size:;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;顾名思义，是修改字体的大小，不过需要注意的是这后面不能跟单独的数字 这样是没有效果的 需要跟单位 px&lt;/p&gt;
+&lt;h6 id=&#34;字体粗细&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体粗细&#34;&gt;#&lt;/a&gt; 字体粗细&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-weight:  ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里需要谨记 2 个数字&lt;br&gt;
+ 700: 加粗&lt;br&gt;
+ 400: 正常大小&lt;br&gt;
+ font-weight 后面跟数字，可以根据需要来进行调整 不过一般都是 700 和 400 之间切换&lt;/p&gt;
+&lt;h6 id=&#34;文字样式风格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字样式风格&#34;&gt;#&lt;/a&gt; 文字样式风格&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-style: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一般运用的都 italic (倾斜) 和 normal (正常) 两种&lt;br&gt;
+实际运用场景：&lt;br&gt;
+1. 用来修改需要倾斜的汉字&lt;br&gt;
+ 2. 当没有标签可用时，可以用 em 倾斜标签先将汉字包括，在通过 font-style:normal；将倾斜属性去掉&lt;/p&gt;
+&lt;h6 id=&#34;字体复合属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体复合属性&#34;&gt;#&lt;/a&gt; 字体复合属性&lt;/h6&gt;
+&lt;p&gt;通过简写的方式来节约代码 (不过有顺序要求)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;font: font-style  font-weight  font-size/line-height  font-family;
+eg:font: italic 700 16px &#39;Microsoft yahei&#39;;
+ 前面两个可以省略，但是后面连个一定要写
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;4文本外观属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4文本外观属性&#34;&gt;#&lt;/a&gt; 4. 文本外观属性&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQn9Zq&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQn9Zq.png&#34; alt=&#34;IQn9Zq.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#颜色&#34;&gt;#&lt;/a&gt; 颜色&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;color: &#34;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里 color 后面所带有 4 种写法&lt;br&gt;
+ 1. 直接加颜色例如 red,blue&lt;br&gt;
+2. 加颜色编号，主要这里 #必须加例如 #123456 (常用) 后期通常会用吸色笔 然后负值颜色编号&lt;br&gt;
+ 3.rgb (X,X,X) 三色的搭配&lt;br&gt;
+ 4.rgba (X,X,X,G) 这个主要是用来设置颜色的透明度 G 取值从 0~1&lt;br&gt;
+ 用来设置颜色的透明度&lt;/p&gt;
+&lt;h6 id=&#34;文字对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字对齐&#34;&gt;#&lt;/a&gt; 文字对齐&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;text-align: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置文字的对齐方式，&lt;br&gt;
+left,center,right&lt;/p&gt;
+&lt;h6 id=&#34;装饰文本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#装饰文本&#34;&gt;#&lt;/a&gt; 装饰文本&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;text-deroration: ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可加元素:&lt;br&gt;
+line-through 删除线&lt;br&gt;
+ overline 上划线&lt;br&gt;
+&lt;strong&gt; none&lt;/strong&gt; (常用) 通常用来配合通配符选择器来取消 a 的下划线&lt;/p&gt;
+&lt;h6 id=&#34;文本缩进&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本缩进&#34;&gt;#&lt;/a&gt; 文本缩进&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;text-indent: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面添加数据时需要注意单位 用像素 (px) 或者 em (一个汉字所占的大小)&lt;/p&gt;
+&lt;h6 id=&#34;行间距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行间距&#34;&gt;#&lt;/a&gt; 行间距&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;line-height: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也需要加 px&lt;br&gt;
+ 后期通常使 line-height 和 height 相等，来使文字垂直对齐&lt;/p&gt;
+&lt;h4 id=&#34;5style样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5style样式表&#34;&gt;#&lt;/a&gt; 5.style 样式表&lt;/h4&gt;
+&lt;h6 id=&#34;内部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#内部样式表&#34;&gt;#&lt;/a&gt; 内部样式表&lt;/h6&gt;
+&lt;p&gt;也就是我们最开始介绍，直到现在一直在使用的加到 style 里面的 css 属性&lt;/p&gt;
+&lt;h6 id=&#34;行内样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内样式表&#34;&gt;#&lt;/a&gt; 行内样式表&lt;/h6&gt;
+&lt;p&gt;直接加在 html 标签中的样式表&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt; 例如: &amp;lt;div style=&#34;&#34;;&amp;gt; &amp;lt;/div&amp;gt;
+ 不常使用，会使html标签显得臃肿
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;外部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#外部样式表&#34;&gt;#&lt;/a&gt; 外部样式表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&#34;&#34;; href=&#34;文件地址&#34;;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;另建一个.css 文件，在另外一个文件中书写 css 属性&lt;br&gt;
+再通过在 style 中书写 link 将其引入&lt;/p&gt;
+&lt;h4 id=&#34;6vscode中使用emmet语法快速书写代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6vscode中使用emmet语法快速书写代码&#34;&gt;#&lt;/a&gt; 6.vscode 中使用 emmet 语法快速书写代码&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnSLn&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnSLn.png&#34; alt=&#34;IQnSLn.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;7选择器拓展&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7选择器拓展&#34;&gt;#&lt;/a&gt; 7. 选择器拓展&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnZQJ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnZQJ.png&#34; alt=&#34;IQnZQJ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;后代选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后代选择器&#34;&gt;#&lt;/a&gt; 后代选择器&lt;/h6&gt;
+&lt;p&gt;顾名思义就是将大元素中包括的小元素提取出来，这里通过列子来展示&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnCd0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnCd0.png&#34; alt=&#34;IQnCd0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;子元素选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#子元素选择器&#34;&gt;#&lt;/a&gt; 子元素选择器&lt;/h6&gt;
+&lt;p&gt;例如上面的 ol li 变成 ol&amp;gt;li 就只对 ol 中的下一级 li 有用也就是他的儿子，而他的下下级，也就是孙子则不起作用&lt;/p&gt;
+&lt;h6 id=&#34;并集选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#并集选择器&#34;&gt;#&lt;/a&gt; 并集选择器&lt;/h6&gt;
+&lt;p&gt;在标签和标签中间用逗号连接，这样就可以达到同时对两个盒子都起作用的效果&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;例如 div,p,li {}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;需要注意的是最后一个选择器不需要加逗号&lt;/p&gt;
+&lt;h6 id=&#34;链接伪类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#链接伪类选择器&#34;&gt;#&lt;/a&gt; 链接伪类选择器&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqEWt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqEWt.png&#34; alt=&#34;IJqEWt.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;X:GGGG {}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;X 可以是你的选择器中的任何&lt;br&gt;
+：后面可以添加 4 中元素 (其中 hover 最经常使用)：&lt;br&gt;
+link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
+ visited: 访问过的链接，把点击过的链接选择出来&lt;br&gt;
+ hover: 当鼠标经过时&lt;br&gt;
+ active: 鼠标点击但是还未弹起来时&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmxMj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmxMj.png&#34; alt=&#34;IQmxMj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;focus选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#focus选择器&#34;&gt;#&lt;/a&gt; focus 选择器&lt;/h6&gt;
+&lt;p&gt;把获得光标的 input 选择显示出来&lt;br&gt;
+下面是代码，可以通过自己运行来进行查看&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnPoV&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnPoV.png&#34; alt=&#34;IQnPoV.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;8元素显示模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8元素显示模式&#34;&gt;#&lt;/a&gt; 8. 元素显示模式&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqmy8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqmy8.png&#34; alt=&#34;IJqmy8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;块级元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#块级元素&#34;&gt;#&lt;/a&gt; 块级元素&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnkJU&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnkJU.png&#34; alt=&#34;IQnkJU.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;行内元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内元素&#34;&gt;#&lt;/a&gt; 行内元素&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnAWF&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnAWF.png&#34; alt=&#34;IQnAWF.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;行内块元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内块元素&#34;&gt;#&lt;/a&gt; 行内块元素&lt;/h6&gt;
+&lt;p&gt;特殊情况，同时具有块级元素和行内元素的特点，可以进行的大小设置，也可以书写汉字，但是大小会随着汉字的多少而改变&lt;/p&gt;
+&lt;h6 id=&#34;元素显示模式转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#元素显示模式转换&#34;&gt;#&lt;/a&gt; 元素显示模式转换&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt; display:   ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;inline: 行内元素&lt;br&gt;
+ block: 块级元素&lt;br&gt;
+ inline-block: 行内块元素&lt;br&gt;
+&lt;strong&gt;学到这里去做一下小米侧边栏试试吧&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;单行文字垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单行文字垂直居中&#34;&gt;#&lt;/a&gt; 单行文字垂直居中&lt;/h6&gt;
+&lt;p&gt;也就是上面和大家提及过的，这里让 height 和 line-height 相同即可&lt;/p&gt;
+&lt;h4 id=&#34;9背景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9背景&#34;&gt;#&lt;/a&gt; 9. 背景&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6dHA&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6dHA.png&#34; alt=&#34;IQ6dHA.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景颜色&#34;&gt;#&lt;/a&gt; 背景颜色&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-color: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面的元素参照前面 color 属性&lt;/p&gt;
+&lt;h6 id=&#34;背景图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景图片&#34;&gt;#&lt;/a&gt; 背景图片&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-image: url (链接 / 地址)；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;背景平铺&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景平铺&#34;&gt;#&lt;/a&gt; 背景平铺&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-repeat: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;no-repeat (常用): 不平铺&lt;br&gt;
+ repeat (默认): 平铺&lt;br&gt;
+ repeat-x: 沿着 X 轴平铺&lt;br&gt;
+ repeat-y: 沿着 Y 轴平铺&lt;br&gt;
+&lt;strong&gt;背景图片会压住背景颜色&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnFiT&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnFiT.png&#34; alt=&#34;IQnFiT.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景位置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景位置&#34;&gt;#&lt;/a&gt; 背景位置&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-position: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;left top center right bottom&lt;br&gt;
+ 也可以用 right center 等同时使用 但是有几点需要注意&lt;br&gt;
+ 1. 如果是方位名词  right center 和 center right 效果是等价的 跟顺序没有关系&lt;br&gt;
+ 2. 当有参数省略时，并且不全是方位名字时，例如 right top ,&lt;br&gt;
+ 省略 right，此时 top 会自动顶部对齐，而省略的会被判定为水平居中&lt;br&gt;
+省略 top，则会被判定为垂直居中&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnEz4&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnEz4.png&#34; alt=&#34;IQnEz4.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 也可以用具体的数据来进行移动，主要用于精灵图&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQney9&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQney9.png&#34; alt=&#34;IQney9.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 需要注意的时，html 的 X 轴向右，而 y 轴是向下的，需要向反方向移动时可以添加负号&lt;/p&gt;
+&lt;h6 id=&#34;背景固定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景固定&#34;&gt;#&lt;/a&gt; 背景固定&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;backgrounf-attachment: fixed;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将背景图片固定，这样滑动鼠标滚轮时，背景图片会一直存在于网页上，并不会滑走&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnmLR&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnmLR.png&#34; alt=&#34;IQnmLR.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景属性复合写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景属性复合写法&#34;&gt;#&lt;/a&gt; 背景属性复合写法&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6tje&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6tje.png&#34; alt=&#34;IQ6tje.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景半透明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景半透明&#34;&gt;#&lt;/a&gt; 背景半透明&lt;/h6&gt;
+&lt;p&gt;主要这个不是放在 background-color 中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background: rgba(X,X,X,X);&lt;/p&gt;
+&lt;/blockquote&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/html-xia/</guid>
             <title>Html-second</title>
-            <link>http://yogmas-wang.top/2021/11/06/html-xia/</link>
+            <link>http://s1mwxl.cn/2021/11/06/html-xia/</link>
             <category>Html</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;。&lt;/p&gt;
@@ -2641,9 +2933,9 @@ radio: 单选按钮&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/javascript-ji-chu-ban/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/javascript-ji-chu-ban/</guid>
             <title>Javascript基础(未完待续)</title>
-            <link>http://yogmas-wang.top/2021/11/06/javascript-ji-chu-ban/</link>
+            <link>http://s1mwxl.cn/2021/11/06/javascript-ji-chu-ban/</link>
             <category>Javascript</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript&#34;&gt;#&lt;/a&gt; javascript&lt;/h1&gt;
@@ -3878,9 +4170,9 @@ offsetParent  返回的是带有定位的父元素 (没有则返回 body)&lt;br&
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/c-yu-yan/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/c-yu-yan/</guid>
             <title>C语言</title>
-            <link>http://yogmas-wang.top/2021/11/06/c-yu-yan/</link>
+            <link>http://s1mwxl.cn/2021/11/06/c-yu-yan/</link>
             <category>C语言</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;c语言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言&#34;&gt;#&lt;/a&gt; C 语言&lt;/h1&gt;
@@ -9984,295 +10276,9 @@ bool &lt;span class=&#34;token function&#34;&gt;DeQueue&lt;/span&gt;&lt;span cla
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/02/10/cao-zuo-xi-tong/</guid>
-            <title>操作系统</title>
-            <link>http://yogmas-wang.top/2021/02/10/cao-zuo-xi-tong/</link>
-            <category>操作系统</category>
-            <pubDate>Wed, 10 Feb 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
-&lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt; ,beginning from 2022.1.18&lt;/p&gt;
-&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;裸机&lt;/strong&gt;：没有安装操作系统的电脑&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: 1. 对硬件进行操作 2. 将对硬件的一系列操作封装成为系统调用，方便程序员调用&lt;/p&gt;
-&lt;h3 id=&#34;不同领域的主流操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#不同领域的主流操作系统&#34;&gt;#&lt;/a&gt; 不同领域的主流操作系统&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;桌面操作系统
-&lt;ul&gt;
-&lt;li&gt;Windows&lt;/li&gt;
-&lt;li&gt;macOS&lt;/li&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;服务器操作系统
-&lt;ul&gt;
-&lt;li&gt;Linux 免费 安全&lt;/li&gt;
-&lt;li&gt;Windows Server  付费&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;嵌入式操作系统
-&lt;ul&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;移动设备操作系统
-&lt;ul&gt;
-&lt;li&gt;iOS&lt;/li&gt;
-&lt;li&gt;Android (基于 &lt;code&gt;Linux&lt;/code&gt; )&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#虚拟机&#34;&gt;#&lt;/a&gt; 虚拟机&lt;/h3&gt;
-&lt;p&gt;相当于安装在电脑上的一台虚拟电脑&lt;/p&gt;
-&lt;h2 id=&#34;操作系统的发展史略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统的发展史略&#34;&gt;#&lt;/a&gt; 操作系统的发展史 (略)&lt;/h2&gt;
-&lt;h3 id=&#34;unix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unix&#34;&gt;#&lt;/a&gt; Unix&lt;/h3&gt;
-&lt;p&gt;伴随着 B 语言和 C 语言的由来，同时由于其创作者可以直接访问使用该系统的电脑，电气公司将其私有化后随之产生了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;minix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#minix&#34;&gt;#&lt;/a&gt; Minix&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Unix&lt;/code&gt;  私有化之后，大学无法使用 &lt;code&gt;Unix&lt;/code&gt;  系统进行教学，就出现了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux&#34;&gt;#&lt;/a&gt; Linux&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Minix&lt;/code&gt;  上可以实现的功能非常少，为了达到相应的功能需要，就出现了 &lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;linux操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux操作系统&#34;&gt;#&lt;/a&gt; Linux 操作系统&lt;/h2&gt;
-&lt;h3 id=&#34;linux内核及发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核及发行版&#34;&gt;#&lt;/a&gt; Linux 内核及发行版&lt;/h3&gt;
-&lt;h4 id=&#34;linux内核&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核&#34;&gt;#&lt;/a&gt; Linux 内核&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;  内核对各种硬件进行操作并且将各种操作封装成为系统调用&lt;/p&gt;
-&lt;h4 id=&#34;linux发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux发行版&#34;&gt;#&lt;/a&gt; Linux 发行版&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;Linux&lt;/code&gt;  内核的基础上包括了桌面环境，办公套件，数据库等应用软件&lt;/p&gt;
-&lt;h3 id=&#34;linux文件和目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux文件和目录&#34;&gt;#&lt;/a&gt; Linux 文件和目录&lt;/h3&gt;
-&lt;h4 id=&#34;单用户与多用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单用户与多用户&#34;&gt;#&lt;/a&gt; 单用户与多用户&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;单用户操作系统：一台电脑同一时间只能由一个用户使用  &lt;code&gt;Windows&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;多用户操作系统：一台电脑同一时间可以由多个用户使用  &lt;code&gt;Linux&lt;/code&gt; , &lt;code&gt;Unix&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;windows与linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#windows与linux&#34;&gt;#&lt;/a&gt; Windows 与 Linux&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Windows&lt;/code&gt;  下，看到的基本都是驱动器盘符&lt;/li&gt;
-&lt;li&gt;多用户操作系统下，看到的都是根目录结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;linux基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux基本操作&#34;&gt;#&lt;/a&gt; Linux 基本操作&lt;/h2&gt;
-&lt;h3 id=&#34;linux命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux命令&#34;&gt;#&lt;/a&gt; Linux 命令&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ls&lt;/code&gt;  显示当前目录下的所有文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt;  显示当前目录&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd 地址&lt;/code&gt; 更改地址&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;touch 文件名&lt;/code&gt; 创建文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mkdir 文件名&lt;/code&gt; 创建目录&lt;/li&gt;
-&lt;li&gt;clear 清屏&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;command --help&lt;/code&gt;  帮助信息&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;man command&lt;/code&gt;  知识手册&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://imgtu.com/i/HvXbkT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvXbkT.png&#34; alt=&#34;man操作键&#34;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;文件和目录命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件和目录命令&#34;&gt;#&lt;/a&gt; 文件和目录命令&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvjUH0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvjUH0.png&#34; alt=&#34;文件和目录相关命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ls命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls命令选项&#34;&gt;#&lt;/a&gt; ls 命令选项&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvvTiT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvvTiT.png&#34; alt=&#34;ls命令选项&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ls通配符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls通配符&#34;&gt;#&lt;/a&gt; ls 通配符&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/Hxqm4g&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/Hxqm4g.png&#34; alt=&#34;ls通配符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;切换目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#切换目录&#34;&gt;#&lt;/a&gt; 切换目录&lt;/h4&gt;
-&lt;h5 id=&#34;cd命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cd命令选项&#34;&gt;#&lt;/a&gt; cd 命令选项&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HxLZs1&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/HxLZs1.png&#34; alt=&#34;cd&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;创建和删除操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建和删除操作&#34;&gt;#&lt;/a&gt; 创建和删除操作&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;没有该名的文件存在，则创建一个新的文件&lt;/li&gt;
-&lt;li&gt;有改名字的文件存在，则更改文件的末次修改日期&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-p&lt;/code&gt;  连续创建多个目录&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;mkdir -p a/b/c/d&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  连续删除多个同一文件夹下的文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-f&lt;/code&gt;  强制删除无提示信息&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; &lt;code&gt;ls&lt;/code&gt;  的通配符对 &lt;code&gt;rm&lt;/code&gt;  一样适用&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;拷贝和移动命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#拷贝和移动命令&#34;&gt;#&lt;/a&gt; 拷贝和移动命令&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;tree&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;以&lt;strong&gt;树状图&lt;/strong&gt;列出文件目录结构&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-d&lt;/code&gt;  只显示目录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;cp 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖文件前提示&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  复制整个目录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;mv 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖前提示&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;文件内容命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件内容命令&#34;&gt;#&lt;/a&gt; 文件内容命令&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bSr1JO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/bSr1JO.png&#34; alt=&#34;查看文件内容&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-b&lt;/code&gt;  显示非空行编号&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-n&lt;/code&gt;  显示所有行编号&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;more&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC3bsf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC3bsf.png&#34; alt=&#34;more&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;grep -n （） （文件）&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC8SWn&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC8SWn.png&#34; alt=&#34;grep&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;其他命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
-&lt;h5 id=&#34;echo和重定向&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#echo和重定向&#34;&gt;#&lt;/a&gt; echo 和重定向&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;echo&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;在终端中显示参数指定的文字&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;重定向&lt;/p&gt;
-&lt;p&gt;原本应该输出到终端中的内容重定向到其他文件中&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCYd61&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCYd61.png&#34; alt=&#34;bCYd61.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5 id=&#34;管道&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#管道&#34;&gt;#&lt;/a&gt; 管道 &lt;code&gt;|&lt;/code&gt;&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCN0IO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCN0IO.png&#34; alt=&#34;管道&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;远程管理常用命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#远程管理常用命令&#34;&gt;#&lt;/a&gt; 远程管理常用命令&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;关机重启 &lt;code&gt;shutdown&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCUtfg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCUtfg.png&#34; alt=&#34;shutdown&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;查看和配置网卡信息&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCawCD&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCawCD.png&#34; alt=&#34;bCawCD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ifconfig&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCduqI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCduqI.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ping&lt;/code&gt;  测试网络连接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCwOc4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCwOc4.png&#34; alt=&#34;ping&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5 id=&#34;ssh工作及简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh工作及简介&#34;&gt;#&lt;/a&gt; SSH 工作及简介&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC0R56&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC0R56.png&#34; alt=&#34;SSH&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;域名和端口号&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCBuL9&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCBuL9.png&#34; alt=&#34;域名和端口号&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SSH 客户端的简单实用&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ssh [-p port] user@remote&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;user&lt;/code&gt; : 远程机器上的用户名&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;remote&lt;/code&gt; : 远程机器的地址&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;port&lt;/code&gt; :&lt;strong&gt;SSH server&lt;/strong&gt; 监听的端口&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可以对装有 SSH 客户端的电脑或者服务器进行&lt;strong&gt;远程控制&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5 id=&#34;scp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scp&#34;&gt;#&lt;/a&gt; SCP&lt;/h5&gt;
-&lt;p&gt;远程状态下进行文件拷贝&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFnyod&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFnyod.png&#34; alt=&#34;scp&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ftp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ftp&#34;&gt;#&lt;/a&gt; FTP&lt;/h5&gt;
-&lt;p&gt;在 &lt;code&gt;WINDOWS&lt;/code&gt;  下可以利用 FTP 进行文件拷贝 端口号默认为 21&lt;/p&gt;
-&lt;h5 id=&#34;ssh免密码登录设置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh免密码登录设置&#34;&gt;#&lt;/a&gt; SSH 免密码登录设置&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFMOSI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFMOSI.png&#34; alt=&#34;SSH免密码登录设置&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;配置别名&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFlUK0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFlUK0.png&#34; alt=&#34;配置别名&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;用户权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户权限&#34;&gt;#&lt;/a&gt; 用户权限&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMkvT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMkvT.png&#34; alt=&#34;用户权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ls-l-指令介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls-l-指令介绍&#34;&gt;#&lt;/a&gt;  &lt;code&gt;ls -l&lt;/code&gt;  指令介绍&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMTLF&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMTLF.png&#34; alt=&#34;ls-l指令介绍&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;chmod指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#chmod指令&#34;&gt;#&lt;/a&gt;  &lt;code&gt;chmod&lt;/code&gt;  指令&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  change mod 用于修改用户对文件和目录的权限&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;chmod +/- rwx 文件/目录&lt;/code&gt;&lt;/p&gt;
-&lt;h5 id=&#34;超级用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超级用户&#34;&gt;#&lt;/a&gt; 超级用户&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMl759&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMl759.png&#34; alt=&#34;超级用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;组管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#组管理&#34;&gt;#&lt;/a&gt; 组管理&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bM1rM6&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bM1rM6.png&#34; alt=&#34;组管理终端命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;用户管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户管理&#34;&gt;#&lt;/a&gt; 用户管理&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMYL2d&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMYL2d.png&#34; alt=&#34;用户管理&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;查看用户信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看用户信息&#34;&gt;#&lt;/a&gt; 查看用户信息&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMtIQs&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMtIQs.png&#34; alt=&#34;查看用户信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;设置主组和附加组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置主组和附加组&#34;&gt;#&lt;/a&gt; 设置主组和附加组&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;usermod&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl8pcR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl8pcR.png&#34; alt=&#34;usermod&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;改变用户登录的 &lt;code&gt;shell&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ubantu 默认的是 dash,dash 在 xshell 软件中存在 bug, 可以利用 &lt;code&gt;usermod&lt;/code&gt;  指令更改成为 bash&lt;/p&gt;
-&lt;h5 id=&#34;which&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#which&#34;&gt;#&lt;/a&gt;  &lt;code&gt;which&lt;/code&gt;&lt;/h5&gt;
-&lt;p&gt;查看命令执行所在文件夹&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl6v11&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl6v11.png&#34; alt=&#34;which&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;bin和sbin文件的差别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bin和sbin文件的差别&#34;&gt;#&lt;/a&gt;  &lt;code&gt;bin&lt;/code&gt;  和 sbin 文件的差别&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/blcbKP&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/blcbKP.png&#34; alt=&#34;bin和sbin文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;su切换用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#su切换用户&#34;&gt;#&lt;/a&gt; su 切换用户&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWmee&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWmee.png&#34; alt=&#34;su切换用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;修改文件权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改文件权限&#34;&gt;#&lt;/a&gt; 修改文件权限&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWNwQ&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWNwQ.png&#34; alt=&#34;修改文件权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  的数字表示法&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNhVVe&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNhVVe.png&#34; alt=&#34;chmod数字表示法&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;查询系统信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查询系统信息&#34;&gt;#&lt;/a&gt; 查询系统信息&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;时间和磁盘占用&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIK2R&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIK2R.png&#34; alt=&#34;时间日期额磁盘大小&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进程信息&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIsZ8&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIsZ8.png&#34; alt=&#34;进程信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;其他命令-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令-2&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;查找文件&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNTtgA&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNTtgA.png&#34; alt=&#34;查找文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;文件软链接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bN7VVf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bN7VVf.png&#34; alt=&#34;文件软链接&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;文件硬链接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNq3qI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNq3qI.png&#34; alt=&#34;硬链接简介&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;打包和压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包和压缩&#34;&gt;#&lt;/a&gt; 打包和压缩&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打包&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0plef&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0plef.png&#34; alt=&#34;tar打包和解包指令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;压缩和解压缩&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;gzip&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0C1Pg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0C1Pg.png&#34; alt=&#34;gzip&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;bzip2&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0CDG4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0CDG4.png&#34; alt=&#34;bzip2 &#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;adp安装与卸载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp安装与卸载&#34;&gt;#&lt;/a&gt; adp 安装与卸载&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0PKyR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0PKyR.png&#34; alt=&#34;adp安装与卸载&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;adp设计软件源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp设计软件源&#34;&gt;#&lt;/a&gt; adp 设计软件源&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0iptO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0iptO.png&#34; alt=&#34;设置软件源&#34;&gt;&lt;/a&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</guid>
             <title>机器学习基础</title>
-            <link>http://yogmas-wang.top/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</link>
+            <link>http://s1mwxl.cn/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</link>
             <category>机器学习</category>
             <pubDate>Wed, 10 Feb 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;机器学习-入门ml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#机器学习-入门ml&#34;&gt;#&lt;/a&gt; 机器学习 - 入门 ML&lt;/h1&gt;
@@ -10677,6 +10683,292 @@ J(\theta) &amp;amp;=\frac{1}{m} \sum_{i=1}^{m} \operatorname{Cost}\left(h_{\thet
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/02/10/cao-zuo-xi-tong/</guid>
+            <title>操作系统</title>
+            <link>http://s1mwxl.cn/2021/02/10/cao-zuo-xi-tong/</link>
+            <category>操作系统</category>
+            <pubDate>Wed, 10 Feb 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
+&lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt; ,beginning from 2022.1.18&lt;/p&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;裸机&lt;/strong&gt;：没有安装操作系统的电脑&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: 1. 对硬件进行操作 2. 将对硬件的一系列操作封装成为系统调用，方便程序员调用&lt;/p&gt;
+&lt;h3 id=&#34;不同领域的主流操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#不同领域的主流操作系统&#34;&gt;#&lt;/a&gt; 不同领域的主流操作系统&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;桌面操作系统
+&lt;ul&gt;
+&lt;li&gt;Windows&lt;/li&gt;
+&lt;li&gt;macOS&lt;/li&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务器操作系统
+&lt;ul&gt;
+&lt;li&gt;Linux 免费 安全&lt;/li&gt;
+&lt;li&gt;Windows Server  付费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;嵌入式操作系统
+&lt;ul&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;移动设备操作系统
+&lt;ul&gt;
+&lt;li&gt;iOS&lt;/li&gt;
+&lt;li&gt;Android (基于 &lt;code&gt;Linux&lt;/code&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#虚拟机&#34;&gt;#&lt;/a&gt; 虚拟机&lt;/h3&gt;
+&lt;p&gt;相当于安装在电脑上的一台虚拟电脑&lt;/p&gt;
+&lt;h2 id=&#34;操作系统的发展史略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统的发展史略&#34;&gt;#&lt;/a&gt; 操作系统的发展史 (略)&lt;/h2&gt;
+&lt;h3 id=&#34;unix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unix&#34;&gt;#&lt;/a&gt; Unix&lt;/h3&gt;
+&lt;p&gt;伴随着 B 语言和 C 语言的由来，同时由于其创作者可以直接访问使用该系统的电脑，电气公司将其私有化后随之产生了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;minix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#minix&#34;&gt;#&lt;/a&gt; Minix&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Unix&lt;/code&gt;  私有化之后，大学无法使用 &lt;code&gt;Unix&lt;/code&gt;  系统进行教学，就出现了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux&#34;&gt;#&lt;/a&gt; Linux&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Minix&lt;/code&gt;  上可以实现的功能非常少，为了达到相应的功能需要，就出现了 &lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linux操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux操作系统&#34;&gt;#&lt;/a&gt; Linux 操作系统&lt;/h2&gt;
+&lt;h3 id=&#34;linux内核及发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核及发行版&#34;&gt;#&lt;/a&gt; Linux 内核及发行版&lt;/h3&gt;
+&lt;h4 id=&#34;linux内核&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核&#34;&gt;#&lt;/a&gt; Linux 内核&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;  内核对各种硬件进行操作并且将各种操作封装成为系统调用&lt;/p&gt;
+&lt;h4 id=&#34;linux发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux发行版&#34;&gt;#&lt;/a&gt; Linux 发行版&lt;/h4&gt;
+&lt;p&gt;在 &lt;code&gt;Linux&lt;/code&gt;  内核的基础上包括了桌面环境，办公套件，数据库等应用软件&lt;/p&gt;
+&lt;h3 id=&#34;linux文件和目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux文件和目录&#34;&gt;#&lt;/a&gt; Linux 文件和目录&lt;/h3&gt;
+&lt;h4 id=&#34;单用户与多用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单用户与多用户&#34;&gt;#&lt;/a&gt; 单用户与多用户&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;单用户操作系统：一台电脑同一时间只能由一个用户使用  &lt;code&gt;Windows&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;多用户操作系统：一台电脑同一时间可以由多个用户使用  &lt;code&gt;Linux&lt;/code&gt; , &lt;code&gt;Unix&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;windows与linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#windows与linux&#34;&gt;#&lt;/a&gt; Windows 与 Linux&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Windows&lt;/code&gt;  下，看到的基本都是驱动器盘符&lt;/li&gt;
+&lt;li&gt;多用户操作系统下，看到的都是根目录结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux基本操作&#34;&gt;#&lt;/a&gt; Linux 基本操作&lt;/h2&gt;
+&lt;h3 id=&#34;linux命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux命令&#34;&gt;#&lt;/a&gt; Linux 命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ls&lt;/code&gt;  显示当前目录下的所有文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt;  显示当前目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd 地址&lt;/code&gt; 更改地址&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;touch 文件名&lt;/code&gt; 创建文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mkdir 文件名&lt;/code&gt; 创建目录&lt;/li&gt;
+&lt;li&gt;clear 清屏&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;command --help&lt;/code&gt;  帮助信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;man command&lt;/code&gt;  知识手册&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgtu.com/i/HvXbkT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvXbkT.png&#34; alt=&#34;man操作键&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;文件和目录命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件和目录命令&#34;&gt;#&lt;/a&gt; 文件和目录命令&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvjUH0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvjUH0.png&#34; alt=&#34;文件和目录相关命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ls命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls命令选项&#34;&gt;#&lt;/a&gt; ls 命令选项&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvvTiT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvvTiT.png&#34; alt=&#34;ls命令选项&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ls通配符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls通配符&#34;&gt;#&lt;/a&gt; ls 通配符&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/Hxqm4g&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/Hxqm4g.png&#34; alt=&#34;ls通配符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;切换目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#切换目录&#34;&gt;#&lt;/a&gt; 切换目录&lt;/h4&gt;
+&lt;h5 id=&#34;cd命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cd命令选项&#34;&gt;#&lt;/a&gt; cd 命令选项&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HxLZs1&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/HxLZs1.png&#34; alt=&#34;cd&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;创建和删除操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建和删除操作&#34;&gt;#&lt;/a&gt; 创建和删除操作&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有该名的文件存在，则创建一个新的文件&lt;/li&gt;
+&lt;li&gt;有改名字的文件存在，则更改文件的末次修改日期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-p&lt;/code&gt;  连续创建多个目录&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;mkdir -p a/b/c/d&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  连续删除多个同一文件夹下的文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-f&lt;/code&gt;  强制删除无提示信息&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;ls&lt;/code&gt;  的通配符对 &lt;code&gt;rm&lt;/code&gt;  一样适用&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;拷贝和移动命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#拷贝和移动命令&#34;&gt;#&lt;/a&gt; 拷贝和移动命令&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tree&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;以&lt;strong&gt;树状图&lt;/strong&gt;列出文件目录结构&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-d&lt;/code&gt;  只显示目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cp 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖文件前提示&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  复制整个目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mv 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖前提示&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;文件内容命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件内容命令&#34;&gt;#&lt;/a&gt; 文件内容命令&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bSr1JO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/bSr1JO.png&#34; alt=&#34;查看文件内容&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-b&lt;/code&gt;  显示非空行编号&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-n&lt;/code&gt;  显示所有行编号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;more&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC3bsf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC3bsf.png&#34; alt=&#34;more&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;grep -n （） （文件）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC8SWn&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC8SWn.png&#34; alt=&#34;grep&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;其他命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
+&lt;h5 id=&#34;echo和重定向&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#echo和重定向&#34;&gt;#&lt;/a&gt; echo 和重定向&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;echo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在终端中显示参数指定的文字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重定向&lt;/p&gt;
+&lt;p&gt;原本应该输出到终端中的内容重定向到其他文件中&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCYd61&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCYd61.png&#34; alt=&#34;bCYd61.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;管道&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#管道&#34;&gt;#&lt;/a&gt; 管道 &lt;code&gt;|&lt;/code&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCN0IO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCN0IO.png&#34; alt=&#34;管道&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;远程管理常用命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#远程管理常用命令&#34;&gt;#&lt;/a&gt; 远程管理常用命令&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;关机重启 &lt;code&gt;shutdown&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCUtfg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCUtfg.png&#34; alt=&#34;shutdown&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看和配置网卡信息&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCawCD&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCawCD.png&#34; alt=&#34;bCawCD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ifconfig&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCduqI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCduqI.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ping&lt;/code&gt;  测试网络连接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCwOc4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCwOc4.png&#34; alt=&#34;ping&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;ssh工作及简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh工作及简介&#34;&gt;#&lt;/a&gt; SSH 工作及简介&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC0R56&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC0R56.png&#34; alt=&#34;SSH&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;域名和端口号&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCBuL9&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCBuL9.png&#34; alt=&#34;域名和端口号&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SSH 客户端的简单实用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh [-p port] user@remote&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;user&lt;/code&gt; : 远程机器上的用户名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;remote&lt;/code&gt; : 远程机器的地址&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;port&lt;/code&gt; :&lt;strong&gt;SSH server&lt;/strong&gt; 监听的端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以对装有 SSH 客户端的电脑或者服务器进行&lt;strong&gt;远程控制&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;scp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scp&#34;&gt;#&lt;/a&gt; SCP&lt;/h5&gt;
+&lt;p&gt;远程状态下进行文件拷贝&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFnyod&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFnyod.png&#34; alt=&#34;scp&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ftp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ftp&#34;&gt;#&lt;/a&gt; FTP&lt;/h5&gt;
+&lt;p&gt;在 &lt;code&gt;WINDOWS&lt;/code&gt;  下可以利用 FTP 进行文件拷贝 端口号默认为 21&lt;/p&gt;
+&lt;h5 id=&#34;ssh免密码登录设置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh免密码登录设置&#34;&gt;#&lt;/a&gt; SSH 免密码登录设置&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFMOSI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFMOSI.png&#34; alt=&#34;SSH免密码登录设置&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;配置别名&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFlUK0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFlUK0.png&#34; alt=&#34;配置别名&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;用户权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户权限&#34;&gt;#&lt;/a&gt; 用户权限&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMkvT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMkvT.png&#34; alt=&#34;用户权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ls-l-指令介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls-l-指令介绍&#34;&gt;#&lt;/a&gt;  &lt;code&gt;ls -l&lt;/code&gt;  指令介绍&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMTLF&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMTLF.png&#34; alt=&#34;ls-l指令介绍&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;chmod指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#chmod指令&#34;&gt;#&lt;/a&gt;  &lt;code&gt;chmod&lt;/code&gt;  指令&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  change mod 用于修改用户对文件和目录的权限&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;chmod +/- rwx 文件/目录&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;超级用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超级用户&#34;&gt;#&lt;/a&gt; 超级用户&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMl759&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMl759.png&#34; alt=&#34;超级用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;组管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#组管理&#34;&gt;#&lt;/a&gt; 组管理&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bM1rM6&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bM1rM6.png&#34; alt=&#34;组管理终端命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;用户管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户管理&#34;&gt;#&lt;/a&gt; 用户管理&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMYL2d&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMYL2d.png&#34; alt=&#34;用户管理&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;查看用户信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看用户信息&#34;&gt;#&lt;/a&gt; 查看用户信息&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMtIQs&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMtIQs.png&#34; alt=&#34;查看用户信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;设置主组和附加组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置主组和附加组&#34;&gt;#&lt;/a&gt; 设置主组和附加组&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;usermod&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl8pcR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl8pcR.png&#34; alt=&#34;usermod&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;改变用户登录的 &lt;code&gt;shell&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ubantu 默认的是 dash,dash 在 xshell 软件中存在 bug, 可以利用 &lt;code&gt;usermod&lt;/code&gt;  指令更改成为 bash&lt;/p&gt;
+&lt;h5 id=&#34;which&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#which&#34;&gt;#&lt;/a&gt;  &lt;code&gt;which&lt;/code&gt;&lt;/h5&gt;
+&lt;p&gt;查看命令执行所在文件夹&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl6v11&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl6v11.png&#34; alt=&#34;which&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;bin和sbin文件的差别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bin和sbin文件的差别&#34;&gt;#&lt;/a&gt;  &lt;code&gt;bin&lt;/code&gt;  和 sbin 文件的差别&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/blcbKP&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/blcbKP.png&#34; alt=&#34;bin和sbin文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;su切换用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#su切换用户&#34;&gt;#&lt;/a&gt; su 切换用户&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWmee&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWmee.png&#34; alt=&#34;su切换用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;修改文件权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改文件权限&#34;&gt;#&lt;/a&gt; 修改文件权限&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWNwQ&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWNwQ.png&#34; alt=&#34;修改文件权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  的数字表示法&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNhVVe&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNhVVe.png&#34; alt=&#34;chmod数字表示法&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;查询系统信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查询系统信息&#34;&gt;#&lt;/a&gt; 查询系统信息&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;时间和磁盘占用&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIK2R&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIK2R.png&#34; alt=&#34;时间日期额磁盘大小&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进程信息&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIsZ8&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIsZ8.png&#34; alt=&#34;进程信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;其他命令-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令-2&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;查找文件&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNTtgA&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNTtgA.png&#34; alt=&#34;查找文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件软链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bN7VVf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bN7VVf.png&#34; alt=&#34;文件软链接&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件硬链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNq3qI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNq3qI.png&#34; alt=&#34;硬链接简介&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;打包和压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包和压缩&#34;&gt;#&lt;/a&gt; 打包和压缩&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打包&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0plef&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0plef.png&#34; alt=&#34;tar打包和解包指令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;压缩和解压缩&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;gzip&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0C1Pg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0C1Pg.png&#34; alt=&#34;gzip&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bzip2&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0CDG4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0CDG4.png&#34; alt=&#34;bzip2 &#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;adp安装与卸载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp安装与卸载&#34;&gt;#&lt;/a&gt; adp 安装与卸载&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0PKyR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0PKyR.png&#34; alt=&#34;adp安装与卸载&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;adp设计软件源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp设计软件源&#34;&gt;#&lt;/a&gt; adp 设计软件源&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0iptO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0iptO.png&#34; alt=&#34;设置软件源&#34;&gt;&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

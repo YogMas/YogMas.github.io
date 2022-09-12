@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>YogMas学习站 • Posts by &#34;css&#34; tag</title>
-        <link>http://yogmas-wang.top</link>
-        <description></description>
+        <title>S1m • Posts by &#34;css&#34; tag</title>
+        <link>http://s1mwxl.cn</link>
+        <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
         <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
         <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0800</lastBuildDate>
@@ -11,261 +11,15 @@
         <category>python</category>
         <category>Css</category>
         <category>Html</category>
-        <category>操作系统</category>
-        <category>Javascript</category>
-        <category>icoding答案</category>
         <category>机器学习</category>
+        <category>操作系统</category>
+        <category>icoding答案</category>
+        <category>Javascript</category>
+        <category>java</category>
         <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/css1/</guid>
-            <title>Css-first</title>
-            <link>http://yogmas-wang.top/2021/11/06/css1/</link>
-            <category>Css</category>
-            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1css基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css基本架构&#34;&gt;#&lt;/a&gt; 1.css 基本架构&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
-&amp;lt;head&amp;gt;
-&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;
- &amp;lt;/head&amp;gt;
- &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
- &amp;lt;/html&amp;gt;
- style为css放置位置
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;前期学习先将 css 放置在 html 文件夹里面后期会单独利用 css 文件来写 css&lt;/p&gt;
-&lt;h4 id=&#34;2选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2选择器&#34;&gt;#&lt;/a&gt; 2. 选择器&lt;/h4&gt;
-&lt;h6 id=&#34;标签选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标签选择器&#34;&gt;#&lt;/a&gt; 标签选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;选择器 {样式}&lt;br&gt;
- 给谁改样式 {改什么样式}&lt;br&gt;
-eg.p { color: red;&lt;br&gt;
-font-size: 12px; }&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;标签选择器为大类选择，同一类标签全部都会被 css 修改&lt;/p&gt;
-&lt;h6 id=&#34;类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类选择器&#34;&gt;#&lt;/a&gt; 类选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;.id {} 
-eg .red {color:red;}
-&amp;lt;# class=&#34;id&#34;&amp;gt;  &amp;lt;/#&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里的 ID 还需要与 html 中的 class 相互匹配 #可以替换成任何你想选择的类别 id 可以替换成任何你命名的字母或者单词&lt;br&gt;
-&lt;strong&gt;类选择器口诀：样式点定义  结构类 (class) 调用  一个或多个 开发最常用&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmbIf&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmbIf.png&#34; alt=&#34;IQmbIf.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 同时类选择器可以有多个 ID 都会起作用 中间用空格隔开 例如&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmHdP&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmHdP.png&#34; alt=&#34;IQmHdP.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;id选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#id选择器&#34;&gt;#&lt;/a&gt; id 选择器&lt;/h6&gt;
-&lt;p&gt;id 选择器与类选择器相似，不过 ID 选择器只能使用一次 并且一个 ID 只能调用一次&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;#ID {}
-&amp;lt;XX id=&#34;&#34;&amp;gt;  &amp;lt;/XX&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;通配符选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#通配符选择器&#34;&gt;#&lt;/a&gt; 通配符选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;* { }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通配符 简而言之就是对所有元素和类都有作用，后期主要用来先去除掉浏览器自身所带的一些 css 属性方便我们后续进行 css 操作&lt;/p&gt;
-&lt;h4 id=&#34;3css字体属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3css字体属性&#34;&gt;#&lt;/a&gt; 3.CSS 字体属性&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQmjzQ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmjzQ.png&#34; alt=&#34;IQmjzQ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;字体系列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体系列&#34;&gt;#&lt;/a&gt; 字体系列&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-family:’   &#39;;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;通常会根据团队的要求来确定书写的字体 一般来说是微软雅黑也就是 microsoft YaHei 当然也可以有其他的一系列字体&lt;br&gt;
-比如在后期的&lt;strong&gt;字体图标&lt;/strong&gt;中就需要修改 font-family&lt;/p&gt;
-&lt;h6 id=&#34;字体大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体大小&#34;&gt;#&lt;/a&gt; 字体大小&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-size:;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;顾名思义，是修改字体的大小，不过需要注意的是这后面不能跟单独的数字 这样是没有效果的 需要跟单位 px&lt;/p&gt;
-&lt;h6 id=&#34;字体粗细&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体粗细&#34;&gt;#&lt;/a&gt; 字体粗细&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-weight:  ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里需要谨记 2 个数字&lt;br&gt;
- 700: 加粗&lt;br&gt;
- 400: 正常大小&lt;br&gt;
- font-weight 后面跟数字，可以根据需要来进行调整 不过一般都是 700 和 400 之间切换&lt;/p&gt;
-&lt;h6 id=&#34;文字样式风格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字样式风格&#34;&gt;#&lt;/a&gt; 文字样式风格&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;font-style: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一般运用的都 italic (倾斜) 和 normal (正常) 两种&lt;br&gt;
-实际运用场景：&lt;br&gt;
-1. 用来修改需要倾斜的汉字&lt;br&gt;
- 2. 当没有标签可用时，可以用 em 倾斜标签先将汉字包括，在通过 font-style:normal；将倾斜属性去掉&lt;/p&gt;
-&lt;h6 id=&#34;字体复合属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体复合属性&#34;&gt;#&lt;/a&gt; 字体复合属性&lt;/h6&gt;
-&lt;p&gt;通过简写的方式来节约代码 (不过有顺序要求)&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;font: font-style  font-weight  font-size/line-height  font-family;
-eg:font: italic 700 16px &#39;Microsoft yahei&#39;;
- 前面两个可以省略，但是后面连个一定要写
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;4文本外观属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4文本外观属性&#34;&gt;#&lt;/a&gt; 4. 文本外观属性&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQn9Zq&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQn9Zq.png&#34; alt=&#34;IQn9Zq.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#颜色&#34;&gt;#&lt;/a&gt; 颜色&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;color: &#34;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这里 color 后面所带有 4 种写法&lt;br&gt;
- 1. 直接加颜色例如 red,blue&lt;br&gt;
-2. 加颜色编号，主要这里 #必须加例如 #123456 (常用) 后期通常会用吸色笔 然后负值颜色编号&lt;br&gt;
- 3.rgb (X,X,X) 三色的搭配&lt;br&gt;
- 4.rgba (X,X,X,G) 这个主要是用来设置颜色的透明度 G 取值从 0~1&lt;br&gt;
- 用来设置颜色的透明度&lt;/p&gt;
-&lt;h6 id=&#34;文字对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字对齐&#34;&gt;#&lt;/a&gt; 文字对齐&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;text-align: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;设置文字的对齐方式，&lt;br&gt;
-left,center,right&lt;/p&gt;
-&lt;h6 id=&#34;装饰文本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#装饰文本&#34;&gt;#&lt;/a&gt; 装饰文本&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;text-deroration: ;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可加元素:&lt;br&gt;
-line-through 删除线&lt;br&gt;
- overline 上划线&lt;br&gt;
-&lt;strong&gt; none&lt;/strong&gt; (常用) 通常用来配合通配符选择器来取消 a 的下划线&lt;/p&gt;
-&lt;h6 id=&#34;文本缩进&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本缩进&#34;&gt;#&lt;/a&gt; 文本缩进&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;text-indent: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;后面添加数据时需要注意单位 用像素 (px) 或者 em (一个汉字所占的大小)&lt;/p&gt;
-&lt;h6 id=&#34;行间距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行间距&#34;&gt;#&lt;/a&gt; 行间距&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;line-height: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;也需要加 px&lt;br&gt;
- 后期通常使 line-height 和 height 相等，来使文字垂直对齐&lt;/p&gt;
-&lt;h4 id=&#34;5style样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5style样式表&#34;&gt;#&lt;/a&gt; 5.style 样式表&lt;/h4&gt;
-&lt;h6 id=&#34;内部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#内部样式表&#34;&gt;#&lt;/a&gt; 内部样式表&lt;/h6&gt;
-&lt;p&gt;也就是我们最开始介绍，直到现在一直在使用的加到 style 里面的 css 属性&lt;/p&gt;
-&lt;h6 id=&#34;行内样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内样式表&#34;&gt;#&lt;/a&gt; 行内样式表&lt;/h6&gt;
-&lt;p&gt;直接加在 html 标签中的样式表&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; 例如: &amp;lt;div style=&#34;&#34;;&amp;gt; &amp;lt;/div&amp;gt;
- 不常使用，会使html标签显得臃肿
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;外部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#外部样式表&#34;&gt;#&lt;/a&gt; 外部样式表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&#34;&#34;; href=&#34;文件地址&#34;;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;另建一个.css 文件，在另外一个文件中书写 css 属性&lt;br&gt;
-再通过在 style 中书写 link 将其引入&lt;/p&gt;
-&lt;h4 id=&#34;6vscode中使用emmet语法快速书写代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6vscode中使用emmet语法快速书写代码&#34;&gt;#&lt;/a&gt; 6.vscode 中使用 emmet 语法快速书写代码&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnSLn&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnSLn.png&#34; alt=&#34;IQnSLn.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;7选择器拓展&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7选择器拓展&#34;&gt;#&lt;/a&gt; 7. 选择器拓展&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnZQJ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnZQJ.png&#34; alt=&#34;IQnZQJ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;后代选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后代选择器&#34;&gt;#&lt;/a&gt; 后代选择器&lt;/h6&gt;
-&lt;p&gt;顾名思义就是将大元素中包括的小元素提取出来，这里通过列子来展示&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnCd0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnCd0.png&#34; alt=&#34;IQnCd0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;子元素选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#子元素选择器&#34;&gt;#&lt;/a&gt; 子元素选择器&lt;/h6&gt;
-&lt;p&gt;例如上面的 ol li 变成 ol&amp;gt;li 就只对 ol 中的下一级 li 有用也就是他的儿子，而他的下下级，也就是孙子则不起作用&lt;/p&gt;
-&lt;h6 id=&#34;并集选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#并集选择器&#34;&gt;#&lt;/a&gt; 并集选择器&lt;/h6&gt;
-&lt;p&gt;在标签和标签中间用逗号连接，这样就可以达到同时对两个盒子都起作用的效果&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;例如 div,p,li {}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;需要注意的是最后一个选择器不需要加逗号&lt;/p&gt;
-&lt;h6 id=&#34;链接伪类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#链接伪类选择器&#34;&gt;#&lt;/a&gt; 链接伪类选择器&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqEWt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqEWt.png&#34; alt=&#34;IJqEWt.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;X:GGGG {}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;X 可以是你的选择器中的任何&lt;br&gt;
-：后面可以添加 4 中元素 (其中 hover 最经常使用)：&lt;br&gt;
-link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
- visited: 访问过的链接，把点击过的链接选择出来&lt;br&gt;
- hover: 当鼠标经过时&lt;br&gt;
- active: 鼠标点击但是还未弹起来时&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmxMj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmxMj.png&#34; alt=&#34;IQmxMj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;focus选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#focus选择器&#34;&gt;#&lt;/a&gt; focus 选择器&lt;/h6&gt;
-&lt;p&gt;把获得光标的 input 选择显示出来&lt;br&gt;
-下面是代码，可以通过自己运行来进行查看&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnPoV&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnPoV.png&#34; alt=&#34;IQnPoV.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;8元素显示模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8元素显示模式&#34;&gt;#&lt;/a&gt; 8. 元素显示模式&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqmy8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqmy8.png&#34; alt=&#34;IJqmy8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;块级元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#块级元素&#34;&gt;#&lt;/a&gt; 块级元素&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnkJU&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnkJU.png&#34; alt=&#34;IQnkJU.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;行内元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内元素&#34;&gt;#&lt;/a&gt; 行内元素&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnAWF&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnAWF.png&#34; alt=&#34;IQnAWF.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;行内块元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内块元素&#34;&gt;#&lt;/a&gt; 行内块元素&lt;/h6&gt;
-&lt;p&gt;特殊情况，同时具有块级元素和行内元素的特点，可以进行的大小设置，也可以书写汉字，但是大小会随着汉字的多少而改变&lt;/p&gt;
-&lt;h6 id=&#34;元素显示模式转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#元素显示模式转换&#34;&gt;#&lt;/a&gt; 元素显示模式转换&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; display:   ;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;inline: 行内元素&lt;br&gt;
- block: 块级元素&lt;br&gt;
- inline-block: 行内块元素&lt;br&gt;
-&lt;strong&gt;学到这里去做一下小米侧边栏试试吧&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;单行文字垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单行文字垂直居中&#34;&gt;#&lt;/a&gt; 单行文字垂直居中&lt;/h6&gt;
-&lt;p&gt;也就是上面和大家提及过的，这里让 height 和 line-height 相同即可&lt;/p&gt;
-&lt;h4 id=&#34;9背景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9背景&#34;&gt;#&lt;/a&gt; 9. 背景&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6dHA&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6dHA.png&#34; alt=&#34;IQ6dHA.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景颜色&#34;&gt;#&lt;/a&gt; 背景颜色&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-color: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;后面的元素参照前面 color 属性&lt;/p&gt;
-&lt;h6 id=&#34;背景图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景图片&#34;&gt;#&lt;/a&gt; 背景图片&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-image: url (链接 / 地址)；&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;背景平铺&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景平铺&#34;&gt;#&lt;/a&gt; 背景平铺&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-repeat: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;no-repeat (常用): 不平铺&lt;br&gt;
- repeat (默认): 平铺&lt;br&gt;
- repeat-x: 沿着 X 轴平铺&lt;br&gt;
- repeat-y: 沿着 Y 轴平铺&lt;br&gt;
-&lt;strong&gt;背景图片会压住背景颜色&lt;/strong&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnFiT&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnFiT.png&#34; alt=&#34;IQnFiT.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景位置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景位置&#34;&gt;#&lt;/a&gt; 背景位置&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background-position: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;left top center right bottom&lt;br&gt;
- 也可以用 right center 等同时使用 但是有几点需要注意&lt;br&gt;
- 1. 如果是方位名词  right center 和 center right 效果是等价的 跟顺序没有关系&lt;br&gt;
- 2. 当有参数省略时，并且不全是方位名字时，例如 right top ,&lt;br&gt;
- 省略 right，此时 top 会自动顶部对齐，而省略的会被判定为水平居中&lt;br&gt;
-省略 top，则会被判定为垂直居中&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnEz4&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnEz4.png&#34; alt=&#34;IQnEz4.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 也可以用具体的数据来进行移动，主要用于精灵图&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQney9&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQney9.png&#34; alt=&#34;IQney9.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 需要注意的时，html 的 X 轴向右，而 y 轴是向下的，需要向反方向移动时可以添加负号&lt;/p&gt;
-&lt;h6 id=&#34;背景固定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景固定&#34;&gt;#&lt;/a&gt; 背景固定&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;backgrounf-attachment: fixed;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;将背景图片固定，这样滑动鼠标滚轮时，背景图片会一直存在于网页上，并不会滑走&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQnmLR&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnmLR.png&#34; alt=&#34;IQnmLR.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景属性复合写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景属性复合写法&#34;&gt;#&lt;/a&gt; 背景属性复合写法&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6tje&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6tje.png&#34; alt=&#34;IQ6tje.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;背景半透明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景半透明&#34;&gt;#&lt;/a&gt; 背景半透明&lt;/h6&gt;
-&lt;p&gt;主要这个不是放在 background-color 中&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;background: rgba(X,X,X,X);&lt;/p&gt;
-&lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://yogmas-wang.top/2021/11/06/css2/</guid>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/css2/</guid>
             <title>Css-second</title>
-            <link>http://yogmas-wang.top/2021/11/06/css2/</link>
+            <link>http://s1mwxl.cn/2021/11/06/css2/</link>
             <category>Css</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
@@ -632,6 +386,253 @@ content:’’;&lt;br&gt;
 &lt;p&gt;大概来说就是将一个瞬间变化的过程转化成阶段性有时间长短的变化&lt;br&gt;
 &lt;a href=&#34;https://imgtu.com/i/IJqTpt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqTpt.png&#34; alt=&#34;IJqTpt.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
  在这里 0s 开始一般可以不写而省略，变化曲线也一遍使用 ease 这是最常用的变化曲线&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mwxl.cn/2021/11/06/css1/</guid>
+            <title>Css-first</title>
+            <link>http://s1mwxl.cn/2021/11/06/css1/</link>
+            <category>Css</category>
+            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1css基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css基本架构&#34;&gt;#&lt;/a&gt; 1.css 基本架构&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
+&amp;lt;head&amp;gt;
+&amp;lt;style&amp;gt;&amp;lt;/style&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+ style为css放置位置
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前期学习先将 css 放置在 html 文件夹里面后期会单独利用 css 文件来写 css&lt;/p&gt;
+&lt;h4 id=&#34;2选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2选择器&#34;&gt;#&lt;/a&gt; 2. 选择器&lt;/h4&gt;
+&lt;h6 id=&#34;标签选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标签选择器&#34;&gt;#&lt;/a&gt; 标签选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;选择器 {样式}&lt;br&gt;
+ 给谁改样式 {改什么样式}&lt;br&gt;
+eg.p { color: red;&lt;br&gt;
+font-size: 12px; }&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;标签选择器为大类选择，同一类标签全部都会被 css 修改&lt;/p&gt;
+&lt;h6 id=&#34;类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类选择器&#34;&gt;#&lt;/a&gt; 类选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;.id {} 
+eg .red {color:red;}
+&amp;lt;# class=&#34;id&#34;&amp;gt;  &amp;lt;/#&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里的 ID 还需要与 html 中的 class 相互匹配 #可以替换成任何你想选择的类别 id 可以替换成任何你命名的字母或者单词&lt;br&gt;
+&lt;strong&gt;类选择器口诀：样式点定义  结构类 (class) 调用  一个或多个 开发最常用&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmbIf&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmbIf.png&#34; alt=&#34;IQmbIf.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 同时类选择器可以有多个 ID 都会起作用 中间用空格隔开 例如&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmHdP&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmHdP.png&#34; alt=&#34;IQmHdP.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;id选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#id选择器&#34;&gt;#&lt;/a&gt; id 选择器&lt;/h6&gt;
+&lt;p&gt;id 选择器与类选择器相似，不过 ID 选择器只能使用一次 并且一个 ID 只能调用一次&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;#ID {}
+&amp;lt;XX id=&#34;&#34;&amp;gt;  &amp;lt;/XX&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;通配符选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#通配符选择器&#34;&gt;#&lt;/a&gt; 通配符选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;* { }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通配符 简而言之就是对所有元素和类都有作用，后期主要用来先去除掉浏览器自身所带的一些 css 属性方便我们后续进行 css 操作&lt;/p&gt;
+&lt;h4 id=&#34;3css字体属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3css字体属性&#34;&gt;#&lt;/a&gt; 3.CSS 字体属性&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQmjzQ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmjzQ.png&#34; alt=&#34;IQmjzQ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;字体系列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体系列&#34;&gt;#&lt;/a&gt; 字体系列&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-family:’   &#39;;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;通常会根据团队的要求来确定书写的字体 一般来说是微软雅黑也就是 microsoft YaHei 当然也可以有其他的一系列字体&lt;br&gt;
+比如在后期的&lt;strong&gt;字体图标&lt;/strong&gt;中就需要修改 font-family&lt;/p&gt;
+&lt;h6 id=&#34;字体大小&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体大小&#34;&gt;#&lt;/a&gt; 字体大小&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-size:;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;顾名思义，是修改字体的大小，不过需要注意的是这后面不能跟单独的数字 这样是没有效果的 需要跟单位 px&lt;/p&gt;
+&lt;h6 id=&#34;字体粗细&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体粗细&#34;&gt;#&lt;/a&gt; 字体粗细&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-weight:  ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里需要谨记 2 个数字&lt;br&gt;
+ 700: 加粗&lt;br&gt;
+ 400: 正常大小&lt;br&gt;
+ font-weight 后面跟数字，可以根据需要来进行调整 不过一般都是 700 和 400 之间切换&lt;/p&gt;
+&lt;h6 id=&#34;文字样式风格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字样式风格&#34;&gt;#&lt;/a&gt; 文字样式风格&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;font-style: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一般运用的都 italic (倾斜) 和 normal (正常) 两种&lt;br&gt;
+实际运用场景：&lt;br&gt;
+1. 用来修改需要倾斜的汉字&lt;br&gt;
+ 2. 当没有标签可用时，可以用 em 倾斜标签先将汉字包括，在通过 font-style:normal；将倾斜属性去掉&lt;/p&gt;
+&lt;h6 id=&#34;字体复合属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体复合属性&#34;&gt;#&lt;/a&gt; 字体复合属性&lt;/h6&gt;
+&lt;p&gt;通过简写的方式来节约代码 (不过有顺序要求)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;font: font-style  font-weight  font-size/line-height  font-family;
+eg:font: italic 700 16px &#39;Microsoft yahei&#39;;
+ 前面两个可以省略，但是后面连个一定要写
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;4文本外观属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4文本外观属性&#34;&gt;#&lt;/a&gt; 4. 文本外观属性&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQn9Zq&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQn9Zq.png&#34; alt=&#34;IQn9Zq.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#颜色&#34;&gt;#&lt;/a&gt; 颜色&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;color: &#34;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里 color 后面所带有 4 种写法&lt;br&gt;
+ 1. 直接加颜色例如 red,blue&lt;br&gt;
+2. 加颜色编号，主要这里 #必须加例如 #123456 (常用) 后期通常会用吸色笔 然后负值颜色编号&lt;br&gt;
+ 3.rgb (X,X,X) 三色的搭配&lt;br&gt;
+ 4.rgba (X,X,X,G) 这个主要是用来设置颜色的透明度 G 取值从 0~1&lt;br&gt;
+ 用来设置颜色的透明度&lt;/p&gt;
+&lt;h6 id=&#34;文字对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字对齐&#34;&gt;#&lt;/a&gt; 文字对齐&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;text-align: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;设置文字的对齐方式，&lt;br&gt;
+left,center,right&lt;/p&gt;
+&lt;h6 id=&#34;装饰文本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#装饰文本&#34;&gt;#&lt;/a&gt; 装饰文本&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;text-deroration: ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可加元素:&lt;br&gt;
+line-through 删除线&lt;br&gt;
+ overline 上划线&lt;br&gt;
+&lt;strong&gt; none&lt;/strong&gt; (常用) 通常用来配合通配符选择器来取消 a 的下划线&lt;/p&gt;
+&lt;h6 id=&#34;文本缩进&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本缩进&#34;&gt;#&lt;/a&gt; 文本缩进&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;text-indent: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面添加数据时需要注意单位 用像素 (px) 或者 em (一个汉字所占的大小)&lt;/p&gt;
+&lt;h6 id=&#34;行间距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行间距&#34;&gt;#&lt;/a&gt; 行间距&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;line-height: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也需要加 px&lt;br&gt;
+ 后期通常使 line-height 和 height 相等，来使文字垂直对齐&lt;/p&gt;
+&lt;h4 id=&#34;5style样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5style样式表&#34;&gt;#&lt;/a&gt; 5.style 样式表&lt;/h4&gt;
+&lt;h6 id=&#34;内部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#内部样式表&#34;&gt;#&lt;/a&gt; 内部样式表&lt;/h6&gt;
+&lt;p&gt;也就是我们最开始介绍，直到现在一直在使用的加到 style 里面的 css 属性&lt;/p&gt;
+&lt;h6 id=&#34;行内样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内样式表&#34;&gt;#&lt;/a&gt; 行内样式表&lt;/h6&gt;
+&lt;p&gt;直接加在 html 标签中的样式表&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt; 例如: &amp;lt;div style=&#34;&#34;;&amp;gt; &amp;lt;/div&amp;gt;
+ 不常使用，会使html标签显得臃肿
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;外部样式表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#外部样式表&#34;&gt;#&lt;/a&gt; 外部样式表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&#34;&#34;; href=&#34;文件地址&#34;;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;另建一个.css 文件，在另外一个文件中书写 css 属性&lt;br&gt;
+再通过在 style 中书写 link 将其引入&lt;/p&gt;
+&lt;h4 id=&#34;6vscode中使用emmet语法快速书写代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6vscode中使用emmet语法快速书写代码&#34;&gt;#&lt;/a&gt; 6.vscode 中使用 emmet 语法快速书写代码&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnSLn&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnSLn.png&#34; alt=&#34;IQnSLn.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;7选择器拓展&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7选择器拓展&#34;&gt;#&lt;/a&gt; 7. 选择器拓展&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnZQJ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnZQJ.png&#34; alt=&#34;IQnZQJ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;后代选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#后代选择器&#34;&gt;#&lt;/a&gt; 后代选择器&lt;/h6&gt;
+&lt;p&gt;顾名思义就是将大元素中包括的小元素提取出来，这里通过列子来展示&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnCd0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnCd0.png&#34; alt=&#34;IQnCd0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;子元素选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#子元素选择器&#34;&gt;#&lt;/a&gt; 子元素选择器&lt;/h6&gt;
+&lt;p&gt;例如上面的 ol li 变成 ol&amp;gt;li 就只对 ol 中的下一级 li 有用也就是他的儿子，而他的下下级，也就是孙子则不起作用&lt;/p&gt;
+&lt;h6 id=&#34;并集选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#并集选择器&#34;&gt;#&lt;/a&gt; 并集选择器&lt;/h6&gt;
+&lt;p&gt;在标签和标签中间用逗号连接，这样就可以达到同时对两个盒子都起作用的效果&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;例如 div,p,li {}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;需要注意的是最后一个选择器不需要加逗号&lt;/p&gt;
+&lt;h6 id=&#34;链接伪类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#链接伪类选择器&#34;&gt;#&lt;/a&gt; 链接伪类选择器&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqEWt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqEWt.png&#34; alt=&#34;IJqEWt.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;X:GGGG {}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;X 可以是你的选择器中的任何&lt;br&gt;
+：后面可以添加 4 中元素 (其中 hover 最经常使用)：&lt;br&gt;
+link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
+ visited: 访问过的链接，把点击过的链接选择出来&lt;br&gt;
+ hover: 当鼠标经过时&lt;br&gt;
+ active: 鼠标点击但是还未弹起来时&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmxMj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmxMj.png&#34; alt=&#34;IQmxMj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;focus选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#focus选择器&#34;&gt;#&lt;/a&gt; focus 选择器&lt;/h6&gt;
+&lt;p&gt;把获得光标的 input 选择显示出来&lt;br&gt;
+下面是代码，可以通过自己运行来进行查看&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnPoV&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnPoV.png&#34; alt=&#34;IQnPoV.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;8元素显示模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8元素显示模式&#34;&gt;#&lt;/a&gt; 8. 元素显示模式&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqmy8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqmy8.png&#34; alt=&#34;IJqmy8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;块级元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#块级元素&#34;&gt;#&lt;/a&gt; 块级元素&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnkJU&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnkJU.png&#34; alt=&#34;IQnkJU.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;行内元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内元素&#34;&gt;#&lt;/a&gt; 行内元素&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQnAWF&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnAWF.png&#34; alt=&#34;IQnAWF.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;行内块元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内块元素&#34;&gt;#&lt;/a&gt; 行内块元素&lt;/h6&gt;
+&lt;p&gt;特殊情况，同时具有块级元素和行内元素的特点，可以进行的大小设置，也可以书写汉字，但是大小会随着汉字的多少而改变&lt;/p&gt;
+&lt;h6 id=&#34;元素显示模式转换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#元素显示模式转换&#34;&gt;#&lt;/a&gt; 元素显示模式转换&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt; display:   ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;inline: 行内元素&lt;br&gt;
+ block: 块级元素&lt;br&gt;
+ inline-block: 行内块元素&lt;br&gt;
+&lt;strong&gt;学到这里去做一下小米侧边栏试试吧&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;单行文字垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单行文字垂直居中&#34;&gt;#&lt;/a&gt; 单行文字垂直居中&lt;/h6&gt;
+&lt;p&gt;也就是上面和大家提及过的，这里让 height 和 line-height 相同即可&lt;/p&gt;
+&lt;h4 id=&#34;9背景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9背景&#34;&gt;#&lt;/a&gt; 9. 背景&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6dHA&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6dHA.png&#34; alt=&#34;IQ6dHA.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景颜色&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景颜色&#34;&gt;#&lt;/a&gt; 背景颜色&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-color: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;后面的元素参照前面 color 属性&lt;/p&gt;
+&lt;h6 id=&#34;背景图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景图片&#34;&gt;#&lt;/a&gt; 背景图片&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-image: url (链接 / 地址)；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;背景平铺&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景平铺&#34;&gt;#&lt;/a&gt; 背景平铺&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-repeat: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;no-repeat (常用): 不平铺&lt;br&gt;
+ repeat (默认): 平铺&lt;br&gt;
+ repeat-x: 沿着 X 轴平铺&lt;br&gt;
+ repeat-y: 沿着 Y 轴平铺&lt;br&gt;
+&lt;strong&gt;背景图片会压住背景颜色&lt;/strong&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnFiT&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnFiT.png&#34; alt=&#34;IQnFiT.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景位置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景位置&#34;&gt;#&lt;/a&gt; 背景位置&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background-position: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;left top center right bottom&lt;br&gt;
+ 也可以用 right center 等同时使用 但是有几点需要注意&lt;br&gt;
+ 1. 如果是方位名词  right center 和 center right 效果是等价的 跟顺序没有关系&lt;br&gt;
+ 2. 当有参数省略时，并且不全是方位名字时，例如 right top ,&lt;br&gt;
+ 省略 right，此时 top 会自动顶部对齐，而省略的会被判定为水平居中&lt;br&gt;
+省略 top，则会被判定为垂直居中&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnEz4&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnEz4.png&#34; alt=&#34;IQnEz4.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 也可以用具体的数据来进行移动，主要用于精灵图&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQney9&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQney9.png&#34; alt=&#34;IQney9.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 需要注意的时，html 的 X 轴向右，而 y 轴是向下的，需要向反方向移动时可以添加负号&lt;/p&gt;
+&lt;h6 id=&#34;背景固定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景固定&#34;&gt;#&lt;/a&gt; 背景固定&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;backgrounf-attachment: fixed;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;将背景图片固定，这样滑动鼠标滚轮时，背景图片会一直存在于网页上，并不会滑走&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQnmLR&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQnmLR.png&#34; alt=&#34;IQnmLR.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景属性复合写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景属性复合写法&#34;&gt;#&lt;/a&gt; 背景属性复合写法&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6tje&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6tje.png&#34; alt=&#34;IQ6tje.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;背景半透明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#背景半透明&#34;&gt;#&lt;/a&gt; 背景半透明&lt;/h6&gt;
+&lt;p&gt;主要这个不是放在 background-color 中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;background: rgba(X,X,X,X);&lt;/p&gt;
+&lt;/blockquote&gt;
  ]]></description>
         </item>
     </channel>

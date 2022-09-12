@@ -1,21 +1,22 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yogmas-wang.top</id>
-    <title>YogMas学习站 • Posts by &#34;操作系统&#34; tag</title>
-    <link href="http://yogmas-wang.top" />
+    <id>http://s1mwxl.cn</id>
+    <title>S1m • Posts by &#34;操作系统&#34; tag</title>
+    <link href="http://s1mwxl.cn" />
     <updated>2021-02-09T16:00:00.000Z</updated>
     <category term="C语言" />
     <category term="python" />
     <category term="Css" />
     <category term="Html" />
-    <category term="操作系统" />
-    <category term="Javascript" />
-    <category term="icoding答案" />
     <category term="机器学习" />
+    <category term="操作系统" />
+    <category term="icoding答案" />
+    <category term="Javascript" />
+    <category term="java" />
     <entry>
-        <id>http://yogmas-wang.top/2021/02/10/cao-zuo-xi-tong/</id>
+        <id>http://s1mwxl.cn/2021/02/10/cao-zuo-xi-tong/</id>
         <title>操作系统</title>
-        <link rel="alternate" href="http://yogmas-wang.top/2021/02/10/cao-zuo-xi-tong/"/>
+        <link rel="alternate" href="http://s1mwxl.cn/2021/02/10/cao-zuo-xi-tong/"/>
         <content type="html">&lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
 &lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt; ,beginning from 2022.1.18&lt;/p&gt;
 &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
