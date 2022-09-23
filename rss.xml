@@ -5,8 +5,8 @@
         <link>http://s1mwxl.cn</link>
         <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
-        <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 16 Sep 2022 00:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0800</lastBuildDate>
         <category>C语言</category>
         <category>python</category>
         <category>Css</category>
@@ -16,6 +16,33 @@
         <category>icoding答案</category>
         <category>Javascript</category>
         <category>java</category>
+        <category>Git</category>
+        <item>
+            <guid isPermalink="true">http://s1mwxl.cn/2022/09/16/git/</guid>
+            <title>Git</title>
+            <link>http://s1mwxl.cn/2022/09/16/git/</link>
+            <category>Git</category>
+            <pubDate>Fri, 16 Sep 2022 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h1&gt;
+&lt;h2 id=&#34;常用指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用指令&#34;&gt;#&lt;/a&gt; 常用指令&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add 文件名&lt;/code&gt; ：添加到缓存区&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -m &#34;提交说明&#34;&lt;/code&gt;   : 提交到本地代码库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt;  : 初始化 git 仓库&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git status&lt;/code&gt; : 时刻掌握仓库当前的状态&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git diff&lt;/code&gt; : 查看仓库更改中的不同&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git log （--pretty=online）&lt;/code&gt; : 显示从最近到最远的提交日志 后面的参数可以简化显示&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git reset --hard HEAD^ (commit ID)&lt;/code&gt; : 文件版本回退&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git reflog&lt;/code&gt; : 显示你之前的每一次命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout -- file&lt;/code&gt; : 把 file 文件在工作区的修改全部撤销，原理是用版本库里的版本替换工作区的版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt; : 把暂存区的修改撤销掉，重新放回工作区&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git rm&lt;/code&gt; : 删除文件，执行后再 &lt;code&gt;git commit&lt;/code&gt;  才能从版本库中删除&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;基本知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本知识&#34;&gt;#&lt;/a&gt; 基本知识&lt;/h2&gt;
+&lt;p&gt;git 中使用 &lt;code&gt;HEAD&lt;/code&gt;  来表示当前版本  &lt;code&gt;HEAD^&lt;/code&gt;  来表示上一个版本  &lt;code&gt;HEAD^^&lt;/code&gt;  来表示上上个版本 还可以写作  &lt;code&gt;HEAD~100&lt;/code&gt;  来表示前一百个版本&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://s1mwxl.cn/2022/09/13/java/</guid>
             <title>java</title>
@@ -415,6 +442,142 @@ return 0; //返回语句 结束函数
 &lt;p&gt;&lt;code&gt;using namespace std&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;为了避免封装的两个文件中有相同的函数名导致的编译器无法判断使用哪个函数，就可以将函数放入不同的名称空间中&lt;/p&gt;
 &lt;p&gt;例如  &lt;code&gt;cout&lt;/code&gt;  的全部其实是  &lt;code&gt;std::cout&lt;/code&gt;  std 就是一个名称空间 这样保证了函数之间的不混淆性&lt;/p&gt;
+&lt;h2 id=&#34;stl&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#stl&#34;&gt;#&lt;/a&gt; STL&lt;/h2&gt;
+&lt;h3 id=&#34;变长数组vector&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变长数组vector&#34;&gt;#&lt;/a&gt; 变长数组 vector&lt;/h3&gt;
+&lt;p&gt;因为涉及数组的复制操作，变长数组一般要比普通的数组速度慢&lt;/p&gt;
+&lt;p&gt;队尾插入删除为 O (1), 队尾插入删除为 O (n);&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;vector&amp;gt;
+//vector自带比较运算  字典序比较
+vector&amp;lt;int&amp;gt; a;  //生成一个长度动态变化的数组
+vector&amp;lt;int&amp;gt; b[233];  //相当于第一维长233，第二维长度动态变化的int数组
+struct rec{…};
+vector&amp;lt;rec&amp;gt; c;
+vector&amp;lt;int&amp;gt;::iterator i = a.begin() //迭代器 类似于指针 *i 表示值
+for (int i = 0; i &amp;lt; a.size(); I ++) cout &amp;lt;&amp;lt; a[i] &amp;lt;&amp;lt; endl;
+for (vector&amp;lt;int&amp;gt;::iterator it = a.begin(); it != a.end(); it ++) cout &amp;lt;&amp;lt; *it &amp;lt;&amp;lt; endl;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;相关函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#相关函数&#34;&gt;#&lt;/a&gt; 相关函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;a.begin()&lt;/code&gt; : 返回指向 vector 中第一个元素的迭代器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.end()&lt;/code&gt; :end 函数返回 vector 的尾部，即第 n 个元素再往后的 “边界”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.clear()&lt;/code&gt; : 将变长数组清空&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.font()&lt;/code&gt; : 返回 vector 的第一个元素，等价于 &lt;code&gt;*a.begin()&lt;/code&gt;  和  &lt;code&gt;a[0]&lt;/code&gt; 。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.back()&lt;/code&gt; : 等价于 &lt;code&gt;a[a.size() – 1]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.push_back(x)&lt;/code&gt; : 元素 x 插入到 vector a 的尾部。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a.pop_back()&lt;/code&gt; : 删除 vector a 的最后一个元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;队列queue&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#队列queue&#34;&gt;#&lt;/a&gt; 队列 queue&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;queue&amp;gt;
+queue&amp;lt;int&amp;gt; q;
+struct rec{…}; queue&amp;lt;rec&amp;gt; q; 	//结构体rec中必须定义小于号
+priority_queue&amp;lt;int&amp;gt; q;		// 大根堆 弹出时默认弹出最大值
+priority_queue&amp;lt;int, vector&amp;lt;int&amp;gt;, greater&amp;lt;int&amp;gt; q;	// 小根堆 弹出元素时,默认弹出最小值
+priority_queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt;q;
+//如果结构体使用优先队列 必须进行运算符重载 如下  
+struct Rec
+{
+    int a,b;
+    bool operator &amp;lt; (const Rec &amp;amp;t) const   //运算符重载  重新定义符号  大根堆重载小于号 小根堆重载大于号
+    {
+        return a&amp;lt;t.a;
+    }
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;相关函数-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#相关函数-2&#34;&gt;#&lt;/a&gt; 相关函数&lt;/h4&gt;
+&lt;h5 id=&#34;普通队列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#普通队列&#34;&gt;#&lt;/a&gt; 普通队列&lt;/h5&gt;
+&lt;p&gt;队列，优先队列，栈没有 **clear ()** 函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;q.push(x)&lt;/code&gt; : 队尾插入一个 x 元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.pop()&lt;/code&gt; : 弹出队头元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.front()&lt;/code&gt; : 返回队头元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.back():&lt;/code&gt;  返回队尾元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;优先队列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优先队列&#34;&gt;#&lt;/a&gt; 优先队列&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;q.push(x)&lt;/code&gt; : 把元素插入堆&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.pop()&lt;/code&gt; : 删除堆顶元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.top()&lt;/code&gt; : 查询堆顶元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;栈stack&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#栈stack&#34;&gt;#&lt;/a&gt; 栈 stack&lt;/h3&gt;
+&lt;p&gt;前进后出&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;q.push(x)&lt;/code&gt; : 把元素插入栈&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.pop()&lt;/code&gt; : 删除栈顶元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;q.top()&lt;/code&gt; : 返回栈顶元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;双端队列deque&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#双端队列deque&#34;&gt;#&lt;/a&gt; 双端队列 deque&lt;/h3&gt;
+&lt;p&gt;双端队列 deque 是一个支持在两端高效插入或删除元素的连续线性存储空间。它就像是 vector 和 queue 的结合。与 vector 相比，deque 在头部增删元素仅需要 O (1) 的时间；与 queue 相比，deque 像数组一样支持随机访问。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;deque&amp;gt;
+deque&amp;lt;int&amp;gt; a;
+// vector性质
+a.begin();
+a.end();
+a.front;
+a.back()
+//queue性质
+a.push_back(1); //从队尾插入
+a.push_front(1); // 从队头插入
+a.pop_back(); //弹出最后一个元素
+a.pop_front(); //弹出第一个元素
+a.clear(); //清空队列&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;set&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#set&#34;&gt;#&lt;/a&gt; set&lt;/h3&gt;
+&lt;p&gt;头文件 set 主要包括 set 和 multiset 两个容器，分别是 “有序集合” 和 “有序多重集合”，即前者的元素不能重复，而后者可以包含若干个相等的元素。set 和 multiset 的内部实现是一棵红黑树，它们支持的函数基本相同。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;set&amp;gt;
+set&amp;lt;int&amp;gt; a; //元素不能重复
+set&amp;lt;int&amp;gt;::iterator it = a.begin()  //迭代器 可++或者--; ++为后一个元素 --为前一个元素
+a.begin();  //集合开始的位置  O(1)
+a.end(); //最后一个元素的后一个位置 O(1)
+a.insert(x); //插入一个x  O(logn)
+a.find(x); //查找x  找到返回迭代器  没有找到返回a.end();  就可以使用a.find(x) == a.end() 来判断x在a中是否存在      O(logn)
+a.lower_bound(x);  //找到大于等于x的最小的元素的迭代器
+a.upper_bound(x);  //找到大于x的最小的元素的迭代器
+
+a.erase(it);  // 从a中删除迭代器it指向的元素 O（logn） it是一元素,就是从a中删除所有等于it的元素 O(k+logn)
+
+a.count(x) // a在x中的个数  O(k+logn)
+    
+
+    
+multiset&amp;lt;int&amp;gt; a; // 元素可以重复
+//结构同样需要重载运算符
+size/empty/clear 与vector相同&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map&#34;&gt;#&lt;/a&gt; map&lt;/h3&gt;
+&lt;p&gt;map 容器是一个键值对 key-value 的映射，其内部实现是一棵以 key 为关键码的红黑树。Map 的 key 和 value 可以是任意类型，其中 key 必须定义小于号运算符。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;map&amp;gt;
+map&amp;lt;int,int&amp;gt; a;
+a[1] = 2; //插入&amp;lt;1,2&amp;gt; 二元组
+cout &amp;lt;&amp;lt; a[1] &amp;lt;&amp;lt; endl; //返回2
+a[&#34;wxl&#34;] = 2;  //插入&amp;lt;&#34;wxl&#34;,2&amp;gt;二元组
+cout &amp;lt;&amp;lt; a[&#34;wxl&#34;]  &amp;lt;&amp;lt; endl; //返回2
+//size/empty/clear/begin/end 与set类似
+//insert/erase 与set类似  只是需要传入一个二元组
+a.insert({1,2});
+a.find(&#34;wxl&#34;);&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;pair&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pair&#34;&gt;#&lt;/a&gt; pair&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;pair&amp;lt;int,string&amp;gt; a;
+a = {3,&#34;wxl&#34;}; //C++ 99不支持
+a.make_pair(3,&#34;wxl&#34;);
+//pair支持比较运算 先比较first 再比较second
+count &amp;lt;&amp;lt; a.first &amp;lt;&amp;lt; &#39; &#39; &amp;lt;&amp;lt; a.second &amp;lt;&amp;lt; endl;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;unordered_set&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unordered_set&#34;&gt;#&lt;/a&gt; unordered_set&lt;/h3&gt;
+&lt;p&gt;无序的 set&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;unordered_set&amp;gt;  //底层逻辑为哈希表
+unordered_set&amp;lt;int&amp;gt;;
+unordered_multiset&amp;lt;int&amp;gt; b; //重复元素
+// 与set函数用法相同 只是没有upper_bound 和 lower_bound 因为unordered_map 是无序的&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;unordered_map&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unordered_map&#34;&gt;#&lt;/a&gt; unordered_map&lt;/h3&gt;
+&lt;p&gt;与 map 一样&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;好处: map 的效率为 O (logn),unordered_map 的效率为 O (1);&lt;/li&gt;
+&lt;li&gt;坏处:unordered_map 不支持二分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bitset&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bitset&#34;&gt;#&lt;/a&gt; bitset&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;#include &amp;lt;bitset&amp;gt;   //用于位运算 不常用
+
+bitset&amp;lt;长度&amp;gt; a;   //为0,1串  没有赋值就为0
+a[0] = 1
+a.count();  //返回1的个数
+a.set(下标); // 将a[下标]设成1
+a.reset(下标);  // 将a[下标]设成0&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;/h3&gt;
  ]]></description>
         </item>
         <item>
