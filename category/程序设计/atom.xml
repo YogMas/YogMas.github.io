@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mm.gitee.io/myblog</id>
+    <id>http://s1mm.gitee.io/s1mm</id>
     <title>S1m • Posts by &#34;程序设计&#34; category</title>
-    <link href="http://s1mm.gitee.io/myblog" />
+    <link href="http://s1mm.gitee.io/s1mm" />
     <updated>2022-07-09T16:00:00.000Z</updated>
     <category term="C语言" />
-    <category term="Css" />
     <category term="python" />
+    <category term="Css" />
     <category term="Git" />
     <category term="Html" />
     <category term="java" />
     <category term="操作系统" />
-    <category term="Javascript" />
     <category term="机器学习" />
+    <category term="Javascript" />
     <category term="icoding答案" />
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2022/07/10/c/</id>
+        <id>http://s1mm.gitee.io/s1mm/2022/07/10/c/</id>
         <title>C++</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2022/07/10/c/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/07/10/c/"/>
         <content type="html">&lt;h1 id=&#34;c&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c&#34;&gt;#&lt;/a&gt; C++&lt;/h1&gt;
 &lt;h2 id=&#34;第一章-预备知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一章-预备知识&#34;&gt;#&lt;/a&gt; 第一章 预备知识&lt;/h2&gt;
 &lt;p&gt;C++ 在 C 语言的编程上添加了&lt;strong&gt;面向对象编程&lt;/strong&gt;和&lt;strong&gt;泛型编程&lt;/strong&gt;&lt;/p&gt;
@@ -204,9 +204,9 @@ a.reset(下标);  // 将a[下标]设成0&lt;span aria-hidden=&#34;true&#34; clas
         <updated>2022-07-09T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/c-yu-yan/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/c-yu-yan/</id>
         <title>C语言</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/c-yu-yan/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/c-yu-yan/"/>
         <content type="html">&lt;h1 id=&#34;c语言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言&#34;&gt;#&lt;/a&gt; C 语言&lt;/h1&gt;
 &lt;!-- The Article Made by YogMas --&gt;
 &lt;h2 id=&#34;the-article-made-by-yogmas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-made-by-yogmas&#34;&gt;#&lt;/a&gt; The Article Made by YogMas&lt;/h2&gt;

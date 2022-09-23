@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mm.gitee.io/myblog</id>
+    <id>http://s1mm.gitee.io/s1mm</id>
     <title>S1m</title>
-    <link href="http://s1mm.gitee.io/myblog" />
+    <link href="http://s1mm.gitee.io/s1mm" />
     <updated>2022-09-15T16:00:00.000Z</updated>
     <category term="C语言" />
-    <category term="Css" />
     <category term="python" />
+    <category term="Css" />
     <category term="Git" />
     <category term="Html" />
     <category term="java" />
     <category term="操作系统" />
-    <category term="Javascript" />
     <category term="机器学习" />
+    <category term="Javascript" />
     <category term="icoding答案" />
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2022/09/16/git/</id>
+        <id>http://s1mm.gitee.io/s1mm/2022/09/16/git/</id>
         <title>Git</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2022/09/16/git/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/09/16/git/"/>
         <content type="html">&lt;h1 id=&#34;git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h1&gt;
 &lt;h2 id=&#34;常用指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用指令&#34;&gt;#&lt;/a&gt; 常用指令&lt;/h2&gt;
 &lt;ul&gt;
@@ -41,9 +41,9 @@
         <updated>2022-09-15T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2022/09/13/java/</id>
+        <id>http://s1mm.gitee.io/s1mm/2022/09/13/java/</id>
         <title>java</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2022/09/13/java/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/09/13/java/"/>
         <content type="html">&lt;h1 id=&#34;java&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h1&gt;
 &lt;p&gt;软件工程课程中 java 学习的记录&lt;/p&gt;
 &lt;h2 id=&#34;java开发&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java开发&#34;&gt;#&lt;/a&gt; Java 开发&lt;/h2&gt;
@@ -389,9 +389,9 @@ sb&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#3
         <updated>2022-09-12T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2022/07/10/c/</id>
+        <id>http://s1mm.gitee.io/s1mm/2022/07/10/c/</id>
         <title>C++</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2022/07/10/c/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/07/10/c/"/>
         <content type="html">&lt;h1 id=&#34;c&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c&#34;&gt;#&lt;/a&gt; C++&lt;/h1&gt;
 &lt;h2 id=&#34;第一章-预备知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一章-预备知识&#34;&gt;#&lt;/a&gt; 第一章 预备知识&lt;/h2&gt;
 &lt;p&gt;C++ 在 C 语言的编程上添加了&lt;strong&gt;面向对象编程&lt;/strong&gt;和&lt;strong&gt;泛型编程&lt;/strong&gt;&lt;/p&gt;
@@ -578,9 +578,9 @@ a.reset(下标);  // 将a[下标]设成0&lt;span aria-hidden=&#34;true&#34; clas
         <updated>2022-07-09T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2022/07/10/python/</id>
+        <id>http://s1mm.gitee.io/s1mm/2022/07/10/python/</id>
         <title>python</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2022/07/10/python/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/07/10/python/"/>
         <content type="html">&lt;h1 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h1&gt;
 &lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt;  on 2022/7/08&lt;/p&gt;
 &lt;h2 id=&#34;变量和字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量和字符串&#34;&gt;#&lt;/a&gt; 变量和字符串&lt;/h2&gt;
@@ -1216,9 +1216,9 @@ squareY &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class
         <updated>2022-07-09T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/18/dian-ke-icoding/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/18/dian-ke-icoding/</id>
         <title>电科icoding答案</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/18/dian-ke-icoding/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/18/dian-ke-icoding/"/>
         <content type="html">&lt;h1 id=&#34;c语言-icoding答案&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言-icoding答案&#34;&gt;#&lt;/a&gt; C 语言 - icoding 答案&lt;/h1&gt;
 &lt;h2 id=&#34;the-article-made-by-yogmas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-made-by-yogmas&#34;&gt;#&lt;/a&gt; The article made by YogMas&lt;/h2&gt;
 &lt;h3 id=&#34;实验一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实验一&#34;&gt;#&lt;/a&gt; 实验一&lt;/h3&gt;
@@ -2188,9 +2188,9 @@ Largest word: light&lt;/p&gt;
         <updated>2021-11-17T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/css1/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/css1/</id>
         <title>Css-first</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/css1/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/css1/"/>
         <content type="html">&lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
 &lt;h4 id=&#34;1css基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css基本架构&#34;&gt;#&lt;/a&gt; 1.css 基本架构&lt;/h4&gt;
@@ -2435,9 +2435,9 @@ link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/css2/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/css2/</id>
         <title>Css-second</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/css2/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/css2/"/>
         <content type="html">&lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
 &lt;h4 id=&#34;1css选择器的性质&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css选择器的性质&#34;&gt;#&lt;/a&gt; 1.css 选择器的性质&lt;/h4&gt;
@@ -2807,9 +2807,9 @@ content:’’;&lt;br&gt;
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/html-shang/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</id>
         <title>Html-first</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/html-shang/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/"/>
         <content type="html">&lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
 &lt;h4 id=&#34;1基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本架构&#34;&gt;#&lt;/a&gt; 1. 基本架构&lt;/h4&gt;
@@ -2904,9 +2904,198 @@ X 包括_self (覆盖当前页面)&lt;br&gt;
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/c-yu-yan/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</id>
+        <title>Html-second</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/"/>
+        <content type="html">&lt;p&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;html下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html下&#34;&gt;#&lt;/a&gt; Html (下)&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1表格&#34;&gt;#&lt;/a&gt; 1. 表格&lt;/h4&gt;
+&lt;h6 id=&#34;表格基本语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格基本语法&#34;&gt;#&lt;/a&gt; 表格基本语法&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;
+  &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;表头单元格标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表头单元格标签&#34;&gt;#&lt;/a&gt; 表头单元格标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;align=&#34;&#34;&lt;br&gt;
+border=&#34;&#34;&lt;br&gt;
+cellpadding=&#34;&#34;&lt;br&gt;
+cellspacing=&#34;&#34;&lt;br&gt;
+width=&#34;&#34;&lt;br&gt;
+height=&#34;&#34;&lt;br&gt;
+&lt;strong&gt; 这些标签要写到 table 里面去&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;align: 表格中的文字所处的文字 eg.center 就是未于中间类似的还有 left,right&lt;br&gt;
+border：表示表格边框的大小 0 表示没有 &lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;&lt;br&gt;
+ cellpadding：代表单元格边框到内容之间的距离（留白）&lt;br&gt;
+cellspacing：用来指定表格各单元格之间的空隙。&lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;，表示单元格间隙所占的像素点数。&lt;br&gt;
+同样 width,height 已经介绍过了 ，大多数时候都会用&lt;strong&gt; CSS&lt;/strong&gt; 来写&lt;/p&gt;
+&lt;h6 id=&#34;合并单元格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并单元格&#34;&gt;#&lt;/a&gt; 合并单元格&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rowspan=“合并单元格数目”&lt;br&gt;
+colspan=“合并单元格数目”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;rowspan: 合并行 (也就是将一列上的各行合并)&lt;br&gt;
+ colspan: 合并列 (也就是将一行上的各列合并)&lt;br&gt;
+ 合并准则：如果 rowspan 就在最上面的表格的标签里面加上 rowspan=&#34;合并数目&#34; 并且删除已经被合并的表格&lt;br&gt;
+ colspan 同理，注意 colspan 加在最左边的表格标签&lt;br&gt;
+ eg.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;tr&amp;gt;
+     &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td colspan=&#34;2&#34;&amp;gt;&amp;lt;/td&amp;gt;
+
+  &amp;lt;/tr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;表示合并一行上的 2 列 第三列删除 colspan 写在第二列的 td 表格标签内&lt;/p&gt;
+&lt;h4 id=&#34;2列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2列表&#34;&gt;#&lt;/a&gt; 2. 列表&lt;/h4&gt;
+&lt;h6 id=&#34;无序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无序列表&#34;&gt;#&lt;/a&gt; 无序列表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    …………
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中的 li 标签各位根据需要而定&lt;br&gt;
+ ul:unorderlist&lt;br&gt;
+li:list&lt;/p&gt;
+&lt;h6 id=&#34;有序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有序列表&#34;&gt;#&lt;/a&gt; 有序列表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    …………
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ol:orderlist&lt;br&gt;
+li:list&lt;/p&gt;
+&lt;h6 id=&#34;自定义列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自定义列表&#34;&gt;#&lt;/a&gt; 自定义列表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;dl&amp;gt;
+   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;顶部总标签
+   &amp;lt;dd&amp;gt;&amp;lt;/dd&amp;gt;
+   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;
+   &amp;lt;dd&amp;gt;&amp;lt;/dd
+ &amp;lt;/dl&amp;gt;
+ 一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;标签出现代表一列
+ 直到下一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;出现才换列
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;3表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3表单&#34;&gt;#&lt;/a&gt; 3. 表单&lt;/h4&gt;
+&lt;h6 id=&#34;表单域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单域&#34;&gt;#&lt;/a&gt; 表单域&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&#34;&#34; method=&#34;&#34; name=&#34;&#34;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;表单域需要与后端结合使用只是接下来的一系列需要传输数据到后端的都需要写到表单域内&lt;br&gt;
+附：此时作者还不知道表单域的 action 等标签充当的角色和用处&lt;/p&gt;
+&lt;h6 id=&#34;input表单元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单元素&#34;&gt;#&lt;/a&gt; input 表单元素&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;&#34; value=&#34;&#34; name=&#34;&#34; &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqbX8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqbX8.png&#34; alt=&#34;IJqbX8.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+type 里面可以填写的元素&lt;br&gt;
+ text: 文本框，用户可以输入任何文字，但可以用 maxlength 等来加以限定&lt;br&gt;
+ password：密码框，可以对你输入的数字进行保密 此时显示 *******&lt;br&gt;
+radio: 单选按钮&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将两个 input+radio 元素的标签 name 设置成相同 才可以进行单选 具体下面看图&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;checkbox: 复选框，可以进行多个选择&lt;br&gt;
+ submit: 提交按钮，点击可以将数据提交给后端&lt;br&gt;
+ reset: 重新填写&lt;br&gt;
+ button: 点击  例如：获取短信验证码需要使用&lt;/p&gt;
+&lt;p&gt;与 type 同等级的元素作用&lt;br&gt;
+ value：提前显示在文本框内的文字&lt;br&gt;
+ name：传送给后端时的数据名称，radio 只有 name 相同才能单选&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmXRg&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmXRg.png&#34; alt=&#34;IQmXRg.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;label标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#label标签&#34;&gt;#&lt;/a&gt; label 标签&lt;/h6&gt;
+&lt;p&gt;点击添加了 label 标签的元素等于点击 label 标签的输出端&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&#34;XXX&#34;&amp;gt; &amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;&#34; id=&#34;XXX&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;并不一定要是 input 只是在 input 等填写数据中较为广泛地使用，xxx 可以换成任何自己命名的单词字母等&lt;br&gt;
+ for 和 id 中填写的必须相同&lt;/p&gt;
+&lt;h6 id=&#34;select下拉表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#select下拉表单&#34;&gt;#&lt;/a&gt; select 下拉表单&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
+&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;
+&amp;lt;option selected=&#34;selected&#34;&amp;gt; &amp;lt;/potion&amp;gt;
+&amp;lt;/select&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;option 标签中间填写下拉菜单中的文字等&lt;br&gt;
+添加了 selected 元素的表示 未下拉时显示在表面的选项&lt;/p&gt;
+&lt;h6 id=&#34;textarea文本域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#textarea文本域&#34;&gt;#&lt;/a&gt; textarea 文本域&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;textarea cols=&#34;&#34; rows=&#34;&#34;&amp;gt;
+&amp;lt;/textarea&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;文本域通常很大所以用 cols 和 rows 来进行限定&lt;br&gt;
+ cols 限定一行的字数 rows 限定行数&lt;br&gt;
+在后期的学习中可以用&lt;strong&gt; css&lt;/strong&gt; 将文本域的右下角拉伸和上下滑动进行去除，增加美观性&lt;/p&gt;
+&lt;h4 id=&#34;4html5新增&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4html5新增&#34;&gt;#&lt;/a&gt; 4.html5 新增&lt;/h4&gt;
+&lt;h6 id=&#34;语义化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语义化标签&#34;&gt;#&lt;/a&gt; 语义化标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;header&amp;gt;头部标签&amp;lt;/header&amp;gt;
+
+&amp;lt;nav&amp;gt;导航栏标签&amp;lt;/nav&amp;gt;   
+&amp;lt;section&amp;gt;某个区域&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;视频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#视频标签&#34;&gt;#&lt;/a&gt; 视频标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;video src=&#34;&#34; autoplay=&#34;&#34;muted=&#34;muted&#34;  loop=&#34;loop&#34; poster=&#34;media/mi9.jpg&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;src: 路径&lt;br&gt;
+ autoplay: 写入 autoplay 代表自动播放&lt;br&gt;
+ mute: 播放时静音&lt;br&gt;
+ loop: 预先加载&lt;br&gt;
+ poster: 播放还没有加载出来的时候显示的图片&lt;br&gt;
+ controls: 是否显示控制按钮&lt;/p&gt;
+&lt;h6 id=&#34;音频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#音频标签&#34;&gt;#&lt;/a&gt; 音频标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;audio src=&#34;media/music.mp3&#34; autoplay=&#34;autoplay&#34; controls=&#34;controls&#34;&amp;gt;&amp;lt;/audio&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;与视频标签相差无几&lt;/p&gt;
+&lt;h6 id=&#34;input表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单&#34;&gt;#&lt;/a&gt; input 表单&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqLnS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqLnS.png&#34; alt=&#34;IJqLnS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;表单属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单属性&#34;&gt;#&lt;/a&gt; 表单属性&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;search&#34; name=&#34;sear&#34; id=&#34;&#34; required=&#34;required&#34; placeholder=&#34;pink老师&#34; autofocus=&#34;autofocus&#34; autocomplete=&#34;off&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;input type=&#34;file&#34; name=&#34;&#34; id=&#34;&#34; multiple=&#34;multiple&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;required: 需要填写才能点确定&lt;br&gt;
+ placeholder: 还没有填写时候显示的文字&lt;br&gt;
+ autofocus: 打开网页时，指标会自动点一下这里&lt;br&gt;
+ autocomplete: 自动储存你输入过的信息 (容易暴露信息，所以一般都会关闭)&lt;br&gt;
+ multiple: 可以选取多个文件&lt;/p&gt;
+</content>
+        <category term="Html" />
+        <updated>2021-11-05T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/c-yu-yan/</id>
         <title>C语言</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/c-yu-yan/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/c-yu-yan/"/>
         <content type="html">&lt;h1 id=&#34;c语言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c语言&#34;&gt;#&lt;/a&gt; C 语言&lt;/h1&gt;
 &lt;!-- The Article Made by YogMas --&gt;
 &lt;h2 id=&#34;the-article-made-by-yogmas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-made-by-yogmas&#34;&gt;#&lt;/a&gt; The Article Made by YogMas&lt;/h2&gt;
@@ -9010,198 +9199,9 @@ bool &lt;span class=&#34;token function&#34;&gt;DeQueue&lt;/span&gt;&lt;span cla
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/html-xia/</id>
-        <title>Html-second</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/html-xia/"/>
-        <content type="html">&lt;p&gt;。&lt;/p&gt;
-&lt;h1 id=&#34;html下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html下&#34;&gt;#&lt;/a&gt; Html (下)&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1表格&#34;&gt;#&lt;/a&gt; 1. 表格&lt;/h4&gt;
-&lt;h6 id=&#34;表格基本语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格基本语法&#34;&gt;#&lt;/a&gt; 表格基本语法&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;
-  &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;表头单元格标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表头单元格标签&#34;&gt;#&lt;/a&gt; 表头单元格标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;align=&#34;&#34;&lt;br&gt;
-border=&#34;&#34;&lt;br&gt;
-cellpadding=&#34;&#34;&lt;br&gt;
-cellspacing=&#34;&#34;&lt;br&gt;
-width=&#34;&#34;&lt;br&gt;
-height=&#34;&#34;&lt;br&gt;
-&lt;strong&gt; 这些标签要写到 table 里面去&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;align: 表格中的文字所处的文字 eg.center 就是未于中间类似的还有 left,right&lt;br&gt;
-border：表示表格边框的大小 0 表示没有 &lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;&lt;br&gt;
- cellpadding：代表单元格边框到内容之间的距离（留白）&lt;br&gt;
-cellspacing：用来指定表格各单元格之间的空隙。&lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;，表示单元格间隙所占的像素点数。&lt;br&gt;
-同样 width,height 已经介绍过了 ，大多数时候都会用&lt;strong&gt; CSS&lt;/strong&gt; 来写&lt;/p&gt;
-&lt;h6 id=&#34;合并单元格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并单元格&#34;&gt;#&lt;/a&gt; 合并单元格&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;rowspan=“合并单元格数目”&lt;br&gt;
-colspan=“合并单元格数目”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;rowspan: 合并行 (也就是将一列上的各行合并)&lt;br&gt;
- colspan: 合并列 (也就是将一行上的各列合并)&lt;br&gt;
- 合并准则：如果 rowspan 就在最上面的表格的标签里面加上 rowspan=&#34;合并数目&#34; 并且删除已经被合并的表格&lt;br&gt;
- colspan 同理，注意 colspan 加在最左边的表格标签&lt;br&gt;
- eg.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;  &amp;lt;tr&amp;gt;
-     &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;td colspan=&#34;2&#34;&amp;gt;&amp;lt;/td&amp;gt;
-
-  &amp;lt;/tr&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;表示合并一行上的 2 列 第三列删除 colspan 写在第二列的 td 表格标签内&lt;/p&gt;
-&lt;h4 id=&#34;2列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2列表&#34;&gt;#&lt;/a&gt; 2. 列表&lt;/h4&gt;
-&lt;h6 id=&#34;无序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无序列表&#34;&gt;#&lt;/a&gt; 无序列表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-    …………
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;其中的 li 标签各位根据需要而定&lt;br&gt;
- ul:unorderlist&lt;br&gt;
-li:list&lt;/p&gt;
-&lt;h6 id=&#34;有序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有序列表&#34;&gt;#&lt;/a&gt; 有序列表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-    …………
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ol&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ol:orderlist&lt;br&gt;
-li:list&lt;/p&gt;
-&lt;h6 id=&#34;自定义列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自定义列表&#34;&gt;#&lt;/a&gt; 自定义列表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;dl&amp;gt;
-   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;顶部总标签
-   &amp;lt;dd&amp;gt;&amp;lt;/dd&amp;gt;
-   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;
-   &amp;lt;dd&amp;gt;&amp;lt;/dd
- &amp;lt;/dl&amp;gt;
- 一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;标签出现代表一列
- 直到下一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;出现才换列
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;3表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3表单&#34;&gt;#&lt;/a&gt; 3. 表单&lt;/h4&gt;
-&lt;h6 id=&#34;表单域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单域&#34;&gt;#&lt;/a&gt; 表单域&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&#34;&#34; method=&#34;&#34; name=&#34;&#34;&amp;gt;
-&amp;lt;/form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;表单域需要与后端结合使用只是接下来的一系列需要传输数据到后端的都需要写到表单域内&lt;br&gt;
-附：此时作者还不知道表单域的 action 等标签充当的角色和用处&lt;/p&gt;
-&lt;h6 id=&#34;input表单元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单元素&#34;&gt;#&lt;/a&gt; input 表单元素&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;&#34; value=&#34;&#34; name=&#34;&#34; &amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqbX8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqbX8.png&#34; alt=&#34;IJqbX8.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
-type 里面可以填写的元素&lt;br&gt;
- text: 文本框，用户可以输入任何文字，但可以用 maxlength 等来加以限定&lt;br&gt;
- password：密码框，可以对你输入的数字进行保密 此时显示 *******&lt;br&gt;
-radio: 单选按钮&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;将两个 input+radio 元素的标签 name 设置成相同 才可以进行单选 具体下面看图&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;checkbox: 复选框，可以进行多个选择&lt;br&gt;
- submit: 提交按钮，点击可以将数据提交给后端&lt;br&gt;
- reset: 重新填写&lt;br&gt;
- button: 点击  例如：获取短信验证码需要使用&lt;/p&gt;
-&lt;p&gt;与 type 同等级的元素作用&lt;br&gt;
- value：提前显示在文本框内的文字&lt;br&gt;
- name：传送给后端时的数据名称，radio 只有 name 相同才能单选&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmXRg&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmXRg.png&#34; alt=&#34;IQmXRg.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;label标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#label标签&#34;&gt;#&lt;/a&gt; label 标签&lt;/h6&gt;
-&lt;p&gt;点击添加了 label 标签的元素等于点击 label 标签的输出端&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&#34;XXX&#34;&amp;gt; &amp;lt;/label&amp;gt;
-&amp;lt;input type=&#34;&#34; id=&#34;XXX&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;并不一定要是 input 只是在 input 等填写数据中较为广泛地使用，xxx 可以换成任何自己命名的单词字母等&lt;br&gt;
- for 和 id 中填写的必须相同&lt;/p&gt;
-&lt;h6 id=&#34;select下拉表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#select下拉表单&#34;&gt;#&lt;/a&gt; select 下拉表单&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
-&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;
-&amp;lt;option selected=&#34;selected&#34;&amp;gt; &amp;lt;/potion&amp;gt;
-&amp;lt;/select&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;option 标签中间填写下拉菜单中的文字等&lt;br&gt;
-添加了 selected 元素的表示 未下拉时显示在表面的选项&lt;/p&gt;
-&lt;h6 id=&#34;textarea文本域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#textarea文本域&#34;&gt;#&lt;/a&gt; textarea 文本域&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;textarea cols=&#34;&#34; rows=&#34;&#34;&amp;gt;
-&amp;lt;/textarea&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;文本域通常很大所以用 cols 和 rows 来进行限定&lt;br&gt;
- cols 限定一行的字数 rows 限定行数&lt;br&gt;
-在后期的学习中可以用&lt;strong&gt; css&lt;/strong&gt; 将文本域的右下角拉伸和上下滑动进行去除，增加美观性&lt;/p&gt;
-&lt;h4 id=&#34;4html5新增&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4html5新增&#34;&gt;#&lt;/a&gt; 4.html5 新增&lt;/h4&gt;
-&lt;h6 id=&#34;语义化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语义化标签&#34;&gt;#&lt;/a&gt; 语义化标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;header&amp;gt;头部标签&amp;lt;/header&amp;gt;
-
-&amp;lt;nav&amp;gt;导航栏标签&amp;lt;/nav&amp;gt;   
-&amp;lt;section&amp;gt;某个区域&amp;lt;/section&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;视频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#视频标签&#34;&gt;#&lt;/a&gt; 视频标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;video src=&#34;&#34; autoplay=&#34;&#34;muted=&#34;muted&#34;  loop=&#34;loop&#34; poster=&#34;media/mi9.jpg&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;src: 路径&lt;br&gt;
- autoplay: 写入 autoplay 代表自动播放&lt;br&gt;
- mute: 播放时静音&lt;br&gt;
- loop: 预先加载&lt;br&gt;
- poster: 播放还没有加载出来的时候显示的图片&lt;br&gt;
- controls: 是否显示控制按钮&lt;/p&gt;
-&lt;h6 id=&#34;音频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#音频标签&#34;&gt;#&lt;/a&gt; 音频标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;audio src=&#34;media/music.mp3&#34; autoplay=&#34;autoplay&#34; controls=&#34;controls&#34;&amp;gt;&amp;lt;/audio&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;与视频标签相差无几&lt;/p&gt;
-&lt;h6 id=&#34;input表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单&#34;&gt;#&lt;/a&gt; input 表单&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqLnS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqLnS.png&#34; alt=&#34;IJqLnS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;表单属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单属性&#34;&gt;#&lt;/a&gt; 表单属性&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;search&#34; name=&#34;sear&#34; id=&#34;&#34; required=&#34;required&#34; placeholder=&#34;pink老师&#34; autofocus=&#34;autofocus&#34; autocomplete=&#34;off&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;input type=&#34;file&#34; name=&#34;&#34; id=&#34;&#34; multiple=&#34;multiple&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;required: 需要填写才能点确定&lt;br&gt;
- placeholder: 还没有填写时候显示的文字&lt;br&gt;
- autofocus: 打开网页时，指标会自动点一下这里&lt;br&gt;
- autocomplete: 自动储存你输入过的信息 (容易暴露信息，所以一般都会关闭)&lt;br&gt;
- multiple: 可以选取多个文件&lt;/p&gt;
-</content>
-        <category term="Html" />
-        <updated>2021-11-05T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/javascript-ji-chu-ban/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/javascript-ji-chu-ban/</id>
         <title>Javascript基础(未完待续)</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/javascript-ji-chu-ban/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/javascript-ji-chu-ban/"/>
         <content type="html">&lt;h1 id=&#34;javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript&#34;&gt;#&lt;/a&gt; javascript&lt;/h1&gt;
 &lt;h2 id=&#34;article-by-yogmas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#article-by-yogmas&#34;&gt;#&lt;/a&gt; Article By Yogmas&lt;/h2&gt;
 &lt;h3 id=&#34;js的组成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的组成&#34;&gt;#&lt;/a&gt; js 的组成&lt;/h3&gt;
@@ -10436,9 +10436,9 @@ offsetParent  返回的是带有定位的父元素 (没有则返回 body)&lt;br&
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/02/10/cao-zuo-xi-tong/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/02/10/cao-zuo-xi-tong/</id>
         <title>操作系统</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/02/10/cao-zuo-xi-tong/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/02/10/cao-zuo-xi-tong/"/>
         <content type="html">&lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
 &lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt; ,beginning from 2022.1.18&lt;/p&gt;
 &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
@@ -10722,9 +10722,9 @@ offsetParent  返回的是带有定位的父元素 (没有则返回 body)&lt;br&
         <updated>2021-02-09T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</id>
         <title>机器学习基础</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/"/>
         <content type="html">&lt;h1 id=&#34;机器学习-入门ml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#机器学习-入门ml&#34;&gt;#&lt;/a&gt; 机器学习 - 入门 ML&lt;/h1&gt;
 &lt;p&gt;The article made by yogmas,beginning from 2022.1.17 With JoTong studio&lt;/p&gt;
 &lt;p&gt;基于&lt;strong&gt;吴恩达&lt;/strong&gt;机器学习的学习笔记&lt;/p&gt;

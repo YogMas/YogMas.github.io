@@ -2,25 +2,25 @@
 <rss version="2.0">
     <channel>
         <title>S1m • Posts by &#34;语言&#34; category</title>
-        <link>http://s1mm.gitee.io/myblog</link>
+        <link>http://s1mm.gitee.io/s1mm</link>
         <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
         <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 13 Sep 2022 00:00:00 +0800</lastBuildDate>
         <category>C语言</category>
-        <category>Css</category>
         <category>python</category>
+        <category>Css</category>
         <category>Git</category>
         <category>Html</category>
         <category>java</category>
         <category>操作系统</category>
-        <category>Javascript</category>
         <category>机器学习</category>
+        <category>Javascript</category>
         <category>icoding答案</category>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/myblog/2022/09/13/java/</guid>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2022/09/13/java/</guid>
             <title>java</title>
-            <link>http://s1mm.gitee.io/myblog/2022/09/13/java/</link>
+            <link>http://s1mm.gitee.io/s1mm/2022/09/13/java/</link>
             <category>java</category>
             <pubDate>Tue, 13 Sep 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;java&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h1&gt;
@@ -366,9 +366,9 @@ sb&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#3
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/myblog/2022/07/10/python/</guid>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2022/07/10/python/</guid>
             <title>python</title>
-            <link>http://s1mm.gitee.io/myblog/2022/07/10/python/</link>
+            <link>http://s1mm.gitee.io/s1mm/2022/07/10/python/</link>
             <category>python</category>
             <pubDate>Sun, 10 Jul 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h1&gt;

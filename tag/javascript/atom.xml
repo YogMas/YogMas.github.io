@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mm.gitee.io/myblog</id>
+    <id>http://s1mm.gitee.io/s1mm</id>
     <title>S1m • Posts by &#34;javascript&#34; tag</title>
-    <link href="http://s1mm.gitee.io/myblog" />
+    <link href="http://s1mm.gitee.io/s1mm" />
     <updated>2021-11-05T16:00:00.000Z</updated>
     <category term="C语言" />
-    <category term="Css" />
     <category term="python" />
+    <category term="Css" />
     <category term="Git" />
     <category term="Html" />
     <category term="java" />
     <category term="操作系统" />
-    <category term="Javascript" />
     <category term="机器学习" />
+    <category term="Javascript" />
     <category term="icoding答案" />
     <entry>
-        <id>http://s1mm.gitee.io/myblog/2021/11/06/javascript-ji-chu-ban/</id>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/javascript-ji-chu-ban/</id>
         <title>Javascript基础(未完待续)</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2021/11/06/javascript-ji-chu-ban/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/javascript-ji-chu-ban/"/>
         <content type="html">&lt;h1 id=&#34;javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript&#34;&gt;#&lt;/a&gt; javascript&lt;/h1&gt;
 &lt;h2 id=&#34;article-by-yogmas&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#article-by-yogmas&#34;&gt;#&lt;/a&gt; Article By Yogmas&lt;/h2&gt;
 &lt;h3 id=&#34;js的组成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#js的组成&#34;&gt;#&lt;/a&gt; js 的组成&lt;/h3&gt;
