@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mwxl.cn</id>
+    <id>http://s1mm.gitee.io/myblog</id>
     <title>S1m • Posts by &#34;工具&#34; category</title>
-    <link href="http://s1mwxl.cn" />
+    <link href="http://s1mm.gitee.io/myblog" />
     <updated>2022-09-15T16:00:00.000Z</updated>
     <category term="C语言" />
-    <category term="python" />
     <category term="Css" />
+    <category term="python" />
+    <category term="Git" />
     <category term="Html" />
-    <category term="机器学习" />
+    <category term="java" />
+    <category term="Javascript" />
     <category term="操作系统" />
     <category term="icoding答案" />
-    <category term="Javascript" />
-    <category term="java" />
-    <category term="Git" />
+    <category term="机器学习" />
     <entry>
-        <id>http://s1mwxl.cn/2022/09/16/git/</id>
+        <id>http://s1mm.gitee.io/myblog/2022/09/16/git/</id>
         <title>Git</title>
-        <link rel="alternate" href="http://s1mwxl.cn/2022/09/16/git/"/>
+        <link rel="alternate" href="http://s1mm.gitee.io/myblog/2022/09/16/git/"/>
         <content type="html">&lt;h1 id=&#34;git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h1&gt;
 &lt;h2 id=&#34;常用指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用指令&#34;&gt;#&lt;/a&gt; 常用指令&lt;/h2&gt;
 &lt;ul&gt;

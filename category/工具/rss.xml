@@ -2,25 +2,25 @@
 <rss version="2.0">
     <channel>
         <title>S1m • Posts by &#34;工具&#34; category</title>
-        <link>http://s1mwxl.cn</link>
+        <link>http://s1mm.gitee.io/myblog</link>
         <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
         <pubDate>Fri, 16 Sep 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0800</lastBuildDate>
         <category>C语言</category>
-        <category>python</category>
         <category>Css</category>
+        <category>python</category>
+        <category>Git</category>
         <category>Html</category>
-        <category>机器学习</category>
+        <category>java</category>
+        <category>Javascript</category>
         <category>操作系统</category>
         <category>icoding答案</category>
-        <category>Javascript</category>
-        <category>java</category>
-        <category>Git</category>
+        <category>机器学习</category>
         <item>
-            <guid isPermalink="true">http://s1mwxl.cn/2022/09/16/git/</guid>
+            <guid isPermalink="true">http://s1mm.gitee.io/myblog/2022/09/16/git/</guid>
             <title>Git</title>
-            <link>http://s1mwxl.cn/2022/09/16/git/</link>
+            <link>http://s1mm.gitee.io/myblog/2022/09/16/git/</link>
             <category>Git</category>
             <pubDate>Fri, 16 Sep 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h1&gt;
