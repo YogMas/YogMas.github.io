@@ -5,18 +5,319 @@
         <link>http://s1mm.gitee.io/s1mm</link>
         <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 16 Sep 2022 00:00:00 +0800</pubDate>
-        <lastBuildDate>Fri, 16 Sep 2022 00:00:00 +0800</lastBuildDate>
+        <pubDate>Wed, 19 Oct 2022 21:55:03 +0800</pubDate>
+        <lastBuildDate>Wed, 19 Oct 2022 21:55:03 +0800</lastBuildDate>
         <category>C语言</category>
-        <category>python</category>
         <category>Css</category>
-        <category>Git</category>
+        <category>python</category>
         <category>Html</category>
+        <category>Git</category>
         <category>java</category>
         <category>操作系统</category>
-        <category>机器学习</category>
         <category>Javascript</category>
         <category>icoding答案</category>
+        <category>机器学习</category>
+        <item>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2022/10/19/ji-suan-ji-wang-luo/</guid>
+            <title></title>
+            <link>http://s1mm.gitee.io/s1mm/2022/10/19/ji-suan-ji-wang-luo/</link>
+            <pubDate>Wed, 19 Oct 2022 21:55:03 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;计算机网络&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机网络&#34;&gt;#&lt;/a&gt; 计算机网络&lt;/h1&gt;
+&lt;p&gt;IPV4 编址&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2022/10/19/suan-fa/</guid>
+            <title></title>
+            <link>http://s1mm.gitee.io/s1mm/2022/10/19/suan-fa/</link>
+            <pubDate>Wed, 19 Oct 2022 10:32:14 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#算法&#34;&gt;#&lt;/a&gt; 算法&lt;/h1&gt;
+&lt;p&gt;基于 Acwing 算法课&lt;/p&gt;
+&lt;h2 id=&#34;算法基础课&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#算法基础课&#34;&gt;#&lt;/a&gt; 算法基础课&lt;/h2&gt;
+&lt;h3 id=&#34;基础算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础算法&#34;&gt;#&lt;/a&gt; 基础算法&lt;/h3&gt;
+&lt;p&gt;算法：以空间来换取时间&lt;/p&gt;
+&lt;h4 id=&#34;快速排序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速排序&#34;&gt;#&lt;/a&gt; 快速排序&lt;/h4&gt;
+&lt;p&gt;快速排序基于分治的思想，选取数&lt;strong&gt; x&lt;/strong&gt; (从数组中任选), 将大于 x 的数放置于数组的左边，小于 x 的数放置于数组的右边&lt;/p&gt;
+&lt;p&gt;处理过程采用&lt;strong&gt;双指针&lt;/strong&gt;和&lt;strong&gt;递归&lt;/strong&gt;进行处理&lt;/p&gt;
+&lt;p&gt;时间复杂度最快&lt;strong&gt; O (nlogn)&lt;/strong&gt; 最慢&lt;strong&gt; O (n^2)&lt;/strong&gt;  取决于每一次随机选取的数在数组中的大小关系&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;时间复杂度最快&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%BF%AB%E6%8E%92%E6%9C%80%E5%BF%AB.png&#34; alt=&#34;快排最快&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时间复杂度最慢&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java195AF8FC790A2FAFE29FCFC35CCD6B87.png&#34; alt=&#34;时间复杂度最慢&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;//快速排序基本模板
+void quick_sort(int q[],int l,int r)
+{
+    if(l &amp;gt;= r) return;
+    int x = q[l]; //int x = q[r], int x = q[l+r &amp;gt;&amp;gt;1] 都可以 因为是随机选择
+    //这里有个边界问题, 如果后面以j为边界,这里就不能为q[r]  
+    //如果后面以i为边界,这里就不能为q[l];
+    int i = l -1,j = r + 1; // 先- 先+ 因为后面do while循环 会先进行-- 和++
+    while(i &amp;lt; j)
+    {
+        //比较条件没有等号
+        do i++;while(q[i] &amp;lt;x);
+        do j--;while(q[j] &amp;gt;x);
+        if(i &amp;lt; j) swap(q[i],q[j]);
+    }
+    quick_sort(q,l,j);
+    quick_sort(q,j+1,r);
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;归并排序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#归并排序&#34;&gt;#&lt;/a&gt; 归并排序&lt;/h4&gt;
+&lt;p&gt;经典采取分治的思想，时间复杂度为 O (nlogn)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优点：时间复杂度为 O (nlogn);&lt;/li&gt;
+&lt;li&gt;缺点：使用了多余的空间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过不断递归，将整个数组无限二等分，直到最后分成单个，在通过比较，将分割后的数组合并起来.&lt;/p&gt;
+&lt;p&gt;时间复杂度证明可以参照上面的&lt;strong&gt;快排最优&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;//归并排序基本模板
+void merge_sort(int q[],int l,int r)
+{
+    if(l &amp;gt;= r) return;
+    int mid = l + r &amp;gt;&amp;gt; 1;
+    
+    //递归不断二等分
+    merge_sort(q,l,mid);
+    merge_sort(q,mid + 1,r);
+    
+    //进行数组合并
+    int i =l,j = mid +1,k =0;
+    while(i &amp;lt;= mid &amp;amp;&amp;amp; j &amp;lt;= r)
+    {
+        if(q[i] &amp;lt;= q[j]) tmp[k++] =q[i++];                //tmp数组 用空间换时间 临时存储
+            else tmp[k++] = q[j++];
+    }
+    while(i &amp;lt;= mid) tmp[k++] = q[i++];
+    while(j &amp;lt;= r) tmp[k++] = q[j++];	
+    //将tmp排序好的数组重新赋值到原本的数组中
+    for(int i = l,j = 0;i &amp;lt;= r;i++,j++)
+    	q[i] = tmp[j];
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;二分查找&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二分查找&#34;&gt;#&lt;/a&gt; 二分查找&lt;/h4&gt;
+&lt;h5 id=&#34;整数二分&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#整数二分&#34;&gt;#&lt;/a&gt; 整数二分&lt;/h5&gt;
+&lt;p&gt;二分也是采用&lt;strong&gt;分治&lt;/strong&gt;的方法，不断将一个&lt;strong&gt;有序&lt;/strong&gt;数组分成两半，然后判断满足条件的数 (&lt;strong&gt;要查找的数&lt;/strong&gt;) 是在左边还是右边&lt;/p&gt;
+&lt;p&gt;二分存在&lt;strong&gt;边界问题&lt;/strong&gt;，所以记忆一个模板可以&lt;strong&gt;有效避免边界问题&lt;/strong&gt;。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-C++&#34; data-language=&#34;C++&#34;&gt;&lt;code class=&#34;language-C++&#34;&gt;//当l = r 的时候停止，此时无论是取l 或者 取 r 输出都可以
+// 模板1
+void find(int q[],int l,int r)
+{
+    while(l &amp;lt; r)
+    {
+       	int mid = l + r &amp;gt;&amp;gt;1;
+        if(check(mid)) r = mid;  //check(mid)表示是否满足条件
+        else l = mid + 1;
+    }
+}
+
+//模板2
+void find(int q[],int l,int r)
+{
+    while(l &amp;lt; r)
+    {
+       	int mid = l + r + 1 &amp;gt;&amp;gt; 1
+        if(check(mid)) l = mid;  //check(mid)表示中心点是否满足条件
+        else r = mid - 1;
+    }
+}
+
+//通过check函数来判断使用哪个二分
+//注意对mid的使用 是导致边界问题的原因&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;部分问题，查找一个数的值，但数组中有&lt;strong&gt;多个一样的值都满足条件&lt;/strong&gt;，如果确定搜到的答案 是所有满足条件的答案里面&lt;strong&gt;最左边的还是最右边的&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个时候需要根据模板 模拟一下，&lt;strong&gt; 当条件满足的时候&lt;/strong&gt;，二分是在往左边查找，还是往右边查找.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;往右边查找 最后得到的就是最右边的值&lt;/li&gt;
+&lt;li&gt;往左边不断查找，最后得到的就是最左边的值&lt;/li&gt;
+&lt;li&gt;我们可以通过改变 check () 判断函数和模板的切换 来人为控制往左边查找和往右边查找的过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;边界&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;选择模板为了避免边界问题，灵活记忆&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果满足条件的时候，需要 &lt;code&gt;l = mid&lt;/code&gt; , 这个时候求 mid 就是 + 1&lt;/li&gt;
+&lt;li&gt;如果满足条件的时候，需要 &lt;code&gt;r = mid&lt;/code&gt; , 这个时候求 mid 就不需要 + 1, 就是普通的 (l + r) / 2;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;小数二分&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小数二分&#34;&gt;#&lt;/a&gt; 小数二分&lt;/h5&gt;
+&lt;p&gt;因为小数二分&lt;strong&gt;不存在这个边界问题&lt;/strong&gt;，就非常简单&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;void find(int q[],int l,int r)
+{
+    while(l &amp;lt; r)
+    {
+       	int mid = l + r &amp;gt;&amp;gt;1;
+        if(check(mid)) r = mid;  //check(mid)表示是否满足条件
+        else l = mid;
+    }
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;高精度&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#高精度&#34;&gt;#&lt;/a&gt; 高精度&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;C++&lt;strong&gt; 中对&lt;/strong&gt;大数存储不支持&lt;/strong&gt;，所以需要用&lt;strong&gt;数组来存储&lt;/strong&gt;大数，然后通过小时候学习的&lt;strong&gt;加法竖式等等&lt;/strong&gt;的原理对数组进行处理，从而达到大数计算的目的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：因为&lt;strong&gt;进位&lt;/strong&gt;的问题，所以在&lt;strong&gt;加减乘三个运算&lt;/strong&gt;中反着输入数组，最后再将数组颠倒&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;因为存在&lt;strong&gt;借位&lt;/strong&gt;问题，减法的最后可能因为被借了一位被判断为 0，所以需要去除这个 0, 去除这个 0 的时候要考虑特例，这个 0 就是答案，所以还要判断是不是只有 1 个 0, 只有满足不止一位数，且最后一位是 0, 才去除这个 0&lt;/li&gt;
+&lt;li&gt;同样减法也可能存在&lt;strong&gt;前置 0&lt;/strong&gt;, 需要去除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;高精度加法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#高精度加法&#34;&gt;#&lt;/a&gt; 高精度加法&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;//进位问题 输入的数组都是反向存的
+vector&amp;lt;int&amp;gt; add(vector&amp;lt;int&amp;gt; &amp;amp;a,vector&amp;lt;int&amp;gt; &amp;amp;b)
+{
+    vector&amp;lt;int&amp;gt; c;
+    for(int i = 0 ,t = 0; t ||i &amp;lt; a.size() || i &amp;lt;b.size();i++)
+    {
+        if(i &amp;lt;a.size()) t += a[i];
+        if(i &amp;lt; b.size()) t += b[i];
+        c.push_back(t % 10);
+        t /= 10;
+    }
+    reverse(c.begin(),c.end());
+    return c;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;高精度减法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#高精度减法&#34;&gt;#&lt;/a&gt; 高精度减法&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;//可以在外面先写个函数 保证输入减函数内部的时候一定是 a &amp;gt;= b的
+bool cmp(vector&amp;lt;int&amp;gt; &amp;amp;a,vector&amp;lt;int&amp;gt; &amp;amp;b) //a &amp;gt;= b 则返回true 否则返回false
+{
+    if(a.size()!= b.size()) return a.size() &amp;gt;b.size(); //长度不一样的时候,显然长度大的更大
+    else
+    {
+        for(int i = 0 ; i &amp;lt; a.size();i++)
+        {
+            if(a[i] != b[i]) return a[i] &amp;gt;= b[i]; //当某个位置出现不一样的时候,该位置大的更大
+        }
+    }
+    return true; //长度相同 每个位置也相同 说明两个大数相等返回true
+}
+//默认输入的时候a &amp;gt;= b;
+vector&amp;lt;int&amp;gt; sub(vector&amp;lt;int&amp;gt; &amp;amp;a,vector&amp;lt;int&amp;gt; &amp;amp;b)
+{
+    if(!cpm(a,b)) return sub(b,a); //如果a &amp;lt; b 就进行b - a的操作
+    vector&amp;lt;int&amp;gt; c;
+    for(int i = 0, t = 0;i &amp;lt; a.size();i++)
+    {
+        t += a[i];
+        if(i &amp;lt;b.size()) t = t - b[i];
+        c.push_back((t +10) % 10); //保证插入的是正数
+        if(t &amp;lt; 0) t = -1;
+        else t = 0;
+    }
+    while(c.size() &amp;gt;1 &amp;amp;&amp;amp; c.back() == 0) c.pop_back(); //删除前置0,如果最后一个为0 并且不只有1个0(正确答案)，就将最后一位山区
+    reverse(c.begin(),c.end(0));
+    return c;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;高精度乘法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#高精度乘法&#34;&gt;#&lt;/a&gt; 高精度乘法&lt;/h5&gt;
+&lt;p&gt;依据乘法&lt;strong&gt;竖式&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;//高精度乘法一般是一个大数和一个小数相乘,不会出现大数乘大数
+vector&amp;lt;int&amp;gt; mul(vector&amp;lt;int&amp;gt; &amp;amp;a,int b)
+{
+    vector&amp;lt;int&amp;gt; c;
+    for(int i = 0,t = 0 ; t || i &amp;lt;a.size();i++)
+    {
+        if(i&amp;lt; a.size())t += a[i] * b;
+        c.push_back(t % 10);
+        t /= 10;
+    }
+    reverse(c.begin(),c.end())
+    return c;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;高精度除法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#高精度除法&#34;&gt;#&lt;/a&gt; 高精度除法&lt;/h5&gt;
+&lt;p&gt;高精度除法，不存在&lt;strong&gt;借位和进位&lt;/strong&gt;的问题，所以按照原来的数组存储，但是最后需要&lt;strong&gt;翻转两次&lt;/strong&gt;来&lt;strong&gt;去掉前缀 0&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;//高精度除法,一般也为一个大数和一个小数相除
+vector&amp;lt;int&amp;gt; div(vector&amp;lt;int&amp;gt; a,int b,int &amp;amp;r) // r用来存储余数 默认为0
+{
+    vector&amp;lt;int&amp;gt; c;
+    for(int i = 0,r = 0; i&amp;lt; a.size();i++)
+    {
+        r = r * 10 + a[i];
+        c.push_back(r / b); //不够除的时候 自然传入的是0 所以也会有前缀0的问题
+        r = r % b; //取余数
+    }
+    reverse(c.begin(),c.end());
+    while(c.size() &amp;gt;1 &amp;amp;&amp;amp; c.back() == 0) a.pop_back();
+    reverse(c.begin(),c.end());
+    return c;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;数学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数学&#34;&gt;#&lt;/a&gt; 数学&lt;/h3&gt;
+&lt;h4 id=&#34;判断质因数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#判断质因数&#34;&gt;#&lt;/a&gt; 判断质因数&lt;/h4&gt;
+&lt;p&gt;如果一个数除了表示成 1 和他自身的乘积外 还能表示成另外两个数的乘积  这个数就不是质因数&lt;/p&gt;
+&lt;p&gt;反之一个数如果只能表示成 1 和他自身的乘积，那么这个数是质因数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;bool is_prime(int x)
+{
+	for(int i = 2 ; i &amp;lt;= x /i ;i++) //做了优化  将O(n)时间复杂度降到O(sqrt(n))  这里x/i不写成sqrt(x) sqrt()函数运行较慢 这样每次比较的时候,都会调用sqrt()函数 会大大提高时间
+    {
+        if(x % i == 0) return false
+    }
+    return true;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;优化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优化&#34;&gt;#&lt;/a&gt; 优化&lt;/h5&gt;
+&lt;p&gt;一个数 表示成两个数的乘积 显然这两个数是&lt;strong&gt;一大一小&lt;/strong&gt;的&lt;/p&gt;
+&lt;p&gt;如果 x 可以表示成 a *  b 的话  假设 a &amp;lt; b 那么显然 &lt;strong&gt;a &amp;lt; x / a&lt;/strong&gt; 即  &lt;strong&gt;a &amp;lt; sqrt(x)&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;分解质因数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分解质因数&#34;&gt;#&lt;/a&gt; 分解质因数&lt;/h4&gt;
+&lt;p&gt;例如 12 = 2 * 2 * 3 一个合数可以被分解成若干个质数的乘积&lt;/p&gt;
+&lt;p&gt;分解质因数就是找出一个合数 他所可以分解成的所有质因数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;void get_primes(int x)
+{
+    for(int i = 2; i &amp;lt;= x/ i;i++ )
+    {
+        if(x % i == 0)
+        {
+            int s = 0; 
+            while(x % i == 0) //将一个质数 判断到底
+            {
+                x = x / i;
+                s++;
+            }
+            cout &amp;lt;&amp;lt; i &amp;lt;&amp;lt; s;
+        }
+    }
+    if(x &amp;gt; x / i) cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt;endl; //优化 数据单独处理
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;优化-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优化-2&#34;&gt;#&lt;/a&gt; 优化&lt;/h5&gt;
+&lt;p&gt;分解质因数中 最多只存在一个质数大于&lt;strong&gt; sqrt (x)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所以将最后一个数 脱离出来&lt;strong&gt;单独处理&lt;/strong&gt; 可以将时间复杂度 进行一个降低&lt;/p&gt;
+&lt;p&gt;前半部分采用遍历的方式 最后一个数据单独处理&lt;/p&gt;
+&lt;h4 id=&#34;筛质数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#筛质数&#34;&gt;#&lt;/a&gt; 筛质数&lt;/h4&gt;
+&lt;p&gt;给出一个数 x 把小于等于他的&lt;strong&gt;质数&lt;/strong&gt;全部筛出来&lt;/p&gt;
+&lt;h5 id=&#34;埃式筛法onloglogn&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#埃式筛法onloglogn&#34;&gt;#&lt;/a&gt; 埃式筛法 O (nloglogn)&lt;/h5&gt;
+&lt;p&gt;从左往右遍历，找到一个质数的同时，就把 &amp;lt;= n 范围内 他的所有倍数打上标签 (这个数不是质数)  遍历过程中没有打上标签的就是质数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;int primes[N]; // 存储所有质数
+bool st[N]; //这个数是否被筛过了
+int get_primes(int n)
+{
+    int cnt = 0 ;
+    for(int i = 2 ; i &amp;lt;= n;i++)
+    {
+        if(st[i]) continue; //被筛过了 就跳过
+        prime[cnt++] = i;
+        for(int j = i + i; j &amp;lt;= n; j += i)   //这里似乎 j 可以直接从i * i 开始 没理解
+        {
+            st[j] = true;
+        }
+    }
+    return cnt;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;欧式筛法线性筛法-on&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#欧式筛法线性筛法-on&#34;&gt;#&lt;/a&gt; 欧式筛法 (线性筛法) O (n)&lt;/h5&gt;
+&lt;p&gt;时间复杂度是线性的&lt;/p&gt;
+&lt;p&gt;埃式筛法 筛查过程中存在大量的重复筛的问题 比如 2  * 2 = 4 已经被筛过了 但是在到 4 的同时还会被再筛查一遍&lt;/p&gt;
+&lt;p&gt;所以欧式筛法采用的一个优化的方法 就是筛一个数的时候 只通过最小质因数来筛，这样每个数都只会被筛一遍&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;bool st[N];
+int primes[N];
+int get_primes(int n)
+{
+    int cnt = 0;
+    for(int i = 2 ; i &amp;lt;= n;i++)
+    {
+        if(!st[i]) prime[cnt++] = i;
+        for(int j = 0 ; j &amp;lt; cnt &amp;amp;&amp;amp; primes[j] &amp;lt;= n \ i;j++)
+        {
+            st[i * primes[j]] = true;
+            if(i % primes[j] == 0) break; //优化所在 如果i是primes[j]的倍数 显然后面 primes[j+1]就不会是最小的质因数了 就break
+        }
+    }
+    return cnt;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2022/09/16/git/</guid>
             <title>Git</title>
@@ -582,7 +883,391 @@ sb&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#3
 &lt;li&gt;对于覆盖或继承的方法，java 运行时系统根据调用该方法的实参的类型来决定选择哪个方法调用&lt;/li&gt;
 &lt;li&gt;对子类的一个实例，如果覆盖了超类的方法，则运行时系统调用子类的方法&lt;/li&gt;
 &lt;li&gt;如果子类继承了超类的方法，则运行时系统调用超类的 l 方法&lt;/li&gt;
+&lt;li&gt;当超类的对象对子类实例引用时，这个对象所访问的成员必须是超类中所具有的&lt;/li&gt;
+&lt;li&gt;这个对象不能访问子类自己创建的成员&lt;/li&gt;
+&lt;li&gt;当这个对象访问的是&lt;strong&gt;被覆盖的方法&lt;/strong&gt;，则调用的是子类中覆盖方法&lt;/li&gt;
+&lt;li&gt;只有当这个对象被强制转换成子类类型时，这个子类的所有成员才有可能被访问&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h4 id=&#34;final和abstract&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#final和abstract&#34;&gt;#&lt;/a&gt; final 和 abstract&lt;/h4&gt;
+&lt;h5 id=&#34;final关键字&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#final关键字&#34;&gt;#&lt;/a&gt; final 关键字&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;final 修饰的类不能被继承&lt;/li&gt;
+&lt;li&gt;final 修饰的方法不能被子类重写&lt;/li&gt;
+&lt;li&gt;final 修饰的变量是常量，初始化后不能再修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在编译时，如果 final 变量是&lt;strong&gt;基本类型或 String 类型&lt;/strong&gt;，则编译器会把它当成&lt;strong&gt;编译器常量&lt;/strong&gt;，其他类型会成为&lt;strong&gt;运行时常量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;空白 final&lt;/p&gt;
+&lt;h2 id=&#34;输入输出流&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入输出流&#34;&gt;#&lt;/a&gt; 输入输出流&lt;/h2&gt;
+&lt;h3 id=&#34;file类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#file类&#34;&gt;#&lt;/a&gt; File 类&lt;/h3&gt;
+&lt;p&gt;具有查询文件属性、状态和文件名等功能，但不能 访问文件内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;boolean createNewFile()&lt;/code&gt;  不存在返回 true 存在返回 false&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean mkdir()&lt;/code&gt;  创建目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean mkdirs()&lt;/code&gt;  创建多级目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean delete()&lt;/code&gt;  用于删除文件或删除空目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;boolean deleteOnExit()&lt;/code&gt;  文件使用完成后删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileDemo2&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;d:\\1.txt&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;createNewFile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//当文件存在时返回false&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;delete&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//当文件不存在时返回false&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token comment&#34;&gt;// TODO Auto-generated catch block&lt;/span&gt;
+		e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;查询文件状态和属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查询文件状态和属性&#34;&gt;#&lt;/a&gt; 查询文件状态和属性&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7.png&#34; alt=&#34;查询文件属性&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;查询文件目录管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查询文件目录管理&#34;&gt;#&lt;/a&gt; 查询文件目录管理&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%9F%A5%E8%AF%A2%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86.png&#34; alt=&#34;查询文件目录管理&#34;&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//列出磁盘下文件或文件夹的例子&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileDemo3&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; files &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;listRoots&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//列出的磁盘盘符&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt; file&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;files&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;file&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; filenames &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//列出磁盘文件&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; filename&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;filenames&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;filename&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;randomaccessfile类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#randomaccessfile类&#34;&gt;#&lt;/a&gt; RandomAccessFile 类&lt;/h3&gt;
+&lt;p&gt;在 java.io 包中 RandomAccessFile 类和输入输出流类具有&lt;strong&gt;读写文件&lt;/strong&gt;的功能&lt;/p&gt;
+&lt;p&gt;提供了两个构造函数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;public RandomAccessFile(String name, String &lt;strong&gt;mode&lt;/strong&gt;) throws IOException;&lt;/li&gt;
+&lt;li&gt;public RandomAccessFile(File file, String &lt;strong&gt;mode&lt;/strong&gt;) throws IOException;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;name 表示文件名，file 为 File 类对象，mode 为读写方式 w (write),r (read)&lt;/p&gt;
+&lt;p&gt;当以读写方式生成 randomAccessFile 对象时&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件不存在，就创建该文件，进行读写&lt;/li&gt;
+&lt;li&gt;如果文件存在，就对文件进行覆盖 (有文件指针从文件头开始，当写入一个文件指针往后指，直接写入操作结果)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;RandomAccessFile 对象生成的时候，文件就相当于被打开了，文件指针位于开头&lt;/p&gt;
+&lt;h4 id=&#34;randomaccessfile的成员方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#randomaccessfile的成员方法&#34;&gt;#&lt;/a&gt; RandomAccessFile 的成员方法&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaRandomAccessFile%E7%B1%BB%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95.png&#34; alt=&#34;RandomAccessFile类成员方法&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaRandomAccessFile%E7%B1%BB%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95(1).png&#34; alt=&#34;RandomAccessFile类成员方法(1)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaRandomAccessFile%E7%B1%BB%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%20(2).png&#34; alt=&#34;RandomAccessFile类成员方法 (2)&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaRandomAccessFile%E7%B1%BB%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95%20(3).png&#34; alt=&#34;RandomAccessFile类成员方法 (3)&#34;&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;// RandomAccessFile 写出文件&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;stream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;RandomAccessFile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;TestStream&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;F:\\javatest\\1.text&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;RandomAccessFile&lt;/span&gt; rf &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RandomAccessFile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;rw&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;zhangsan&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeInt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;age&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;lisi    &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;31&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeInt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;age&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//RandomAccessFile 读出文件中的内容&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;RandomAccessFile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RandomAccessFileDemo02&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 所有的异常直接抛出，程序中不再进行处理&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;throws&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt; f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;d:&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;separator &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;test.dat&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 指定要操作的文件&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;RandomAccessFile&lt;/span&gt; rdf &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 声明RandomAccessFile类的对象&lt;/span&gt;
+		rdf &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RandomAccessFile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;f&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;r&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 以只读的方式打开文件&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;byte&lt;/span&gt; b&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;byte&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 开辟byte数组&lt;/span&gt;
+		&lt;span class=&#34;token comment&#34;&gt;/* 读取第二个人的信息，意味着要空出第一个人的信息*/&lt;/span&gt;
+		rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;skipBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 跳过第一个人的信息&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;length&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			b&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readByte&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 读取一个字节&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 将读取出来的byte数组变为字符串&lt;/span&gt;
+		age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readInt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 读取数字&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;第二个人的信息 --&amp;gt; 姓名：&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; name &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;；年龄：&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; age&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;seek&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 指针回到文件的开头，读取第一个人的信息&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;length&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			b&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readByte&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 读取一个字节&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 将读取出来的byte数组变为字符串&lt;/span&gt;
+		age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readInt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 读取数字&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;第一个人的信息 --&amp;gt; 姓名：&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; name &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;；年龄：&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; age&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;skipBytes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 空出第二个人的信息&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; i&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;length&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			b&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readByte&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 读取一个字节&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 将读取出来的byte数组变为字符串&lt;/span&gt;
+		age &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readInt&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 读取数字&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;第三个人的信息 --&amp;gt; 姓名：&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; name &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;；年龄：&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; age&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		rdf&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// 关闭&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;字节流&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字节流&#34;&gt;#&lt;/a&gt; 字节流&lt;/h3&gt;
+&lt;h5 id=&#34;inputstream-和-outputstream&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#inputstream-和-outputstream&#34;&gt;#&lt;/a&gt; &lt;strong&gt;InputStream&lt;/strong&gt; 和 &lt;strong&gt;OutputStream&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;字节流由两个类层次结构定义，在顶层有两个抽象类： &lt;strong&gt;InputStream&lt;/strong&gt; 和 &lt;strong&gt;OutputStream&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每个抽象楼都有多个具体的子类，这些子类对不同的外设进行处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;抽象类 InputStream 和 OutputStream 定义了实现其他流类的关键方法。&lt;/li&gt;
+&lt;li&gt;最重要的两种方法是&lt;strong&gt; read ()&lt;strong&gt; 和&lt;/strong&gt; write ()&lt;/strong&gt;，它们分别对数据以字节为单位进行读写。&lt;/li&gt;
+&lt;li&gt;两种方法都在 InputStream 和 OutputStream 中被定义为&lt;strong&gt;抽象方法&lt;/strong&gt;，它们被派生的流类&lt;strong&gt;重载&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;InputSteam 类有关读入数据的方法&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javainput%E7%B1%BB%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95.png&#34; alt=&#34;input类读入数据的方法&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javainputstream%E7%B1%BB%E7%9A%84%E5%85%B6%E4%BB%96%E6%96%B9%E6%B3%95.png&#34; alt=&#34;inputstream类的其他方法&#34;&gt;&lt;/p&gt;
+&lt;p&gt;所有 InputStream 的子类都是针对不同的输入数据源，其类名的 前缀清楚地表示出输入数据源，FileInputStream 类的数据源是文 件，PipedInputStream 类的数据源是管道等等&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaInputStream%E8%AF%BB%E5%85%A5%E7%B1%BB%E5%B1%82%E6%AC%A1.png&#34; alt=&#34;InputStream读入类层次&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;output 类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;int write (int)&lt;/code&gt;  向流的末尾写入一个字节的数据。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int write (byte[])&lt;/code&gt;  将数组 b 中的数据依次写入当前的流对象中&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int write (byte[],int,int)&lt;/code&gt;  将数组中从开始下标 (包含)，后续长度的数据依次写入到流对象中&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void close()&lt;/code&gt;  关闭当前流对象，并释放该流对象占用的资源&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void flush()&lt;/code&gt;  将当前流对象中的缓冲数据强制输出出去。使用该方法可以实现立 即输出&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有 OutputStream 的子类与 InputStream 的子类相似，针对不同 的输出数据源，其类名的前缀清楚地表示出输出数据源&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaoutput%E8%BE%93%E5%87%BA%E7%B1%BB%E5%B1%82%E6%AC%A1.png&#34; alt=&#34;output输出类层次&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;fileinputstream和outinputstream&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fileinputstream和outinputstream&#34;&gt;#&lt;/a&gt; &lt;strong&gt;FileInputStream&lt;/strong&gt; 和&lt;strong&gt; OutInputStream&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;这两个类属于节点流，分别完成对文件的输入输出（读写）操作&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;FileInputStream&lt;/p&gt;
+&lt;p&gt;构造器：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FileInputStream (String) 参数 String 对象表示文件名&lt;/li&gt;
+&lt;li&gt;FileInputStream (File) 参数 File 对象表示文件名&lt;/li&gt;
+&lt;li&gt;FileInputStream (FileDescriptor) 参数 FileDescriptor 定义一个本地文件系统对象表示的文件名。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//FileInputStream类显示文件内容的程序的示例&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileInputStream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileInputStreamDemo01&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt; file &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;d:/javaFileIO.java&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileInputStream&lt;/span&gt; fis &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileInputStream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;file&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Total file size to read (in bytes) : &#34;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; fis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;available&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; content&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;content &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+				&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; content&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// convert to char and display it&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;FileOutputStream&lt;/p&gt;
+&lt;p&gt;构造器:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FileOutputStream(String)&lt;/li&gt;
+&lt;li&gt;FileOutputStream(String,boolean)&lt;/li&gt;
+&lt;li&gt;FileOutputStream(File)&lt;/li&gt;
+&lt;li&gt;FileOutputStream(FileDescriptor)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;生成 FileOutputStream 对象时，如果文件不存在，则创建该文件供 程序输出数据&lt;/p&gt;
+&lt;p&gt;如果文件已经存在，则有改写和附加两种输出数据的方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;改写的含义是先把原文件长度截为零，原文件数据被丢弃， 然后再输出数据。(第二个构造器的 boolean 参数为 false 值和其 它构造器的对象)&lt;/li&gt;
+&lt;li&gt;附加的含义是在原文件末尾追加输出数据，原文件数据仍然 存在。(第二个构造器的 boolean 参数为 true)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;import java.io.FileOutputStream;
+import java.io.IOException;
+public class FileOutputStreamDemo2 {
+	public static void main(String[] args) throws IOException { //创建字节输出流对象
+		FileOutputStream fos = new FileOutputStream(&#34;d:\\testfout.txt&#34;);
+		//如果没有testfout.txt文件则会自动创建这个文件
+		fos.write(97); //调用write()方法
+		fos.write(57); //调用write()方法
+		fos.write(55); //调用write()方法
+		byte[] bys = {97,98,99,100,101};
+		fos.write(bys); //public void write(byte[] b):写一个字节数组
+		fos.write(bys,1,3); //public void write(byte[] b,int off,int len)
+		fos.close(); //释放资源
+}
+}
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;dateinputstream和dataoutstream&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dateinputstream和dataoutstream&#34;&gt;#&lt;/a&gt; DateInputStream 和 DataOutStream&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这两个类创建对象分别被称为数据输入流和数据输出流。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它们分别实现了 DataInput 接口和 DataOutput 接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它们允许程序按与机器无关的风格读写 Java 数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这两个流也是过滤器流，常以其它流如 InputStream 或 OutputStream 作为它们的输入或输出。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它们输入和输出几乎是对应的，每种基本数据类型的读写方法可以从 其后缀名字识别。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;readInt() writeInt() readBoolean() writeBoolean() readChar() writeChar() readDouble() writeDouble()&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;字符流&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字符流&#34;&gt;#&lt;/a&gt; 字符流&lt;/h3&gt;
+&lt;p&gt;字符流主要是用来&lt;strong&gt;处理字符&lt;/strong&gt;的。它们在读写流内数据时是&lt;strong&gt;以字符为单位&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;字符流类由两个类层次结构定义。顶层有两个&lt;strong&gt;抽象&lt;/strong&gt;类：&lt;strong&gt;Reader 和 Writer&lt;/strong&gt;。 这些抽象类处理统一编码的字符流。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;抽象类 Reader 和 Writer 定义了实现其他流类的关键方法。其中两 个最重要的是 read () 和 write ()，它们分别进行字符数据的读和写。 &lt;strong&gt;这些方法被派生流类重载&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reader 及 Writer 类&lt;/strong&gt;和它们子类的方法，与&lt;strong&gt; InputStream 及 OutputStream 类&lt;/strong&gt;及它们子类的使用方法非常类似。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaReader%E7%9A%84%E7%B1%BB%E5%B1%82%E6%AC%A1.png&#34; alt=&#34;Reader的类层次&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaWrite%E7%9A%84%E7%B1%BB%E5%B1%82%E6%AC%A1.png&#34; alt=&#34;Write的类层次&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;InputStreamReader&lt;/strong&gt; 类和&lt;strong&gt; OutputStreamWriter&lt;/strong&gt; 类&lt;/p&gt;
+&lt;p&gt;在构造这两个类对应的流时，它们会自动进行转换，将平台缺 省的编码集编码的字节转换为 Unicode 字符。对英语环境，其缺 省的编码集一般为 ISO8859-1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BufferedReader&lt;/strong&gt; 类和&lt;strong&gt; BufferedWriter&lt;/strong&gt; 类&lt;/p&gt;
+&lt;p&gt;这两个类对应的流使用了缓冲，能大大提高输入输出效率。这 两个也是过滤器流，常用来对 InputStreamReader 和 OutputStreamWriter 进行处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//字节流和字符流示例&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;BufferedReader&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileNotFoundException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileReader&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;BufferedReaderDemo01&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; fileName &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;d:\\javaFileIO.java&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;BufferedReader&lt;/span&gt; fromFile &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;token class-name&#34;&gt;FileReader&lt;/span&gt; fr &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileReader&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fileName&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			fromFile &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;BufferedReader&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fr&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;The file &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; fileName&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34; contains the following lines:&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; line &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fromFile&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readLine&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;line &lt;span class=&#34;token operator&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+				&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;line&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; line &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; fromFile&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readLine&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// throw IOException&lt;/span&gt;
+				&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;FileNotFoundException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+				&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Error opening the file &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; fileName&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+				&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+					&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Error reading the file &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; fileName&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;finally&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+				&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fromFile &lt;span class=&#34;token operator&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; fromFile&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;// throw IOException&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+					&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Error closing the file &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; fileName&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;exit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;pipedinputstream和pipedoutputstream管道输入输出流类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pipedinputstream和pipedoutputstream管道输入输出流类&#34;&gt;#&lt;/a&gt; PipedInputStream 和 PipedOutputStream 管道输入输出流类&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;管道是 UNIX 的发明，它大大增强了流的概念。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;管道 (pipe) 提供一种线程之间的通信方法，可用于 IPC (进程间通信) 或是 ITC (线程间通信)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入管道是用来接收输出管道所写出的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这两个类必须同时使用，所以它们除了不带参数的构造器外，互为构 造器中的参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PipedInputStream(PipedOutputStream)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PipedOutputStream(PipedInputStream)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;io流链接及处理流&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#io流链接及处理流&#34;&gt;#&lt;/a&gt; I/O 流链接及处理流&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%A4%84%E7%90%86%E6%B5%81.png&#34; alt=&#34;处理流&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E5%AD%97%E7%AC%A6%E6%B5%81%E5%92%8C%E5%AD%97%E8%8A%82%E6%B5%81%E5%A4%84%E7%90%86%E5%AF%B9%E5%BA%94%E8%A1%A8.png&#34; alt=&#34;字符流和字节流处理对应表&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;对象序列化处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对象序列化处理&#34;&gt;#&lt;/a&gt; 对象序列化处理&lt;/h3&gt;
+&lt;p&gt;“对象序列化”（Object Serialization）是 Java 一种特性。类实现 &lt;strong&gt;Serializable 接口&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;实现了 Serializable 接口的对象，可将它们转换成&lt;strong&gt;一系列字节&lt;/strong&gt;，并可在以后完全恢复回原来的样子。&lt;/p&gt;
+&lt;p&gt;网络传输时进行序列化，能自动弥补操作系统间的差异。&lt;/p&gt;
+&lt;p&gt;可以实现 “有限持久化” ，意味着对象的 “生存时间” 取决于程序的每一次调用之间。&lt;/p&gt;
+&lt;p&gt;首先要创建某些 OutputStream 对象，然后将其封装到 ObjectOutputStream 对象内。&lt;/p&gt;
+&lt;p&gt;再需调用 writeObject () 即可完成对象的序列化，并将其发送给 OutputStream。&lt;/p&gt;
+&lt;p&gt;相反将一个 InputStream 封装到 ObjectInputStream 内，然后调用 readObject ()。&lt;/p&gt;
+&lt;p&gt;最后获得的是一个 Object 对象的引用，以便能够直接设置。&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-java&#34; data-language=&#34;java&#34;&gt;&lt;code class=&#34;language-java&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//对象序列化例子&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Serializable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Serializable&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; 		&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; sex&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; year&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; gpa&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; sex&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; year&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; gpa&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sex &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; sex&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;year &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; year&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;gpa &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gpa&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setSex&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; sex&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sex &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; sex&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setYear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; year&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;year &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; year&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setGpa&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; gpa&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;gpa &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gpa&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+    	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getSex&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sex&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getYear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;year&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getGpa&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;gpa&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;UseStudent&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; 	
+    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt; st &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Tom&#34;&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+		&lt;span class=&#34;token string&#34;&gt;&#39;M&#39;&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;3.6&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt; file &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;File&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;d:\\student.txt&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; file&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;createNewFile&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//Student对象序列化过程&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;FileOutputStream&lt;/span&gt; fos &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileOutputStream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;file&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;ObjectOutputStream&lt;/span&gt; oos &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ObjectOutputStream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fos&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		oos&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;writeObject&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;st&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		oos&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;flush&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		oos&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		fos&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//Student对象反序列化过程&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;FileInputStream&lt;/span&gt; fis &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;FileInputStream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;file&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;ObjectInputStream&lt;/span&gt; ois &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ObjectInputStream&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;fis&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt; st1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Student&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; ois&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;readObject&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;name = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; st1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;sex = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; st1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getSex&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;year = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; st1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getYear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;gpa = &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; st1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getGpa&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		ois&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		fis&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;close&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ClassNotFoundException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+			&lt;span class=&#34;token keyword&#34;&gt;catch&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;IOException&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;printStackTrace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
  ]]></description>
         </item>
         <item>
@@ -2629,664 +3314,6 @@ link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
 &lt;blockquote&gt;
 &lt;p&gt;background: rgba(X,X,X,X);&lt;/p&gt;
 &lt;/blockquote&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/css2/</guid>
-            <title>Css-second</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/css2/</link>
-            <category>Css</category>
-            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1css选择器的性质&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css选择器的性质&#34;&gt;#&lt;/a&gt; 1.css 选择器的性质&lt;/h4&gt;
-&lt;h6 id=&#34;css层叠性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css层叠性&#34;&gt;#&lt;/a&gt; css 层叠性&lt;/h6&gt;
-&lt;p&gt;长江后浪推前浪，前浪死在沙滩上&lt;br&gt;
-当两个完全相同的选择器写在一起时，此时根据就近原则处理&lt;/p&gt;
-&lt;h6 id=&#34;css继承性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css继承性&#34;&gt;#&lt;/a&gt; css 继承性&lt;/h6&gt;
-&lt;p&gt;大元素中的小元素会继承写在大元素中的属性&lt;/p&gt;
-&lt;h6 id=&#34;行高的继承&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行高的继承&#34;&gt;#&lt;/a&gt; 行高的继承&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6YcD&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6YcD.png&#34; alt=&#34;IQ6YcD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;孩子拥有 font-size 元素会优先使用定义在自身的，而后面的倍数孩子自身没有就会继承父亲的倍数&lt;/p&gt;
-&lt;h6 id=&#34;css优先级&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css优先级&#34;&gt;#&lt;/a&gt; css 优先级&lt;/h6&gt;
-&lt;p&gt;这个主要是根据后面的权重的大小而判定的，权重大的优先。&lt;/p&gt;
-&lt;h6 id=&#34;css权重&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css权重&#34;&gt;#&lt;/a&gt; css 权重&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6UnH&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6UnH.png&#34; alt=&#34;IQ6UnH.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;权重的叠加&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#权重的叠加&#34;&gt;#&lt;/a&gt; 权重的叠加&lt;/h6&gt;
-&lt;p&gt;权重的叠加可以用加减法来计算&lt;br&gt;
-例如 0,1,0,0 相当于 100&lt;/p&gt;
-&lt;h4 id=&#34;2盒子模型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2盒子模型&#34;&gt;#&lt;/a&gt; 2. 盒子模型&lt;/h4&gt;
-&lt;p&gt;盒子通常是块级元素&lt;br&gt;
-也可以通过 display 将其变成块级元素 a 元素通常使用这种方法&lt;/p&gt;
-&lt;h6 id=&#34;盒子边框&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子边框&#34;&gt;#&lt;/a&gt; 盒子边框&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6aBd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6aBd.png&#34; alt=&#34;IQ6aBd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;border-width: ;&lt;br&gt;
-border-style: ;&lt;br&gt;
-border-color: ;&lt;br&gt;
-border:width style color ; 复合写法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这边建议大家使用复合写法&lt;br&gt;
- style:solid 实线 dotted 虚线 dashed 更大点的虚线&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;边框会影响盒子的实际大小&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;盒子内边框&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子内边框&#34;&gt;#&lt;/a&gt; 盒子内边框&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ66gS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ66gS.png&#34; alt=&#34;IQ66gS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;padding: ;&lt;br&gt;
-padding-left: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;同理 left 可以换成其他的方位&lt;/p&gt;
-&lt;p&gt;内边距复合写法：从顶部顺时针数&lt;br&gt;
-&lt;strong&gt;内边距会影响盒子的大小&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;内边距不会影响盒子大小的情况:&lt;br&gt;
- 当盒子内没有给宽时，padding-left/right 不会影响&lt;br&gt;
-没有给高时 padding-top/bottom 不会影响&lt;/p&gt;
-&lt;h6 id=&#34;盒子外边距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子外边距&#34;&gt;#&lt;/a&gt; 盒子外边距&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;margin:  ;&lt;br&gt;
-margin-top/XXX: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;复合写法和内边距同理&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;外边距典型应用&lt;/strong&gt;:&lt;br&gt;
-margin: XXXpx auto;&lt;br&gt;
- 此时 auto 代表左右两边自动设置可以让盒子水平对齐&lt;/p&gt;
-&lt;h6 id=&#34;行内元素或行内块元素水平居中对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内元素或行内块元素水平居中对齐&#34;&gt;#&lt;/a&gt; 行内元素或行内块元素水平居中对齐&lt;/h6&gt;
-&lt;p&gt;margin 对行内元素没有作用，但是可以给这两种元素的父盒子添加 text-align:center;&lt;/p&gt;
-&lt;h6 id=&#34;外边距合并&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#外边距合并&#34;&gt;#&lt;/a&gt; 外边距合并&lt;/h6&gt;
-&lt;p&gt;当子盒子给 margin 时，父盒子和子盒子会塌陷，两个盒子会边框重合&lt;/p&gt;
-&lt;h6 id=&#34;清除内外边距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除内外边距&#34;&gt;#&lt;/a&gt; 清除内外边距&lt;/h6&gt;
-&lt;p&gt;通常浏览器会自带内外边距这时就需要使用通用符选择器将浏览器自带的边距出去&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;* {padding:0 ;
-   margin:0;}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;圆角边框&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#圆角边框&#34;&gt;#&lt;/a&gt; 圆角边框&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;border-radius: Xpx ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;原理：利用一个半径为 Xpx 的圆，与边角重叠，然后切去没有重叠的边角；&lt;/p&gt;
-&lt;h6 id=&#34;盒子阴影&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子阴影&#34;&gt;#&lt;/a&gt; 盒子阴影&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCJfI&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCJfI.png&#34; alt=&#34;IQCJfI.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;box-shadow: X X X X X;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;由左到右依次为 往右边移动的距离 往下面移动的距离 阴影发散度 (往四面八方发散)  往四面八方扩散的距离 颜色 (通常是 rgba 控制)&lt;/p&gt;
-&lt;h6 id=&#34;文字阴影&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字阴影&#34;&gt;#&lt;/a&gt; 文字阴影&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;text-shadow:X X X rgba;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;分别是 往右边移动的距离 往下面移动的距离 虚实度 (越大越虚)&lt;/p&gt;
-&lt;h6 id=&#34;行内块元素中间有缝隙&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内块元素中间有缝隙&#34;&gt;#&lt;/a&gt; 行内块元素中间有缝隙&lt;/h6&gt;
-&lt;h4 id=&#34;3浮动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3浮动&#34;&gt;#&lt;/a&gt; 3. 浮动&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;  float: left/right;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;浮动特性-脱标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动特性-脱标&#34;&gt;#&lt;/a&gt; 浮动特性 - 脱标&lt;/h6&gt;
-&lt;p&gt;1. 脱离标准普通流的控制（浮）移动到指定位置（动）。&lt;br&gt;
-2. 浮动的盒子不在保留原先的位置&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;浮动元素具有行内块元素的特点&lt;/strong&gt;&lt;br&gt;
-浮动盒子通常搭配标准流父盒子&lt;/p&gt;
-&lt;h6 id=&#34;浮动的注意点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动的注意点&#34;&gt;#&lt;/a&gt; 浮动的注意点&lt;/h6&gt;
-&lt;p&gt;1. 如果一个子元素浮动了，尽量其他盒子也浮动，这样保证这些子元素一行显示&lt;/p&gt;
-&lt;h6 id=&#34;清除浮动的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除浮动的方法&#34;&gt;#&lt;/a&gt; 清除浮动的方法&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCN1P&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCN1P.png&#34; alt=&#34;IQCN1P.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqJS0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqJS0.png&#34; alt=&#34;IJqJS0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;额外标签法：在子盒子的最后新增一个块级盒子 并且用 css 给快捷盒子加上 clear:both; 属性&lt;/p&gt;
-&lt;p&gt;父元素 overflow: 给父元素加上一个 overflow: hidden; 的 css 属性&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IJqtyT&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqtyT.png&#34; alt=&#34;IJqtyT.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;伪元素清除:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;.clearfix:after {&lt;br&gt;
-content: “”;&lt;br&gt;
-display: block;&lt;br&gt;
-height: 0;&lt;br&gt;
-clear: both;&lt;br&gt;
-visibility: hidden;&lt;br&gt;
-}&lt;br&gt;
-.clearfix {&lt;br&gt;
-IE6、7 专有&lt;br&gt;
- zoom: 1;&lt;br&gt;
-}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ60AI&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ60AI.png&#34; alt=&#34;IQ60AI.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;给父盒子一个 class 为 clearfix 然后将这串代码心如 css 中&lt;/p&gt;
-&lt;p&gt;双伪元素清除:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;.clearfix:before,&lt;br&gt;
-.clearfix:after {&lt;br&gt;
-content: “”;&lt;br&gt;
-display: table;&lt;br&gt;
-}&lt;br&gt;
-.clearfix:after {&lt;br&gt;
-clear: both;&lt;br&gt;
-}&lt;br&gt;
-.clearfix {&lt;br&gt;
-*zoom: 1;&lt;br&gt;
-}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;同理给一个 clearfix 标签，然后将这串代码写入 css 中&lt;/p&gt;
-&lt;h4 id=&#34;4定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4定位&#34;&gt;#&lt;/a&gt; 4. 定位&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCGtA&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCGtA.png&#34; alt=&#34;IQCGtA.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IJqwTJ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqwTJ.png&#34; alt=&#34;IJqwTJ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;position: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;static: 默认静态定位&lt;br&gt;
- absolute: 绝对定位&lt;br&gt;
- relative: 相对定位&lt;br&gt;
- fixed: 固定定位&lt;br&gt;
- sticky: 粘性定位&lt;/p&gt;
-&lt;p&gt;相对定位：可以进行定位，但依旧会占用空间&lt;br&gt;
-绝对定位&lt;br&gt;
-如果没施加绝对定位的盒子没有父盒子，那么绝对定位就是在浏览器的基础上的&lt;br&gt;
-如果绝对定位的盒子有父盒子，那么绝对定位就是在父盒子的基础上，并且&lt;strong&gt;父盒子一定要有定位，否则绝对定位就会失效&lt;/strong&gt;所以通常说相对定位就是给绝对定位当爹的&lt;/p&gt;
-&lt;p&gt;固定定位：会固定在屏幕上，无视浏览器的滑块移动&lt;/p&gt;
-&lt;p&gt;粘性定位：会先随着浏览器滑块的滑动而滑动，但是后来会静止，并且无法滑出浏览器屏幕&lt;/p&gt;
-&lt;h6 id=&#34;定位的堆叠顺序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位的堆叠顺序&#34;&gt;#&lt;/a&gt; 定位的堆叠顺序&lt;/h6&gt;
-&lt;p&gt;如果有很多个绝对定位，可能会放在同一个位置，这时候需要确定谁放置在最上面&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;z-index: ;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;默认为 0，数值越大显示等级越高&lt;/p&gt;
-&lt;h6 id=&#34;小技巧-绝对定位的水平垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小技巧-绝对定位的水平垂直居中&#34;&gt;#&lt;/a&gt; 小技巧 - 绝对定位的水平垂直居中&lt;/h6&gt;
-&lt;p&gt;1.left 走 50%  父容器宽度的一半&lt;br&gt;
- 2.margin 负值 往左边走 自己盒子宽度的一半&lt;/p&gt;
-&lt;h6 id=&#34;定位的特殊特性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位的特殊特性&#34;&gt;#&lt;/a&gt; 定位的特殊特性&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQC1TH&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC1TH.png&#34; alt=&#34;IQC1TH.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQCtpt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCtpt.png&#34; alt=&#34;IQCtpt.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;定位和浮动的差异&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位和浮动的差异&#34;&gt;#&lt;/a&gt; 定位和浮动的差异&lt;/h6&gt;
-&lt;p&gt;定位和浮动有相似部分，类如都会转化为行内块元素，都会压住盒子，但是浮动不会压住文字，定位会将所有东西压住&lt;/p&gt;
-&lt;h4 id=&#34;5显示隐藏&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5显示隐藏&#34;&gt;#&lt;/a&gt; 5. 显示隐藏&lt;/h4&gt;
-&lt;h6 id=&#34;display&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#display&#34;&gt;#&lt;/a&gt; display&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;display: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCaX8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCaX8.png&#34; alt=&#34;IQCaX8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;visibility&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#visibility&#34;&gt;#&lt;/a&gt; visibility&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCwnS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCwnS.png&#34; alt=&#34;IQCwnS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;overflow&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#overflow&#34;&gt;#&lt;/a&gt; overflow&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;overflow: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQC00g&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC00g.png&#34; alt=&#34;IQC00g.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQCB7Q&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCB7Q.png&#34; alt=&#34;IQCB7Q.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;6精灵图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6精灵图&#34;&gt;#&lt;/a&gt; 6. 精灵图&lt;/h4&gt;
-&lt;p&gt;这里不好介绍怎样操作只能简单而言&lt;br&gt;
-一张包含各种小图片的大图片&lt;br&gt;
-利用前面所讲的背景图片位置的移动使其只能显示出一张小图片来&lt;br&gt;
-问：为什么需要精灵图&lt;br&gt;
-利用精灵图可以将多张图片整合在一起，从而可以减少信息的发送和接受量，减少服务器的负担&lt;/p&gt;
-&lt;h4 id=&#34;7字体图标的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7字体图标的使用&#34;&gt;#&lt;/a&gt; 7. 字体图标的使用&lt;/h4&gt;
-&lt;p&gt;通过在网站上寻找字体图标，下载&lt;/p&gt;
-&lt;p&gt;然后将代码写入 css 中&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;@font-face {&lt;br&gt;
-font-family: ‘icomoon’;&lt;br&gt;
-src:  url(‘fonts/icomoon.eot?p4ssmb’);&lt;br&gt;
-src:  url(‘fonts/icomoon.eot?p4ssmb#iefix’) format(‘embedded-opentype’),&lt;br&gt;
-url(‘fonts/icomoon.ttf?p4ssmb’) format(‘truetype’),&lt;br&gt;
-url(‘fonts/icomoon.woff?p4ssmb’) format(‘woff’),&lt;br&gt;
-url(‘fonts/icomoon.svg?p4ssmb#icomoon’) format(‘svg’);&lt;br&gt;
-font-weight: normal;&lt;br&gt;
-font-style: normal;&lt;br&gt;
-font-display: block;&lt;br&gt;
-}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;font 文件夹移动到主文件夹中&lt;/p&gt;
-&lt;p&gt;此时就可以用字体图标代码来进行表示字体图标&lt;/p&gt;
-&lt;p&gt;好处：可以对图标进行改变颜色大小等等的改变字体时用到的属性&lt;/p&gt;
-&lt;h4 id=&#34;8css三角的制作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8css三角的制作&#34;&gt;#&lt;/a&gt; 8.css 三角的制作&lt;/h4&gt;
-&lt;p&gt;利用 cssborder 属性来进行三角的制作&lt;br&gt;
-由于不好叙述，自己输入，理解并体验这几组代码，应该就能理解 css 三角的制作&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQCsts&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCsts.png&#34; alt=&#34;IQCsts.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQCrkj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCrkj.png&#34; alt=&#34;IQCrkj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;9用户界面样式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9用户界面样式&#34;&gt;#&lt;/a&gt; 9. 用户界面样式&lt;/h4&gt;
-&lt;h6 id=&#34;表单轮廓&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单轮廓&#34;&gt;#&lt;/a&gt; 表单轮廓&lt;/h6&gt;
-&lt;p&gt;由于点击表单或者 text 文本框时边框上会出现颜色变化边框变大拖拽文本域等一系列的反应，从而利用 css 取消边框的轮廓&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;outline: none;  (input,textarea)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;resize:none; (textarea)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;用来防止拖拽文本域的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;鼠标样式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#鼠标样式&#34;&gt;#&lt;/a&gt; 鼠标样式&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;cursor: ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;default: 小白鼠标样式&lt;br&gt;
- pointer: 鼠标小手样式&lt;br&gt;
- move: 鼠标移动样式&lt;br&gt;
- text: 鼠标文本样式&lt;br&gt;
- not-allowed: 鼠标禁止样式&lt;/p&gt;
-&lt;h6 id=&#34;图片文字垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片文字垂直居中&#34;&gt;#&lt;/a&gt; 图片文字垂直居中&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqrf1&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqrf1.png&#34; alt=&#34;IJqrf1.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;图片底侧有空白缝隙的解决方案&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片底侧有空白缝隙的解决方案&#34;&gt;#&lt;/a&gt; 图片底侧有空白缝隙的解决方案&lt;/h6&gt;
-&lt;p&gt;先将图片变为块级元素，然后再给块级元素设置边框就可以解决&lt;/p&gt;
-&lt;h4 id=&#34;10文字溢出显示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10文字溢出显示&#34;&gt;#&lt;/a&gt; 10. 文字溢出显示&lt;/h4&gt;
-&lt;h6 id=&#34;单行文字溢出显示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单行文字溢出显示&#34;&gt;#&lt;/a&gt; 单行文字溢出显示&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCyhn&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCyhn.png&#34; alt=&#34;IQCyhn.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;多行文字溢出显示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#多行文字溢出显示&#34;&gt;#&lt;/a&gt; 多行文字溢出显示&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqc6K&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqc6K.png&#34; alt=&#34;IJqc6K.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;11margin负值的巧妙运动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11margin负值的巧妙运动&#34;&gt;#&lt;/a&gt; 11.margin 负值的巧妙运动&lt;/h4&gt;
-&lt;p&gt;如果多个盒子都有边框，此时相交部分边框会重合在一起，从而增加边框的大小，此时只需要写入 margin-left: -1px; 就可以得到解决&lt;/p&gt;
-&lt;h4 id=&#34;12文字围绕浮动元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12文字围绕浮动元素&#34;&gt;#&lt;/a&gt; 12. 文字围绕浮动元素&lt;/h4&gt;
-&lt;p&gt;众所周知浮动元素是不占用空间的，此时如果将一个照片浮动，而需要在照片旁边写入汉字的话，汉字是否会出现在图片的下方呢，答案是不会，因为汉字会围绕浮动元素&lt;/p&gt;
-&lt;h4 id=&#34;13css初始化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#13css初始化&#34;&gt;#&lt;/a&gt; 13.css 初始化&lt;/h4&gt;
-&lt;p&gt;这里给出一串代码，初始化网页，将网页元素自带的一些 css 属性给去掉&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;/* 把我们所有标签的内外边距清零 &lt;em&gt;/&lt;br&gt;
-* {&lt;br&gt;
-margin: 0;&lt;br&gt;
-padding: 0&lt;br&gt;
-}&lt;br&gt;
-/&lt;/em&gt;em 和 i 斜体的文字不倾斜 &lt;em&gt;/&lt;br&gt;
-em,&lt;br&gt;
-i {&lt;br&gt;
-font-style: normal&lt;br&gt;
-}&lt;br&gt;
-/&lt;/em&gt; 去掉 li 的小圆点 &lt;em&gt;/&lt;br&gt;
-li {&lt;br&gt;
-list-style: none&lt;br&gt;
-}&lt;br&gt;
-img {&lt;br&gt;
-/&lt;/em&gt;border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 &lt;em&gt;/&lt;br&gt;
-border: 0;&lt;br&gt;
-/&lt;/em&gt; 取消图片底侧有空白缝隙的问题 &lt;em&gt;/&lt;br&gt;
-vertical-align: middle&lt;br&gt;
-}&lt;br&gt;
-button {&lt;br&gt;
-/&lt;/em&gt; 当我们鼠标经过 button 按钮的时候，鼠标变成小手 &lt;em&gt;/&lt;br&gt;
-cursor: pointer&lt;br&gt;
-}&lt;br&gt;
-a {&lt;br&gt;
-color: #666;&lt;br&gt;
-text-decoration: none&lt;br&gt;
-}&lt;br&gt;
-a:hover {&lt;br&gt;
-color: #c81623&lt;br&gt;
-}&lt;br&gt;
-button,&lt;br&gt;
-input {&lt;br&gt;
-/&lt;/em&gt; “\5B8B\4F53” 就是宋体的意思 这样浏览器兼容性比较好 &lt;em&gt;/&lt;br&gt;
-font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, “\5B8B\4F53”, sans-serif&lt;br&gt;
-}&lt;br&gt;
-body {&lt;br&gt;
-/&lt;/em&gt; CSS3 抗锯齿形 让文字显示的更加清晰 &lt;em&gt;/&lt;br&gt;
--webkit-font-smoothing: antialiased;&lt;br&gt;
-background-color: #fff;&lt;br&gt;
-font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, “\5B8B\4F53”, sans-serif;&lt;br&gt;
-color: #666&lt;br&gt;
-}&lt;br&gt;
-.hide,&lt;br&gt;
-.none {&lt;br&gt;
-display: none&lt;br&gt;
-}&lt;br&gt;
-/&lt;/em&gt; 清除浮动 */&lt;br&gt;
-.clearfix:after {&lt;br&gt;
-visibility: hidden;&lt;br&gt;
-clear: both;&lt;br&gt;
-display: block;&lt;br&gt;
-content: “.”;&lt;br&gt;
-height: 0&lt;br&gt;
-}&lt;br&gt;
-.clearfix {&lt;br&gt;
-*zoom: 1&lt;br&gt;
-}&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;14css新增属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#14css新增属性&#34;&gt;#&lt;/a&gt; 14.css 新增属性&lt;/h4&gt;
-&lt;h6 id=&#34;新增属性选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新增属性选择器&#34;&gt;#&lt;/a&gt; 新增属性选择器&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqRmD&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqRmD.png&#34; alt=&#34;IJqRmD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;通过举例进行说明&lt;br&gt;
- input [type=text] {}&lt;br&gt;
- 这个表示选出 input 中 type=text 的元素&lt;/p&gt;
-&lt;p&gt;div [class^=XXX]: 选出以 XXX 开头的元素&lt;/p&gt;
-&lt;p&gt;div [class$=XXX]: 选出以 XXX 结尾的元素&lt;/p&gt;
-&lt;h6 id=&#34;结构伪类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#结构伪类选择器&#34;&gt;#&lt;/a&gt; 结构伪类选择器&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqgOO&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqgOO.png&#34; alt=&#34;IJqgOO.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;xxx:firstchild
-xxx:secondchild
-xxx:nth-child(number)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;都是选出第几个子元素的意思&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJq4kd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJq4kd.png&#34; alt=&#34;IJq4kd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;括号里面不仅仅可以跟数字，也可以很有特殊意义的单词，甚至可以跟公式 n 将取自然数&lt;/p&gt;
-&lt;p&gt;nth-of-type 选择器&lt;/p&gt;
-&lt;p&gt;两个选择器的区别如下&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IJqfTH&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqfTH.png&#34; alt=&#34;IJqfTH.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;举例子来说明:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;光头强&amp;lt;/p&amp;gt;
-&amp;lt;div&amp;gt;熊大&amp;lt;/div&amp;gt;
-&amp;lt;div&amp;gt;熊二&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;此时如果给一个 section div:nth-child (1) { background-color: red; } 指令，你觉得谁会被加上红色呢&lt;br&gt;
-答案是都不会&lt;br&gt;
- child 先看后面的数字 1   ，此时第一个孩子是 p，然后再来看前面的 div，发现 div 不是 P，所以不成立 谁都不给&lt;/p&gt;
-&lt;p&gt;但如果给一个 section div:nth-of-type (1) {&lt;br&gt;
-background-color: blue;} 指令呢&lt;br&gt;
-答案是会给熊大，type 先看前面的 div，找出 div，再发现后面的 1，所以会给 div 中的第一个孩子&lt;/p&gt;
-&lt;h6 id=&#34;伪元素选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#伪元素选择器&#34;&gt;#&lt;/a&gt; 伪元素选择器&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;XXX::before/after {&lt;br&gt;
-content:’’;&lt;br&gt;
-}&lt;br&gt;
- 这里面的 content 是必须加的，表示里面的内容，即使你没有内容要写，也需要写出 content 否则无效，注意是单引号&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;用处：可以里面 css 来个父元素添加盒子 词的的 before 表示出现在父元素的左边 after 表示出现在父元素的右边&lt;/p&gt;
-&lt;h6 id=&#34;css3盒子模型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css3盒子模型&#34;&gt;#&lt;/a&gt; css3 盒子模型&lt;/h6&gt;
-&lt;p&gt;前面我们说了 padding 和边框都会撑大盒子，所以说我们使用 border 和 padding 还需要减去其尺寸，现在我们提供了修复的方法&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;box-sizing:  ;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;content-box: 按照原来会撑大盒子的方式&lt;br&gt;
- border-box: 会自动减去撑大的尺寸，保证盒子的尺寸不变&lt;/p&gt;
-&lt;h6 id=&#34;图片模糊处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片模糊处理&#34;&gt;#&lt;/a&gt; 图片模糊处理&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;filter:blur()&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;blur 是一个函数 小括号里面数值越大，图片越模糊 注意数值要加 px 单位&lt;/p&gt;
-&lt;h6 id=&#34;css3宽度calc函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css3宽度calc函数&#34;&gt;#&lt;/a&gt; css3 宽度 calc 函数&lt;/h6&gt;
-&lt;p&gt;calc 函数主要提供了一个计算的方法&lt;br&gt;
-例如在有一个父盒子的前提下，子盒子写出这样一个函数 width: calc (100% - 30px); 表示在父亲 100% 尺寸的前提下始终减去 30px 的宽度&lt;/p&gt;
-&lt;h6 id=&#34;过渡效果&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过渡效果&#34;&gt;#&lt;/a&gt; 过渡效果&lt;/h6&gt;
-&lt;p&gt;大概来说就是将一个瞬间变化的过程转化成阶段性有时间长短的变化&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IJqTpt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqTpt.png&#34; alt=&#34;IJqTpt.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
- 在这里 0s 开始一般可以不写而省略，变化曲线也一遍使用 ease 这是最常用的变化曲线&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</guid>
-            <title>Html-first</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</link>
-            <category>Html</category>
-            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本架构&#34;&gt;#&lt;/a&gt; 1. 基本架构&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
-&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;2html标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2html标签&#34;&gt;#&lt;/a&gt; 2.html 标签&lt;/h4&gt;
-&lt;h6 id=&#34;标题标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标题标签&#34;&gt;#&lt;/a&gt; 标题标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;   ……  &amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一共六级标题，文字加粗，由大到小依次减小。&lt;br&gt;
-&lt;strong&gt;大多数标签都是成对存在的，只有少数例如 br 的单标签&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;段落和换行标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#段落和换行标签&#34;&gt;#&lt;/a&gt; 段落和换行标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;/br&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;p 标签会自动换行，不用添加 br&lt;/p&gt;
-&lt;h6 id=&#34;文本格式化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本格式化标签&#34;&gt;#&lt;/a&gt; 文本格式化标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;strong&amp;gt;加粗&amp;lt;/strong&amp;gt; 或者 &amp;lt;b&amp;gt;加粗&amp;lt;/b&amp;gt;
-&amp;lt;em&amp;gt;倾斜&amp;lt;/em&amp;gt; 或者 &amp;lt;i&amp;gt;倾斜&amp;lt;/i&amp;gt;
-&amp;lt;del&amp;gt;删除线&amp;lt;/del&amp;gt; 或者 &amp;lt;s&amp;gt;删除线&amp;lt;/s&amp;gt;
-&amp;lt;ins&amp;gt;下划线&amp;lt;/ins&amp;gt; 或者 &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;div和span标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#div和span标签&#34;&gt;#&lt;/a&gt; div 和 span 标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;形象来说 div 是一个大盒子，span 通常是用来放在大盒子里面的小盒子（后期 div 在页面构造中非常常用)&lt;/p&gt;
-&lt;h6 id=&#34;图像标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图像标签&#34;&gt;#&lt;/a&gt; 图像标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&#34;路径&#34; alt=&#34;图片不显示时显示出来的&#34; 
-title=&#34;鼠标放在图片上面显示出来的文字&#34; 
-width=&#34;&#34; height=&#34;&#34; border=&#34;&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在后期使用的 width,height,border, 都会放入&lt;strong&gt; css&lt;/strong&gt; 中来运行使用不会单独列入 img 中&lt;br&gt;
-图像标签的路径&lt;br&gt;
- 1. 同一级路径&lt;br&gt;
- eg:(img.jpg)&lt;br&gt;
- 2. 下一级路径&lt;br&gt;
- eg:(images/img.jpg)&lt;br&gt;
- 3. 绝对路径&lt;br&gt;
- eg:(C:\Users\apple\Desktop\ 前端基础第一天 - HTML\ 案例 \img.jpg)&lt;br&gt;
-eg：(&lt;a href=&#34;http://www.itcast.cn/2018czgw/images/logo.png&#34;&gt;http://www.itcast.cn/2018czgw/images/logo.png&lt;/a&gt;)&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmLi8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmLi8.png&#34; alt=&#34;IQmLi8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;超链接标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超链接标签&#34;&gt;#&lt;/a&gt; 超链接标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;链接&#34;&amp;gt;LOL&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;LOL 可以以图片文字等等代替，点击就可以跳转到 href 所在的链接&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可以添加的元素：target=“X”&lt;br&gt;
-X 包括_self (覆盖当前页面)&lt;br&gt;
- 和_blank 重新启动新的页面&lt;br&gt;
-链接分类&lt;br&gt;
- 1. 内部链接：存放在你网站前端的链接也就是你写前端时电脑里面的链接&lt;br&gt;
- 2. 外部链接：例如 http 这类的其他网站的链接&lt;br&gt;
- 3. 空链接：当你还没有链接可以填时，留出空位用 #代替&lt;br&gt;
- 4. 下载链接：通常是以.zip 结尾的压缩包&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQC8kd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC8kd.png&#34; alt=&#34;IQC8kd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;锚点定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#锚点定位&#34;&gt;#&lt;/a&gt; 锚点定位&lt;/h6&gt;
-&lt;p&gt;由两个相互呼应的标签组成&lt;br&gt;
-可以从页面的一个地方跳转到当前页面的另外一个地方&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;#ID&#34;&amp;gt;&amp;lt;/a&amp;gt;
-&amp;lt;h3 id=&#34;ID&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ID 可以写成任何你定义的名称&lt;br&gt;
- h3 并不是固定的，可以换成任意标签&lt;br&gt;
-当你点击 a 中携带的元素或标签时你将会跳转到拥有 id=“” 且和 a 相同 id 的标签这&lt;/p&gt;
-&lt;h6 id=&#34;注释标签和特殊字符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注释标签和特殊字符&#34;&gt;#&lt;/a&gt; 注释标签和特殊字符&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 注释内容 --&amp;gt; 
-&amp;lt;用&amp;amp;lt  &amp;gt;用&amp;amp;gt；(由于&amp;lt;&amp;gt;符号在html中的特殊性)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;特殊内容可以用 ctrl+l 快速注释&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</guid>
-            <title>Html-second</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</link>
-            <category>Html</category>
-            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;。&lt;/p&gt;
-&lt;h1 id=&#34;html下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html下&#34;&gt;#&lt;/a&gt; Html (下)&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1表格&#34;&gt;#&lt;/a&gt; 1. 表格&lt;/h4&gt;
-&lt;h6 id=&#34;表格基本语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格基本语法&#34;&gt;#&lt;/a&gt; 表格基本语法&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;
-  &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;
-  &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
-&amp;lt;/table&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;表头单元格标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表头单元格标签&#34;&gt;#&lt;/a&gt; 表头单元格标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;align=&#34;&#34;&lt;br&gt;
-border=&#34;&#34;&lt;br&gt;
-cellpadding=&#34;&#34;&lt;br&gt;
-cellspacing=&#34;&#34;&lt;br&gt;
-width=&#34;&#34;&lt;br&gt;
-height=&#34;&#34;&lt;br&gt;
-&lt;strong&gt; 这些标签要写到 table 里面去&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;align: 表格中的文字所处的文字 eg.center 就是未于中间类似的还有 left,right&lt;br&gt;
-border：表示表格边框的大小 0 表示没有 &lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;&lt;br&gt;
- cellpadding：代表单元格边框到内容之间的距离（留白）&lt;br&gt;
-cellspacing：用来指定表格各单元格之间的空隙。&lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;，表示单元格间隙所占的像素点数。&lt;br&gt;
-同样 width,height 已经介绍过了 ，大多数时候都会用&lt;strong&gt; CSS&lt;/strong&gt; 来写&lt;/p&gt;
-&lt;h6 id=&#34;合并单元格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并单元格&#34;&gt;#&lt;/a&gt; 合并单元格&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;p&gt;rowspan=“合并单元格数目”&lt;br&gt;
-colspan=“合并单元格数目”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;rowspan: 合并行 (也就是将一列上的各行合并)&lt;br&gt;
- colspan: 合并列 (也就是将一行上的各列合并)&lt;br&gt;
- 合并准则：如果 rowspan 就在最上面的表格的标签里面加上 rowspan=&#34;合并数目&#34; 并且删除已经被合并的表格&lt;br&gt;
- colspan 同理，注意 colspan 加在最左边的表格标签&lt;br&gt;
- eg.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;  &amp;lt;tr&amp;gt;
-     &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
-      &amp;lt;td colspan=&#34;2&#34;&amp;gt;&amp;lt;/td&amp;gt;
-
-  &amp;lt;/tr&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;表示合并一行上的 2 列 第三列删除 colspan 写在第二列的 td 表格标签内&lt;/p&gt;
-&lt;h4 id=&#34;2列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2列表&#34;&gt;#&lt;/a&gt; 2. 列表&lt;/h4&gt;
-&lt;h6 id=&#34;无序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无序列表&#34;&gt;#&lt;/a&gt; 无序列表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-    …………
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;其中的 li 标签各位根据需要而定&lt;br&gt;
- ul:unorderlist&lt;br&gt;
-li:list&lt;/p&gt;
-&lt;h6 id=&#34;有序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有序列表&#34;&gt;#&lt;/a&gt; 有序列表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-    …………
-  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
-&amp;lt;/ol&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ol:orderlist&lt;br&gt;
-li:list&lt;/p&gt;
-&lt;h6 id=&#34;自定义列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自定义列表&#34;&gt;#&lt;/a&gt; 自定义列表&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;dl&amp;gt;
-   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;顶部总标签
-   &amp;lt;dd&amp;gt;&amp;lt;/dd&amp;gt;
-   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;
-   &amp;lt;dd&amp;gt;&amp;lt;/dd
- &amp;lt;/dl&amp;gt;
- 一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;标签出现代表一列
- 直到下一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;出现才换列
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;3表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3表单&#34;&gt;#&lt;/a&gt; 3. 表单&lt;/h4&gt;
-&lt;h6 id=&#34;表单域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单域&#34;&gt;#&lt;/a&gt; 表单域&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&#34;&#34; method=&#34;&#34; name=&#34;&#34;&amp;gt;
-&amp;lt;/form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;表单域需要与后端结合使用只是接下来的一系列需要传输数据到后端的都需要写到表单域内&lt;br&gt;
-附：此时作者还不知道表单域的 action 等标签充当的角色和用处&lt;/p&gt;
-&lt;h6 id=&#34;input表单元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单元素&#34;&gt;#&lt;/a&gt; input 表单元素&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;&#34; value=&#34;&#34; name=&#34;&#34; &amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqbX8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqbX8.png&#34; alt=&#34;IJqbX8.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
-type 里面可以填写的元素&lt;br&gt;
- text: 文本框，用户可以输入任何文字，但可以用 maxlength 等来加以限定&lt;br&gt;
- password：密码框，可以对你输入的数字进行保密 此时显示 *******&lt;br&gt;
-radio: 单选按钮&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;将两个 input+radio 元素的标签 name 设置成相同 才可以进行单选 具体下面看图&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;checkbox: 复选框，可以进行多个选择&lt;br&gt;
- submit: 提交按钮，点击可以将数据提交给后端&lt;br&gt;
- reset: 重新填写&lt;br&gt;
- button: 点击  例如：获取短信验证码需要使用&lt;/p&gt;
-&lt;p&gt;与 type 同等级的元素作用&lt;br&gt;
- value：提前显示在文本框内的文字&lt;br&gt;
- name：传送给后端时的数据名称，radio 只有 name 相同才能单选&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmXRg&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmXRg.png&#34; alt=&#34;IQmXRg.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;label标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#label标签&#34;&gt;#&lt;/a&gt; label 标签&lt;/h6&gt;
-&lt;p&gt;点击添加了 label 标签的元素等于点击 label 标签的输出端&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&#34;XXX&#34;&amp;gt; &amp;lt;/label&amp;gt;
-&amp;lt;input type=&#34;&#34; id=&#34;XXX&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;并不一定要是 input 只是在 input 等填写数据中较为广泛地使用，xxx 可以换成任何自己命名的单词字母等&lt;br&gt;
- for 和 id 中填写的必须相同&lt;/p&gt;
-&lt;h6 id=&#34;select下拉表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#select下拉表单&#34;&gt;#&lt;/a&gt; select 下拉表单&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
-&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;
-&amp;lt;option selected=&#34;selected&#34;&amp;gt; &amp;lt;/potion&amp;gt;
-&amp;lt;/select&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;option 标签中间填写下拉菜单中的文字等&lt;br&gt;
-添加了 selected 元素的表示 未下拉时显示在表面的选项&lt;/p&gt;
-&lt;h6 id=&#34;textarea文本域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#textarea文本域&#34;&gt;#&lt;/a&gt; textarea 文本域&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;textarea cols=&#34;&#34; rows=&#34;&#34;&amp;gt;
-&amp;lt;/textarea&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;文本域通常很大所以用 cols 和 rows 来进行限定&lt;br&gt;
- cols 限定一行的字数 rows 限定行数&lt;br&gt;
-在后期的学习中可以用&lt;strong&gt; css&lt;/strong&gt; 将文本域的右下角拉伸和上下滑动进行去除，增加美观性&lt;/p&gt;
-&lt;h4 id=&#34;4html5新增&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4html5新增&#34;&gt;#&lt;/a&gt; 4.html5 新增&lt;/h4&gt;
-&lt;h6 id=&#34;语义化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语义化标签&#34;&gt;#&lt;/a&gt; 语义化标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;header&amp;gt;头部标签&amp;lt;/header&amp;gt;
-
-&amp;lt;nav&amp;gt;导航栏标签&amp;lt;/nav&amp;gt;   
-&amp;lt;section&amp;gt;某个区域&amp;lt;/section&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;视频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#视频标签&#34;&gt;#&lt;/a&gt; 视频标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;video src=&#34;&#34; autoplay=&#34;&#34;muted=&#34;muted&#34;  loop=&#34;loop&#34; poster=&#34;media/mi9.jpg&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;src: 路径&lt;br&gt;
- autoplay: 写入 autoplay 代表自动播放&lt;br&gt;
- mute: 播放时静音&lt;br&gt;
- loop: 预先加载&lt;br&gt;
- poster: 播放还没有加载出来的时候显示的图片&lt;br&gt;
- controls: 是否显示控制按钮&lt;/p&gt;
-&lt;h6 id=&#34;音频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#音频标签&#34;&gt;#&lt;/a&gt; 音频标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;audio src=&#34;media/music.mp3&#34; autoplay=&#34;autoplay&#34; controls=&#34;controls&#34;&amp;gt;&amp;lt;/audio&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;与视频标签相差无几&lt;/p&gt;
-&lt;h6 id=&#34;input表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单&#34;&gt;#&lt;/a&gt; input 表单&lt;/h6&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqLnS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqLnS.png&#34; alt=&#34;IJqLnS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;表单属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单属性&#34;&gt;#&lt;/a&gt; 表单属性&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;search&#34; name=&#34;sear&#34; id=&#34;&#34; required=&#34;required&#34; placeholder=&#34;pink老师&#34; autofocus=&#34;autofocus&#34; autocomplete=&#34;off&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt; &amp;lt;input type=&#34;file&#34; name=&#34;&#34; id=&#34;&#34; multiple=&#34;multiple&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;required: 需要填写才能点确定&lt;br&gt;
- placeholder: 还没有填写时候显示的文字&lt;br&gt;
- autofocus: 打开网页时，指标会自动点一下这里&lt;br&gt;
- autocomplete: 自动储存你输入过的信息 (容易暴露信息，所以一般都会关闭)&lt;br&gt;
- multiple: 可以选取多个文件&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -9393,6 +9420,664 @@ bool &lt;span class=&#34;token function&#34;&gt;DeQueue&lt;/span&gt;&lt;span cla
 &lt;h4 id=&#34;175-用队列进行模拟&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#175-用队列进行模拟&#34;&gt;#&lt;/a&gt; 17.5 用队列进行模拟&lt;/h4&gt;
 &lt;h4 id=&#34;176-链表和数组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#176-链表和数组&#34;&gt;#&lt;/a&gt; 17.6 链表和数组&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/Tysdzj&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2021/12/28/Tysdzj.png&#34; alt=&#34;Tysdzj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/css2/</guid>
+            <title>Css-second</title>
+            <link>http://s1mm.gitee.io/s1mm/2021/11/06/css2/</link>
+            <category>Css</category>
+            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1css选择器的性质&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css选择器的性质&#34;&gt;#&lt;/a&gt; 1.css 选择器的性质&lt;/h4&gt;
+&lt;h6 id=&#34;css层叠性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css层叠性&#34;&gt;#&lt;/a&gt; css 层叠性&lt;/h6&gt;
+&lt;p&gt;长江后浪推前浪，前浪死在沙滩上&lt;br&gt;
+当两个完全相同的选择器写在一起时，此时根据就近原则处理&lt;/p&gt;
+&lt;h6 id=&#34;css继承性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css继承性&#34;&gt;#&lt;/a&gt; css 继承性&lt;/h6&gt;
+&lt;p&gt;大元素中的小元素会继承写在大元素中的属性&lt;/p&gt;
+&lt;h6 id=&#34;行高的继承&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行高的继承&#34;&gt;#&lt;/a&gt; 行高的继承&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6YcD&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6YcD.png&#34; alt=&#34;IQ6YcD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;孩子拥有 font-size 元素会优先使用定义在自身的，而后面的倍数孩子自身没有就会继承父亲的倍数&lt;/p&gt;
+&lt;h6 id=&#34;css优先级&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css优先级&#34;&gt;#&lt;/a&gt; css 优先级&lt;/h6&gt;
+&lt;p&gt;这个主要是根据后面的权重的大小而判定的，权重大的优先。&lt;/p&gt;
+&lt;h6 id=&#34;css权重&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css权重&#34;&gt;#&lt;/a&gt; css 权重&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6UnH&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6UnH.png&#34; alt=&#34;IQ6UnH.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;权重的叠加&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#权重的叠加&#34;&gt;#&lt;/a&gt; 权重的叠加&lt;/h6&gt;
+&lt;p&gt;权重的叠加可以用加减法来计算&lt;br&gt;
+例如 0,1,0,0 相当于 100&lt;/p&gt;
+&lt;h4 id=&#34;2盒子模型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2盒子模型&#34;&gt;#&lt;/a&gt; 2. 盒子模型&lt;/h4&gt;
+&lt;p&gt;盒子通常是块级元素&lt;br&gt;
+也可以通过 display 将其变成块级元素 a 元素通常使用这种方法&lt;/p&gt;
+&lt;h6 id=&#34;盒子边框&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子边框&#34;&gt;#&lt;/a&gt; 盒子边框&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ6aBd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ6aBd.png&#34; alt=&#34;IQ6aBd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;border-width: ;&lt;br&gt;
+border-style: ;&lt;br&gt;
+border-color: ;&lt;br&gt;
+border:width style color ; 复合写法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这边建议大家使用复合写法&lt;br&gt;
+ style:solid 实线 dotted 虚线 dashed 更大点的虚线&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;边框会影响盒子的实际大小&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;盒子内边框&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子内边框&#34;&gt;#&lt;/a&gt; 盒子内边框&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ66gS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ66gS.png&#34; alt=&#34;IQ66gS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;padding: ;&lt;br&gt;
+padding-left: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;同理 left 可以换成其他的方位&lt;/p&gt;
+&lt;p&gt;内边距复合写法：从顶部顺时针数&lt;br&gt;
+&lt;strong&gt;内边距会影响盒子的大小&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;内边距不会影响盒子大小的情况:&lt;br&gt;
+ 当盒子内没有给宽时，padding-left/right 不会影响&lt;br&gt;
+没有给高时 padding-top/bottom 不会影响&lt;/p&gt;
+&lt;h6 id=&#34;盒子外边距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子外边距&#34;&gt;#&lt;/a&gt; 盒子外边距&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;margin:  ;&lt;br&gt;
+margin-top/XXX: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;复合写法和内边距同理&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;外边距典型应用&lt;/strong&gt;:&lt;br&gt;
+margin: XXXpx auto;&lt;br&gt;
+ 此时 auto 代表左右两边自动设置可以让盒子水平对齐&lt;/p&gt;
+&lt;h6 id=&#34;行内元素或行内块元素水平居中对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内元素或行内块元素水平居中对齐&#34;&gt;#&lt;/a&gt; 行内元素或行内块元素水平居中对齐&lt;/h6&gt;
+&lt;p&gt;margin 对行内元素没有作用，但是可以给这两种元素的父盒子添加 text-align:center;&lt;/p&gt;
+&lt;h6 id=&#34;外边距合并&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#外边距合并&#34;&gt;#&lt;/a&gt; 外边距合并&lt;/h6&gt;
+&lt;p&gt;当子盒子给 margin 时，父盒子和子盒子会塌陷，两个盒子会边框重合&lt;/p&gt;
+&lt;h6 id=&#34;清除内外边距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除内外边距&#34;&gt;#&lt;/a&gt; 清除内外边距&lt;/h6&gt;
+&lt;p&gt;通常浏览器会自带内外边距这时就需要使用通用符选择器将浏览器自带的边距出去&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;* {padding:0 ;
+   margin:0;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;圆角边框&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#圆角边框&#34;&gt;#&lt;/a&gt; 圆角边框&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;border-radius: Xpx ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原理：利用一个半径为 Xpx 的圆，与边角重叠，然后切去没有重叠的边角；&lt;/p&gt;
+&lt;h6 id=&#34;盒子阴影&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#盒子阴影&#34;&gt;#&lt;/a&gt; 盒子阴影&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCJfI&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCJfI.png&#34; alt=&#34;IQCJfI.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;box-shadow: X X X X X;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由左到右依次为 往右边移动的距离 往下面移动的距离 阴影发散度 (往四面八方发散)  往四面八方扩散的距离 颜色 (通常是 rgba 控制)&lt;/p&gt;
+&lt;h6 id=&#34;文字阴影&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字阴影&#34;&gt;#&lt;/a&gt; 文字阴影&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;text-shadow:X X X rgba;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;分别是 往右边移动的距离 往下面移动的距离 虚实度 (越大越虚)&lt;/p&gt;
+&lt;h6 id=&#34;行内块元素中间有缝隙&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#行内块元素中间有缝隙&#34;&gt;#&lt;/a&gt; 行内块元素中间有缝隙&lt;/h6&gt;
+&lt;h4 id=&#34;3浮动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3浮动&#34;&gt;#&lt;/a&gt; 3. 浮动&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  float: left/right;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;浮动特性-脱标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动特性-脱标&#34;&gt;#&lt;/a&gt; 浮动特性 - 脱标&lt;/h6&gt;
+&lt;p&gt;1. 脱离标准普通流的控制（浮）移动到指定位置（动）。&lt;br&gt;
+2. 浮动的盒子不在保留原先的位置&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;浮动元素具有行内块元素的特点&lt;/strong&gt;&lt;br&gt;
+浮动盒子通常搭配标准流父盒子&lt;/p&gt;
+&lt;h6 id=&#34;浮动的注意点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动的注意点&#34;&gt;#&lt;/a&gt; 浮动的注意点&lt;/h6&gt;
+&lt;p&gt;1. 如果一个子元素浮动了，尽量其他盒子也浮动，这样保证这些子元素一行显示&lt;/p&gt;
+&lt;h6 id=&#34;清除浮动的方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#清除浮动的方法&#34;&gt;#&lt;/a&gt; 清除浮动的方法&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCN1P&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCN1P.png&#34; alt=&#34;IQCN1P.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqJS0&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqJS0.png&#34; alt=&#34;IJqJS0.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;额外标签法：在子盒子的最后新增一个块级盒子 并且用 css 给快捷盒子加上 clear:both; 属性&lt;/p&gt;
+&lt;p&gt;父元素 overflow: 给父元素加上一个 overflow: hidden; 的 css 属性&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IJqtyT&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqtyT.png&#34; alt=&#34;IJqtyT.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;伪元素清除:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.clearfix:after {&lt;br&gt;
+content: “”;&lt;br&gt;
+display: block;&lt;br&gt;
+height: 0;&lt;br&gt;
+clear: both;&lt;br&gt;
+visibility: hidden;&lt;br&gt;
+}&lt;br&gt;
+.clearfix {&lt;br&gt;
+IE6、7 专有&lt;br&gt;
+ zoom: 1;&lt;br&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQ60AI&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQ60AI.png&#34; alt=&#34;IQ60AI.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;给父盒子一个 class 为 clearfix 然后将这串代码心如 css 中&lt;/p&gt;
+&lt;p&gt;双伪元素清除:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;.clearfix:before,&lt;br&gt;
+.clearfix:after {&lt;br&gt;
+content: “”;&lt;br&gt;
+display: table;&lt;br&gt;
+}&lt;br&gt;
+.clearfix:after {&lt;br&gt;
+clear: both;&lt;br&gt;
+}&lt;br&gt;
+.clearfix {&lt;br&gt;
+*zoom: 1;&lt;br&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;同理给一个 clearfix 标签，然后将这串代码写入 css 中&lt;/p&gt;
+&lt;h4 id=&#34;4定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4定位&#34;&gt;#&lt;/a&gt; 4. 定位&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCGtA&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCGtA.png&#34; alt=&#34;IQCGtA.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IJqwTJ&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqwTJ.png&#34; alt=&#34;IJqwTJ.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;position: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;static: 默认静态定位&lt;br&gt;
+ absolute: 绝对定位&lt;br&gt;
+ relative: 相对定位&lt;br&gt;
+ fixed: 固定定位&lt;br&gt;
+ sticky: 粘性定位&lt;/p&gt;
+&lt;p&gt;相对定位：可以进行定位，但依旧会占用空间&lt;br&gt;
+绝对定位&lt;br&gt;
+如果没施加绝对定位的盒子没有父盒子，那么绝对定位就是在浏览器的基础上的&lt;br&gt;
+如果绝对定位的盒子有父盒子，那么绝对定位就是在父盒子的基础上，并且&lt;strong&gt;父盒子一定要有定位，否则绝对定位就会失效&lt;/strong&gt;所以通常说相对定位就是给绝对定位当爹的&lt;/p&gt;
+&lt;p&gt;固定定位：会固定在屏幕上，无视浏览器的滑块移动&lt;/p&gt;
+&lt;p&gt;粘性定位：会先随着浏览器滑块的滑动而滑动，但是后来会静止，并且无法滑出浏览器屏幕&lt;/p&gt;
+&lt;h6 id=&#34;定位的堆叠顺序&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位的堆叠顺序&#34;&gt;#&lt;/a&gt; 定位的堆叠顺序&lt;/h6&gt;
+&lt;p&gt;如果有很多个绝对定位，可能会放在同一个位置，这时候需要确定谁放置在最上面&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;z-index: ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;默认为 0，数值越大显示等级越高&lt;/p&gt;
+&lt;h6 id=&#34;小技巧-绝对定位的水平垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#小技巧-绝对定位的水平垂直居中&#34;&gt;#&lt;/a&gt; 小技巧 - 绝对定位的水平垂直居中&lt;/h6&gt;
+&lt;p&gt;1.left 走 50%  父容器宽度的一半&lt;br&gt;
+ 2.margin 负值 往左边走 自己盒子宽度的一半&lt;/p&gt;
+&lt;h6 id=&#34;定位的特殊特性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位的特殊特性&#34;&gt;#&lt;/a&gt; 定位的特殊特性&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQC1TH&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC1TH.png&#34; alt=&#34;IQC1TH.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQCtpt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCtpt.png&#34; alt=&#34;IQCtpt.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;定位和浮动的差异&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位和浮动的差异&#34;&gt;#&lt;/a&gt; 定位和浮动的差异&lt;/h6&gt;
+&lt;p&gt;定位和浮动有相似部分，类如都会转化为行内块元素，都会压住盒子，但是浮动不会压住文字，定位会将所有东西压住&lt;/p&gt;
+&lt;h4 id=&#34;5显示隐藏&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5显示隐藏&#34;&gt;#&lt;/a&gt; 5. 显示隐藏&lt;/h4&gt;
+&lt;h6 id=&#34;display&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#display&#34;&gt;#&lt;/a&gt; display&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;display: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCaX8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCaX8.png&#34; alt=&#34;IQCaX8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;visibility&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#visibility&#34;&gt;#&lt;/a&gt; visibility&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCwnS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCwnS.png&#34; alt=&#34;IQCwnS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;overflow&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#overflow&#34;&gt;#&lt;/a&gt; overflow&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;overflow: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQC00g&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC00g.png&#34; alt=&#34;IQC00g.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQCB7Q&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCB7Q.png&#34; alt=&#34;IQCB7Q.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;6精灵图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6精灵图&#34;&gt;#&lt;/a&gt; 6. 精灵图&lt;/h4&gt;
+&lt;p&gt;这里不好介绍怎样操作只能简单而言&lt;br&gt;
+一张包含各种小图片的大图片&lt;br&gt;
+利用前面所讲的背景图片位置的移动使其只能显示出一张小图片来&lt;br&gt;
+问：为什么需要精灵图&lt;br&gt;
+利用精灵图可以将多张图片整合在一起，从而可以减少信息的发送和接受量，减少服务器的负担&lt;/p&gt;
+&lt;h4 id=&#34;7字体图标的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7字体图标的使用&#34;&gt;#&lt;/a&gt; 7. 字体图标的使用&lt;/h4&gt;
+&lt;p&gt;通过在网站上寻找字体图标，下载&lt;/p&gt;
+&lt;p&gt;然后将代码写入 css 中&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@font-face {&lt;br&gt;
+font-family: ‘icomoon’;&lt;br&gt;
+src:  url(‘fonts/icomoon.eot?p4ssmb’);&lt;br&gt;
+src:  url(‘fonts/icomoon.eot?p4ssmb#iefix’) format(‘embedded-opentype’),&lt;br&gt;
+url(‘fonts/icomoon.ttf?p4ssmb’) format(‘truetype’),&lt;br&gt;
+url(‘fonts/icomoon.woff?p4ssmb’) format(‘woff’),&lt;br&gt;
+url(‘fonts/icomoon.svg?p4ssmb#icomoon’) format(‘svg’);&lt;br&gt;
+font-weight: normal;&lt;br&gt;
+font-style: normal;&lt;br&gt;
+font-display: block;&lt;br&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;font 文件夹移动到主文件夹中&lt;/p&gt;
+&lt;p&gt;此时就可以用字体图标代码来进行表示字体图标&lt;/p&gt;
+&lt;p&gt;好处：可以对图标进行改变颜色大小等等的改变字体时用到的属性&lt;/p&gt;
+&lt;h4 id=&#34;8css三角的制作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8css三角的制作&#34;&gt;#&lt;/a&gt; 8.css 三角的制作&lt;/h4&gt;
+&lt;p&gt;利用 cssborder 属性来进行三角的制作&lt;br&gt;
+由于不好叙述，自己输入，理解并体验这几组代码，应该就能理解 css 三角的制作&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQCsts&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCsts.png&#34; alt=&#34;IQCsts.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQCrkj&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCrkj.png&#34; alt=&#34;IQCrkj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;9用户界面样式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9用户界面样式&#34;&gt;#&lt;/a&gt; 9. 用户界面样式&lt;/h4&gt;
+&lt;h6 id=&#34;表单轮廓&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单轮廓&#34;&gt;#&lt;/a&gt; 表单轮廓&lt;/h6&gt;
+&lt;p&gt;由于点击表单或者 text 文本框时边框上会出现颜色变化边框变大拖拽文本域等一系列的反应，从而利用 css 取消边框的轮廓&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;outline: none;  (input,textarea)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;resize:none; (textarea)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用来防止拖拽文本域的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;鼠标样式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#鼠标样式&#34;&gt;#&lt;/a&gt; 鼠标样式&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;cursor: ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;default: 小白鼠标样式&lt;br&gt;
+ pointer: 鼠标小手样式&lt;br&gt;
+ move: 鼠标移动样式&lt;br&gt;
+ text: 鼠标文本样式&lt;br&gt;
+ not-allowed: 鼠标禁止样式&lt;/p&gt;
+&lt;h6 id=&#34;图片文字垂直居中&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片文字垂直居中&#34;&gt;#&lt;/a&gt; 图片文字垂直居中&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqrf1&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqrf1.png&#34; alt=&#34;IJqrf1.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;图片底侧有空白缝隙的解决方案&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片底侧有空白缝隙的解决方案&#34;&gt;#&lt;/a&gt; 图片底侧有空白缝隙的解决方案&lt;/h6&gt;
+&lt;p&gt;先将图片变为块级元素，然后再给块级元素设置边框就可以解决&lt;/p&gt;
+&lt;h4 id=&#34;10文字溢出显示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10文字溢出显示&#34;&gt;#&lt;/a&gt; 10. 文字溢出显示&lt;/h4&gt;
+&lt;h6 id=&#34;单行文字溢出显示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单行文字溢出显示&#34;&gt;#&lt;/a&gt; 单行文字溢出显示&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IQCyhn&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQCyhn.png&#34; alt=&#34;IQCyhn.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;多行文字溢出显示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#多行文字溢出显示&#34;&gt;#&lt;/a&gt; 多行文字溢出显示&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqc6K&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqc6K.png&#34; alt=&#34;IJqc6K.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;11margin负值的巧妙运动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11margin负值的巧妙运动&#34;&gt;#&lt;/a&gt; 11.margin 负值的巧妙运动&lt;/h4&gt;
+&lt;p&gt;如果多个盒子都有边框，此时相交部分边框会重合在一起，从而增加边框的大小，此时只需要写入 margin-left: -1px; 就可以得到解决&lt;/p&gt;
+&lt;h4 id=&#34;12文字围绕浮动元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12文字围绕浮动元素&#34;&gt;#&lt;/a&gt; 12. 文字围绕浮动元素&lt;/h4&gt;
+&lt;p&gt;众所周知浮动元素是不占用空间的，此时如果将一个照片浮动，而需要在照片旁边写入汉字的话，汉字是否会出现在图片的下方呢，答案是不会，因为汉字会围绕浮动元素&lt;/p&gt;
+&lt;h4 id=&#34;13css初始化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#13css初始化&#34;&gt;#&lt;/a&gt; 13.css 初始化&lt;/h4&gt;
+&lt;p&gt;这里给出一串代码，初始化网页，将网页元素自带的一些 css 属性给去掉&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/* 把我们所有标签的内外边距清零 &lt;em&gt;/&lt;br&gt;
+* {&lt;br&gt;
+margin: 0;&lt;br&gt;
+padding: 0&lt;br&gt;
+}&lt;br&gt;
+/&lt;/em&gt;em 和 i 斜体的文字不倾斜 &lt;em&gt;/&lt;br&gt;
+em,&lt;br&gt;
+i {&lt;br&gt;
+font-style: normal&lt;br&gt;
+}&lt;br&gt;
+/&lt;/em&gt; 去掉 li 的小圆点 &lt;em&gt;/&lt;br&gt;
+li {&lt;br&gt;
+list-style: none&lt;br&gt;
+}&lt;br&gt;
+img {&lt;br&gt;
+/&lt;/em&gt;border 0 照顾低版本浏览器 如果 图片外面包含了链接会有边框的问题 &lt;em&gt;/&lt;br&gt;
+border: 0;&lt;br&gt;
+/&lt;/em&gt; 取消图片底侧有空白缝隙的问题 &lt;em&gt;/&lt;br&gt;
+vertical-align: middle&lt;br&gt;
+}&lt;br&gt;
+button {&lt;br&gt;
+/&lt;/em&gt; 当我们鼠标经过 button 按钮的时候，鼠标变成小手 &lt;em&gt;/&lt;br&gt;
+cursor: pointer&lt;br&gt;
+}&lt;br&gt;
+a {&lt;br&gt;
+color: #666;&lt;br&gt;
+text-decoration: none&lt;br&gt;
+}&lt;br&gt;
+a:hover {&lt;br&gt;
+color: #c81623&lt;br&gt;
+}&lt;br&gt;
+button,&lt;br&gt;
+input {&lt;br&gt;
+/&lt;/em&gt; “\5B8B\4F53” 就是宋体的意思 这样浏览器兼容性比较好 &lt;em&gt;/&lt;br&gt;
+font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, “\5B8B\4F53”, sans-serif&lt;br&gt;
+}&lt;br&gt;
+body {&lt;br&gt;
+/&lt;/em&gt; CSS3 抗锯齿形 让文字显示的更加清晰 &lt;em&gt;/&lt;br&gt;
+-webkit-font-smoothing: antialiased;&lt;br&gt;
+background-color: #fff;&lt;br&gt;
+font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, “\5B8B\4F53”, sans-serif;&lt;br&gt;
+color: #666&lt;br&gt;
+}&lt;br&gt;
+.hide,&lt;br&gt;
+.none {&lt;br&gt;
+display: none&lt;br&gt;
+}&lt;br&gt;
+/&lt;/em&gt; 清除浮动 */&lt;br&gt;
+.clearfix:after {&lt;br&gt;
+visibility: hidden;&lt;br&gt;
+clear: both;&lt;br&gt;
+display: block;&lt;br&gt;
+content: “.”;&lt;br&gt;
+height: 0&lt;br&gt;
+}&lt;br&gt;
+.clearfix {&lt;br&gt;
+*zoom: 1&lt;br&gt;
+}&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;14css新增属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#14css新增属性&#34;&gt;#&lt;/a&gt; 14.css 新增属性&lt;/h4&gt;
+&lt;h6 id=&#34;新增属性选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新增属性选择器&#34;&gt;#&lt;/a&gt; 新增属性选择器&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqRmD&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqRmD.png&#34; alt=&#34;IJqRmD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;通过举例进行说明&lt;br&gt;
+ input [type=text] {}&lt;br&gt;
+ 这个表示选出 input 中 type=text 的元素&lt;/p&gt;
+&lt;p&gt;div [class^=XXX]: 选出以 XXX 开头的元素&lt;/p&gt;
+&lt;p&gt;div [class$=XXX]: 选出以 XXX 结尾的元素&lt;/p&gt;
+&lt;h6 id=&#34;结构伪类选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#结构伪类选择器&#34;&gt;#&lt;/a&gt; 结构伪类选择器&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqgOO&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqgOO.png&#34; alt=&#34;IJqgOO.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;xxx:firstchild
+xxx:secondchild
+xxx:nth-child(number)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;都是选出第几个子元素的意思&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJq4kd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJq4kd.png&#34; alt=&#34;IJq4kd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;括号里面不仅仅可以跟数字，也可以很有特殊意义的单词，甚至可以跟公式 n 将取自然数&lt;/p&gt;
+&lt;p&gt;nth-of-type 选择器&lt;/p&gt;
+&lt;p&gt;两个选择器的区别如下&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IJqfTH&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqfTH.png&#34; alt=&#34;IJqfTH.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;举例子来说明:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;光头强&amp;lt;/p&amp;gt;
+&amp;lt;div&amp;gt;熊大&amp;lt;/div&amp;gt;
+&amp;lt;div&amp;gt;熊二&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;此时如果给一个 section div:nth-child (1) { background-color: red; } 指令，你觉得谁会被加上红色呢&lt;br&gt;
+答案是都不会&lt;br&gt;
+ child 先看后面的数字 1   ，此时第一个孩子是 p，然后再来看前面的 div，发现 div 不是 P，所以不成立 谁都不给&lt;/p&gt;
+&lt;p&gt;但如果给一个 section div:nth-of-type (1) {&lt;br&gt;
+background-color: blue;} 指令呢&lt;br&gt;
+答案是会给熊大，type 先看前面的 div，找出 div，再发现后面的 1，所以会给 div 中的第一个孩子&lt;/p&gt;
+&lt;h6 id=&#34;伪元素选择器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#伪元素选择器&#34;&gt;#&lt;/a&gt; 伪元素选择器&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;XXX::before/after {&lt;br&gt;
+content:’’;&lt;br&gt;
+}&lt;br&gt;
+ 这里面的 content 是必须加的，表示里面的内容，即使你没有内容要写，也需要写出 content 否则无效，注意是单引号&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;用处：可以里面 css 来个父元素添加盒子 词的的 before 表示出现在父元素的左边 after 表示出现在父元素的右边&lt;/p&gt;
+&lt;h6 id=&#34;css3盒子模型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css3盒子模型&#34;&gt;#&lt;/a&gt; css3 盒子模型&lt;/h6&gt;
+&lt;p&gt;前面我们说了 padding 和边框都会撑大盒子，所以说我们使用 border 和 padding 还需要减去其尺寸，现在我们提供了修复的方法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;box-sizing:  ;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;content-box: 按照原来会撑大盒子的方式&lt;br&gt;
+ border-box: 会自动减去撑大的尺寸，保证盒子的尺寸不变&lt;/p&gt;
+&lt;h6 id=&#34;图片模糊处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片模糊处理&#34;&gt;#&lt;/a&gt; 图片模糊处理&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;filter:blur()&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;blur 是一个函数 小括号里面数值越大，图片越模糊 注意数值要加 px 单位&lt;/p&gt;
+&lt;h6 id=&#34;css3宽度calc函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css3宽度calc函数&#34;&gt;#&lt;/a&gt; css3 宽度 calc 函数&lt;/h6&gt;
+&lt;p&gt;calc 函数主要提供了一个计算的方法&lt;br&gt;
+例如在有一个父盒子的前提下，子盒子写出这样一个函数 width: calc (100% - 30px); 表示在父亲 100% 尺寸的前提下始终减去 30px 的宽度&lt;/p&gt;
+&lt;h6 id=&#34;过渡效果&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过渡效果&#34;&gt;#&lt;/a&gt; 过渡效果&lt;/h6&gt;
+&lt;p&gt;大概来说就是将一个瞬间变化的过程转化成阶段性有时间长短的变化&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IJqTpt&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqTpt.png&#34; alt=&#34;IJqTpt.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+ 在这里 0s 开始一般可以不写而省略，变化曲线也一遍使用 ease 这是最常用的变化曲线&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</guid>
+            <title>Html-first</title>
+            <link>http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</link>
+            <category>Html</category>
+            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本架构&#34;&gt;#&lt;/a&gt; 1. 基本架构&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
+&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;2html标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2html标签&#34;&gt;#&lt;/a&gt; 2.html 标签&lt;/h4&gt;
+&lt;h6 id=&#34;标题标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标题标签&#34;&gt;#&lt;/a&gt; 标题标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;   ……  &amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一共六级标题，文字加粗，由大到小依次减小。&lt;br&gt;
+&lt;strong&gt;大多数标签都是成对存在的，只有少数例如 br 的单标签&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;段落和换行标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#段落和换行标签&#34;&gt;#&lt;/a&gt; 段落和换行标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;p 标签会自动换行，不用添加 br&lt;/p&gt;
+&lt;h6 id=&#34;文本格式化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本格式化标签&#34;&gt;#&lt;/a&gt; 文本格式化标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;strong&amp;gt;加粗&amp;lt;/strong&amp;gt; 或者 &amp;lt;b&amp;gt;加粗&amp;lt;/b&amp;gt;
+&amp;lt;em&amp;gt;倾斜&amp;lt;/em&amp;gt; 或者 &amp;lt;i&amp;gt;倾斜&amp;lt;/i&amp;gt;
+&amp;lt;del&amp;gt;删除线&amp;lt;/del&amp;gt; 或者 &amp;lt;s&amp;gt;删除线&amp;lt;/s&amp;gt;
+&amp;lt;ins&amp;gt;下划线&amp;lt;/ins&amp;gt; 或者 &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;div和span标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#div和span标签&#34;&gt;#&lt;/a&gt; div 和 span 标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;形象来说 div 是一个大盒子，span 通常是用来放在大盒子里面的小盒子（后期 div 在页面构造中非常常用)&lt;/p&gt;
+&lt;h6 id=&#34;图像标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图像标签&#34;&gt;#&lt;/a&gt; 图像标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&#34;路径&#34; alt=&#34;图片不显示时显示出来的&#34; 
+title=&#34;鼠标放在图片上面显示出来的文字&#34; 
+width=&#34;&#34; height=&#34;&#34; border=&#34;&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在后期使用的 width,height,border, 都会放入&lt;strong&gt; css&lt;/strong&gt; 中来运行使用不会单独列入 img 中&lt;br&gt;
+图像标签的路径&lt;br&gt;
+ 1. 同一级路径&lt;br&gt;
+ eg:(img.jpg)&lt;br&gt;
+ 2. 下一级路径&lt;br&gt;
+ eg:(images/img.jpg)&lt;br&gt;
+ 3. 绝对路径&lt;br&gt;
+ eg:(C:\Users\apple\Desktop\ 前端基础第一天 - HTML\ 案例 \img.jpg)&lt;br&gt;
+eg：(&lt;a href=&#34;http://www.itcast.cn/2018czgw/images/logo.png&#34;&gt;http://www.itcast.cn/2018czgw/images/logo.png&lt;/a&gt;)&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmLi8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmLi8.png&#34; alt=&#34;IQmLi8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;超链接标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超链接标签&#34;&gt;#&lt;/a&gt; 超链接标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;链接&#34;&amp;gt;LOL&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;LOL 可以以图片文字等等代替，点击就可以跳转到 href 所在的链接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以添加的元素：target=“X”&lt;br&gt;
+X 包括_self (覆盖当前页面)&lt;br&gt;
+ 和_blank 重新启动新的页面&lt;br&gt;
+链接分类&lt;br&gt;
+ 1. 内部链接：存放在你网站前端的链接也就是你写前端时电脑里面的链接&lt;br&gt;
+ 2. 外部链接：例如 http 这类的其他网站的链接&lt;br&gt;
+ 3. 空链接：当你还没有链接可以填时，留出空位用 #代替&lt;br&gt;
+ 4. 下载链接：通常是以.zip 结尾的压缩包&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQC8kd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC8kd.png&#34; alt=&#34;IQC8kd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;锚点定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#锚点定位&#34;&gt;#&lt;/a&gt; 锚点定位&lt;/h6&gt;
+&lt;p&gt;由两个相互呼应的标签组成&lt;br&gt;
+可以从页面的一个地方跳转到当前页面的另外一个地方&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;#ID&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;h3 id=&#34;ID&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ID 可以写成任何你定义的名称&lt;br&gt;
+ h3 并不是固定的，可以换成任意标签&lt;br&gt;
+当你点击 a 中携带的元素或标签时你将会跳转到拥有 id=“” 且和 a 相同 id 的标签这&lt;/p&gt;
+&lt;h6 id=&#34;注释标签和特殊字符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注释标签和特殊字符&#34;&gt;#&lt;/a&gt; 注释标签和特殊字符&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 注释内容 --&amp;gt; 
+&amp;lt;用&amp;amp;lt  &amp;gt;用&amp;amp;gt；(由于&amp;lt;&amp;gt;符号在html中的特殊性)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;特殊内容可以用 ctrl+l 快速注释&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</guid>
+            <title>Html-second</title>
+            <link>http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</link>
+            <category>Html</category>
+            <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;html下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html下&#34;&gt;#&lt;/a&gt; Html (下)&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1表格&#34;&gt;#&lt;/a&gt; 1. 表格&lt;/h4&gt;
+&lt;h6 id=&#34;表格基本语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格基本语法&#34;&gt;#&lt;/a&gt; 表格基本语法&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;table&amp;gt;
+  &amp;lt;tr&amp;gt;&amp;lt;th&amp;gt;&amp;lt;/th&amp;gt;&amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;表头单元格标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表头单元格标签&#34;&gt;#&lt;/a&gt; 表头单元格标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;align=&#34;&#34;&lt;br&gt;
+border=&#34;&#34;&lt;br&gt;
+cellpadding=&#34;&#34;&lt;br&gt;
+cellspacing=&#34;&#34;&lt;br&gt;
+width=&#34;&#34;&lt;br&gt;
+height=&#34;&#34;&lt;br&gt;
+&lt;strong&gt; 这些标签要写到 table 里面去&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;align: 表格中的文字所处的文字 eg.center 就是未于中间类似的还有 left,right&lt;br&gt;
+border：表示表格边框的大小 0 表示没有 &lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;&lt;br&gt;
+ cellpadding：代表单元格边框到内容之间的距离（留白）&lt;br&gt;
+cellspacing：用来指定表格各单元格之间的空隙。&lt;strong&gt;此属性的参数值是数字&lt;/strong&gt;，表示单元格间隙所占的像素点数。&lt;br&gt;
+同样 width,height 已经介绍过了 ，大多数时候都会用&lt;strong&gt; CSS&lt;/strong&gt; 来写&lt;/p&gt;
+&lt;h6 id=&#34;合并单元格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并单元格&#34;&gt;#&lt;/a&gt; 合并单元格&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;rowspan=“合并单元格数目”&lt;br&gt;
+colspan=“合并单元格数目”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;rowspan: 合并行 (也就是将一列上的各行合并)&lt;br&gt;
+ colspan: 合并列 (也就是将一行上的各列合并)&lt;br&gt;
+ 合并准则：如果 rowspan 就在最上面的表格的标签里面加上 rowspan=&#34;合并数目&#34; 并且删除已经被合并的表格&lt;br&gt;
+ colspan 同理，注意 colspan 加在最左边的表格标签&lt;br&gt;
+ eg.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;  &amp;lt;tr&amp;gt;
+     &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+      &amp;lt;td colspan=&#34;2&#34;&amp;gt;&amp;lt;/td&amp;gt;
+
+  &amp;lt;/tr&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;表示合并一行上的 2 列 第三列删除 colspan 写在第二列的 td 表格标签内&lt;/p&gt;
+&lt;h4 id=&#34;2列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2列表&#34;&gt;#&lt;/a&gt; 2. 列表&lt;/h4&gt;
+&lt;h6 id=&#34;无序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无序列表&#34;&gt;#&lt;/a&gt; 无序列表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    …………
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中的 li 标签各位根据需要而定&lt;br&gt;
+ ul:unorderlist&lt;br&gt;
+li:list&lt;/p&gt;
+&lt;h6 id=&#34;有序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有序列表&#34;&gt;#&lt;/a&gt; 有序列表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;ol&amp;gt;
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+    …………
+  &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ol:orderlist&lt;br&gt;
+li:list&lt;/p&gt;
+&lt;h6 id=&#34;自定义列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#自定义列表&#34;&gt;#&lt;/a&gt; 自定义列表&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;dl&amp;gt;
+   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;顶部总标签
+   &amp;lt;dd&amp;gt;&amp;lt;/dd&amp;gt;
+   &amp;lt;dt&amp;gt;&amp;lt;/dt&amp;gt;
+   &amp;lt;dd&amp;gt;&amp;lt;/dd
+ &amp;lt;/dl&amp;gt;
+ 一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;标签出现代表一列
+ 直到下一个&amp;lt;dt&amp;gt;和&amp;lt;/dt&amp;gt;出现才换列
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;3表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3表单&#34;&gt;#&lt;/a&gt; 3. 表单&lt;/h4&gt;
+&lt;h6 id=&#34;表单域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单域&#34;&gt;#&lt;/a&gt; 表单域&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;form action=&#34;&#34; method=&#34;&#34; name=&#34;&#34;&amp;gt;
+&amp;lt;/form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;表单域需要与后端结合使用只是接下来的一系列需要传输数据到后端的都需要写到表单域内&lt;br&gt;
+附：此时作者还不知道表单域的 action 等标签充当的角色和用处&lt;/p&gt;
+&lt;h6 id=&#34;input表单元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单元素&#34;&gt;#&lt;/a&gt; input 表单元素&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;&#34; value=&#34;&#34; name=&#34;&#34; &amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqbX8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqbX8.png&#34; alt=&#34;IJqbX8.png&#34;&gt;&lt;/a&gt;&lt;br&gt;
+type 里面可以填写的元素&lt;br&gt;
+ text: 文本框，用户可以输入任何文字，但可以用 maxlength 等来加以限定&lt;br&gt;
+ password：密码框，可以对你输入的数字进行保密 此时显示 *******&lt;br&gt;
+radio: 单选按钮&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;将两个 input+radio 元素的标签 name 设置成相同 才可以进行单选 具体下面看图&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;checkbox: 复选框，可以进行多个选择&lt;br&gt;
+ submit: 提交按钮，点击可以将数据提交给后端&lt;br&gt;
+ reset: 重新填写&lt;br&gt;
+ button: 点击  例如：获取短信验证码需要使用&lt;/p&gt;
+&lt;p&gt;与 type 同等级的元素作用&lt;br&gt;
+ value：提前显示在文本框内的文字&lt;br&gt;
+ name：传送给后端时的数据名称，radio 只有 name 相同才能单选&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmXRg&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmXRg.png&#34; alt=&#34;IQmXRg.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;label标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#label标签&#34;&gt;#&lt;/a&gt; label 标签&lt;/h6&gt;
+&lt;p&gt;点击添加了 label 标签的元素等于点击 label 标签的输出端&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;label for=&#34;XXX&#34;&amp;gt; &amp;lt;/label&amp;gt;
+&amp;lt;input type=&#34;&#34; id=&#34;XXX&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;并不一定要是 input 只是在 input 等填写数据中较为广泛地使用，xxx 可以换成任何自己命名的单词字母等&lt;br&gt;
+ for 和 id 中填写的必须相同&lt;/p&gt;
+&lt;h6 id=&#34;select下拉表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#select下拉表单&#34;&gt;#&lt;/a&gt; select 下拉表单&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;select&amp;gt;
+&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;
+&amp;lt;option selected=&#34;selected&#34;&amp;gt; &amp;lt;/potion&amp;gt;
+&amp;lt;/select&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;option 标签中间填写下拉菜单中的文字等&lt;br&gt;
+添加了 selected 元素的表示 未下拉时显示在表面的选项&lt;/p&gt;
+&lt;h6 id=&#34;textarea文本域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#textarea文本域&#34;&gt;#&lt;/a&gt; textarea 文本域&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;textarea cols=&#34;&#34; rows=&#34;&#34;&amp;gt;
+&amp;lt;/textarea&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;文本域通常很大所以用 cols 和 rows 来进行限定&lt;br&gt;
+ cols 限定一行的字数 rows 限定行数&lt;br&gt;
+在后期的学习中可以用&lt;strong&gt; css&lt;/strong&gt; 将文本域的右下角拉伸和上下滑动进行去除，增加美观性&lt;/p&gt;
+&lt;h4 id=&#34;4html5新增&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4html5新增&#34;&gt;#&lt;/a&gt; 4.html5 新增&lt;/h4&gt;
+&lt;h6 id=&#34;语义化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语义化标签&#34;&gt;#&lt;/a&gt; 语义化标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;header&amp;gt;头部标签&amp;lt;/header&amp;gt;
+
+&amp;lt;nav&amp;gt;导航栏标签&amp;lt;/nav&amp;gt;   
+&amp;lt;section&amp;gt;某个区域&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;视频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#视频标签&#34;&gt;#&lt;/a&gt; 视频标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;video src=&#34;&#34; autoplay=&#34;&#34;muted=&#34;muted&#34;  loop=&#34;loop&#34; poster=&#34;media/mi9.jpg&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;src: 路径&lt;br&gt;
+ autoplay: 写入 autoplay 代表自动播放&lt;br&gt;
+ mute: 播放时静音&lt;br&gt;
+ loop: 预先加载&lt;br&gt;
+ poster: 播放还没有加载出来的时候显示的图片&lt;br&gt;
+ controls: 是否显示控制按钮&lt;/p&gt;
+&lt;h6 id=&#34;音频标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#音频标签&#34;&gt;#&lt;/a&gt; 音频标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;audio src=&#34;media/music.mp3&#34; autoplay=&#34;autoplay&#34; controls=&#34;controls&#34;&amp;gt;&amp;lt;/audio&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;与视频标签相差无几&lt;/p&gt;
+&lt;h6 id=&#34;input表单&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#input表单&#34;&gt;#&lt;/a&gt; input 表单&lt;/h6&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/IJqLnS&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/09/IJqLnS.png&#34; alt=&#34;IJqLnS.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;表单属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表单属性&#34;&gt;#&lt;/a&gt; 表单属性&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;input type=&#34;search&#34; name=&#34;sear&#34; id=&#34;&#34; required=&#34;required&#34; placeholder=&#34;pink老师&#34; autofocus=&#34;autofocus&#34; autocomplete=&#34;off&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt; &amp;lt;input type=&#34;file&#34; name=&#34;&#34; id=&#34;&#34; multiple=&#34;multiple&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;required: 需要填写才能点确定&lt;br&gt;
+ placeholder: 还没有填写时候显示的文字&lt;br&gt;
+ autofocus: 打开网页时，指标会自动点一下这里&lt;br&gt;
+ autocomplete: 自动储存你输入过的信息 (容易暴露信息，所以一般都会关闭)&lt;br&gt;
+ multiple: 可以选取多个文件&lt;/p&gt;
  ]]></description>
         </item>
         <item>
