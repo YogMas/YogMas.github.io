@@ -390,6 +390,89 @@ int getallnum(int x)
 {
   	return b?gck(b,a%b):a;
 }&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;欧拉函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#欧拉函数&#34;&gt;#&lt;/a&gt; 欧拉函数&lt;/h4&gt;
+&lt;p&gt;求 1∼N 中与 N 互质的数的个数被称为欧拉函数，记为 ϕ(N)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/java%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0.png&#34; alt=&#34;欧拉函数&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其中 p1 ~ pk 是 N 的所有质因子&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;int getola(int x)
+{
+    int res =x;
+    for(int i = 2 ; i &amp;lt;= x\i;i++)
+    {
+        if(x % i == 0)
+        {
+            res = (long long )res *(i -1)/ i;
+            while(x % i == 0) x /= i;
+        }
+    }
+    if(x &amp;gt;1) res = (long long)res *(x - 1)/x;
+    return res;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;欧拉定理小费马定理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#欧拉定理小费马定理&#34;&gt;#&lt;/a&gt; 欧拉定理 + 小费马定理&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img%E6%AC%A7%E6%8B%89%E5%AE%9A%E7%90%86%E5%B0%8F%E8%B4%B9%E9%A9%AC%E5%AE%9A%E7%90%86.png&#34; alt=&#34;欧拉定理小费马定理&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;筛发求欧拉函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#筛发求欧拉函数&#34;&gt;#&lt;/a&gt; 筛发求欧拉函数&lt;/h5&gt;
+&lt;p&gt;求出所有小于 N 的数的欧拉值&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;bool st[N];
+int cnt,primes[N],ola[N];
+long long getallola(int n)
+{
+    ola[1] = 1;
+    for(int i = 2; i &amp;lt;= n;i++)
+    {
+        if(!st[i]) 
+        {
+        	primes[cnt++] = i;
+            ola[i] = i -1; //显然一个数如果是质数 他的欧拉值 比他小的所有数的和
+        }
+        for(int j = 0; primes[j] &amp;lt;= n/i;j++)
+        {
+            st[i * primes[j]] = true;
+            if(i % primes[j] == 0)
+            {
+                ola[i * primes[j]] = primes[j] * ola[i];
+                break;
+            }
+            else ola[i * primes[j]] = ola[i] * (primes[j] - 1);
+        }
+    }
+    long long res = 0;
+       for(int i = 1 ; i &amp;lt;= n ; i++)
+        res += (long long)ola[i];
+    return res;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/javaPNN~XFP6Q74$8QXO4YY%5B9%60J.png&#34; alt=&#34;从欧筛中延伸&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;快速幂&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快速幂&#34;&gt;#&lt;/a&gt; 快速幂&lt;/h4&gt;
+&lt;p&gt;时间复杂度从 O (n) 降低到 O (logn);&lt;/p&gt;
+&lt;p&gt;将质数不断切分成平方形式，切分&lt;strong&gt; logn&lt;/strong&gt; 次&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-cpp&#34; data-language=&#34;cpp&#34;&gt;&lt;code class=&#34;language-cpp&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;qmi&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; a&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; k &lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//求a^^k % p的结果&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; res  &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;k&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;k &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; res &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; res &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        k &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&amp;gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;a &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; a &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; p&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;扩展欧几里得算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#扩展欧几里得算法&#34;&gt;#&lt;/a&gt; 扩展欧几里得算法&lt;/h4&gt;
+&lt;p&gt;存在 x 和 y 使得 ax + by = gcd (a,b)&lt;/p&gt;
+&lt;p&gt;扩展欧几里得算法求出 x 和 y&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-c++&#34; data-language=&#34;c++&#34;&gt;&lt;code class=&#34;language-c++&#34;&gt;// 通过引用获取x和y的值
+int exgcd(int a,int b,int &amp;amp;x,int &amp;amp;y)
+{
+    if(!b)
+    {
+        x =1 ;
+        y = 0;
+        return a;
+    }
+    int x1,y1,d;
+    d = exgcd(b,a%b,x1,y1);
+    x = y1;
+    y = x1 - a/b * y1;
+    return d;
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95.png&#34; alt=&#34;扩展欧几里得算法&#34;&gt;&lt;/p&gt;
 </content>
         <category term="算法啊" />
         <updated>2022-10-08T16:00:00.000Z</updated>
