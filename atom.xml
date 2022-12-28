@@ -3,7 +3,7 @@
     <id>http://s1mm.gitee.io/s1mm</id>
     <title>S1m</title>
     <link href="http://s1mm.gitee.io/s1mm" />
-    <updated>2022-10-08T16:00:00.000Z</updated>
+    <updated>2022-12-17T11:42:26.973Z</updated>
     <category term="C语言" />
     <category term="Css" />
     <category term="python" />
@@ -16,6 +16,645 @@
     <category term="机器学习" />
     <category term="算法啊" />
     <category term="计算机组成原理" />
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2022/12/17/vue/</id>
+        <title></title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/12/17/vue/"/>
+        <content type="html">&lt;h1 id=&#34;vue&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue&#34;&gt;#&lt;/a&gt; Vue&lt;/h1&gt;
+&lt;h2 id=&#34;vue2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue2&#34;&gt;#&lt;/a&gt; Vue2&lt;/h2&gt;
+&lt;h3 id=&#34;vue核心&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue核心&#34;&gt;#&lt;/a&gt; Vue 核心&lt;/h3&gt;
+&lt;h4 id=&#34;初识vue&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#初识vue&#34;&gt;#&lt;/a&gt; 初识 Vue&lt;/h4&gt;
+&lt;p&gt;Vue 通过创造一个&lt;strong&gt; Vue 实例&lt;/strong&gt;来进行工作，其中需要传入一个&lt;strong&gt;配置对象&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;el&lt;/code&gt; : 表示 Vue 实例为哪一个&lt;strong&gt;容器&lt;/strong&gt;服务&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data&lt;/code&gt; : 存储数据供 el 中的容器使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;     &lt;span class=&#34;token comment&#34;&gt;//创建一个Vue实例  传入配置对象&lt;/span&gt;
+    el&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;#root&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;//Vue为哪个容器服务  这里为ID为root的容器服务&lt;/span&gt;
+    data&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        name&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;s1m&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;//存储的数据&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;容器中的代码仍然符合 html 规范，只不过引入了一些特殊的 Vue 语法&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt; &lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+           	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+                hello {{name}}  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 此时就去调用了Vue中name数据--&amp;gt;&lt;/span&gt;
+            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{{}}`内的内容并不是只能写Vue实例中存在的数据,可以写**js表达式**(表达式:一个表达式会产生一个值,可以放在任何一个需要值的地方)
+- 一个容器只能由一个实例接管  必须**一对一**,真实开发中只有一个Vue实例,配合着Vue中的组件进行使用
+
+#### 模板语法
+
+##### 插值语法
+
+`{{}}&lt;/code&gt; : 用在&lt;strong&gt;标签体&lt;/strong&gt;中，也就是放在标签内，用于读取 data 中的内容，会将其内的内容转化成&lt;strong&gt; js 表达式&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;指令语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#指令语法&#34;&gt;#&lt;/a&gt; 指令语法&lt;/h5&gt;
+&lt;p&gt;用于解析&lt;strong&gt;标签&lt;/strong&gt; 属性 内容 绑定事件等等&lt;/p&gt;
+&lt;p&gt;Vue 中的指令语法 一般都是 &lt;code&gt;v-xxx:&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;数据绑定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据绑定&#34;&gt;#&lt;/a&gt; 数据绑定&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;单向数据绑定:  &lt;code&gt;v-bind:&lt;/code&gt; Vue 实例中的数据发生改变，页面中的数据也发生改变，但是发过来不改变&lt;/li&gt;
+&lt;li&gt;双向数据绑定: &lt;code&gt;v-model:&lt;/code&gt;  页面中的数据和 Vue 实例中的数据双向绑定，一个改变另一个就发生改变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;并不是所有支持单向数据绑定的就能双向绑定&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;v-model&lt;/code&gt;  只能应用在&lt;strong&gt;表单类&lt;/strong&gt;元素上面，即有 &lt;code&gt;value&lt;/code&gt;  属性，&lt;/p&gt;
+&lt;p&gt;显然 &lt;code&gt;v-model&lt;/code&gt;  是用来与用户产生交互的，不是表单类元素，无法捕获到用户的输入，根本没有必要进行双向绑定&lt;/p&gt;
+&lt;h5 id=&#34;简写&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简写&#34;&gt;#&lt;/a&gt; 简写&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;v-bind:&lt;/code&gt;  可以&lt;strong&gt;简写&lt;/strong&gt;为 &lt;code&gt;:&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;v-model:value&lt;/code&gt;  可以&lt;strong&gt;简写&lt;/strong&gt;为 &lt;code&gt;v-model&lt;/code&gt;  因为 &lt;code&gt;v-model&lt;/code&gt;  本来就是对 &lt;code&gt;value&lt;/code&gt;  属性进行捕获&lt;/p&gt;
+&lt;h4 id=&#34;el和data的两种写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#el和data的两种写法&#34;&gt;#&lt;/a&gt; el 和 data 的两种写法&lt;/h4&gt;
+&lt;h5 id=&#34;el的写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#el的写法&#34;&gt;#&lt;/a&gt; el 的写法&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;在初始化 Vue 实例中传入配置化对象，配置化对象中包含 &lt;code&gt;el:&#39;&#39;&lt;/code&gt;  来指定挂载对象&lt;/li&gt;
+&lt;li&gt;通过对 Vue 实例进行挂载&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//第一种写法&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    el&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;#root&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 
+
+&lt;span class=&#34;token comment&#34;&gt;//第二种写法&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; v &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+v&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;$mount&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;#root&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;进行挂载&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;data的写法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#data的写法&#34;&gt;#&lt;/a&gt; data 的写法&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;对象式：通过 &lt;code&gt;data:{}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;函数式: &lt;code&gt;data:function() {return {}}&lt;/code&gt;  通过函数的返回值返回数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;写项目组件时，必须得使用函数式&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//第一种写法 对象式&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;//对象式&lt;/span&gt;
+    data&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+    
+    
+    &lt;span class=&#34;token comment&#34;&gt;//函数式&lt;/span&gt;
+    &lt;span class=&#34;token function-variable function&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;//此处的this是Vue对象&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;//此处的函数不能使用箭头函数 因为箭头函数没有自己的this 他会往外找 然后找到window全局对象   所以此处只能写成普通函数&lt;/span&gt;
+    	&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//数据  &lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+	&lt;span class=&#34;token comment&#34;&gt;//在对象里面写函数 一般会写成这种简写形式&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;u&gt;&lt;strong&gt;由 Vue 所管理的函数，一定不要写成箭头函数，一旦写成箭头函数，this 就不再是 Vue 实例了，就变成 window 全局对象了&lt;/strong&gt;&lt;/u&gt;&lt;/p&gt;
+&lt;h4 id=&#34;mvvm模型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mvvm模型&#34;&gt;#&lt;/a&gt; MVVM 模型&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Vue 设计受 MVVM 模型的启发&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;M: 模型 (Model): 对应 data 中的数据&lt;/li&gt;
+&lt;li&gt;V: 视图 (View): 模板&lt;/li&gt;
+&lt;li&gt;VM: 视图模型 (ViewModel): Vue 实例对象&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/C0DE41AAD7ED441C2C288D4E7A7AA07E.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;将 Dom 结构和数据进行链接&lt;/p&gt;
+&lt;p&gt;Vue 中通常使用&lt;strong&gt; vm&lt;/strong&gt; 来作为 Vue 实例的名称&lt;/p&gt;
+&lt;p&gt;插值语法可以获取到所有&lt;strong&gt; VM 中的数据&lt;/strong&gt; (data 数据也在 VM 中)&lt;/p&gt;
+&lt;h4 id=&#34;数据代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据代理&#34;&gt;#&lt;/a&gt; 数据代理&lt;/h4&gt;
+&lt;h5 id=&#34;defineproperty-方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#defineproperty-方法&#34;&gt;#&lt;/a&gt; defineproperty 方法&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//js代码&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; person &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    name： &lt;span class=&#34;token string&#34;&gt;&#34;s1m&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+Object&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;defineproperty&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;person&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;age&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    value&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;18&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    enumerable&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//属性是否可以被枚举 默认为false&lt;/span&gt;
+    writable&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//属性是否可以被修改 默认为false&lt;/span&gt;
+    configurable&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//属性是否可以被修改 默认为false&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//传入三个参数 第一个为修改对象,第二个为添加的key值 第三个为参数&lt;/span&gt;
+
+Object&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;defineproperty&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;person&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;age&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;token comment&#34;&gt;//当有人获取 age的值的时候进行调用 且返回值为age的value&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    	&lt;span class=&#34;token comment&#34;&gt;//当有人 修改 age的值的时候调用&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;什么是数据代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#什么是数据代理&#34;&gt;#&lt;/a&gt; 什么是数据代理&lt;/h5&gt;
+&lt;p&gt;数据代理：通过一个对象代理对另一个对象中属性的操作 (读 / 写)&lt;/p&gt;
+&lt;p&gt;通过修改一个对象的属性可以对另一个对象的属性同样进行修改&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;        &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; obj1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;x&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;token keyword&#34;&gt;let&lt;/span&gt; obj2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;y&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        Object&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;defineProperty&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;obj2&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;x&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; obj1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;x&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;span class=&#34;token comment&#34;&gt;//当访问obj2的x的属性时候 返回的是obj1的属性&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                obj1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;x &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; value&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//当对obj2的x改的时候,修改的obj1的x&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; 
+&lt;span class=&#34;token comment&#34;&gt;//当对obj2的x值更改的时候 更改的是obj1的x值&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//获取obj2的x值的时候,获取的是obj1的值&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;vue中的数据代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue中的数据代理&#34;&gt;#&lt;/a&gt; Vue 中的数据代理&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;data 中的数据都代理在 vm 中&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过 vm 对象来代理 data 中属性的操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当获取 vm 中的数据时，vm 触发 getter, 返回 data 中的数据&lt;/li&gt;
+&lt;li&gt;当修改 vm 中的数据时，vm 触发 setter, 修改 data 中的数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;data 中的数据存储在了 vm 中的_data 中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/ED11289633F8ED8EA2D312E86600F0F9.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;没有数据代理的话 每次访问数据就得写_data.xxx 更加地麻烦&lt;/p&gt;
+&lt;h4 id=&#34;事件处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事件处理&#34;&gt;#&lt;/a&gt; 事件处理&lt;/h4&gt;
+&lt;h5 id=&#34;事件的基本使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事件的基本使用&#34;&gt;#&lt;/a&gt; 事件的基本使用&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;所有被 Vue 管理的函数都写成普通函数&lt;/u&gt;&lt;/strong&gt;, 为了保证 this&lt;/p&gt;
+&lt;p&gt;事件的基本使用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;v-on:xxx&lt;/code&gt;  或者 &lt;code&gt;@xxx&lt;/code&gt;  绑定事件&lt;/li&gt;
+&lt;li&gt;事件的回调配置在 methods 对象中，最终会在 vm 上&lt;/li&gt;
+&lt;li&gt;methods 中配置的函数，不要用箭头函数，否则 this 将发生改变&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@click=&#34;demo&#34;&lt;/code&gt;  和 &lt;code&gt;@click=&#34;demo($event)&#34;&lt;/code&gt;  效果一致，但是后者可以传参&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;@click=&#34;xxx&#34;&lt;/code&gt;  xxx 可以写一些简单的 js 语句，当语句过多时，还是建议写到 methods 方法中去&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;事件修饰符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事件修饰符&#34;&gt;#&lt;/a&gt; 事件修饰符&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;prevent&lt;/code&gt; : 阻止默认事件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stop&lt;/code&gt; : 阻止时间冒泡&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;once&lt;/code&gt; : 事件只触发一次&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;capture&lt;/code&gt; : 使用事件的捕获方式&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;self&lt;/code&gt; : 只有 event.target 是当前操作的元素时才触发事件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;passive&lt;/code&gt; : 事件的默认行为立即执行，无需等待时间回调执行完毕&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;eg:  &lt;code&gt;@click.prevent = &#34;showInfo&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;键盘事件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#键盘事件&#34;&gt;#&lt;/a&gt; 键盘事件&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;Vue 常用的按键别名
+&lt;ul&gt;
+&lt;li&gt;回车:enter&lt;/li&gt;
+&lt;li&gt;删除:delete&lt;/li&gt;
+&lt;li&gt;退出:esc&lt;/li&gt;
+&lt;li&gt;空格:space&lt;/li&gt;
+&lt;li&gt;换行:tab (特殊，必须配合 keydown 使用)&lt;/li&gt;
+&lt;li&gt;上:up&lt;/li&gt;
+&lt;li&gt;下:down&lt;/li&gt;
+&lt;li&gt;左:left&lt;/li&gt;
+&lt;li&gt;右:right&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;原始 key 值绑定，&lt;strong&gt; 由多个单词组成的 key 值需要将多个单词用 &lt;code&gt;-&lt;/code&gt;  连接&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;系统修饰键:ctrl,alt,shift,meta (特殊用法)
+&lt;ul&gt;
+&lt;li&gt;配合 &lt;code&gt;keyup&lt;/code&gt;  使用：按下修饰键的同时，再按下其他键，随后释放其他键，时间才被触发  要实现同时按下修饰符和普通符 可以 &lt;code&gt;@keyup.修饰符.普通键&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;配合 &lt;code&gt;keydown&lt;/code&gt;  使用：正常触发事件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;也可以使用 keyCode 去指定具体的按键 (&lt;u&gt;不推荐&lt;/u&gt;), 因为不同的键盘编码可能不统一&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Vue.config.keyCodes.自定义键名 = 键码&lt;/code&gt;  可以定制按键别名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;计算属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算属性&#34;&gt;#&lt;/a&gt; 计算属性&lt;/h4&gt;
+&lt;p&gt;Vue 中只要模板中的数据发生改变，Vue 就会重新解析一遍模板，然后将更改的部分渲染到页面上&lt;/p&gt;
+&lt;p&gt;Vue 认为 data 里面的数据是&lt;strong&gt;属性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;计算属性&lt;/strong&gt;：对已有的属性进行加工计算，从而得到一个全新的属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义：要用的属性不存在，要通过&lt;strong&gt;已有属性&lt;/strong&gt;&lt;u&gt;计算&lt;/u&gt;得来&lt;/li&gt;
+&lt;li&gt;原理：底层借助 &lt;code&gt;Object.defineproperty&lt;/code&gt;  方法提供的 getter 和 setter&lt;/li&gt;
+&lt;li&gt;get 函数的调用时机:
+&lt;ol&gt;
+&lt;li&gt;初次读取时&lt;/li&gt;
+&lt;li&gt;当依赖的数据发生改变的时候&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;优势：与 methods 相比，内部有缓存机制，效率更高&lt;/li&gt;
+&lt;li&gt;计算属性最终会出现在 vm 上，直接读取使用就可以，如果计算属性会被修改，就要写 set 函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;计算属性的简写&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算属性的简写&#34;&gt;#&lt;/a&gt; 计算属性的简写&lt;/h5&gt;
+&lt;p&gt;一般情况下计算属性用不到 set, 只需要用 get&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不考虑修改的情况下才可以简写&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//完整情况&lt;/span&gt;
+computed&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    fullName&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; lastName &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; firstName&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//简写&lt;/span&gt;
+computed&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token function&#34;&gt;fullName&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; lastName &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; firstName
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;监视属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#监视属性&#34;&gt;#&lt;/a&gt; 监视属性&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;当被监视的属性发生变化&lt;/strong&gt;的时候，回调函数自动调用&lt;/li&gt;
+&lt;li&gt;监视的属性必须&lt;strong&gt;存在&lt;/strong&gt;，才能进行监视&lt;/li&gt;
+&lt;li&gt;监视的两种写法:
+&lt;ol&gt;
+&lt;li&gt;.new Vue 的时候传入 watch 配置&lt;/li&gt;
+&lt;li&gt;通过 vm.$watch 监视&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//第一种监视写法&lt;/span&gt;
+&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;const vm &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	watch&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        isHot&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//监视属性 isHot&lt;/span&gt;
+             immediate&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//可以不写 默认为false 为true表示,初始化的时候也调用handler&lt;/span&gt;
+        	&lt;span class=&#34;token function&#34;&gt;handler&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;newValue&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;oldValue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;token comment&#34;&gt;//表示当isHot属性的值发生改变的时候,会调用handler函数,并传入新的值和旧的值&lt;/span&gt;
+            &lt;span class=&#34;token comment&#34;&gt;//计算出来的属性也可以监视&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&#34;token comment&#34;&gt;//第二种监视的写法&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; vm &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+vm&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;$watch&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;isHot&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;//和上面相同&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;深度监视&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#深度监视&#34;&gt;#&lt;/a&gt; 深度监视&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Vue 中的&lt;strong&gt; watch&lt;/strong&gt; 默认不监测对象内部值的改变 (一层)       (Vue 是可以监视的 但是 Watch 不行)&lt;/li&gt;
+&lt;li&gt;配置 &lt;code&gt;deep:true&lt;/code&gt;  可以检测到对象内部值的改变 (多层次)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;监视的简写形式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#监视的简写形式&#34;&gt;#&lt;/a&gt; 监视的简写形式&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;不需要 immediate 和 deep 的时候，才可以简写&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;watch &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;//正常写法&lt;/span&gt;
+    isHot&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;token function&#34;&gt;handler&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;newValue&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;oldValue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+          console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;正常写法&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+      &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;  
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;//简写形式&lt;/span&gt;
+    &lt;span class=&#34;token function&#34;&gt;isHot&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;newValue&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;oldValue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        console&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;log&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;简写写法&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;watch对比computed&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#watch对比computed&#34;&gt;#&lt;/a&gt; Watch 对比 Computed&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Computed 可以完成的，watch 能完成的&lt;/li&gt;
+&lt;li&gt;Watch 能完成，computed 不一定能完成&lt;/li&gt;
+&lt;li&gt;Computed 不支持异步操作，Watch 支持&lt;/li&gt;
+&lt;li&gt;在都可以实现的时候，哪个容易写哪个&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;两个重要小原则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#两个重要小原则&#34;&gt;#&lt;/a&gt; 两个重要小原则&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;被 Vue 管理的函数，都写成普通函数，这样 this 指定的才是 vue&lt;/li&gt;
+&lt;li&gt;所有不被 Vue 所管理的函数 (定时器，ajax) 最好写成箭头函数，这样 this 的指向才是 vue&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;class与style绑定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#class与style绑定&#34;&gt;#&lt;/a&gt; Class 与 style 绑定&lt;/h4&gt;
+&lt;h5 id=&#34;绑定class样式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#绑定class样式&#34;&gt;#&lt;/a&gt; 绑定 class 样式&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;字符串写法&lt;/strong&gt;：适用于样式的类名不确定，需要动态指定&lt;/li&gt;
+&lt;li&gt;** 数组写法:** 适用于样式的个数和名字都不确定&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对象写法&lt;/strong&gt;：适用于要绑定的样式用不用不确定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;style&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token style&#34;&gt;&lt;span class=&#34;token language-css&#34;&gt;
+ //省略
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;style&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+	// 字符串写法
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;:class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;Mode&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;@click&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;changeMode&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    
+    //数组写法
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;:class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;ModeArr&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    
+    //对象写法
+    
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;:class&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;ModeObj&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+ &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        el&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;#root&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+        data&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            Mode&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;happy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            ModeArr&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;happy&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;normal&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;bad&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;
+            ModeObj&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            	happy&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            	bad&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+        methods&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;token function&#34;&gt;changeMode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Mode &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;normal&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;绑定style&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#绑定style&#34;&gt;#&lt;/a&gt; 绑定 style&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;:style=&#34;{fontSize: xxx}&#34;&lt;/code&gt;   其中 xxx 是动态值&lt;/li&gt;
+&lt;li&gt;也可以像下面代码中一样 (常用)&lt;/li&gt;
+&lt;li&gt;注意必须写成 &lt;strong&gt;&lt;u&gt;驼峰命名&lt;/u&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;:style&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;styleObj&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+	
+	&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;
+        &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            el&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;#root&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            data&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                styleObj&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                	fontSize&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;40px&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;      &lt;span class=&#34;token comment&#34;&gt;//要切换成驼峰命名&lt;/span&gt;
+                &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            methods&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;条件渲染&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#条件渲染&#34;&gt;#&lt;/a&gt; 条件渲染&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;v-show&lt;/code&gt;  做条件渲染，只是使用 display 将其隐藏了，但是本身还存在在 DOM 树里面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;v-if&lt;/code&gt;  做条件渲染，直接在 DOM 树里面增添或者删除这个结点&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果频繁切换，推荐用 &lt;code&gt;v-show&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;v-if与v-if-else于v-else&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#v-if与v-if-else于v-else&#34;&gt;#&lt;/a&gt; v-if 与 v-if-else 于 v-else&lt;/h5&gt;
+&lt;p&gt;使用与 &lt;code&gt;if      else if      else&lt;/code&gt;  一样，但是进行判断的标签必须紧紧相连&lt;/p&gt;
+&lt;p&gt;如果要对一堆元素进行管理，可以在最外层加上一个 &lt;code&gt;&amp;lt;template v-if=&#34;true&#34;&amp;gt;&lt;/code&gt; , 这样不影响结构&lt;/p&gt;
+&lt;p&gt;另外 templace 只能和 &lt;code&gt;v-if&lt;/code&gt;  配合使用，不能和 &lt;code&gt;v-show&lt;/code&gt;  配合使用&lt;/p&gt;
+&lt;h4 id=&#34;列表渲染important&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表渲染important&#34;&gt;#&lt;/a&gt; 列表渲染 (important)&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;v-for&lt;/code&gt;  指令用于展示列表数据&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;语法:  &lt;code&gt;v-for=&#34;(item,index) in xxx&#34; :key=&#34;yyy&#34;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以遍历：数组，对象，字符串 (用得少), 指定次数 (用得少)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;key作用与原理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#key作用与原理&#34;&gt;#&lt;/a&gt; key 作用与原理&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/C9F8A6E7AC902688BD253CBFCB33AE47.png&#34; alt=&#34;index作为key&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/ACF36FEC23900F414FD48E7CC5EFF9DE.png&#34; alt=&#34;id作为key&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如果遍历的时候不写 key,vue 会自动将 index 作为 key&lt;/p&gt;
+&lt;h3 id=&#34;基础模板作者学习时候用来构建最基本html文件的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础模板作者学习时候用来构建最基本html文件的&#34;&gt;#&lt;/a&gt; 基础模板 (作者学习时候用来构建最基本 html 文件的)&lt;/h3&gt;
+&lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token doctype&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&#34;token doctype-tag&#34;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&#34;token name&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;head&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;UTF-8&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;http-equiv&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;X-UA-Compatible&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;IE=edge&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;meta&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;viewport&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;content&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;width=device-width, initial-scale=1.0&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;text/javascript&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;../js/vue.js&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;Document&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;title&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;head&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;root&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token script&#34;&gt;&lt;span class=&#34;token language-javascript&#34;&gt;
+        &lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; vm &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;token function&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                    
+                &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            methods&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                
+            &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+        vm&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;$mount&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;#root&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+    &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;script&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <updated>2022-12-17T11:42:26.973Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2022/12/15/devops/</id>
+        <title></title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/12/15/devops/"/>
+        <content type="html">&lt;h1 id=&#34;devopsdevelopment-operation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devopsdevelopment-operation&#34;&gt;#&lt;/a&gt; DevOps(Development &amp;amp; Operation)&lt;/h1&gt;
+&lt;h2 id=&#34;devops概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devops概述&#34;&gt;#&lt;/a&gt; DevOps 概述&lt;/h2&gt;
+&lt;p&gt;DevOps 产生的原因：将开发团队和运维团队之间复杂的工程&lt;strong&gt;自动化&lt;/strong&gt;，实现自动化构建，自动化测试，自动化部署，自动化监控&lt;/p&gt;
+&lt;h3 id=&#34;devops周期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devops周期&#34;&gt;#&lt;/a&gt; DevOps 周期&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/DevOps%E5%91%A8%E6%9C%9F.png&#34; alt=&#34;DevOps周期&#34;&gt;&lt;/p&gt;
+&lt;p&gt;整个过程的流程如下：指定任务 (PLAN)-&amp;gt; 上传代码到代码仓库 (CODE)-&amp;gt; 构建代码 (BUILD)-&amp;gt; 测试代码 (TEST)-&amp;gt; 发布到运维 (DEPLOY)-&amp;gt; 容器部署与编排 (OPERATE)-&amp;gt; 监控 (MONITOR)&lt;/p&gt;
+&lt;p&gt;Jenkins 为&lt;strong&gt;最核心的部件&lt;/strong&gt;，Jenkins 会自动进行构建测试部署，开发人员只需要关注代码是不是成功提交到代码仓库&lt;/p&gt;
+&lt;p&gt;DevOps 强调 高效团队之间通过&lt;strong&gt;自动化&lt;/strong&gt;的工具协作和沟通来完成软件的生命周期管理，从而&lt;strong&gt;更快&lt;/strong&gt;，&lt;strong&gt; 更频繁&lt;/strong&gt;地交付&lt;strong&gt;更稳定&lt;/strong&gt;的软件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/DevOps%E6%B5%81%E7%A8%8B.png&#34; alt=&#34;DevOps流程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h2&gt;
+</content>
+        <updated>2022-12-15T11:20:48.761Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2022/11/22/css-xin/</id>
+        <title></title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/11/22/css-xin/"/>
+        <content type="html">&lt;h1 id=&#34;css新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css新&#34;&gt;#&lt;/a&gt; CSS (新)&lt;/h1&gt;
+&lt;p&gt;复习 (好吧 太久没用忘了 其实是重新学习过程) CSS 时记忆的笔记&lt;/p&gt;
+&lt;h2 id=&#34;定位position&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位position&#34;&gt;#&lt;/a&gt; 定位 (position)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;static: 正常流定位&lt;/li&gt;
+&lt;li&gt;relative: 相对定位&lt;/li&gt;
+&lt;li&gt;absolute,fixed: 绝对定位&lt;/li&gt;
+&lt;li&gt;sticky: 粘性定位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;static正常流定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static正常流定位&#34;&gt;#&lt;/a&gt; Static 正常流定位&lt;/h3&gt;
+&lt;p&gt;按照从上到下文档刷新的方式，就是最默认的定位方式&lt;/p&gt;
+&lt;h3 id=&#34;relative相对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#relative相对定位&#34;&gt;#&lt;/a&gt; relative 相对定位&lt;/h3&gt;
+&lt;p&gt;相对于原位置的定位，可以相对于原位置进行位置的移动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;相对定位会保留原有的样式&lt;/strong&gt;，意思就是说相对定位移动后，原来那个位置的样式，不会被覆盖，可以理解为被隐藏了但是还在&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;relative&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;absolute绝对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#absolute绝对定位&#34;&gt;#&lt;/a&gt; absolute 绝对定位&lt;/h3&gt;
+&lt;p&gt;absolute 是相对于上一个&lt;strong&gt;非 static 定位&lt;/strong&gt;的祖宗节点的位置&lt;/p&gt;
+&lt;p&gt;意思就是说 absolute 会向上找，找到一个不会 static 定位的祖宗节点 (最上面是&lt;strong&gt; body&lt;/strong&gt;),top 相当于距离这个父节点顶部的距离，其他类似&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;absolute&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fixed固定定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fixed固定定位&#34;&gt;#&lt;/a&gt; fixed 固定定位&lt;/h3&gt;
+&lt;p&gt;fixed 是相对于&lt;strong&gt;整个视窗&lt;/strong&gt;的位移，也是固定不变的&lt;/p&gt;
+&lt;h3 id=&#34;static粘性定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static粘性定位&#34;&gt;#&lt;/a&gt; static 粘性定位&lt;/h3&gt;
+&lt;p&gt;当粘性定位的盒子的&lt;strong&gt;真实位置&lt;/strong&gt;在视窗内部的时候，他是正常显示的，但是当他要脱离视窗的时候，他会像固定定位一样，导致不脱离视窗&lt;/p&gt;
+&lt;h2 id=&#34;浮动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动&#34;&gt;#&lt;/a&gt; 浮动&lt;/h2&gt;
+&lt;p&gt;块是会自动换行的，加上 float 之后，可以放在一行的会放在一行，一行无法放下时再进行换行&lt;/p&gt;
+&lt;p&gt;新的未浮动块会在浮动块的上方而不是排布在后方，要排布在后方可以清除浮动块的影响 使用 clear&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left
+&lt;span class=&#34;token property&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left/right/both&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;flex布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flex布局&#34;&gt;#&lt;/a&gt; flex 布局&lt;/h2&gt;
+&lt;p&gt;弹性布局，也就是当拉伸视窗的时候，布局随着视窗的改变会自动变化&lt;/p&gt;
+&lt;p&gt;定义在&lt;strong&gt;父节点盒子上&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;flex-direction&lt;/code&gt; ： 属性指定了内部元素是如何在 flex 容器中&lt;strong&gt;布局&lt;/strong&gt;的，&lt;strong&gt;定义了主轴的方向&lt;/strong&gt; (正方向或反方向)。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;row&lt;/code&gt; :flex 容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;row-reverse&lt;/code&gt; : 表现和 row 相同，但是置换了主轴起点和主轴终点。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column&lt;/code&gt; :flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column-reverse&lt;/code&gt; : 表现和 column 相同，但是置换了主轴起点和主轴终点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-wrap&lt;/code&gt; : 指定 flex 元素&lt;strong&gt;单行显示还是多行显示&lt;/strong&gt;。如果允许换行，这个属性允许你控制行的堆叠方向。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nowrap&lt;/code&gt; : 默认值。不换行。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrap&lt;/code&gt; : 换行，第一行在上方。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrap-reverse&lt;/code&gt; : 换行，第一行在下方。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-flow&lt;/code&gt; : &lt;code&gt;flex-direction&lt;/code&gt;  和  &lt;code&gt;flex-wrap&lt;/code&gt;  的简写。默认值为： &lt;code&gt;row nowrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;justify-content&lt;/code&gt; : 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。也就是&lt;strong&gt;控制横向对齐方式&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：默认值。左对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：右对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-between&lt;/code&gt; ：左右两段对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-around&lt;/code&gt; ：在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-evenly&lt;/code&gt; ：flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-items&lt;/code&gt; ：控制&lt;strong&gt;纵轴 (交叉轴&lt;/strong&gt;对齐)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：元素向主轴起点对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：元素向主轴终点对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;center&lt;/code&gt; ：元素在侧轴居中。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stretch&lt;/code&gt; ：弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-content&lt;/code&gt; : 与 &lt;code&gt;align-items&lt;/code&gt;  类似但是有以下区别
+&lt;ul&gt;
+&lt;li&gt;前者会均匀分布，后者会使所有行紧贴在一起&lt;/li&gt;
+&lt;li&gt;当只有一行的时候，前者仍然会居中，后者会失去居中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;定义在&lt;strong&gt; flex 盒子内部元素中&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;order&lt;/code&gt; : 定义 &lt;code&gt;flex&lt;/code&gt;  项目的顺序，值越小越靠前。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-grow&lt;/code&gt; :CSS 属性 flex-grow CSS 设置 flex 项主尺寸 的 flex 增长系数。&lt;strong&gt;负值无效，默认为 0。&lt;/strong&gt; &lt;strong&gt;也就是当视窗变大的时候 块也等比例变大&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-shrink&lt;/code&gt; : 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。&lt;strong&gt;负值无效，默认为 1。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-basis&lt;/code&gt; : 设置默认宽度，&lt;strong&gt; 优先级大于默认 width&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex&lt;/code&gt; : &lt;code&gt;flex-grow&lt;/code&gt; 、 &lt;code&gt;flex-shrink&lt;/code&gt; 、 &lt;code&gt;flex-basis&lt;/code&gt;  的缩写。&lt;/p&gt;
+&lt;p&gt;常用取值： &lt;code&gt;flex: 1 1 auto&lt;/code&gt;        &lt;code&gt;flex: 0 0 auto&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2022-11-22T13:28:09.377Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2022/11/19/latex/</id>
+        <title></title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/11/19/latex/"/>
+        <content type="html">&lt;h1 id=&#34;latex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#latex&#34;&gt;#&lt;/a&gt; Latex&lt;/h1&gt;
+&lt;p&gt;latex 命令多采用 &lt;code&gt;\   []{}&lt;/code&gt;  的格式&lt;/p&gt;
+&lt;p&gt;基本结构&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;UTF8&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;ctexart&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;字体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体&#34;&gt;#&lt;/a&gt; 字体&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\textbf {文本内容}&lt;/code&gt; : 加粗文本内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\textit {文本内容}&lt;/code&gt; : 设置斜体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\underline {文本内容}&lt;/code&gt; : 设置下划线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;章和节&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#章和节&#34;&gt;#&lt;/a&gt; 章和节&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;切换段落需要输入两个换行符 也就是按两次回车  一个换行符仅仅会显示一个空格&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\part {部名称}&lt;/code&gt; : 表示书籍中的第几部&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\chapter {章节名称}&lt;/code&gt;  通常用于表示章节中的第几章，大于 chapter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\section {章节名称}&lt;/code&gt; : 开启一个新的章节&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\subsection {章节名称}&lt;/code&gt; : 创建下一级的章节，要创建更下一级的章节就多加个 sub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片&#34;&gt;#&lt;/a&gt; 图片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一步要先引用包  &lt;code&gt;\usepackage{grathicx}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\includegraphics [可选参数]{图片文件名字}&lt;/code&gt; : 在当前位置添加一张图片  可以省略图片后的扩展名称&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;width=0.5\textwidth&lt;/code&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给图片添加标题&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;    放在figure中
+&lt;span class=&#34;token function selector&#34;&gt;\centering&lt;/span&gt;   居中显示
+&lt;span class=&#34;token function selector&#34;&gt;\includegraphicx&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;head&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;哈哈哈&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;       标题名称
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表&#34;&gt;#&lt;/a&gt; 列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;切换到列表中的环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无序列表:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;itemize&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项1
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项2
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;itemize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有序列表&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项1
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项2
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数学公式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数学公式&#34;&gt;#&lt;/a&gt; 数学公式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行内公式: &lt;code&gt;$   $&lt;/code&gt;  在行内直接显示公式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单独显示一行公式&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;equation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;quation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+可以简写为
+&lt;span class=&#34;token equation string&#34;&gt;\[
+
+\]&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;公式常用指令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\over&lt;/code&gt; : 表示分数  分子在前 分母在后&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\varphi&lt;/code&gt; : 小写的 φ&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\phi&lt;/code&gt; : 大写的 φ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以使用在线公式编辑器和 mathpix&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://latex.codecogs.com/eqneditor/editor.php&#34;&gt;latex.codecogs.com/eqneditor/editor.php&lt;/a&gt; 在线公式编辑器 也可以快速查阅公式的语法&lt;/p&gt;
+&lt;h2 id=&#34;表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格&#34;&gt;#&lt;/a&gt; 表格&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tabular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;传入参数|参数&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; c表示居中 l表示靠左 多少个字母就表示多少列    p&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;列宽&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; 单独指定每一列的宽度
+&lt;span class=&#34;token function selector&#34;&gt;\hline&lt;/span&gt;
+1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 2 ^ 3 &lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\hline&lt;/span&gt;    水平方向边框
+1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 3 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 2 &lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;      每一列数据用&lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt;分割
+				每一行的数据用&lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;分割
+				
+&lt;span class=&#34;token function selector&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;表格的标题&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tabular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <updated>2022-11-19T14:06:27.936Z</updated>
+    </entry>
     <entry>
         <id>http://s1mm.gitee.io/s1mm/2022/10/09/suan-fa/</id>
         <title>算法</title>
@@ -11727,292 +12366,6 @@ offsetParent  返回的是带有定位的父元素 (没有则返回 body)&lt;br&
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/s1mm/2021/02/10/cao-zuo-xi-tong/</id>
-        <title>操作系统</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/02/10/cao-zuo-xi-tong/"/>
-        <content type="html">&lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
-&lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt; ,beginning from 2022.1.18&lt;/p&gt;
-&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;裸机&lt;/strong&gt;：没有安装操作系统的电脑&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: 1. 对硬件进行操作 2. 将对硬件的一系列操作封装成为系统调用，方便程序员调用&lt;/p&gt;
-&lt;h3 id=&#34;不同领域的主流操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#不同领域的主流操作系统&#34;&gt;#&lt;/a&gt; 不同领域的主流操作系统&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;桌面操作系统
-&lt;ul&gt;
-&lt;li&gt;Windows&lt;/li&gt;
-&lt;li&gt;macOS&lt;/li&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;服务器操作系统
-&lt;ul&gt;
-&lt;li&gt;Linux 免费 安全&lt;/li&gt;
-&lt;li&gt;Windows Server  付费&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;嵌入式操作系统
-&lt;ul&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;移动设备操作系统
-&lt;ul&gt;
-&lt;li&gt;iOS&lt;/li&gt;
-&lt;li&gt;Android (基于 &lt;code&gt;Linux&lt;/code&gt; )&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#虚拟机&#34;&gt;#&lt;/a&gt; 虚拟机&lt;/h3&gt;
-&lt;p&gt;相当于安装在电脑上的一台虚拟电脑&lt;/p&gt;
-&lt;h2 id=&#34;操作系统的发展史略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统的发展史略&#34;&gt;#&lt;/a&gt; 操作系统的发展史 (略)&lt;/h2&gt;
-&lt;h3 id=&#34;unix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unix&#34;&gt;#&lt;/a&gt; Unix&lt;/h3&gt;
-&lt;p&gt;伴随着 B 语言和 C 语言的由来，同时由于其创作者可以直接访问使用该系统的电脑，电气公司将其私有化后随之产生了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;minix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#minix&#34;&gt;#&lt;/a&gt; Minix&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Unix&lt;/code&gt;  私有化之后，大学无法使用 &lt;code&gt;Unix&lt;/code&gt;  系统进行教学，就出现了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux&#34;&gt;#&lt;/a&gt; Linux&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Minix&lt;/code&gt;  上可以实现的功能非常少，为了达到相应的功能需要，就出现了 &lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;linux操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux操作系统&#34;&gt;#&lt;/a&gt; Linux 操作系统&lt;/h2&gt;
-&lt;h3 id=&#34;linux内核及发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核及发行版&#34;&gt;#&lt;/a&gt; Linux 内核及发行版&lt;/h3&gt;
-&lt;h4 id=&#34;linux内核&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核&#34;&gt;#&lt;/a&gt; Linux 内核&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;  内核对各种硬件进行操作并且将各种操作封装成为系统调用&lt;/p&gt;
-&lt;h4 id=&#34;linux发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux发行版&#34;&gt;#&lt;/a&gt; Linux 发行版&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;Linux&lt;/code&gt;  内核的基础上包括了桌面环境，办公套件，数据库等应用软件&lt;/p&gt;
-&lt;h3 id=&#34;linux文件和目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux文件和目录&#34;&gt;#&lt;/a&gt; Linux 文件和目录&lt;/h3&gt;
-&lt;h4 id=&#34;单用户与多用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单用户与多用户&#34;&gt;#&lt;/a&gt; 单用户与多用户&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;单用户操作系统：一台电脑同一时间只能由一个用户使用  &lt;code&gt;Windows&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;多用户操作系统：一台电脑同一时间可以由多个用户使用  &lt;code&gt;Linux&lt;/code&gt; , &lt;code&gt;Unix&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;windows与linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#windows与linux&#34;&gt;#&lt;/a&gt; Windows 与 Linux&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Windows&lt;/code&gt;  下，看到的基本都是驱动器盘符&lt;/li&gt;
-&lt;li&gt;多用户操作系统下，看到的都是根目录结构&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;linux基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux基本操作&#34;&gt;#&lt;/a&gt; Linux 基本操作&lt;/h2&gt;
-&lt;h3 id=&#34;linux命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux命令&#34;&gt;#&lt;/a&gt; Linux 命令&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ls&lt;/code&gt;  显示当前目录下的所有文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt;  显示当前目录&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;cd 地址&lt;/code&gt; 更改地址&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;touch 文件名&lt;/code&gt; 创建文件&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;mkdir 文件名&lt;/code&gt; 创建目录&lt;/li&gt;
-&lt;li&gt;clear 清屏&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;command --help&lt;/code&gt;  帮助信息&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;man command&lt;/code&gt;  知识手册&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://imgtu.com/i/HvXbkT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvXbkT.png&#34; alt=&#34;man操作键&#34;&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;文件和目录命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件和目录命令&#34;&gt;#&lt;/a&gt; 文件和目录命令&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvjUH0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvjUH0.png&#34; alt=&#34;文件和目录相关命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ls命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls命令选项&#34;&gt;#&lt;/a&gt; ls 命令选项&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvvTiT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvvTiT.png&#34; alt=&#34;ls命令选项&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ls通配符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls通配符&#34;&gt;#&lt;/a&gt; ls 通配符&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/Hxqm4g&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/Hxqm4g.png&#34; alt=&#34;ls通配符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;切换目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#切换目录&#34;&gt;#&lt;/a&gt; 切换目录&lt;/h4&gt;
-&lt;h5 id=&#34;cd命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cd命令选项&#34;&gt;#&lt;/a&gt; cd 命令选项&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HxLZs1&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/HxLZs1.png&#34; alt=&#34;cd&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;创建和删除操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建和删除操作&#34;&gt;#&lt;/a&gt; 创建和删除操作&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;没有该名的文件存在，则创建一个新的文件&lt;/li&gt;
-&lt;li&gt;有改名字的文件存在，则更改文件的末次修改日期&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-p&lt;/code&gt;  连续创建多个目录&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;mkdir -p a/b/c/d&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  连续删除多个同一文件夹下的文件&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-f&lt;/code&gt;  强制删除无提示信息&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt; &lt;code&gt;ls&lt;/code&gt;  的通配符对 &lt;code&gt;rm&lt;/code&gt;  一样适用&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;拷贝和移动命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#拷贝和移动命令&#34;&gt;#&lt;/a&gt; 拷贝和移动命令&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;tree&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;以&lt;strong&gt;树状图&lt;/strong&gt;列出文件目录结构&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-d&lt;/code&gt;  只显示目录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;cp 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖文件前提示&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  复制整个目录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;mv 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖前提示&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;文件内容命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件内容命令&#34;&gt;#&lt;/a&gt; 文件内容命令&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bSr1JO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/bSr1JO.png&#34; alt=&#34;查看文件内容&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-b&lt;/code&gt;  显示非空行编号&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;-n&lt;/code&gt;  显示所有行编号&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;more&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC3bsf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC3bsf.png&#34; alt=&#34;more&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;grep -n （） （文件）&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC8SWn&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC8SWn.png&#34; alt=&#34;grep&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;其他命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
-&lt;h5 id=&#34;echo和重定向&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#echo和重定向&#34;&gt;#&lt;/a&gt; echo 和重定向&lt;/h5&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;echo&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;在终端中显示参数指定的文字&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;重定向&lt;/p&gt;
-&lt;p&gt;原本应该输出到终端中的内容重定向到其他文件中&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCYd61&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCYd61.png&#34; alt=&#34;bCYd61.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5 id=&#34;管道&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#管道&#34;&gt;#&lt;/a&gt; 管道 &lt;code&gt;|&lt;/code&gt;&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCN0IO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCN0IO.png&#34; alt=&#34;管道&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;远程管理常用命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#远程管理常用命令&#34;&gt;#&lt;/a&gt; 远程管理常用命令&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;关机重启 &lt;code&gt;shutdown&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCUtfg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCUtfg.png&#34; alt=&#34;shutdown&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;查看和配置网卡信息&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCawCD&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCawCD.png&#34; alt=&#34;bCawCD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ifconfig&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCduqI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCduqI.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ping&lt;/code&gt;  测试网络连接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCwOc4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCwOc4.png&#34; alt=&#34;ping&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5 id=&#34;ssh工作及简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh工作及简介&#34;&gt;#&lt;/a&gt; SSH 工作及简介&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC0R56&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC0R56.png&#34; alt=&#34;SSH&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;域名和端口号&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCBuL9&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCBuL9.png&#34; alt=&#34;域名和端口号&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;SSH 客户端的简单实用&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ssh [-p port] user@remote&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;user&lt;/code&gt; : 远程机器上的用户名&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;remote&lt;/code&gt; : 远程机器的地址&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;port&lt;/code&gt; :&lt;strong&gt;SSH server&lt;/strong&gt; 监听的端口&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可以对装有 SSH 客户端的电脑或者服务器进行&lt;strong&gt;远程控制&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h5 id=&#34;scp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scp&#34;&gt;#&lt;/a&gt; SCP&lt;/h5&gt;
-&lt;p&gt;远程状态下进行文件拷贝&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFnyod&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFnyod.png&#34; alt=&#34;scp&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ftp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ftp&#34;&gt;#&lt;/a&gt; FTP&lt;/h5&gt;
-&lt;p&gt;在 &lt;code&gt;WINDOWS&lt;/code&gt;  下可以利用 FTP 进行文件拷贝 端口号默认为 21&lt;/p&gt;
-&lt;h5 id=&#34;ssh免密码登录设置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh免密码登录设置&#34;&gt;#&lt;/a&gt; SSH 免密码登录设置&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFMOSI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFMOSI.png&#34; alt=&#34;SSH免密码登录设置&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;配置别名&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFlUK0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFlUK0.png&#34; alt=&#34;配置别名&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;用户权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户权限&#34;&gt;#&lt;/a&gt; 用户权限&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMkvT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMkvT.png&#34; alt=&#34;用户权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;ls-l-指令介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls-l-指令介绍&#34;&gt;#&lt;/a&gt;  &lt;code&gt;ls -l&lt;/code&gt;  指令介绍&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMTLF&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMTLF.png&#34; alt=&#34;ls-l指令介绍&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;chmod指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#chmod指令&#34;&gt;#&lt;/a&gt;  &lt;code&gt;chmod&lt;/code&gt;  指令&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  change mod 用于修改用户对文件和目录的权限&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;chmod +/- rwx 文件/目录&lt;/code&gt;&lt;/p&gt;
-&lt;h5 id=&#34;超级用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超级用户&#34;&gt;#&lt;/a&gt; 超级用户&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMl759&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMl759.png&#34; alt=&#34;超级用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;组管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#组管理&#34;&gt;#&lt;/a&gt; 组管理&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bM1rM6&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bM1rM6.png&#34; alt=&#34;组管理终端命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;用户管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户管理&#34;&gt;#&lt;/a&gt; 用户管理&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMYL2d&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMYL2d.png&#34; alt=&#34;用户管理&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;查看用户信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看用户信息&#34;&gt;#&lt;/a&gt; 查看用户信息&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMtIQs&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMtIQs.png&#34; alt=&#34;查看用户信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;设置主组和附加组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置主组和附加组&#34;&gt;#&lt;/a&gt; 设置主组和附加组&lt;/h5&gt;
-&lt;p&gt;&lt;code&gt;usermod&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl8pcR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl8pcR.png&#34; alt=&#34;usermod&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;改变用户登录的 &lt;code&gt;shell&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;ubantu 默认的是 dash,dash 在 xshell 软件中存在 bug, 可以利用 &lt;code&gt;usermod&lt;/code&gt;  指令更改成为 bash&lt;/p&gt;
-&lt;h5 id=&#34;which&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#which&#34;&gt;#&lt;/a&gt;  &lt;code&gt;which&lt;/code&gt;&lt;/h5&gt;
-&lt;p&gt;查看命令执行所在文件夹&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl6v11&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl6v11.png&#34; alt=&#34;which&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;bin和sbin文件的差别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bin和sbin文件的差别&#34;&gt;#&lt;/a&gt;  &lt;code&gt;bin&lt;/code&gt;  和 sbin 文件的差别&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/blcbKP&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/blcbKP.png&#34; alt=&#34;bin和sbin文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;su切换用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#su切换用户&#34;&gt;#&lt;/a&gt; su 切换用户&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWmee&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWmee.png&#34; alt=&#34;su切换用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;修改文件权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改文件权限&#34;&gt;#&lt;/a&gt; 修改文件权限&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWNwQ&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWNwQ.png&#34; alt=&#34;修改文件权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  的数字表示法&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNhVVe&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNhVVe.png&#34; alt=&#34;chmod数字表示法&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;查询系统信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查询系统信息&#34;&gt;#&lt;/a&gt; 查询系统信息&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;时间和磁盘占用&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIK2R&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIK2R.png&#34; alt=&#34;时间日期额磁盘大小&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进程信息&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIsZ8&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIsZ8.png&#34; alt=&#34;进程信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;其他命令-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令-2&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;查找文件&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNTtgA&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNTtgA.png&#34; alt=&#34;查找文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;文件软链接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bN7VVf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bN7VVf.png&#34; alt=&#34;文件软链接&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;文件硬链接&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNq3qI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNq3qI.png&#34; alt=&#34;硬链接简介&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;打包和压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包和压缩&#34;&gt;#&lt;/a&gt; 打包和压缩&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打包&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0plef&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0plef.png&#34; alt=&#34;tar打包和解包指令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;压缩和解压缩&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;gzip&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0C1Pg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0C1Pg.png&#34; alt=&#34;gzip&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;bzip2&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0CDG4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0CDG4.png&#34; alt=&#34;bzip2 &#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4 id=&#34;adp安装与卸载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp安装与卸载&#34;&gt;#&lt;/a&gt; adp 安装与卸载&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0PKyR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0PKyR.png&#34; alt=&#34;adp安装与卸载&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h5 id=&#34;adp设计软件源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp设计软件源&#34;&gt;#&lt;/a&gt; adp 设计软件源&lt;/h5&gt;
-&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0iptO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0iptO.png&#34; alt=&#34;设置软件源&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-        <category term="操作系统" />
-        <updated>2021-02-09T16:00:00.000Z</updated>
-    </entry>
-    <entry>
         <id>http://s1mm.gitee.io/s1mm/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</id>
         <title>机器学习基础</title>
         <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/"/>
@@ -12420,6 +12773,292 @@ J(\theta) &amp;amp;=\frac{1}{m} \sum_{i=1}^{m} \operatorname{Cost}\left(h_{\thet
 &lt;/ol&gt;
 </content>
         <category term="机器学习" />
+        <updated>2021-02-09T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/02/10/linux/</id>
+        <title>操作系统</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/02/10/linux/"/>
+        <content type="html">&lt;h1 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h1&gt;
+&lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt; ,beginning from 2022.1.18&lt;/p&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;裸机&lt;/strong&gt;：没有安装操作系统的电脑&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作系统&lt;/strong&gt;: 1. 对硬件进行操作 2. 将对硬件的一系列操作封装成为系统调用，方便程序员调用&lt;/p&gt;
+&lt;h3 id=&#34;不同领域的主流操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#不同领域的主流操作系统&#34;&gt;#&lt;/a&gt; 不同领域的主流操作系统&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;桌面操作系统
+&lt;ul&gt;
+&lt;li&gt;Windows&lt;/li&gt;
+&lt;li&gt;macOS&lt;/li&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;服务器操作系统
+&lt;ul&gt;
+&lt;li&gt;Linux 免费 安全&lt;/li&gt;
+&lt;li&gt;Windows Server  付费&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;嵌入式操作系统
+&lt;ul&gt;
+&lt;li&gt;Linux&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;移动设备操作系统
+&lt;ul&gt;
+&lt;li&gt;iOS&lt;/li&gt;
+&lt;li&gt;Android (基于 &lt;code&gt;Linux&lt;/code&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;虚拟机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#虚拟机&#34;&gt;#&lt;/a&gt; 虚拟机&lt;/h3&gt;
+&lt;p&gt;相当于安装在电脑上的一台虚拟电脑&lt;/p&gt;
+&lt;h2 id=&#34;操作系统的发展史略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统的发展史略&#34;&gt;#&lt;/a&gt; 操作系统的发展史 (略)&lt;/h2&gt;
+&lt;h3 id=&#34;unix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#unix&#34;&gt;#&lt;/a&gt; Unix&lt;/h3&gt;
+&lt;p&gt;伴随着 B 语言和 C 语言的由来，同时由于其创作者可以直接访问使用该系统的电脑，电气公司将其私有化后随之产生了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;minix&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#minix&#34;&gt;#&lt;/a&gt; Minix&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Unix&lt;/code&gt;  私有化之后，大学无法使用 &lt;code&gt;Unix&lt;/code&gt;  系统进行教学，就出现了 &lt;code&gt;Minix&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux&#34;&gt;#&lt;/a&gt; Linux&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;Minix&lt;/code&gt;  上可以实现的功能非常少，为了达到相应的功能需要，就出现了 &lt;code&gt;Linux&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;linux操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux操作系统&#34;&gt;#&lt;/a&gt; Linux 操作系统&lt;/h2&gt;
+&lt;h3 id=&#34;linux内核及发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核及发行版&#34;&gt;#&lt;/a&gt; Linux 内核及发行版&lt;/h3&gt;
+&lt;h4 id=&#34;linux内核&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux内核&#34;&gt;#&lt;/a&gt; Linux 内核&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Linux&lt;/code&gt;  内核对各种硬件进行操作并且将各种操作封装成为系统调用&lt;/p&gt;
+&lt;h4 id=&#34;linux发行版&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux发行版&#34;&gt;#&lt;/a&gt; Linux 发行版&lt;/h4&gt;
+&lt;p&gt;在 &lt;code&gt;Linux&lt;/code&gt;  内核的基础上包括了桌面环境，办公套件，数据库等应用软件&lt;/p&gt;
+&lt;h3 id=&#34;linux文件和目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux文件和目录&#34;&gt;#&lt;/a&gt; Linux 文件和目录&lt;/h3&gt;
+&lt;h4 id=&#34;单用户与多用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#单用户与多用户&#34;&gt;#&lt;/a&gt; 单用户与多用户&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;单用户操作系统：一台电脑同一时间只能由一个用户使用  &lt;code&gt;Windows&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;多用户操作系统：一台电脑同一时间可以由多个用户使用  &lt;code&gt;Linux&lt;/code&gt; , &lt;code&gt;Unix&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;windows与linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#windows与linux&#34;&gt;#&lt;/a&gt; Windows 与 Linux&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Windows&lt;/code&gt;  下，看到的基本都是驱动器盘符&lt;/li&gt;
+&lt;li&gt;多用户操作系统下，看到的都是根目录结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;linux基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux基本操作&#34;&gt;#&lt;/a&gt; Linux 基本操作&lt;/h2&gt;
+&lt;h3 id=&#34;linux命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux命令&#34;&gt;#&lt;/a&gt; Linux 命令&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ls&lt;/code&gt;  显示当前目录下的所有文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pwd&lt;/code&gt;  显示当前目录&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd 地址&lt;/code&gt; 更改地址&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;touch 文件名&lt;/code&gt; 创建文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mkdir 文件名&lt;/code&gt; 创建目录&lt;/li&gt;
+&lt;li&gt;clear 清屏&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;command --help&lt;/code&gt;  帮助信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;man command&lt;/code&gt;  知识手册&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://imgtu.com/i/HvXbkT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvXbkT.png&#34; alt=&#34;man操作键&#34;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;文件和目录命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件和目录命令&#34;&gt;#&lt;/a&gt; 文件和目录命令&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvjUH0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvjUH0.png&#34; alt=&#34;文件和目录相关命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ls命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls命令选项&#34;&gt;#&lt;/a&gt; ls 命令选项&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HvvTiT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/21/HvvTiT.png&#34; alt=&#34;ls命令选项&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ls通配符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls通配符&#34;&gt;#&lt;/a&gt; ls 通配符&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/Hxqm4g&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/Hxqm4g.png&#34; alt=&#34;ls通配符&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;切换目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#切换目录&#34;&gt;#&lt;/a&gt; 切换目录&lt;/h4&gt;
+&lt;h5 id=&#34;cd命令选项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cd命令选项&#34;&gt;#&lt;/a&gt; cd 命令选项&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/HxLZs1&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/HxLZs1.png&#34; alt=&#34;cd&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;创建和删除操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建和删除操作&#34;&gt;#&lt;/a&gt; 创建和删除操作&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;touch&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有该名的文件存在，则创建一个新的文件&lt;/li&gt;
+&lt;li&gt;有改名字的文件存在，则更改文件的末次修改日期&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mkdir&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-p&lt;/code&gt;  连续创建多个目录&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;mkdir -p a/b/c/d&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;rm&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  连续删除多个同一文件夹下的文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-f&lt;/code&gt;  强制删除无提示信息&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; &lt;code&gt;ls&lt;/code&gt;  的通配符对 &lt;code&gt;rm&lt;/code&gt;  一样适用&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;拷贝和移动命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#拷贝和移动命令&#34;&gt;#&lt;/a&gt; 拷贝和移动命令&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tree&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;以&lt;strong&gt;树状图&lt;/strong&gt;列出文件目录结构&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-d&lt;/code&gt;  只显示目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cp 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖文件前提示&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-r&lt;/code&gt;  复制整个目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mv 源文件 目标文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-i&lt;/code&gt;  覆盖前提示&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;文件内容命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件内容命令&#34;&gt;#&lt;/a&gt; 文件内容命令&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bSr1JO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/22/bSr1JO.png&#34; alt=&#34;查看文件内容&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;cat&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-b&lt;/code&gt;  显示非空行编号&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;-n&lt;/code&gt;  显示所有行编号&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;more&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC3bsf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC3bsf.png&#34; alt=&#34;more&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;grep&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;grep -n （） （文件）&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC8SWn&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC8SWn.png&#34; alt=&#34;grep&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;其他命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
+&lt;h5 id=&#34;echo和重定向&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#echo和重定向&#34;&gt;#&lt;/a&gt; echo 和重定向&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;echo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在终端中显示参数指定的文字&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重定向&lt;/p&gt;
+&lt;p&gt;原本应该输出到终端中的内容重定向到其他文件中&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCYd61&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCYd61.png&#34; alt=&#34;bCYd61.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;管道&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#管道&#34;&gt;#&lt;/a&gt; 管道 &lt;code&gt;|&lt;/code&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCN0IO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCN0IO.png&#34; alt=&#34;管道&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;远程管理常用命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#远程管理常用命令&#34;&gt;#&lt;/a&gt; 远程管理常用命令&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;关机重启 &lt;code&gt;shutdown&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCUtfg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCUtfg.png&#34; alt=&#34;shutdown&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看和配置网卡信息&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCawCD&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCawCD.png&#34; alt=&#34;bCawCD.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ifconfig&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCduqI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCduqI.png&#34; alt=&#34;ifconfig&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ping&lt;/code&gt;  测试网络连接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCwOc4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCwOc4.png&#34; alt=&#34;ping&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;ssh工作及简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh工作及简介&#34;&gt;#&lt;/a&gt; SSH 工作及简介&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bC0R56&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bC0R56.png&#34; alt=&#34;SSH&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;域名和端口号&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bCBuL9&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/23/bCBuL9.png&#34; alt=&#34;域名和端口号&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SSH 客户端的简单实用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh [-p port] user@remote&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;user&lt;/code&gt; : 远程机器上的用户名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;remote&lt;/code&gt; : 远程机器的地址&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;port&lt;/code&gt; :&lt;strong&gt;SSH server&lt;/strong&gt; 监听的端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以对装有 SSH 客户端的电脑或者服务器进行&lt;strong&gt;远程控制&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;scp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scp&#34;&gt;#&lt;/a&gt; SCP&lt;/h5&gt;
+&lt;p&gt;远程状态下进行文件拷贝&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFnyod&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFnyod.png&#34; alt=&#34;scp&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ftp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ftp&#34;&gt;#&lt;/a&gt; FTP&lt;/h5&gt;
+&lt;p&gt;在 &lt;code&gt;WINDOWS&lt;/code&gt;  下可以利用 FTP 进行文件拷贝 端口号默认为 21&lt;/p&gt;
+&lt;h5 id=&#34;ssh免密码登录设置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh免密码登录设置&#34;&gt;#&lt;/a&gt; SSH 免密码登录设置&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFMOSI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFMOSI.png&#34; alt=&#34;SSH免密码登录设置&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;配置别名&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bFlUK0&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/24/bFlUK0.png&#34; alt=&#34;配置别名&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;用户权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户权限&#34;&gt;#&lt;/a&gt; 用户权限&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMkvT&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMkvT.png&#34; alt=&#34;用户权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;ls-l-指令介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ls-l-指令介绍&#34;&gt;#&lt;/a&gt;  &lt;code&gt;ls -l&lt;/code&gt;  指令介绍&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMMTLF&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMMTLF.png&#34; alt=&#34;ls-l指令介绍&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;chmod指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#chmod指令&#34;&gt;#&lt;/a&gt;  &lt;code&gt;chmod&lt;/code&gt;  指令&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  change mod 用于修改用户对文件和目录的权限&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;chmod +/- rwx 文件/目录&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;超级用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超级用户&#34;&gt;#&lt;/a&gt; 超级用户&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMl759&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMl759.png&#34; alt=&#34;超级用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;组管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#组管理&#34;&gt;#&lt;/a&gt; 组管理&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bM1rM6&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bM1rM6.png&#34; alt=&#34;组管理终端命令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;用户管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#用户管理&#34;&gt;#&lt;/a&gt; 用户管理&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMYL2d&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMYL2d.png&#34; alt=&#34;用户管理&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;查看用户信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看用户信息&#34;&gt;#&lt;/a&gt; 查看用户信息&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bMtIQs&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/02/28/bMtIQs.png&#34; alt=&#34;查看用户信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;设置主组和附加组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置主组和附加组&#34;&gt;#&lt;/a&gt; 设置主组和附加组&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;usermod&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl8pcR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl8pcR.png&#34; alt=&#34;usermod&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;改变用户登录的 &lt;code&gt;shell&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;ubantu 默认的是 dash,dash 在 xshell 软件中存在 bug, 可以利用 &lt;code&gt;usermod&lt;/code&gt;  指令更改成为 bash&lt;/p&gt;
+&lt;h5 id=&#34;which&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#which&#34;&gt;#&lt;/a&gt;  &lt;code&gt;which&lt;/code&gt;&lt;/h5&gt;
+&lt;p&gt;查看命令执行所在文件夹&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bl6v11&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/bl6v11.png&#34; alt=&#34;which&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;bin和sbin文件的差别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#bin和sbin文件的差别&#34;&gt;#&lt;/a&gt;  &lt;code&gt;bin&lt;/code&gt;  和 sbin 文件的差别&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/blcbKP&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/01/blcbKP.png&#34; alt=&#34;bin和sbin文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;su切换用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#su切换用户&#34;&gt;#&lt;/a&gt; su 切换用户&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWmee&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWmee.png&#34; alt=&#34;su切换用户&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;修改文件权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改文件权限&#34;&gt;#&lt;/a&gt; 修改文件权限&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNWNwQ&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNWNwQ.png&#34; alt=&#34;修改文件权限&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;chmod&lt;/code&gt;  的数字表示法&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNhVVe&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNhVVe.png&#34; alt=&#34;chmod数字表示法&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;查询系统信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查询系统信息&#34;&gt;#&lt;/a&gt; 查询系统信息&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;时间和磁盘占用&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIK2R&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIK2R.png&#34; alt=&#34;时间日期额磁盘大小&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进程信息&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNIsZ8&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNIsZ8.png&#34; alt=&#34;进程信息&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;其他命令-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他命令-2&#34;&gt;#&lt;/a&gt; 其他命令&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;查找文件&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNTtgA&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNTtgA.png&#34; alt=&#34;查找文件&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件软链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bN7VVf&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bN7VVf.png&#34; alt=&#34;文件软链接&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;文件硬链接&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/bNq3qI&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/04/bNq3qI.png&#34; alt=&#34;硬链接简介&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;打包和压缩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包和压缩&#34;&gt;#&lt;/a&gt; 打包和压缩&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打包&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0plef&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0plef.png&#34; alt=&#34;tar打包和解包指令&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;压缩和解压缩&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;gzip&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0C1Pg&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0C1Pg.png&#34; alt=&#34;gzip&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;bzip2&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0CDG4&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0CDG4.png&#34; alt=&#34;bzip2 &#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;adp安装与卸载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp安装与卸载&#34;&gt;#&lt;/a&gt; adp 安装与卸载&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0PKyR&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0PKyR.png&#34; alt=&#34;adp安装与卸载&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;adp设计软件源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#adp设计软件源&#34;&gt;#&lt;/a&gt; adp 设计软件源&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/b0iptO&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2022/03/05/b0iptO.png&#34; alt=&#34;设置软件源&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="操作系统" />
         <updated>2021-02-09T16:00:00.000Z</updated>
     </entry>
 </feed>
