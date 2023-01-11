@@ -7,15 +7,16 @@
     <category term="C语言" />
     <category term="操作系统" />
     <category term="python" />
+    <category term="vue" />
     <category term="Css" />
-    <category term="Html" />
     <category term="Git" />
-    <category term="java" />
+    <category term="Html" />
+    <category term="Javascript" />
     <category term="icoding答案" />
     <category term="机器学习" />
-    <category term="算法啊" />
     <category term="计算机组成原理" />
-    <category term="Javascript" />
+    <category term="算法啊" />
+    <category term="java" />
     <entry>
         <id>http://s1mm.gitee.io/s1mm/2022/07/10/c/</id>
         <title>C++</title>
