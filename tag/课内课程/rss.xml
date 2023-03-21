@@ -2,30 +2,91 @@
 <rss version="2.0">
     <channel>
         <title>S1m • Posts by &#34;课内课程&#34; tag</title>
-        <link>https://github.com/YogMas/YogMas.github.io</link>
+        <link>https://gitee.com/s1mm/s1mm</link>
         <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
         <pubDate>Thu, 18 Nov 2021 00:00:00 +0800</pubDate>
         <lastBuildDate>Thu, 18 Nov 2021 00:00:00 +0800</lastBuildDate>
-        <category>C语言</category>
         <category>Latex</category>
+        <category>C语言</category>
         <category>操作系统</category>
-        <category>Css</category>
-        <category>vue</category>
         <category>python</category>
+        <category>Css</category>
         <category>Git</category>
+        <category>vue</category>
         <category>Html</category>
         <category>java</category>
         <category>机器学习</category>
         <category>Javascript</category>
         <category>icoding答案</category>
-        <category>算法啊</category>
         <category>计算机组成原理</category>
+        <category>算法啊</category>
         <category>课内课程</category>
         <item>
-            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</guid>
+            <guid isPermalink="true">https://gitee.com/s1mm/s1mm/2021/11/18/ruan-jian-gong-cheng/</guid>
+            <title>软件工程</title>
+            <link>https://gitee.com/s1mm/s1mm/2021/11/18/ruan-jian-gong-cheng/</link>
+            <category>课内课程</category>
+            <pubDate>Thu, 18 Nov 2021 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;软件工程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程&#34;&gt;#&lt;/a&gt; 软件工程&lt;/h1&gt;
+&lt;h2 id=&#34;三张概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三张概念&#34;&gt;#&lt;/a&gt; 三张概念&lt;/h2&gt;
+&lt;h3 id=&#34;软件工程概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程概述&#34;&gt;#&lt;/a&gt; 软件工程概述&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/C3E00849B22E3F8293BB39509B22A521.png&#34; alt=&#34;软件工程概述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/1556EBAF262471A4230C157472597C91.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;软件的概念和特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件的概念和特点&#34;&gt;#&lt;/a&gt; 软件的概念和特点&lt;/h4&gt;
+&lt;p&gt;软件 = 程序 + 数据 + 文档&lt;/p&gt;
+&lt;p&gt;软件测试，系统维护将占据工程的很大一部分成本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;软件是一种产品&lt;/li&gt;
+&lt;li&gt;软件是开发其他软件产品的工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件的分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统软件&lt;/li&gt;
+&lt;li&gt;支撑软件&lt;/li&gt;
+&lt;li&gt;应用软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么软件发展如此之快&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算需求：软件必须适应新的计算环境或技术&lt;/li&gt;
+&lt;li&gt;嵌入需求：软件必须扩展，以满足和新一代系统或数据库之间的互操作性&lt;/li&gt;
+&lt;li&gt;业务需求：软件必须改善，以实现新的业务需求&lt;/li&gt;
+&lt;li&gt;架构需求：软件必须重新设计，使其在新的网络环境可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;软件危机的产生&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件危机的产生&#34;&gt;#&lt;/a&gt; 软件危机的产生&lt;/h4&gt;
+&lt;p&gt;软件工程概念的产生：目的是倡导以&lt;strong&gt;工程&lt;/strong&gt;的原理，原则和方法进行软件开发，以解决软件危机&lt;/p&gt;
+&lt;p&gt;软件危机：在计算机软件的开发和维护过程中所遇到的一系列严重问题 (效率和质量下降)&lt;/p&gt;
+&lt;p&gt;产生软件危机的原因&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;客观：软件本身特点：成本日益增加，规模庞大&lt;/li&gt;
+&lt;li&gt;客观：忽视需求分析，轻视软件维护，错误认为软件开发 = 程序编写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;软件工程的概念与发展过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程的概念与发展过程&#34;&gt;#&lt;/a&gt; 软件工程的概念与发展过程&lt;/h4&gt;
+&lt;p&gt;概念：建立和使用合理的工程原则，以经济地获取可靠的，且在真实机器上可高效工作的软件&lt;/p&gt;
+&lt;p&gt;软件工程框架：目的，原则，活动&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目的：给出了软件所涉及软件工程的工程要素&lt;/li&gt;
+&lt;li&gt;原则：给出了各要素之间的关系&lt;/li&gt;
+&lt;li&gt;活动：给出了软件工程学科所研究的主要内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件开发模型：是软件开发全部过程，活动和任务的框架&lt;/p&gt;
+&lt;p&gt;软件开发方法：为构造软件提供技术上的解决方法，包括沟通，需求分析，设计建模&lt;/p&gt;
+&lt;p&gt;软件过程：为建造高质量的软件所需完成任务的框架&lt;/p&gt;
+&lt;p&gt;软件工程目标：生产具有正确性，可用性以及开销合宜的产品&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性：产品达到预期功能&lt;/li&gt;
+&lt;li&gt;可用性：软件基本结构，实现及文档为用户可用&lt;/li&gt;
+&lt;li&gt;开销事宜，软件开发运行整个过程开销满足用户要求的程度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四张图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四张图&#34;&gt;#&lt;/a&gt; 四张图&lt;/h2&gt;
+&lt;h3 id=&#34;顺序图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#顺序图&#34;&gt;#&lt;/a&gt; 顺序图&lt;/h3&gt;
+&lt;h3 id=&#34;类图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类图&#34;&gt;#&lt;/a&gt; 类图&lt;/h3&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://gitee.com/s1mm/s1mm/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</guid>
             <title>计算机组成原理与结构</title>
-            <link>https://github.com/YogMas/YogMas.github.io/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</link>
+            <link>https://gitee.com/s1mm/s1mm/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</link>
             <category>课内课程</category>
             <pubDate>Thu, 18 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;计算机组成原理与结构重要知识点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机组成原理与结构重要知识点&#34;&gt;#&lt;/a&gt; &lt;strong&gt;《计算机组成原理与结构》重要知识点&lt;/strong&gt;&lt;/h1&gt;
@@ -541,67 +602,6 @@
 &lt;p&gt;主机与外部设备进行数据传送时，采用哪一种传送方式 CPU 的效率最高？DMA&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/18/ruan-jian-gong-cheng/</guid>
-            <title>软件工程</title>
-            <link>https://github.com/YogMas/YogMas.github.io/2021/11/18/ruan-jian-gong-cheng/</link>
-            <category>课内课程</category>
-            <pubDate>Thu, 18 Nov 2021 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;软件工程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程&#34;&gt;#&lt;/a&gt; 软件工程&lt;/h1&gt;
-&lt;h2 id=&#34;三张概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三张概念&#34;&gt;#&lt;/a&gt; 三张概念&lt;/h2&gt;
-&lt;h3 id=&#34;软件工程概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程概述&#34;&gt;#&lt;/a&gt; 软件工程概述&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/C3E00849B22E3F8293BB39509B22A521.png&#34; alt=&#34;软件工程概述&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/1556EBAF262471A4230C157472597C91.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
-&lt;h4 id=&#34;软件的概念和特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件的概念和特点&#34;&gt;#&lt;/a&gt; 软件的概念和特点&lt;/h4&gt;
-&lt;p&gt;软件 = 程序 + 数据 + 文档&lt;/p&gt;
-&lt;p&gt;软件测试，系统维护将占据工程的很大一部分成本&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;软件是一种产品&lt;/li&gt;
-&lt;li&gt;软件是开发其他软件产品的工具&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;软件的分类&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;系统软件&lt;/li&gt;
-&lt;li&gt;支撑软件&lt;/li&gt;
-&lt;li&gt;应用软件&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;为什么软件发展如此之快&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;计算需求：软件必须适应新的计算环境或技术&lt;/li&gt;
-&lt;li&gt;嵌入需求：软件必须扩展，以满足和新一代系统或数据库之间的互操作性&lt;/li&gt;
-&lt;li&gt;业务需求：软件必须改善，以实现新的业务需求&lt;/li&gt;
-&lt;li&gt;架构需求：软件必须重新设计，使其在新的网络环境可用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;软件危机的产生&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件危机的产生&#34;&gt;#&lt;/a&gt; 软件危机的产生&lt;/h4&gt;
-&lt;p&gt;软件工程概念的产生：目的是倡导以&lt;strong&gt;工程&lt;/strong&gt;的原理，原则和方法进行软件开发，以解决软件危机&lt;/p&gt;
-&lt;p&gt;软件危机：在计算机软件的开发和维护过程中所遇到的一系列严重问题 (效率和质量下降)&lt;/p&gt;
-&lt;p&gt;产生软件危机的原因&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;客观：软件本身特点：成本日益增加，规模庞大&lt;/li&gt;
-&lt;li&gt;客观：忽视需求分析，轻视软件维护，错误认为软件开发 = 程序编写&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;软件工程的概念与发展过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程的概念与发展过程&#34;&gt;#&lt;/a&gt; 软件工程的概念与发展过程&lt;/h4&gt;
-&lt;p&gt;概念：建立和使用合理的工程原则，以经济地获取可靠的，且在真实机器上可高效工作的软件&lt;/p&gt;
-&lt;p&gt;软件工程框架：目的，原则，活动&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;目的：给出了软件所涉及软件工程的工程要素&lt;/li&gt;
-&lt;li&gt;原则：给出了各要素之间的关系&lt;/li&gt;
-&lt;li&gt;活动：给出了软件工程学科所研究的主要内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;软件开发模型：是软件开发全部过程，活动和任务的框架&lt;/p&gt;
-&lt;p&gt;软件开发方法：为构造软件提供技术上的解决方法，包括沟通，需求分析，设计建模&lt;/p&gt;
-&lt;p&gt;软件过程：为建造高质量的软件所需完成任务的框架&lt;/p&gt;
-&lt;p&gt;软件工程目标：生产具有正确性，可用性以及开销合宜的产品&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;正确性：产品达到预期功能&lt;/li&gt;
-&lt;li&gt;可用性：软件基本结构，实现及文档为用户可用&lt;/li&gt;
-&lt;li&gt;开销事宜，软件开发运行整个过程开销满足用户要求的程度&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;四张图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四张图&#34;&gt;#&lt;/a&gt; 四张图&lt;/h2&gt;
-&lt;h3 id=&#34;顺序图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#顺序图&#34;&gt;#&lt;/a&gt; 顺序图&lt;/h3&gt;
-&lt;h3 id=&#34;类图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类图&#34;&gt;#&lt;/a&gt; 类图&lt;/h3&gt;
  ]]></description>
         </item>
     </channel>

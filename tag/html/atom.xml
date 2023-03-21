@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/YogMas/YogMas.github.io</id>
+    <id>https://gitee.com/s1mm/s1mm</id>
     <title>S1m • Posts by &#34;html&#34; tag</title>
-    <link href="https://github.com/YogMas/YogMas.github.io" />
+    <link href="https://gitee.com/s1mm/s1mm" />
     <updated>2021-11-05T16:00:00.000Z</updated>
-    <category term="C语言" />
     <category term="Latex" />
+    <category term="C语言" />
     <category term="操作系统" />
-    <category term="Css" />
-    <category term="vue" />
     <category term="python" />
+    <category term="Css" />
     <category term="Git" />
+    <category term="vue" />
     <category term="Html" />
     <category term="java" />
     <category term="机器学习" />
     <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="算法啊" />
     <category term="计算机组成原理" />
+    <category term="算法啊" />
     <category term="课内课程" />
     <entry>
-        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-xia/</id>
+        <id>https://gitee.com/s1mm/s1mm/2021/11/06/html-xia/</id>
         <title>Html-second</title>
-        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/html-xia/"/>
+        <link rel="alternate" href="https://gitee.com/s1mm/s1mm/2021/11/06/html-xia/"/>
         <content type="html">&lt;p&gt;。&lt;/p&gt;
 &lt;h1 id=&#34;html下&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html下&#34;&gt;#&lt;/a&gt; Html (下)&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
@@ -209,9 +209,9 @@ radio: 单选按钮&lt;/p&gt;
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/</id>
+        <id>https://gitee.com/s1mm/s1mm/2021/11/06/html-shang/</id>
         <title>Html-first</title>
-        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/"/>
+        <link rel="alternate" href="https://gitee.com/s1mm/s1mm/2021/11/06/html-shang/"/>
         <content type="html">&lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
 &lt;h4 id=&#34;1基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本架构&#34;&gt;#&lt;/a&gt; 1. 基本架构&lt;/h4&gt;

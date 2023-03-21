@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://github.com/YogMas/YogMas.github.io</id>
+    <id>https://gitee.com/s1mm/s1mm</id>
     <title>S1m • Posts by &#34;css&#34; tag</title>
-    <link href="https://github.com/YogMas/YogMas.github.io" />
+    <link href="https://gitee.com/s1mm/s1mm" />
     <updated>2021-11-05T16:00:00.000Z</updated>
-    <category term="C语言" />
     <category term="Latex" />
+    <category term="C语言" />
     <category term="操作系统" />
-    <category term="Css" />
-    <category term="vue" />
     <category term="python" />
+    <category term="Css" />
     <category term="Git" />
+    <category term="vue" />
     <category term="Html" />
     <category term="java" />
     <category term="机器学习" />
     <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="算法啊" />
     <category term="计算机组成原理" />
+    <category term="算法啊" />
     <category term="课内课程" />
     <entry>
-        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/css-xin/</id>
+        <id>https://gitee.com/s1mm/s1mm/2021/11/06/css-xin/</id>
         <title>Css新</title>
-        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/css-xin/"/>
+        <link rel="alternate" href="https://gitee.com/s1mm/s1mm/2021/11/06/css-xin/"/>
         <content type="html">&lt;h1 id=&#34;css新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css新&#34;&gt;#&lt;/a&gt; CSS (新)&lt;/h1&gt;
 &lt;p&gt;复习 (好吧 太久没用忘了 其实是重新学习过程) CSS 时记忆的笔记&lt;/p&gt;
 &lt;h2 id=&#34;定位position&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位position&#34;&gt;#&lt;/a&gt; 定位 (position)&lt;/h2&gt;
@@ -127,9 +127,9 @@
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/css1/</id>
+        <id>https://gitee.com/s1mm/s1mm/2021/11/06/css1/</id>
         <title>Css-first</title>
-        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/css1/"/>
+        <link rel="alternate" href="https://gitee.com/s1mm/s1mm/2021/11/06/css1/"/>
         <content type="html">&lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
 &lt;h4 id=&#34;1css基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css基本架构&#34;&gt;#&lt;/a&gt; 1.css 基本架构&lt;/h4&gt;
@@ -374,9 +374,9 @@ link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/css2/</id>
+        <id>https://gitee.com/s1mm/s1mm/2021/11/06/css2/</id>
         <title>Css-second</title>
-        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/css2/"/>
+        <link rel="alternate" href="https://gitee.com/s1mm/s1mm/2021/11/06/css2/"/>
         <content type="html">&lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
 &lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
 &lt;h4 id=&#34;1css选择器的性质&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1css选择器的性质&#34;&gt;#&lt;/a&gt; 1.css 选择器的性质&lt;/h4&gt;
