@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mm.gitee.io/s1mm</id>
+    <id>https://github.com/YogMas/YogMas.github.io</id>
     <title>S1m • Posts by &#34;课内课程&#34; category</title>
-    <link href="http://s1mm.gitee.io/s1mm" />
+    <link href="https://github.com/YogMas/YogMas.github.io" />
     <updated>2021-11-17T16:00:00.000Z</updated>
+    <category term="Latex" />
     <category term="C语言" />
     <category term="操作系统" />
     <category term="python" />
-    <category term="vue" />
     <category term="Css" />
+    <category term="vue" />
     <category term="Git" />
     <category term="Html" />
+    <category term="java" />
+    <category term="机器学习" />
     <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="机器学习" />
+    <category term="课内课程" />
     <category term="计算机组成原理" />
     <category term="算法啊" />
-    <category term="java" />
-    <category term="Latex" />
-    <category term="课内课程" />
     <entry>
-        <id>http://s1mm.gitee.io/s1mm/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</id>
+        <id>https://github.com/YogMas/YogMas.github.io/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</id>
         <title>计算机组成原理与结构</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/"/>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/"/>
         <content type="html">&lt;h1 id=&#34;计算机组成原理与结构重要知识点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机组成原理与结构重要知识点&#34;&gt;#&lt;/a&gt; &lt;strong&gt;《计算机组成原理与结构》重要知识点&lt;/strong&gt;&lt;/h1&gt;
 &lt;h2 id=&#34;计算机结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机结构&#34;&gt;#&lt;/a&gt; 计算机结构&lt;/h2&gt;
 &lt;h3 id=&#34;第一章-概论&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一章-概论&#34;&gt;#&lt;/a&gt; 第一章 概论&lt;/h3&gt;
@@ -541,9 +541,9 @@
         <updated>2021-11-17T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/s1mm/2021/11/18/ruan-jian-gong-cheng/</id>
+        <id>https://github.com/YogMas/YogMas.github.io/2021/11/18/ruan-jian-gong-cheng/</id>
         <title>软件工程</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/18/ruan-jian-gong-cheng/"/>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/18/ruan-jian-gong-cheng/"/>
         <content type="html">&lt;h1 id=&#34;软件工程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程&#34;&gt;#&lt;/a&gt; 软件工程&lt;/h1&gt;
 &lt;h2 id=&#34;三张概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三张概念&#34;&gt;#&lt;/a&gt; 三张概念&lt;/h2&gt;
 &lt;h3 id=&#34;软件工程概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程概述&#34;&gt;#&lt;/a&gt; 软件工程概述&lt;/h3&gt;

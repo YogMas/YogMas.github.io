@@ -2,30 +2,30 @@
 <rss version="2.0">
     <channel>
         <title>S1m • Posts by &#34;前端&#34; category</title>
-        <link>http://s1mm.gitee.io/s1mm</link>
+        <link>https://github.com/YogMas/YogMas.github.io</link>
         <description>博客记录个人学习笔记,处于不断完善中</description>
         <language>zh-CN</language>
         <pubDate>Sat, 10 Sep 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Sat, 10 Sep 2022 00:00:00 +0800</lastBuildDate>
+        <category>Latex</category>
         <category>C语言</category>
         <category>操作系统</category>
         <category>python</category>
-        <category>vue</category>
         <category>Css</category>
+        <category>vue</category>
         <category>Git</category>
         <category>Html</category>
+        <category>java</category>
+        <category>机器学习</category>
         <category>Javascript</category>
         <category>icoding答案</category>
-        <category>机器学习</category>
+        <category>课内课程</category>
         <category>计算机组成原理</category>
         <category>算法啊</category>
-        <category>java</category>
-        <category>Latex</category>
-        <category>课内课程</category>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2022/09/10/vue/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2022/09/10/vue/</guid>
             <title>vue</title>
-            <link>http://s1mm.gitee.io/s1mm/2022/09/10/vue/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2022/09/10/vue/</link>
             <category>vue</category>
             <pubDate>Sat, 10 Sep 2022 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;vue&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue&#34;&gt;#&lt;/a&gt; Vue&lt;/h1&gt;
@@ -1635,9 +1635,9 @@ props({query:{id,title}})
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/css-xin/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/06/css-xin/</guid>
             <title>Css新</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/css-xin/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2021/11/06/css-xin/</link>
             <category>Css</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;css新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css新&#34;&gt;#&lt;/a&gt; CSS (新)&lt;/h1&gt;
@@ -1742,9 +1742,9 @@ props({query:{id,title}})
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/css1/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/06/css1/</guid>
             <title>Css-first</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/css1/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2021/11/06/css1/</link>
             <category>Css</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;css1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css1&#34;&gt;#&lt;/a&gt; css1&lt;/h1&gt;
@@ -1989,9 +1989,9 @@ link: 未访问链接：把没有点击过的链接选择出来&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/css2/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/06/css2/</guid>
             <title>Css-second</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/css2/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2021/11/06/css2/</link>
             <category>Css</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;css2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css2&#34;&gt;#&lt;/a&gt; css2&lt;/h1&gt;
@@ -2361,9 +2361,9 @@ content:’’;&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/</guid>
             <title>Html-first</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/html-shang/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/</link>
             <category>Html</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
@@ -2458,9 +2458,9 @@ X 包括_self (覆盖当前页面)&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/06/html-xia/</guid>
             <title>Html-second</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/html-xia/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-xia/</link>
             <category>Html</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;。&lt;/p&gt;
@@ -2647,9 +2647,9 @@ radio: 单选按钮&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://s1mm.gitee.io/s1mm/2021/11/06/javascript-ji-chu-ban/</guid>
+            <guid isPermalink="true">https://github.com/YogMas/YogMas.github.io/2021/11/06/javascript-ji-chu-ban/</guid>
             <title>Javascript基础(未完待续)</title>
-            <link>http://s1mm.gitee.io/s1mm/2021/11/06/javascript-ji-chu-ban/</link>
+            <link>https://github.com/YogMas/YogMas.github.io/2021/11/06/javascript-ji-chu-ban/</link>
             <category>Javascript</category>
             <pubDate>Sat, 06 Nov 2021 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript&#34;&gt;#&lt;/a&gt; javascript&lt;/h1&gt;

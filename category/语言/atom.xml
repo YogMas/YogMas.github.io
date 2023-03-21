@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mm.gitee.io/s1mm</id>
+    <id>https://github.com/YogMas/YogMas.github.io</id>
     <title>S1m • Posts by &#34;语言&#34; category</title>
-    <link href="http://s1mm.gitee.io/s1mm" />
+    <link href="https://github.com/YogMas/YogMas.github.io" />
     <updated>2022-09-12T16:00:00.000Z</updated>
+    <category term="Latex" />
     <category term="C语言" />
     <category term="操作系统" />
     <category term="python" />
-    <category term="vue" />
     <category term="Css" />
+    <category term="vue" />
     <category term="Git" />
     <category term="Html" />
+    <category term="java" />
+    <category term="机器学习" />
     <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="机器学习" />
+    <category term="课内课程" />
     <category term="计算机组成原理" />
     <category term="算法啊" />
-    <category term="java" />
-    <category term="Latex" />
-    <category term="课内课程" />
     <entry>
-        <id>http://s1mm.gitee.io/s1mm/2022/09/13/java/</id>
+        <id>https://github.com/YogMas/YogMas.github.io/2022/09/13/java/</id>
         <title>java</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/09/13/java/"/>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2022/09/13/java/"/>
         <content type="html">&lt;h1 id=&#34;java&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h1&gt;
 &lt;p&gt;软件工程课程中 java 学习的记录&lt;/p&gt;
 &lt;h2 id=&#34;java开发&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java开发&#34;&gt;#&lt;/a&gt; Java 开发&lt;/h2&gt;
@@ -946,9 +946,9 @@ public class FileOutputStreamDemo2 {
         <updated>2022-09-12T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://s1mm.gitee.io/s1mm/2022/07/10/python/</id>
+        <id>https://github.com/YogMas/YogMas.github.io/2022/07/10/python/</id>
         <title>python</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/07/10/python/"/>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2022/07/10/python/"/>
         <content type="html">&lt;h1 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h1&gt;
 &lt;p&gt;The article made by  &lt;code&gt;Yogmas&lt;/code&gt;  on 2022/7/08&lt;/p&gt;
 &lt;h2 id=&#34;变量和字符串&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#变量和字符串&#34;&gt;#&lt;/a&gt; 变量和字符串&lt;/h2&gt;

@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://s1mm.gitee.io/s1mm</id>
+    <id>https://github.com/YogMas/YogMas.github.io</id>
     <title>S1m • Posts by &#34;文本编辑&#34; category</title>
-    <link href="http://s1mm.gitee.io/s1mm" />
+    <link href="https://github.com/YogMas/YogMas.github.io" />
     <updated>2021-11-05T16:00:00.000Z</updated>
+    <category term="Latex" />
     <category term="C语言" />
     <category term="操作系统" />
     <category term="python" />
-    <category term="vue" />
     <category term="Css" />
+    <category term="vue" />
     <category term="Git" />
     <category term="Html" />
+    <category term="java" />
+    <category term="机器学习" />
     <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="机器学习" />
+    <category term="课内课程" />
     <category term="计算机组成原理" />
     <category term="算法啊" />
-    <category term="java" />
-    <category term="Latex" />
-    <category term="课内课程" />
     <entry>
-        <id>http://s1mm.gitee.io/s1mm/2021/11/06/latex/</id>
+        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/latex/</id>
         <title>Latex</title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/latex/"/>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/latex/"/>
         <content type="html">&lt;h1 id=&#34;latex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#latex&#34;&gt;#&lt;/a&gt; Latex&lt;/h1&gt;
 &lt;p&gt;latex 命令多采用 &lt;code&gt;\   []{}&lt;/code&gt;  的格式&lt;/p&gt;
 &lt;p&gt;基本结构&lt;/p&gt;
