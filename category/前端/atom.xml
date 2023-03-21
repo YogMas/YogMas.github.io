@@ -4,21 +4,21 @@
     <title>S1m • Posts by &#34;前端&#34; category</title>
     <link href="https://github.com/YogMas/YogMas.github.io" />
     <updated>2022-09-09T16:00:00.000Z</updated>
-    <category term="Latex" />
     <category term="C语言" />
+    <category term="Latex" />
     <category term="操作系统" />
-    <category term="python" />
     <category term="Css" />
     <category term="vue" />
+    <category term="python" />
     <category term="Git" />
     <category term="Html" />
     <category term="java" />
     <category term="机器学习" />
     <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="课内课程" />
-    <category term="计算机组成原理" />
     <category term="算法啊" />
+    <category term="计算机组成原理" />
+    <category term="课内课程" />
     <entry>
         <id>https://github.com/YogMas/YogMas.github.io/2022/09/10/vue/</id>
         <title>vue</title>
@@ -2358,103 +2358,6 @@ content:’’;&lt;br&gt;
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/</id>
-        <title>Html-first</title>
-        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/"/>
-        <content type="html">&lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
-&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
-&lt;h4 id=&#34;1基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本架构&#34;&gt;#&lt;/a&gt; 1. 基本架构&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
-&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
-&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
-&amp;lt;/html&amp;gt; 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;2html标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2html标签&#34;&gt;#&lt;/a&gt; 2.html 标签&lt;/h4&gt;
-&lt;h6 id=&#34;标题标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标题标签&#34;&gt;#&lt;/a&gt; 标题标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;   ……  &amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一共六级标题，文字加粗，由大到小依次减小。&lt;br&gt;
-&lt;strong&gt;大多数标签都是成对存在的，只有少数例如 br 的单标签&lt;/strong&gt;&lt;/p&gt;
-&lt;h6 id=&#34;段落和换行标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#段落和换行标签&#34;&gt;#&lt;/a&gt; 段落和换行标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
-&amp;lt;/br&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;p 标签会自动换行，不用添加 br&lt;/p&gt;
-&lt;h6 id=&#34;文本格式化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本格式化标签&#34;&gt;#&lt;/a&gt; 文本格式化标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;strong&amp;gt;加粗&amp;lt;/strong&amp;gt; 或者 &amp;lt;b&amp;gt;加粗&amp;lt;/b&amp;gt;
-&amp;lt;em&amp;gt;倾斜&amp;lt;/em&amp;gt; 或者 &amp;lt;i&amp;gt;倾斜&amp;lt;/i&amp;gt;
-&amp;lt;del&amp;gt;删除线&amp;lt;/del&amp;gt; 或者 &amp;lt;s&amp;gt;删除线&amp;lt;/s&amp;gt;
-&amp;lt;ins&amp;gt;下划线&amp;lt;/ins&amp;gt; 或者 &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;h6 id=&#34;div和span标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#div和span标签&#34;&gt;#&lt;/a&gt; div 和 span 标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;形象来说 div 是一个大盒子，span 通常是用来放在大盒子里面的小盒子（后期 div 在页面构造中非常常用)&lt;/p&gt;
-&lt;h6 id=&#34;图像标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图像标签&#34;&gt;#&lt;/a&gt; 图像标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&#34;路径&#34; alt=&#34;图片不显示时显示出来的&#34; 
-title=&#34;鼠标放在图片上面显示出来的文字&#34; 
-width=&#34;&#34; height=&#34;&#34; border=&#34;&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;在后期使用的 width,height,border, 都会放入&lt;strong&gt; css&lt;/strong&gt; 中来运行使用不会单独列入 img 中&lt;br&gt;
-图像标签的路径&lt;br&gt;
- 1. 同一级路径&lt;br&gt;
- eg:(img.jpg)&lt;br&gt;
- 2. 下一级路径&lt;br&gt;
- eg:(images/img.jpg)&lt;br&gt;
- 3. 绝对路径&lt;br&gt;
- eg:(C:\Users\apple\Desktop\ 前端基础第一天 - HTML\ 案例 \img.jpg)&lt;br&gt;
-eg：(&lt;a href=&#34;http://www.itcast.cn/2018czgw/images/logo.png&#34;&gt;http://www.itcast.cn/2018czgw/images/logo.png&lt;/a&gt;)&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQmLi8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmLi8.png&#34; alt=&#34;IQmLi8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;超链接标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超链接标签&#34;&gt;#&lt;/a&gt; 超链接标签&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;链接&#34;&amp;gt;LOL&amp;lt;/a&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;LOL 可以以图片文字等等代替，点击就可以跳转到 href 所在的链接&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可以添加的元素：target=“X”&lt;br&gt;
-X 包括_self (覆盖当前页面)&lt;br&gt;
- 和_blank 重新启动新的页面&lt;br&gt;
-链接分类&lt;br&gt;
- 1. 内部链接：存放在你网站前端的链接也就是你写前端时电脑里面的链接&lt;br&gt;
- 2. 外部链接：例如 http 这类的其他网站的链接&lt;br&gt;
- 3. 空链接：当你还没有链接可以填时，留出空位用 #代替&lt;br&gt;
- 4. 下载链接：通常是以.zip 结尾的压缩包&lt;br&gt;
-&lt;a href=&#34;https://imgtu.com/i/IQC8kd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC8kd.png&#34; alt=&#34;IQC8kd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h6 id=&#34;锚点定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#锚点定位&#34;&gt;#&lt;/a&gt; 锚点定位&lt;/h6&gt;
-&lt;p&gt;由两个相互呼应的标签组成&lt;br&gt;
-可以从页面的一个地方跳转到当前页面的另外一个地方&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;#ID&#34;&amp;gt;&amp;lt;/a&amp;gt;
-&amp;lt;h3 id=&#34;ID&#34;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ID 可以写成任何你定义的名称&lt;br&gt;
- h3 并不是固定的，可以换成任意标签&lt;br&gt;
-当你点击 a 中携带的元素或标签时你将会跳转到拥有 id=“” 且和 a 相同 id 的标签这&lt;/p&gt;
-&lt;h6 id=&#34;注释标签和特殊字符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注释标签和特殊字符&#34;&gt;#&lt;/a&gt; 注释标签和特殊字符&lt;/h6&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 注释内容 --&amp;gt; 
-&amp;lt;用&amp;amp;lt  &amp;gt;用&amp;amp;gt；(由于&amp;lt;&amp;gt;符号在html中的特殊性)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;特殊内容可以用 ctrl+l 快速注释&lt;/p&gt;
-</content>
-        <category term="Html" />
-        <updated>2021-11-05T16:00:00.000Z</updated>
-    </entry>
-    <entry>
         <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-xia/</id>
         <title>Html-second</title>
         <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/html-xia/"/>
@@ -3878,6 +3781,103 @@ offsetParent  返回的是带有定位的父元素 (没有则返回 body)&lt;br&
 &lt;/ol&gt;
 </content>
         <category term="Javascript" />
+        <updated>2021-11-05T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/</id>
+        <title>Html-first</title>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/11/06/html-shang/"/>
+        <content type="html">&lt;h1 id=&#34;html上&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html上&#34;&gt;#&lt;/a&gt; Html (上)&lt;/h1&gt;
+&lt;h3 id=&#34;the-article-from-yogmas-also-sam&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#the-article-from-yogmas-also-sam&#34;&gt;#&lt;/a&gt; the article from yogmas also sam&lt;/h3&gt;
+&lt;h4 id=&#34;1基本架构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本架构&#34;&gt;#&lt;/a&gt; 1. 基本架构&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt; 
+&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;2html标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2html标签&#34;&gt;#&lt;/a&gt; 2.html 标签&lt;/h4&gt;
+&lt;h6 id=&#34;标题标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#标题标签&#34;&gt;#&lt;/a&gt; 标题标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;&amp;lt;/h1&amp;gt;   ……  &amp;lt;h6&amp;gt;&amp;lt;/h6&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一共六级标题，文字加粗，由大到小依次减小。&lt;br&gt;
+&lt;strong&gt;大多数标签都是成对存在的，只有少数例如 br 的单标签&lt;/strong&gt;&lt;/p&gt;
+&lt;h6 id=&#34;段落和换行标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#段落和换行标签&#34;&gt;#&lt;/a&gt; 段落和换行标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;
+&amp;lt;/br&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;p 标签会自动换行，不用添加 br&lt;/p&gt;
+&lt;h6 id=&#34;文本格式化标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文本格式化标签&#34;&gt;#&lt;/a&gt; 文本格式化标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;strong&amp;gt;加粗&amp;lt;/strong&amp;gt; 或者 &amp;lt;b&amp;gt;加粗&amp;lt;/b&amp;gt;
+&amp;lt;em&amp;gt;倾斜&amp;lt;/em&amp;gt; 或者 &amp;lt;i&amp;gt;倾斜&amp;lt;/i&amp;gt;
+&amp;lt;del&amp;gt;删除线&amp;lt;/del&amp;gt; 或者 &amp;lt;s&amp;gt;删除线&amp;lt;/s&amp;gt;
+&amp;lt;ins&amp;gt;下划线&amp;lt;/ins&amp;gt; 或者 &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;h6 id=&#34;div和span标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#div和span标签&#34;&gt;#&lt;/a&gt; div 和 span 标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;形象来说 div 是一个大盒子，span 通常是用来放在大盒子里面的小盒子（后期 div 在页面构造中非常常用)&lt;/p&gt;
+&lt;h6 id=&#34;图像标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图像标签&#34;&gt;#&lt;/a&gt; 图像标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img src=&#34;路径&#34; alt=&#34;图片不显示时显示出来的&#34; 
+title=&#34;鼠标放在图片上面显示出来的文字&#34; 
+width=&#34;&#34; height=&#34;&#34; border=&#34;&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在后期使用的 width,height,border, 都会放入&lt;strong&gt; css&lt;/strong&gt; 中来运行使用不会单独列入 img 中&lt;br&gt;
+图像标签的路径&lt;br&gt;
+ 1. 同一级路径&lt;br&gt;
+ eg:(img.jpg)&lt;br&gt;
+ 2. 下一级路径&lt;br&gt;
+ eg:(images/img.jpg)&lt;br&gt;
+ 3. 绝对路径&lt;br&gt;
+ eg:(C:\Users\apple\Desktop\ 前端基础第一天 - HTML\ 案例 \img.jpg)&lt;br&gt;
+eg：(&lt;a href=&#34;http://www.itcast.cn/2018czgw/images/logo.png&#34;&gt;http://www.itcast.cn/2018czgw/images/logo.png&lt;/a&gt;)&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQmLi8&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQmLi8.png&#34; alt=&#34;IQmLi8.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;超链接标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#超链接标签&#34;&gt;#&lt;/a&gt; 超链接标签&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;链接&#34;&amp;gt;LOL&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;LOL 可以以图片文字等等代替，点击就可以跳转到 href 所在的链接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以添加的元素：target=“X”&lt;br&gt;
+X 包括_self (覆盖当前页面)&lt;br&gt;
+ 和_blank 重新启动新的页面&lt;br&gt;
+链接分类&lt;br&gt;
+ 1. 内部链接：存放在你网站前端的链接也就是你写前端时电脑里面的链接&lt;br&gt;
+ 2. 外部链接：例如 http 这类的其他网站的链接&lt;br&gt;
+ 3. 空链接：当你还没有链接可以填时，留出空位用 #代替&lt;br&gt;
+ 4. 下载链接：通常是以.zip 结尾的压缩包&lt;br&gt;
+&lt;a href=&#34;https://imgtu.com/i/IQC8kd&#34;&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/11/06/IQC8kd.png&#34; alt=&#34;IQC8kd.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h6 id=&#34;锚点定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#锚点定位&#34;&gt;#&lt;/a&gt; 锚点定位&lt;/h6&gt;
+&lt;p&gt;由两个相互呼应的标签组成&lt;br&gt;
+可以从页面的一个地方跳转到当前页面的另外一个地方&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;a href=&#34;#ID&#34;&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;h3 id=&#34;ID&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ID 可以写成任何你定义的名称&lt;br&gt;
+ h3 并不是固定的，可以换成任意标签&lt;br&gt;
+当你点击 a 中携带的元素或标签时你将会跳转到拥有 id=“” 且和 a 相同 id 的标签这&lt;/p&gt;
+&lt;h6 id=&#34;注释标签和特殊字符&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注释标签和特殊字符&#34;&gt;#&lt;/a&gt; 注释标签和特殊字符&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- 注释内容 --&amp;gt; 
+&amp;lt;用&amp;amp;lt  &amp;gt;用&amp;amp;gt；(由于&amp;lt;&amp;gt;符号在html中的特殊性)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;特殊内容可以用 ctrl+l 快速注释&lt;/p&gt;
+</content>
+        <category term="Html" />
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
 </feed>
