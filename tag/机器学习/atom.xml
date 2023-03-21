@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://gitee.com/s1mm/s1mm</id>
+    <id>https://github.com/YogMas/YogMas.github.io</id>
     <title>S1m • Posts by &#34;机器学习&#34; tag</title>
-    <link href="https://gitee.com/s1mm/s1mm" />
+    <link href="https://github.com/YogMas/YogMas.github.io" />
     <updated>2021-02-09T16:00:00.000Z</updated>
-    <category term="Latex" />
     <category term="C语言" />
     <category term="操作系统" />
+    <category term="Latex" />
     <category term="python" />
+    <category term="vue" />
     <category term="Css" />
     <category term="Git" />
-    <category term="vue" />
     <category term="Html" />
+    <category term="Javascript" />
     <category term="java" />
     <category term="机器学习" />
-    <category term="Javascript" />
     <category term="icoding答案" />
-    <category term="计算机组成原理" />
     <category term="算法啊" />
+    <category term="计算机组成原理" />
     <category term="课内课程" />
     <entry>
-        <id>https://gitee.com/s1mm/s1mm/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</id>
+        <id>https://github.com/YogMas/YogMas.github.io/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/</id>
         <title>机器学习基础</title>
-        <link rel="alternate" href="https://gitee.com/s1mm/s1mm/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/"/>
+        <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2021/02/10/ji-qi-xue-xi-ru-men-wu-en-da/"/>
         <content type="html">&lt;h1 id=&#34;机器学习-入门ml&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#机器学习-入门ml&#34;&gt;#&lt;/a&gt; 机器学习 - 入门 ML&lt;/h1&gt;
 &lt;p&gt;The article made by yogmas,beginning from 2022.1.17 With JoTong studio&lt;/p&gt;
 &lt;p&gt;基于&lt;strong&gt;吴恩达&lt;/strong&gt;机器学习的学习笔记&lt;/p&gt;
