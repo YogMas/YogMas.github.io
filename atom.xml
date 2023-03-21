@@ -3,7 +3,7 @@
     <id>http://s1mm.gitee.io/s1mm</id>
     <title>S1m</title>
     <link href="http://s1mm.gitee.io/s1mm" />
-    <updated>2022-12-15T11:20:48.761Z</updated>
+    <updated>2022-10-08T16:00:00.000Z</updated>
     <category term="C语言" />
     <category term="操作系统" />
     <category term="python" />
@@ -17,235 +17,8 @@
     <category term="计算机组成原理" />
     <category term="算法啊" />
     <category term="java" />
-    <entry>
-        <id>http://s1mm.gitee.io/s1mm/2022/12/15/devops/</id>
-        <title></title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/12/15/devops/"/>
-        <content type="html">&lt;h1 id=&#34;devopsdevelopment-operation&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devopsdevelopment-operation&#34;&gt;#&lt;/a&gt; DevOps(Development &amp;amp; Operation)&lt;/h1&gt;
-&lt;h2 id=&#34;devops概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devops概述&#34;&gt;#&lt;/a&gt; DevOps 概述&lt;/h2&gt;
-&lt;p&gt;DevOps 产生的原因：将开发团队和运维团队之间复杂的工程&lt;strong&gt;自动化&lt;/strong&gt;，实现自动化构建，自动化测试，自动化部署，自动化监控&lt;/p&gt;
-&lt;h3 id=&#34;devops周期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#devops周期&#34;&gt;#&lt;/a&gt; DevOps 周期&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/DevOps%E5%91%A8%E6%9C%9F.png&#34; alt=&#34;DevOps周期&#34;&gt;&lt;/p&gt;
-&lt;p&gt;整个过程的流程如下：指定任务 (PLAN)-&amp;gt; 上传代码到代码仓库 (CODE)-&amp;gt; 构建代码 (BUILD)-&amp;gt; 测试代码 (TEST)-&amp;gt; 发布到运维 (DEPLOY)-&amp;gt; 容器部署与编排 (OPERATE)-&amp;gt; 监控 (MONITOR)&lt;/p&gt;
-&lt;p&gt;Jenkins 为&lt;strong&gt;最核心的部件&lt;/strong&gt;，Jenkins 会自动进行构建测试部署，开发人员只需要关注代码是不是成功提交到代码仓库&lt;/p&gt;
-&lt;p&gt;DevOps 强调 高效团队之间通过&lt;strong&gt;自动化&lt;/strong&gt;的工具协作和沟通来完成软件的生命周期管理，从而&lt;strong&gt;更快&lt;/strong&gt;，&lt;strong&gt; 更频繁&lt;/strong&gt;地交付&lt;strong&gt;更稳定&lt;/strong&gt;的软件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/DevOps%E6%B5%81%E7%A8%8B.png&#34; alt=&#34;DevOps流程&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git&#34;&gt;#&lt;/a&gt; Git&lt;/h2&gt;
-</content>
-        <updated>2022-12-15T11:20:48.761Z</updated>
-    </entry>
-    <entry>
-        <id>http://s1mm.gitee.io/s1mm/2022/11/22/css-xin/</id>
-        <title></title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/11/22/css-xin/"/>
-        <content type="html">&lt;h1 id=&#34;css新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css新&#34;&gt;#&lt;/a&gt; CSS (新)&lt;/h1&gt;
-&lt;p&gt;复习 (好吧 太久没用忘了 其实是重新学习过程) CSS 时记忆的笔记&lt;/p&gt;
-&lt;h2 id=&#34;定位position&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位position&#34;&gt;#&lt;/a&gt; 定位 (position)&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;static: 正常流定位&lt;/li&gt;
-&lt;li&gt;relative: 相对定位&lt;/li&gt;
-&lt;li&gt;absolute,fixed: 绝对定位&lt;/li&gt;
-&lt;li&gt;sticky: 粘性定位&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;static正常流定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static正常流定位&#34;&gt;#&lt;/a&gt; Static 正常流定位&lt;/h3&gt;
-&lt;p&gt;按照从上到下文档刷新的方式，就是最默认的定位方式&lt;/p&gt;
-&lt;h3 id=&#34;relative相对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#relative相对定位&#34;&gt;#&lt;/a&gt; relative 相对定位&lt;/h3&gt;
-&lt;p&gt;相对于原位置的定位，可以相对于原位置进行位置的移动&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;相对定位会保留原有的样式&lt;/strong&gt;，意思就是说相对定位移动后，原来那个位置的样式，不会被覆盖，可以理解为被隐藏了但是还在&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;relative&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;absolute绝对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#absolute绝对定位&#34;&gt;#&lt;/a&gt; absolute 绝对定位&lt;/h3&gt;
-&lt;p&gt;absolute 是相对于上一个&lt;strong&gt;非 static 定位&lt;/strong&gt;的祖宗节点的位置&lt;/p&gt;
-&lt;p&gt;意思就是说 absolute 会向上找，找到一个不会 static 定位的祖宗节点 (最上面是&lt;strong&gt; body&lt;/strong&gt;),top 相当于距离这个父节点顶部的距离，其他类似&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;absolute&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
-&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;fixed固定定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fixed固定定位&#34;&gt;#&lt;/a&gt; fixed 固定定位&lt;/h3&gt;
-&lt;p&gt;fixed 是相对于&lt;strong&gt;整个视窗&lt;/strong&gt;的位移，也是固定不变的&lt;/p&gt;
-&lt;h3 id=&#34;static粘性定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static粘性定位&#34;&gt;#&lt;/a&gt; static 粘性定位&lt;/h3&gt;
-&lt;p&gt;当粘性定位的盒子的&lt;strong&gt;真实位置&lt;/strong&gt;在视窗内部的时候，他是正常显示的，但是当他要脱离视窗的时候，他会像固定定位一样，导致不脱离视窗&lt;/p&gt;
-&lt;h2 id=&#34;浮动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动&#34;&gt;#&lt;/a&gt; 浮动&lt;/h2&gt;
-&lt;p&gt;块是会自动换行的，加上 float 之后，可以放在一行的会放在一行，一行无法放下时再进行换行&lt;/p&gt;
-&lt;p&gt;新的未浮动块会在浮动块的上方而不是排布在后方，要排布在后方可以清除浮动块的影响 使用 clear&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left
-&lt;span class=&#34;token property&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left/right/both&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;flex布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flex布局&#34;&gt;#&lt;/a&gt; flex 布局&lt;/h2&gt;
-&lt;p&gt;弹性布局，也就是当拉伸视窗的时候，布局随着视窗的改变会自动变化&lt;/p&gt;
-&lt;p&gt;定义在&lt;strong&gt;父节点盒子上&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;flex-direction&lt;/code&gt; ： 属性指定了内部元素是如何在 flex 容器中&lt;strong&gt;布局&lt;/strong&gt;的，&lt;strong&gt;定义了主轴的方向&lt;/strong&gt; (正方向或反方向)。
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;row&lt;/code&gt; :flex 容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;row-reverse&lt;/code&gt; : 表现和 row 相同，但是置换了主轴起点和主轴终点。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;column&lt;/code&gt; :flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;column-reverse&lt;/code&gt; : 表现和 column 相同，但是置换了主轴起点和主轴终点&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;flex-wrap&lt;/code&gt; : 指定 flex 元素&lt;strong&gt;单行显示还是多行显示&lt;/strong&gt;。如果允许换行，这个属性允许你控制行的堆叠方向。
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;nowrap&lt;/code&gt; : 默认值。不换行。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;wrap&lt;/code&gt; : 换行，第一行在上方。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;wrap-reverse&lt;/code&gt; : 换行，第一行在下方。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;flex-flow&lt;/code&gt; : &lt;code&gt;flex-direction&lt;/code&gt;  和  &lt;code&gt;flex-wrap&lt;/code&gt;  的简写。默认值为： &lt;code&gt;row nowrap&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;justify-content&lt;/code&gt; : 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。也就是&lt;strong&gt;控制横向对齐方式&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：默认值。左对齐。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：右对齐。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;space-between&lt;/code&gt; ：左右两段对齐。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;space-around&lt;/code&gt; ：在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;space-evenly&lt;/code&gt; ：flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;align-items&lt;/code&gt; ：控制&lt;strong&gt;纵轴 (交叉轴&lt;/strong&gt;对齐)
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：元素向主轴起点对齐。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：元素向主轴终点对齐。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;center&lt;/code&gt; ：元素在侧轴居中。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;stretch&lt;/code&gt; ：弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;align-content&lt;/code&gt; : 与 &lt;code&gt;align-items&lt;/code&gt;  类似但是有以下区别
-&lt;ul&gt;
-&lt;li&gt;前者会均匀分布，后者会使所有行紧贴在一起&lt;/li&gt;
-&lt;li&gt;当只有一行的时候，前者仍然会居中，后者会失去居中&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;定义在&lt;strong&gt; flex 盒子内部元素中&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;order&lt;/code&gt; : 定义 &lt;code&gt;flex&lt;/code&gt;  项目的顺序，值越小越靠前。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;flex-grow&lt;/code&gt; :CSS 属性 flex-grow CSS 设置 flex 项主尺寸 的 flex 增长系数。&lt;strong&gt;负值无效，默认为 0。&lt;/strong&gt; &lt;strong&gt;也就是当视窗变大的时候 块也等比例变大&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;flex-shrink&lt;/code&gt; : 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。&lt;strong&gt;负值无效，默认为 1。&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;flex-basis&lt;/code&gt; : 设置默认宽度，&lt;strong&gt; 优先级大于默认 width&lt;/strong&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;flex&lt;/code&gt; : &lt;code&gt;flex-grow&lt;/code&gt; 、 &lt;code&gt;flex-shrink&lt;/code&gt; 、 &lt;code&gt;flex-basis&lt;/code&gt;  的缩写。&lt;/p&gt;
-&lt;p&gt;常用取值： &lt;code&gt;flex: 1 1 auto&lt;/code&gt;        &lt;code&gt;flex: 0 0 auto&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <updated>2022-11-22T13:28:09.377Z</updated>
-    </entry>
-    <entry>
-        <id>http://s1mm.gitee.io/s1mm/2022/11/19/latex/</id>
-        <title></title>
-        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2022/11/19/latex/"/>
-        <content type="html">&lt;h1 id=&#34;latex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#latex&#34;&gt;#&lt;/a&gt; Latex&lt;/h1&gt;
-&lt;p&gt;latex 命令多采用 &lt;code&gt;\   []{}&lt;/code&gt;  的格式&lt;/p&gt;
-&lt;p&gt;基本结构&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;UTF8&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;ctexart&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;字体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体&#34;&gt;#&lt;/a&gt; 字体&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\textbf {文本内容}&lt;/code&gt; : 加粗文本内容&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\textit {文本内容}&lt;/code&gt; : 设置斜体&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\underline {文本内容}&lt;/code&gt; : 设置下划线&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;章和节&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#章和节&#34;&gt;#&lt;/a&gt; 章和节&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;切换段落需要输入两个换行符 也就是按两次回车  一个换行符仅仅会显示一个空格&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\part {部名称}&lt;/code&gt; : 表示书籍中的第几部&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\chapter {章节名称}&lt;/code&gt;  通常用于表示章节中的第几章，大于 chapter&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\section {章节名称}&lt;/code&gt; : 开启一个新的章节&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\subsection {章节名称}&lt;/code&gt; : 创建下一级的章节，要创建更下一级的章节就多加个 sub&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片&#34;&gt;#&lt;/a&gt; 图片&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;第一步要先引用包  &lt;code&gt;\usepackage{grathicx}&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;\includegraphics [可选参数]{图片文件名字}&lt;/code&gt; : 在当前位置添加一张图片  可以省略图片后的扩展名称&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;width=0.5\textwidth&lt;/code&gt; :&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;给图片添加标题&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;    放在figure中
-&lt;span class=&#34;token function selector&#34;&gt;\centering&lt;/span&gt;   居中显示
-&lt;span class=&#34;token function selector&#34;&gt;\includegraphicx&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;head&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;token function selector&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;哈哈哈&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;       标题名称
-&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表&#34;&gt;#&lt;/a&gt; 列表&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;切换到列表中的环境&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;无序列表:&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;itemize&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项1
-&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项2
-&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;itemize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有序列表&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项1
-&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项2
-&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;数学公式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数学公式&#34;&gt;#&lt;/a&gt; 数学公式&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;行内公式: &lt;code&gt;$   $&lt;/code&gt;  在行内直接显示公式&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;单独显示一行公式&lt;/p&gt;
-&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;equation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-
-&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;quation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-
-可以简写为
-&lt;span class=&#34;token equation string&#34;&gt;\[
-
-\]&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;公式常用指令&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;\over&lt;/code&gt; : 表示分数  分子在前 分母在后&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\varphi&lt;/code&gt; : 小写的 φ&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\phi&lt;/code&gt; : 大写的 φ&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可以使用在线公式编辑器和 mathpix&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;http://latex.codecogs.com/eqneditor/editor.php&#34;&gt;latex.codecogs.com/eqneditor/editor.php&lt;/a&gt; 在线公式编辑器 也可以快速查阅公式的语法&lt;/p&gt;
-&lt;h2 id=&#34;表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格&#34;&gt;#&lt;/a&gt; 表格&lt;/h2&gt;
-&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tabular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;传入参数|参数&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; c表示居中 l表示靠左 多少个字母就表示多少列    p&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;列宽&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; 单独指定每一列的宽度
-&lt;span class=&#34;token function selector&#34;&gt;\hline&lt;/span&gt;
-1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 2 ^ 3 &lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;
-&lt;span class=&#34;token function selector&#34;&gt;\hline&lt;/span&gt;    水平方向边框
-1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 3 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 2 &lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;      每一列数据用&lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt;分割
-				每一行的数据用&lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;分割
-				
-&lt;span class=&#34;token function selector&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;表格的标题&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
-&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tabular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-</content>
-        <updated>2022-11-19T14:06:27.936Z</updated>
-    </entry>
+    <category term="Latex" />
+    <category term="课内课程" />
     <entry>
         <id>http://s1mm.gitee.io/s1mm/2022/10/09/suan-fa/</id>
         <title>算法</title>
@@ -2878,8 +2651,559 @@ props&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#
 &lt;p&gt;localStorage 一直存储在浏览器&lt;/p&gt;
 &lt;p&gt;sessionstorage 关闭浏览器数据就消失&lt;/p&gt;
 &lt;h4 id=&#34;组件自定义事件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#组件自定义事件&#34;&gt;#&lt;/a&gt; 组件自定义事件&lt;/h4&gt;
-&lt;h5 id=&#34;绑定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#绑定&#34;&gt;#&lt;/a&gt; 绑定&lt;/h5&gt;
-&lt;h5 id=&#34;解绑&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解绑&#34;&gt;#&lt;/a&gt; 解绑&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一种组件间的通信方式，适用于 &lt;strong&gt;子组件 ===&amp;gt; 父组件&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二种方式，在父组件中：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;&amp;lt;Demo ref=&#34;xxx&#34;/&amp;gt;
+.......
+mounted () {
+	this.$ref.xxx.$on(&#39;自定义事件&#39;,this.test)
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果想让自定义时间只能触发一次，可以使用 &lt;code&gt;once&lt;/code&gt;  修饰符，或者 &lt;code&gt;$once&lt;/code&gt;  方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;触发自定义事件: &lt;code&gt;this.$emit(&#39;自定义事件&#39;,数据)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解绑自定义事件: &lt;code&gt;this.$off(&#39;自定义事件&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组件上也可以绑定原生 DOM 事件，需要使用 &lt;code&gt;native&lt;/code&gt;  修饰符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意：通过 this.&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;refs.xxx.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;on (‘自定义事件’, 回调函数) 绑定自定义事件时，回调&lt;strong&gt;要么配置在 methods 中，要么用箭头函数&lt;/strong&gt;，否则 this 指向会出问题！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;全局事件总线globaleventbus&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局事件总线globaleventbus&#34;&gt;#&lt;/a&gt; 全局事件总线 (GlobalEventBus)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;可以实现任意&lt;strong&gt;组件之间的通信&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装全局事件总线:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;beforecreate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$bus &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt; 
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+	&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用全局事件总线:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;接受数据：A 组件想接受数据，则在 A 组件中给 $bus 绑定自定义事件，事件的&lt;strong&gt;回调在 A 组件自身，&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;methods() {
+	demo(data){......}
+}
+......
+mounted() {
+	this.$bus.$on(&#39;xxx&#39;,this.demo)
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提供数据:this.&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;bus.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;emit (‘xxx’, 数据)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最好在 beforeDestroy 钩子中，用 $off 解绑&lt;strong&gt;当前组件所用到的&lt;/strong&gt;事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;消息订阅与发布_pubsub&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#消息订阅与发布_pubsub&#34;&gt;#&lt;/a&gt; 消息订阅与发布_pubsub&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一种组件间通信的方式，适用于&lt;strong&gt;任意组件间通信&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用步骤:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装 pubsub: &lt;code&gt;npm i pubsub-js&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;引入:  &lt;code&gt;import pubsub from &#39;pubsub-js&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接受数据: A 组件想接收数据，则在 A 组件中订阅消息，订阅的&lt;strong&gt;回调在 A 组件自身&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token function&#34;&gt;methods&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;msgName&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;data&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;token function&#34;&gt;mounted&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pubId &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; pubsub&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;xxx&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;demo&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//订阅消息&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提供数据:  &lt;code&gt;pubsub.public(&#39;xxx&#39;,数据)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最好在 beforeDestroy 钩子中，用 Pubsub.unsubscibe (pubId) 取消订阅&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;nexttick&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nexttick&#34;&gt;#&lt;/a&gt; nextTick&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;语法:  &lt;code&gt;this.$nextTick(function () { 代码})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：在下一次 DOM 更新结束后执行其指定的回调函数&lt;/li&gt;
+&lt;li&gt;什么时候用：当改变数据后，要基于更新后的新 DOM 进行某些操作时，要在 nextTick 所指定的回调函数中执行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;过渡与动画&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过渡与动画&#34;&gt;#&lt;/a&gt; 过渡与动画&lt;/h4&gt;
+&lt;p&gt;暂放&lt;/p&gt;
+&lt;h3 id=&#34;vue中的ajax&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue中的ajax&#34;&gt;#&lt;/a&gt; Vue 中的 ajax&lt;/h3&gt;
+&lt;h4 id=&#34;vue脚手架配置代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue脚手架配置代理&#34;&gt;#&lt;/a&gt; Vue 脚手架配置代理&lt;/h4&gt;
+&lt;h5 id=&#34;方法一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法一&#34;&gt;#&lt;/a&gt; 方法一&lt;/h5&gt;
+&lt;p&gt;​	在 Vue.config.js 中添加如下配置:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;devServer&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	proxy&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;http://localhost:5000&#34;&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说明:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 优点:配置简单,请求资源时直接发给前端(8080)即可
+1. 缺点:不能配置多个代理,不能灵活的控制请求是否走代理.
+1. 工作方式:若按照上述配置代理,当请求了前端不存在的资源时,那么该请求会转发给服务器(优先匹配前端资源)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;方法二&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法二&#34;&gt;#&lt;/a&gt; 方法二&lt;/h5&gt;
+&lt;p&gt;编写 Vue.config.js 配置具体代理规则:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;moduel&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;exports &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	devServer&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		proxy&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;token string&#34;&gt;&#39;/api1&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//匹配所有以&#39;/api1/开头的请求路径&lt;/span&gt;
+				target&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;http://localhost:5000&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//代理目标的基础路径&lt;/span&gt;
+                changeOrigin&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+                pathRewrite&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;^api1&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;token string&#34;&gt;&#39;/api2&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//匹配所有以&#39;/api2/开头的请求路径&lt;/span&gt;
+				target&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;http://localhost:5000&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//代理目标的基础路径&lt;/span&gt;
+                changeOrigin&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+                pathRewrite&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;^api2&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说明:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 优点：可以配置多个代理，且可以灵活的控制请求是否走代理。
+1. 缺点：配置略微繁琐，请求资源时必须加前缀
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;vue项目中常用的ajax库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue项目中常用的ajax库&#34;&gt;#&lt;/a&gt; vue 项目中常用的 ajax 库&lt;/h4&gt;
+&lt;h5 id=&#34;axios库使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#axios库使用&#34;&gt;#&lt;/a&gt; axios 库使用&lt;/h5&gt;
+&lt;p&gt;安装  &lt;code&gt;npm i axios&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//先引入&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; axios &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;axios&#39;&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//使用&lt;/span&gt;
+  axios&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token template-string&#34;&gt;&lt;span class=&#34;token template-punctuation string&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;token template-punctuation string&#34;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;
+                &lt;span class=&#34;token parameter&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                    
+                &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+                &lt;span class=&#34;token parameter&#34;&gt;error&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                    
+                &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;vue-resource&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue-resource&#34;&gt;#&lt;/a&gt; vue-resource&lt;/h5&gt;
+&lt;p&gt;vue 自身的插件库，也封装了 ajax, 现在不常用 推荐还是使用 axios&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;this.$http.get(&#39; &#39;).then( Response =&amp;gt; { }, error =&amp;gt; {})&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;slot插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#slot插槽&#34;&gt;#&lt;/a&gt; Slot 插槽&lt;/h4&gt;
+&lt;h5 id=&#34;默认插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#默认插槽&#34;&gt;#&lt;/a&gt; 默认插槽&lt;/h5&gt;
+&lt;p&gt;slot 标签中包含的就是父组件中传入子组件标签中的内容&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//父组件中
+&amp;lt;Category&amp;gt;
+	&amp;lt;h1&amp;gt; 你好 &amp;lt;h1&amp;gt;
+&amp;lt;/Category&amp;gt;
+
+//Category标签中
+&amp;lt;slot&amp;gt;&amp;lt;/slot&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;具名插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#具名插槽&#34;&gt;#&lt;/a&gt; 具名插槽&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//父组件中
+&amp;lt;Category&amp;gt;
+	&amp;lt;h1 slot=&#34;demo&#34;&amp;gt; 你好 &amp;lt;h1&amp;gt;
+	&amp;lt;h1 slot=&#34;demo2&#34;&amp;gt; 你好啊 &amp;lt;h1&amp;gt;
+&amp;lt;/Category&amp;gt;
+
+//Category标签中
+&amp;lt;slot name=&#34;demo&#34;&amp;gt;&amp;lt;/slot&amp;gt;
+&amp;lt;slot name=&#34;demo2&#34;&amp;gt;&amp;lt;/slot&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;slot&lt;/code&gt;  与 &lt;code&gt;name&lt;/code&gt;  相&lt;strong&gt;对应&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;template 标签中用 v-slot&lt;/p&gt;
+&lt;h5 id=&#34;作用域插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#作用域插槽&#34;&gt;#&lt;/a&gt; 作用域插槽&lt;/h5&gt;
+&lt;p&gt;数据在组件自身，但根据数据生成的机构需要组件的使用者来决定&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;&amp;lt;Category&amp;gt;
+&amp;lt;template scope=&#34;nihao&#34;&amp;gt;
+	&amp;lt;h1&amp;gt; {{nihao.xxx}} &amp;lt;h1&amp;gt;  //相当于 games.xxx
+	&amp;lt;h1&amp;gt; 你好啊 &amp;lt;h1&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;/Category&amp;gt;
+
+//Category标签中
+&amp;lt;slot :game=&#34;games&#34;&amp;gt;&amp;lt;/slot&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;vuex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vuex&#34;&gt;#&lt;/a&gt; Vuex&lt;/h3&gt;
+&lt;p&gt;在 Vue 中实现集中式数据管理的一个 Vue&lt;strong&gt; 插件&lt;/strong&gt;，对 Vue 应用中多个组件的共享状态进行集中式的管理 (读 / 写), 也是一种组件间通信的方式，且使用于&lt;strong&gt;任何组件间&lt;/strong&gt;通信&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/vuex.png&#34; alt=&#34;vuex&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;搭建vuex环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搭建vuex环境&#34;&gt;#&lt;/a&gt; 搭建 Vuex 环境&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//在main.js中 传入store
+
+import Vue from &#34;vue&#34;;
+import App from &#34;./App.vue&#34;;
+import store from &#34;./store/index&#34;;
+
+new Vue({
+  render: (h) =&amp;gt; h(App),
+  store,
+  beforeCreate() {
+    Vue.prototype.$bus = this;
+  },
+}).$mount(&#34;#app&#34;);
+
+//在store文件夹中store.js中
+
+import Vue from &#34;vue&#34;;
+import Vuex from &#34;vuex&#34;;
+
+Vue.use(Vuex);
+//准备 actions 用于响应组件中的动作
+
+const actions = {} //响应组件中的数据
+const mutations = {} //用于操作数据
+const state = {} //存储数据
+
+const store = new Vuex.Store({actions,mutations,state}) //创建store
+
+export default store&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;基本使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本使用&#34;&gt;#&lt;/a&gt; 基本使用&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;组件读取 Vuex 中的数据:  &lt;code&gt;$store.state.sum&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;组件修改 vuex 中的数据:  &lt;code&gt;$store.dispatch(&#39;action中的方法名&#39;,数据)&lt;/code&gt;  或者 &lt;code&gt;$store.commit(&#39;mutations中的方法名&#39;,数据)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;getters配置项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#getters配置项&#34;&gt;#&lt;/a&gt; getters 配置项&lt;/h4&gt;
+&lt;p&gt;用于对 state 中的数据进行加工，相当于 vuex 中的计算属性&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; getters &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;bigSum&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; state&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sum &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;mapstate与mapgetters&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mapstate与mapgetters&#34;&gt;#&lt;/a&gt; mapState 与 mapGetters&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;mapState&lt;/strong&gt; 方法：帮助映射 state 中的数据成为计算属性&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;computed: {
+	//对象写法
+	...mapState({sum:&#39;sum&#39;})
+	//数组写法
+	...mapState([&#39;sum&#39;])
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mapGetters 方法：帮助我们映射 getters 中的数据成为计算属性&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;computed: {
+	//对象写法
+	...mapGetters({bigSum:&#39;bigSum&#39;})
+	//数组写法
+	...mapGetters([&#39;bigSum&#39;])
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;mapactions和mapmutations&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mapactions和mapmutations&#34;&gt;#&lt;/a&gt; mapActions 和 mapMutations&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mapActions&lt;/code&gt; : 帮助我们生成与 &lt;code&gt;actions&lt;/code&gt;  对话的方法，即：包含 &lt;code&gt;$store.dispatch(xxx)&lt;/code&gt;  的函数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;methods: {
+	//对象
+	mapActions({increment:&#34;jia&#34;})
+	//数组
+	mapActions([&#39;jia&#39;])
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mapMutations&lt;/code&gt; : 帮助生成与 &lt;code&gt;mutations&lt;/code&gt;  对话的方法&lt;/p&gt;
+&lt;p&gt;类似 略&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;，现在参数通过在标签中事件触发传递 &lt;code&gt;@click=&#34;increment(n)&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;vue模块化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue模块化&#34;&gt;#&lt;/a&gt; Vue 模块化&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;目的：让代码更好维护，让多种数据分类更加准确&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改 store.js&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;const countAbout = {
+	namespaced:true,
+	state:{}.
+	actions:{},
+	mutations:{},
+	getters:{
+	
+	}
+}
+
+const store = new Vuex.Store({moduels:{countAbout}})&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后，组件中读取 state 数据&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己读取
+this.$store.state.personAbout.list
+//方式二：借助mapState读取
+...mapState(&#39;personAbout&#39;,[&#39;sum&#39;,&#39;school&#39;,&#39;subject&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后读取 getters 中的数据&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己读取
+this.$store.getters[&#39;personAbout/firstPersonName&#39;]
+//方式二：借助mapGetters
+...mapGetters(&#39;countAbout&#39;,[&#39;bigSum&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后，组件中调用 dispatch&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己直接dispatch
+this.$store.dispatch(&#39;personAbout/addPerson&#39;,person)
+//方式二：借助mapActions读取
+...mapActions(&#39;countAbout&#39;,[&#39;jia&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后，组件中调用 commit\&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己直接commit
+this.$store.commit(&#39;personAbout/ADD_PERSON&#39;,person)
+//方式二：借助mapActions读取
+...mapMutations(&#39;mapMutations&#39;,[&#39;JIA&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;vue-router路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue-router路由&#34;&gt;#&lt;/a&gt; Vue-Router 路由&lt;/h3&gt;
+&lt;p&gt;Vue 的一个插件库，实现 Single Page Application&lt;/p&gt;
+&lt;h4 id=&#34;1基本使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本使用&#34;&gt;#&lt;/a&gt; 1. 基本使用&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;code&gt;vue-router&lt;/code&gt; , 命令:  &lt;code&gt;npm i vue-router&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应用插件  &lt;code&gt;Vue.use(VueRouter)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编写 router 配置项&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//创建整个应用的路由&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; VueRouter &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;vue-router&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; AboutView &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;../components/AboutView&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; HomeView &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;../components/HomeView&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//创建一个路由器&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;VueRouter&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+  routes&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+      path&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/about&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      component&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; AboutView&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+      path&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/home&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      component&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; HomeView&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实现切换&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;router-link class=&#34;list-group-item&#34; active-class=&#34;active&#34; to=&#34;/about&#34;&amp;gt;About&amp;lt;/router-link&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指定展示位置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;router-view&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;2几个注意点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2几个注意点&#34;&gt;#&lt;/a&gt; 2. 几个注意点&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;路由组件通常放在 pages 文件夹，一般组件通常存放在 components 文件夹&lt;/li&gt;
+&lt;li&gt;通过切换，隐藏了的路由组件，默认是被销毁了&lt;/li&gt;
+&lt;li&gt;每个组件都有自己的 $route 属性，里面存储着自己的路由信息&lt;/li&gt;
+&lt;li&gt;整个应用只有一个 router, 可以通过组件的 $router 属性获取&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;3嵌套路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3嵌套路由&#34;&gt;#&lt;/a&gt; 3. 嵌套路由&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置路由规则，使用&lt;strong&gt; children&lt;/strong&gt; 配置项&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;routes:[
+	{
+		path:&#39;/home&#39;
+		component:AboutView,
+		children:[
+			{
+				path:&#39;news&#39;,
+				component:NewsView
+			}
+		]
+	}
+]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;跳转 (要写&lt;strong&gt;完整路径&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;router-link to=&#34;/home/news&#34;&amp;gt; &amp;lt;router-link&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;4路由传参&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4路由传参&#34;&gt;#&lt;/a&gt; 4. 路由传参&lt;/h4&gt;
+&lt;h5 id=&#34;41-query参数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#41-query参数&#34;&gt;#&lt;/a&gt; 4.1 query 参数&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;传递参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;跳转并携带query参数,to的字符串写法
+&amp;lt;router-link :to=&#34;/home/message/detail?id=666&amp;amp;title=你好&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;
+
+to的对象写法
+&amp;lt;router-link :to=&#34;{
+	path:&#39;/home/message/detail&#39;,
+	query:{
+		id:666,
+		title:&#39;你好&#39;,
+	}
+}&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接收参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;$route.query.id
+$route.query.title&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;不打扰路由器的配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;42-命名路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#42-命名路由&#34;&gt;#&lt;/a&gt; 4.2 命名路由&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;作用：简化路由的跳转&lt;/li&gt;
+&lt;li&gt;如何使用:
+&lt;ol&gt;
+&lt;li&gt;给路由加上 &lt;code&gt;name:xxx&lt;/code&gt;  属性，给路由命名&lt;/li&gt;
+&lt;li&gt;在跳转的 to 的对象写法中 不写 path 直接写 &lt;code&gt;name:xxx&lt;/code&gt;  即可实现跳转&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;43-params参数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#43-params参数&#34;&gt;#&lt;/a&gt; 4.3 params 参数&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置路由，声明接受 params 参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;routes:[
+	{
+		path:&#39;/home&#39;
+		component:AboutView,
+		children:[
+			{
+				path:&#39;news/:id/:title&#39;,
+				component:NewsView
+			}
+		]
+	}
+]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传递参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;跳转并携带query参数,to的字符串写法
+&amp;lt;router-link :to=&#34;/home/message/detail/666/你好&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;
+
+to的对象写法
+&amp;lt;router-link :to=&#34;{
+	name:xxx      
+	params:{
+		id:666,
+		title:&#39;你好&#39;,
+	}
+}&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;使用 params 传递参数 不能使用 path 直接使用 name&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接受参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;$route.params.id
+$route.params.title&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;44-路由的props配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#44-路由的props配置&#34;&gt;#&lt;/a&gt; 4.4 路由的 props 配置&lt;/h5&gt;
+&lt;p&gt;让路由组件更加方便地收到参数&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;props 的第一种写法 (对象)&lt;/p&gt;
+&lt;p&gt;该写法中的所有 key-value 都会以 props 的形式传给 Detail 组件&lt;/p&gt;
+&lt;p&gt;死数据 不常用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;props 的第二种写法，值为布尔值&lt;/p&gt;
+&lt;p&gt;若布尔值为真，就会把该路由组件收到的所有 params 组件以 props 的形式传给组件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;props 的第三种写法，值为函数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;props($route) {
+	return {id:$route.query.id,title:$route.query.title}
+}
+
+props({query:{id,title}})
+{
+ return {id,title}
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;5router-link的replace属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5router-link的replace属性&#34;&gt;#&lt;/a&gt; 5.router-link 的 replace 属性&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;作用：控制路由跳转时操作浏览器历史记录的模式&lt;/li&gt;
+&lt;li&gt;浏览器历史记录有 2 种模式  &lt;code&gt;push&lt;/code&gt;  追加和 &lt;code&gt;replace&lt;/code&gt;  替换 默认为 &lt;code&gt;push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;&amp;lt;router-link&amp;gt;&amp;lt;/router-link&amp;gt;&lt;/code&gt;  标签加上 replace 则可以更改为 replace 模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;6-编程式路由导航&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-编程式路由导航&#34;&gt;#&lt;/a&gt; 6. 编程式路由导航&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;作用：不借助 &lt;code&gt;&amp;lt;router-link&amp;gt;&lt;/code&gt;  进行路由跳转，让路由跳转更灵活&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编码:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	name&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;xxx&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    params&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    name&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;xxx&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    params&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;forward&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;go&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;7-缓存路由组件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7-缓存路由组件&#34;&gt;#&lt;/a&gt; 7. 缓存路由组件&lt;/h4&gt;
+&lt;p&gt;让不展示的组件保持挂载，以保留其中的数据&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;keep-alive&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;组件名&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;:include&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;[&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;xxx&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;,&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;yyy&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;]&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;router-link&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;router-link&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;keep-alive&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;8-两个新的生命周期钩子&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8-两个新的生命周期钩子&#34;&gt;#&lt;/a&gt; 8. 两个新的生命周期钩子&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;路由组件独有&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;activated(){}&lt;/code&gt; : 组件被激活时调用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deactivated() {}&lt;/code&gt; : 组件失活时调用&lt;/p&gt;
+&lt;h4 id=&#34;9路由守卫&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9路由守卫&#34;&gt;#&lt;/a&gt; 9. 路由守卫&lt;/h4&gt;
+&lt;h5 id=&#34;91-全局前置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#91-全局前置&#34;&gt;#&lt;/a&gt; 9.1 全局前置&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;初始化的时候&lt;/strong&gt;调用&lt;/p&gt;
+&lt;p&gt;每次&lt;strong&gt;切换路由前&lt;/strong&gt;调用&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;beforeEach&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;to&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;from&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;next&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// to 去哪个路由 to.path to.name&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// from 来自哪个路由 &lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// next() 允许通行&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;meta:{isAuth:true}&lt;/code&gt; : 在路由器中 meta 中添加数据，表示是否需要鉴权&lt;/p&gt;
+&lt;h5 id=&#34;92-全局后置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#92-全局后置&#34;&gt;#&lt;/a&gt; 9.2 全局后置&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;初始化的时候&lt;/strong&gt;调用&lt;/p&gt;
+&lt;p&gt;每次&lt;strong&gt;切换路由后&lt;/strong&gt;调用&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;afterEach&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;to&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// to 去哪个路由 to.path to.name&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// from 来自哪个路由 &lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;93-独享路由守卫&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#93-独享路由守卫&#34;&gt;#&lt;/a&gt; 9.3 独享路由守卫&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;beforeEneter: (to,from,next) =&amp;gt; {}&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;94-组件内路由守卫&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#94-组件内路由守卫&#34;&gt;#&lt;/a&gt; 9.4 组件内路由守卫&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;beforeRouteEnter(to,from,next)&lt;/code&gt; : 进入该组件时被调用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;beforeRouteLeave(to,from,next)&lt;/code&gt; : 离开该组件时被调用&lt;/p&gt;
+&lt;h4 id=&#34;10-history和hash模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-history和hash模式&#34;&gt;#&lt;/a&gt; 10. History 和 Hash 模式&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;mode:history&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;默认为 hash 模式 会带#&lt;/p&gt;
 &lt;h3 id=&#34;基础模板作者学习时候用来构建最基本html文件的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础模板作者学习时候用来构建最基本html文件的&#34;&gt;#&lt;/a&gt; 基础模板 (作者学习时候用来构建最基本 html 文件的)&lt;/h3&gt;
 &lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token doctype&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&#34;token doctype-tag&#34;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&#34;token name&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
@@ -4710,6 +5034,695 @@ Largest word: light&lt;/p&gt;
 </content>
         <category term="icoding答案" />
         <updated>2021-11-17T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/</id>
+        <title>计算机组成原理与结构</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/18/ji-suan-ji-zu-cheng-qi-mo-fu-xi/"/>
+        <content type="html">&lt;h1 id=&#34;计算机组成原理与结构重要知识点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机组成原理与结构重要知识点&#34;&gt;#&lt;/a&gt; &lt;strong&gt;《计算机组成原理与结构》重要知识点&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2 id=&#34;计算机结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机结构&#34;&gt;#&lt;/a&gt; 计算机结构&lt;/h2&gt;
+&lt;h3 id=&#34;第一章-概论&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一章-概论&#34;&gt;#&lt;/a&gt; 第一章 概论&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;冯。诺依曼体制&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据以二进制的形式存储&lt;/li&gt;
+&lt;li&gt;采用存储程序方式工作&lt;/li&gt;
+&lt;li&gt;规定计算机由五大功能部件 (运算器，存储期，控制器，输入输出系统) 组成，并规定这五大功能部件的功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;存储程序工作方式&lt;/p&gt;
+&lt;p&gt;事先编制程序，存储程序，自动连续运行程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;控制流？数据流？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;控制流：控制计算机工作的信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据流：计算机加工处理的对象&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;总线及其组成？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;能为多个部件分时共享的一组信息传送线路及相应的控制逻辑&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;模拟信号？数字信号？数字信号有哪两种？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模拟信号：&lt;strong&gt;随时间连续变化的电信号&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;数字信号:&lt;strong&gt; 在时间或空间上断续变化的电信号&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;电平：并行传送&lt;/li&gt;
+&lt;li&gt;脉冲：串行传送&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;什么是接口？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;部件与部件（指硬件或软件）之间的交接部分称为接口；&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;主机系统总线与 I/O 设备之间的交接部分称为 I/O 接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;基本字长？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参加一次定点运算的操作数的位数&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CPU 主频？时钟频率？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;是计算机的振荡器输出的脉冲序列的频率，是计算机中一切操作所依据的时间基准信号，其高低决定了计算机工做速度的快慢。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;是主频脉冲经分频后所形成的时钟脉冲序列的频率，两个相邻时钟脉冲之间的间隔时间是一个时钟周期时间，也称为节拍&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据通路宽度？数据传输率？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据总线一次能并行传送的数据位数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据总线每秒传送的数据量，也称为数据总线的带宽。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第二章-计算机中的信息表示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第二章-计算机中的信息表示&#34;&gt;#&lt;/a&gt; 第二章 计算机中的信息表示&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一个数值型数据的完整表示需三个方面？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用什么进位计数制，&lt;/li&gt;
+&lt;li&gt;如何处理带符号的数，如何表示符号&lt;/li&gt;
+&lt;li&gt;小数应该如何处理    定点和浮点表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;权、基数&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基数：计数值所用到的数字符号的个数，逢 R 进 1&lt;/li&gt;
+&lt;li&gt;权：表示不同数位上数值的大小的一个固定常数   12 中 2 的权为 1  1 的权为 10&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第三章-指令系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第三章-指令系统&#34;&gt;#&lt;/a&gt; 第三章 指令系统&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;数的定点表示与浮点表示？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定点表示：约定机器中所有数据的小数点位置固定不变，通常将数据表示为纯小数和纯整数&lt;/li&gt;
+&lt;li&gt;浮点表示:&lt;strong&gt; 把数的范围和精度分别表示的方法&lt;/strong&gt;，小数点的位置随比例因子的不同而在一定范围内可以自由浮动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指令？指令系统？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;指令：一系列按某种规律有序排列，能被 CPU 识别，执行的二进制代码&lt;/li&gt;
+&lt;li&gt;指令系统：一台计算机所能执行的全部指令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;寻址方式&lt;/p&gt;
+&lt;p&gt;① 立即寻址。在读取指令时也就从指令之中获得了操作数，即操作数包含在指令中。&lt;/p&gt;
+&lt;p&gt;② 直接寻址类。直接给出主存地址或寄存器编号，从 CPU 内或主存单元内读取操作数。&lt;/p&gt;
+&lt;p&gt;③ 间接寻址类。先从某寄存器中或主存中读取地址，再按这个地址访问主存以读取操作数。&lt;/p&gt;
+&lt;p&gt;④ 变址类。指令给出的是形式地址（不是最终地址），经过某种变换（例如相加、相减、高低位地址拼接等），才获得有效地址，据此访问主存储器以读取操作数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;何谓隐式 I/O 指令？其主要特点是什么？&lt;/p&gt;
+&lt;p&gt;所谓隐式 I/O 指令，就是用传送指令实现 I/O 操作，即针对统一编址，用传送指令访问 I/O 端口。不设专用 I/O 指令。其主要特点是借用内存传输指令实现 IO 操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第四章-中央处理器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第四章-中央处理器&#34;&gt;#&lt;/a&gt; 第四章 中央处理器&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;CPU 内部各寄存器的功能？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;数据寄存器mdr作为cpu和主存-外设之间信息传输的中转站用以弥补cpu和主存-外设之间操作速度上的差异&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据寄存器mdr作为cpu和主存-外设之间信息传输的中转站用以弥补cpu和主存-外设之间操作速度上的差异&#34;&gt;#&lt;/a&gt; 数据寄存器 MDR: 作为 CPU 和主存、外设之间信息传输的中转站，用以弥补 CPU 和主存、外设之间操作速度上的差异。&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指令寄存器（Instruction Register，IR）用来保存当前正在执行的一条指令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序计数器（Program Counter，PC）用来指出下一条指令在主存储器中的地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序状态字（Program Status Word，PSW）用来表征当前运算的状态及程序的工作方式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h4 id=&#34;数据地址寄存器mar用来保存当前cpu所访问的数据单元的地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据地址寄存器mar用来保存当前cpu所访问的数据单元的地址&#34;&gt;#&lt;/a&gt; 数据地址寄存器（MAR）: 用来保存当前 CPU 所访问的数据单元的地址&lt;/h4&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通用寄存器的功能是：当算术逻辑单元（ALU）执行算术或逻辑运算时，为 ALU 提供一个工作区。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据通路结构&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;单组内总线、分立寄存器结构&lt;/li&gt;
+&lt;li&gt;单组内总线、集成寄存器结构&lt;/li&gt;
+&lt;li&gt;多组内总线结构&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;**CPU 总线和数据通路结构：**ALU 为内部数据传送通路的中心、寄存器采用分立结构、内总线采用单向数据总线，与系统总线的连接通过 MAR、MDR 实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;何谓同步控制方式，何谓异步控制？有何主要特征？应用场合？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同步控制：各项操作由统一的时序信号进行同步控制&lt;/li&gt;
+&lt;li&gt;特点：时序关系比较简单，但在时间的利用上是不经济的&lt;/li&gt;
+&lt;li&gt;异步控制：各项操作按不同需求安排时间，不受统一时序控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;何谓主从设备，试举例说明&lt;/p&gt;
+&lt;p&gt;主设备：申请并掌控总线的设备 否则为从设备&lt;/p&gt;
+&lt;p&gt;当外设有信息传送后，DMA 申请并掌握总线线权后，DMA 则为主设备&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同步控制中如何引入异步应答的，试举例说明.&lt;/p&gt;
+&lt;p&gt;以固定时钟周期作为时序基础，引入应答思想&lt;/p&gt;
+&lt;p&gt;例如：8088 最大模式，用一根总线请求 / 应答实现总线权的转移&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;微程序控制思想的基本要点是什么？&lt;/p&gt;
+&lt;p&gt;微程序控制的基本思想是:&lt;/p&gt;
+&lt;p&gt;一条机器指令对应一段微程序&lt;br&gt;
+一段微程序包含多条微指令&lt;br&gt;
+一条微指令包含机器指令一步操作所需要的微命令&lt;br&gt;
+将 CPU 工作流程对应的每个微操作命令序列编写成微程序 (微程序由若干微指令组成、每条微指令对应一个或几个微操作命令), 所有的微程序存放一个只读存储器中；控制器自动按照微程序的逻辑顺序，逐条取出微指令并执行，以实现 CPU 工作流程的控制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;判断下面叙述是否正确，说明理由：串行加法器中的进位链是串行进位链，并行加法器中的进位链只有并行进位链。&lt;/p&gt;
+&lt;p&gt;并行加法器中的进位链可以并行串行结合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用的加法器进位链结构有哪几种&lt;/p&gt;
+&lt;p&gt;串行进位、并行进位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组合逻辑控制器、微程序控制器有何区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组合逻辑控制器：由硬连逻辑电路产生微命令的方式称为组合逻辑控制方式&lt;/li&gt;
+&lt;li&gt;微程序控制器：由微指令译码产生微命令的方式称为微程序控制方式。它的基本思想如下：将若干微命令编制成一条微指令，控制实现一步操作；将若干微指令组成一段微程序，解释执行一条机器指令；将微程序事先存放在控制存储器中，执行机器指令时再取出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组合逻辑控制器、微程序控制器的时序系统是如何划分的？&lt;/p&gt;
+&lt;p&gt;采用三级时序系统：工作周期、时钟周期 (节拍)、工作脉冲&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工作周期：FT、ST、DT、ET、DMAT、IT&lt;/li&gt;
+&lt;li&gt;时钟周期（节拍）：以访存时间作为一步操作时间&lt;/li&gt;
+&lt;li&gt;工作脉冲：同步定时脉冲控制定时操作，每个时钟周期结束时设置一个脉冲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;微命令、微操作、微指令、微指令周期、微程序？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;微命令：各项操作所需要的控制命令&lt;/strong&gt; /&lt;strong&gt; 控制各功能部件的电平和脉冲信号&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一条机器指令的执行对应一段微程序&lt;/p&gt;
+&lt;p&gt;一段微程序可包含多条微指令&lt;/p&gt;
+&lt;p&gt;一条微指令包含机器指令一步所需要的微命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;1 位全加器的结构及关系表达式&lt;/p&gt;
+&lt;p&gt;Ci = (ab) 与 (a 异或 b) Ci-1&lt;/p&gt;
+&lt;p&gt;三个输入量一个输出量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并行加法器中的串行进位链结构：Cn = Gn + PnCn-1&lt;/p&gt;
+&lt;p&gt;并行进位链结构：Cn = Gn + PnGn-1+ … + Pn…P1C0&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时序信号？时序系统？&lt;/p&gt;
+&lt;p&gt;时序信号：周期、节拍、脉冲&lt;/p&gt;
+&lt;p&gt;时序系统：产生时序信号的部件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第五章-存储子系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第五章-存储子系统&#34;&gt;#&lt;/a&gt; 第五章 存储子系统&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;主存、缓存、外存？&lt;/p&gt;
+&lt;p&gt;主存：CPU 可直接访问，存放 CPU 当前使用的指令和数据。其特点是：能随机访问、工作速度快、容量有限。&lt;/p&gt;
+&lt;p&gt;辅存（外存）：存放大量的后备程序和数据。特点：速度较慢、容量大。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高速缓存 Cache 用来存放什么内容？设置它的主要目的是什么？&lt;/p&gt;
+&lt;p&gt;高速缓冲存储器 (Cache)：存放 CPU 在当前一小段时间内多次使用的程序和数据，以缓解 CPU 和主存的速度差异。特点：速度很快、容量小。‘&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;存储介质？&lt;/p&gt;
+&lt;p&gt;（1）半导体存储器&lt;/p&gt;
+&lt;p&gt;静态存储器：利用双稳态触发器存储信息，功耗较大，速度快，做 Cache。&lt;/p&gt;
+&lt;p&gt;动态存储器：依靠电容上的电荷暂存信息，功耗较小，容量较大，速度较快适合做主存。&lt;/p&gt;
+&lt;p&gt;（2）磁表面存储器：磁带、存盘、硬盘&lt;/p&gt;
+&lt;p&gt;利用磁层上不同方向的磁化区域表示信息。特点：存储容量大；非破坏性读出、永久保存；读写速度比半导体存储器慢；适合用于外存。&lt;/p&gt;
+&lt;p&gt;（3）光盘存储器&lt;/p&gt;
+&lt;p&gt;利用光斑的有无存储信息，特点：容量大；非破坏性读出、永久保存；速度慢；适合用于外存。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;何谓随机存取？何谓顺序存取？何谓直接存取？请各试举一例。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可按地址访问存储器中的任一单元，与访问时间和单元地址无关，SRAM、DRAM&lt;/li&gt;
+&lt;li&gt;访问时读 / 写部件按顺序查找目标地址，访问时间与数据位置有关 - 磁带机&lt;/li&gt;
+&lt;li&gt;访问时读 / 写部件先直接指向一个小区域，再在该区域内顺序查找。访问时间与数据位置有关，如磁盘、硬盘、光盘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;静态存储器 SRAM、动态存储器 DRAM 存储原理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;静态存储器 SRAM (双极型、静态 MOS 型): 依靠双稳态电路内部交叉反馈机制，功耗较大，速度快，作 Cache、（六管单元构成 1 位，有 VCC 供电）非破坏性读出，读出后不需重写。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态存储器 DRAM：依靠电容存储电荷的原理存储信息，功耗较小，容量大，速度较快，作主存。（4 管单元、无 VCC 供电）四管单元是非破坏性读出，读出过程即实现刷新；需定期向电容补充电荷（动态刷新）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（单管单元，无 VCC）：单管单元是破坏性读出，读出后需重写&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;动态刷新分为哪几种情况，各有什么特点？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;集中刷新：2ms 内集中安排所有刷新周期。用于实时要求不高的场合&lt;/li&gt;
+&lt;li&gt;分散刷新：各刷新周期分散安排在存取周期中。造成主存利用率降低，用在低速系统中&lt;/li&gt;
+&lt;li&gt;异步刷新：刷新周期分散安排在 2ms 内。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;全地址译码方式？部分地址译码方式？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;全译码方式：将除了与芯片连接的地址以外的所有高位地址用于译码产生片选信号&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;部分译码方式&lt;/strong&gt;：将除了与芯片连接的地址外的部分高位地址用于译码产生片选信号（易出现地址重叠）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;刷新和重写的区别&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;刷新和重写的区别&lt;/strong&gt;：刷新是动态存储芯片，需补充电荷以保持原信息；重写是破坏性读出后重写，以恢复原来的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第六章-io系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第六章-io系统&#34;&gt;#&lt;/a&gt; 第六章 I/O 系统&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;系统总线上一般包含哪三组信息&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;控制信息&lt;/li&gt;
+&lt;li&gt;地址信息&lt;/li&gt;
+&lt;li&gt;数据信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;中断方式定义、实质、特点？&lt;/p&gt;
+&lt;p&gt;中断含义：CPU 暂时中止现行程序的执行，转去执行为某个随机事件服务的中断处理程序。处理完毕后自动恢复原程序的执行。&lt;/p&gt;
+&lt;p&gt;实质：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序切换
+&lt;ul&gt;
+&lt;li&gt;方法：保存断点、保护现场、恢复现场、返回断点&lt;/li&gt;
+&lt;li&gt;时间：一条指令结束时切换，保证程序的完整性&lt;br&gt;
+特点：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;随机性
+&lt;ul&gt;
+&lt;li&gt;随机发生的事态（按键、故障）&lt;/li&gt;
+&lt;li&gt;有意调用，随即请求与处理的事态（调用打印机）&lt;/li&gt;
+&lt;li&gt;随机插入的事态 (软中断指令可插入程序任何位置)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中断向量、中断向量表、向量地址？&lt;/p&gt;
+&lt;p&gt;中断类型码：每个中断源对应的编号&lt;/p&gt;
+&lt;p&gt;中断向量：中断服务程序入口地址&lt;/p&gt;
+&lt;p&gt;中断向量表：存放各中断服务程序的入口地址的单元&lt;/p&gt;
+&lt;p&gt;向量地址：访问中断向量表的地址码，可通过计算中断类型码得到&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;模型机中：向量地址 = 中断号 + 2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IBM PC 向量表：向量地址 = 中断号 * 4&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;何谓向量中断？何谓非向量中断？各有何优点和缺点？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;非向量中断：由软件查询提供服务程序入口地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;向量中断：由硬件直接提供服务程序入口地址&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单级中断，多级中断&lt;/p&gt;
+&lt;p&gt;中断处理：主要任务：CPU 执行中断服务程序&lt;/p&gt;
+&lt;p&gt;单级中断流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保护现场、中断服务处理、恢复现场、开中断、返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;多级中断流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保护现场&lt;/li&gt;
+&lt;li&gt;送新屏蔽字、开中断（禁止同级别或更低级别的请求，开发更高级别的请求）&lt;/li&gt;
+&lt;li&gt;中断服务处理&lt;/li&gt;
+&lt;li&gt;关中断&lt;/li&gt;
+&lt;li&gt;恢复现场及原屏蔽字&lt;/li&gt;
+&lt;li&gt;开中断&lt;/li&gt;
+&lt;li&gt;返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序直传方式定义、实质、特点？&lt;/p&gt;
+&lt;p&gt;依靠 CPU 直接执行相关的 IO 程序来实现数据的输入和输出的控制&lt;/p&gt;
+&lt;p&gt;优缺点：硬件开销小、并行程度低，实时性差&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序直传方式，中断方式，DMA 方式之间的区别？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接程序传送：依靠 CPU 直接执行相关的 IO 程序来实现数据的输入和输出控制&lt;/li&gt;
+&lt;li&gt;中断方式：设备提出中断请求，主机响应后与设备交换信息，接口中包含中断控制请求&lt;/li&gt;
+&lt;li&gt;DMA 方式：直接依靠硬件系统来控制主存和设备之间的数据传送，传送期间无需 CPU 干预，传送结束后通常通过中断方式通知 CPU, 支持高速外设与主存之间进行 DMA 方式交换数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;微型计算机原理与接口技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微型计算机原理与接口技术&#34;&gt;#&lt;/a&gt; 微型计算机原理与接口技术&lt;/h2&gt;
+&lt;h3 id=&#34;第二章-微处理器与总线&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第二章-微处理器与总线&#34;&gt;#&lt;/a&gt; 第二章 微处理器与总线&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;微处理器主要由哪几部分构成？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;总线接口单元和执行单元&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;总线接口部件由下列各部分组成：4 个段地址&lt;a href=&#34;https://zhidao.baidu.com/search?word=%BC%C4%B4%E6%C6%F7&amp;amp;fr=iknow_pc_qb_highlight&#34;&gt;寄存器&lt;/a&gt;：CS——16 位的代码段寄存器；DS16 位的数据段寄存器；ES——16 位的扩展段寄存器；SS16 位的堆栈段寄存器；16 位的指令指针寄存器 IP；20 位的地址加法器；6 字节的指令队列缓冲器。&lt;/li&gt;
+&lt;li&gt;执行部件由下列几个部分组成：8 个通用寄存器：即 AX、BX、CX、DX,BP,SP,SI,DI ；其中，4 个数据寄存器：AX、BX、CX、DX；2 个地址指针寄存器：BP,SP；2 个变址寄存器：SI,DI ；标志寄存器 FR (flags register)；&lt;a href=&#34;https://zhidao.baidu.com/search?word=%CB%E3%CA%F5%C2%DF%BC%AD%B5%A5%D4%AA&amp;amp;fr=iknow_pc_qb_highlight&#34;&gt;算术逻辑单元&lt;/a&gt; ALU。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;说明 8088CPU 中 EU 和 BIU 的主要功能。在执行指令时，EU 能直接访问存储器吗？&lt;/p&gt;
+&lt;p&gt;CPU 内部结构由两部分组成：执行单元（EU）、总线接口单元（BIU）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;执行单元 EU：包括 ALU、8 个通用寄存器、标志寄存器 FLAGS 和 EU 控制部件从指令队列不断取出指令代码，译码后产生执行指令的控制信号。ALU 完成算术和逻辑运算，通用寄存器存放操作数和运算结果，而运算结果的状态特征则保存到标志寄存器中&lt;/li&gt;
+&lt;li&gt;总线接口单元 BIU：包括四个段寄存器、程序计数器、指令队列、地址加法器、总线控制逻辑，负责 CPU 与存储器和 IO 接口之间的信息传送。由于 8086/8088CPU 中的寄存器均为 16 位，而 CPU 外部地址线为 20 根，因此 BIU 中采用地址加法器得到 20 位的物理地址，可以寻址的存储单元为 1M。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8086/8088CPU 中，有哪些通用寄存器和专用寄存器？说明他们的作用。&lt;/p&gt;
+&lt;p&gt;内部由 8 个通用寄存器、4 个段寄存器、2 个控制寄存器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通用寄存器包括
+&lt;ul&gt;
+&lt;li&gt;数据类寄存器：AX、BX、CX、DX，常用于存放操作数或运算结果&lt;/li&gt;
+&lt;li&gt;地址指针寄存器：包括堆栈指针寄存器 SP 和基址指针寄存器 BP。处理可以存放操作数外，还可以作为地址指针，常用于在堆栈操作中存放偏移地址。
+&lt;ul&gt;
+&lt;li&gt;SP：在堆栈操作中用来存放栈顶单元的偏移地址，永远指向堆栈的栈顶&lt;/li&gt;
+&lt;li&gt;BP：默认用于存放当前堆栈内某个单元的偏移地址，即可以对堆栈内任意单元的数据进行操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;变址寄存器：包括源变址寄存器 SI 和目的变址寄存器 DI，处理可以存放操作数和作为地址指针外，还分别固定应用于数据的串操作指令中，提供串操作数的索引地址。
+&lt;ul&gt;
+&lt;li&gt;SI：串操作指令中隐含作为源操作数偏移地址&lt;/li&gt;
+&lt;li&gt;DI：串操作指令中隐含作为目的操作数的偏移地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;段寄存器：
+&lt;ul&gt;
+&lt;li&gt;CS，代码段寄存器&lt;/li&gt;
+&lt;li&gt;DS：数据段寄存器&lt;/li&gt;
+&lt;li&gt;ES：附加段寄存器&lt;/li&gt;
+&lt;li&gt;SS：堆栈段寄存器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;控制寄存器：
+&lt;ul&gt;
+&lt;li&gt;IP：指令指针寄存器，用以存放预取指令的偏移地址&lt;/li&gt;
+&lt;li&gt;FLAGS：标志寄存器或程序状态字
+&lt;ul&gt;
+&lt;li&gt;算术或逻辑运算结果的特征位&lt;/li&gt;
+&lt;li&gt;控制标志位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8086/8088 系统中，存储器为什么要分段？一个段最大为多少字节？最小为多少字节？&lt;/p&gt;
+&lt;p&gt;分段的主要目的是便于存储器的管理，使得可以用 16 位&lt;a href=&#34;https://zhidao.baidu.com/search?word=%BC%C4%B4%E6%C6%F7&amp;amp;fr=iknow_pc_qb_highlight&#34;&gt;寄存器&lt;/a&gt;来寻址 20 位的内存空间。&lt;/p&gt;
+&lt;p&gt;一个段最大为 64KB，最小为 16B。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8086/8088 系统中，物理地址和逻辑地址是指什么？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理地址:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;指每个内存单元在整个内存空间中具有的唯一的地址&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8086/8088CPU 有 20 根地址线，它可以产生 20 位的地址码，寻址范围为 220. 同时存储器按字节进行编制，索引存储器最大容量为 1MB&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是指由程序产生的与段相关的偏移地址部分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;8088/8086 CPU 的特点？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令流水线：8088/8085CPU 并行完成程序的执行，假设不考虑存储器操作数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;内存分段管理：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;8088/8086CPU 的内部结构为 16 位【内部 1M 的存储单元，但寄存器只有 16 位】&lt;/li&gt;
+&lt;li&gt;作为地址时，则只能访问 64k 存储单元&lt;/li&gt;
+&lt;li&gt;采用分段管理的方法，将内存空间分为多个逻辑段，每个逻辑段最大 64k 存储单元，段内每个单元的相对地址码用 16 位表示&lt;/li&gt;
+&lt;li&gt;每个段设置段地址用 16 位寄存器存储，以区分不同的逻辑段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;支持多处理器系统：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;8086 8088 具有最小与最大两种工作模式：&lt;/li&gt;
+&lt;li&gt;最小模式，也称为单处理器模式，系统控制总线的信号由 CPU 直接产生&lt;/li&gt;
+&lt;li&gt;最大模式，也称为多处理器模式，由总线控制器 8288 提供所有总线信号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第四章-汇编语言程序设计&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第四章-汇编语言程序设计&#34;&gt;#&lt;/a&gt; 第四章 汇编语言程序设计&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;指令与伪指令区别？&lt;/p&gt;
+&lt;p&gt;指令汇编后生成可被 CPU 执行的代码&lt;/p&gt;
+&lt;p&gt;伪指令不生产目标代码，只是用于告诉汇编程序如何对源程序进行汇编&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;伪指令在汇编过程中由汇编程序执行，如定义数据、分配存储区、定义段以及定义过程等&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;伪指令：段定义伪指令、数据定义伪指令：常数 (字符串的使用 DB、DW、DD)、变量和标号，当前位置计数器（ （（! 作变量使用，是 16 位偏移量）与定位伪指令 ORG 等伪指令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第六章-输入输出和中断技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第六章-输入输出和中断技术&#34;&gt;#&lt;/a&gt; 第六章 &lt;strong&gt;输入输出和中断技术&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输人 / 输出系统主要由哪几个部分组成？主要有哪些特点？&lt;/p&gt;
+&lt;p&gt;输入输出系统主要由三个部分组成，即输入输出接口、输入输出设备、输入输出软件。&lt;/p&gt;
+&lt;p&gt;输入输出系统主要有 4 个特点：复杂性、异步性、实时性、与设备无关性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I/0 接口的主要功能有哪些？有哪两种编址方式？在 8088/8086 系统中采用哪一种编址方式？&lt;/p&gt;
+&lt;p&gt;一般来说，I/O 接口应具有以下功能:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;寻址&lt;/li&gt;
+&lt;li&gt;数据缓冲&lt;/li&gt;
+&lt;li&gt;数据格式变换&lt;/li&gt;
+&lt;li&gt;控制逻辑&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有统一和独立编址&lt;/p&gt;
+&lt;p&gt;8086 中采用独立编址方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;试比较 4 种基本输人 / 输出方法的特点。&lt;/p&gt;
+&lt;p&gt;在微型计算机系统中，主机与外设之间的数据传送有 4 种基本的输入输出方式：&lt;br&gt;
+无条件传送方式、查询工作方式、中断工作方式、直接存储器存取（DMA. 方式。它们各自具有以下特点：&lt;br&gt;
+（1）无条件传送方式适合于简单的、慢速的、随时处于 “准备好” 接收或发送数据的外部设备，数据交换与指令的执行同步，控制方式简单。&lt;br&gt;
+（2）查询工作方式针对并不随时 “准备好”、且满足一定状态才能实现数据的输入 / 输出的简单外部设备，其控制方式也比较简单，但 CPU 的效率比较低。&lt;br&gt;
+（3）中断工作方式是由外部设备作为主动的一方，在需要时向 CPU 提出工作请求，CPU 在满足响应条件时响应该请求并执行相应的中断处理程序。这种工作方式使 CPU 的效率提高，但控制方式相对较复杂。&lt;br&gt;
+（4）DMA 方式适合于高速外设，是 4 种基本输入 / 输出方式中速度最高的一种。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主机与外部设备进行数据传送时，采用哪一种传送方式 CPU 的效率最高？DMA&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="课内课程" />
+        <updated>2021-11-17T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/18/ruan-jian-gong-cheng/</id>
+        <title>软件工程</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/18/ruan-jian-gong-cheng/"/>
+        <content type="html">&lt;h1 id=&#34;软件工程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程&#34;&gt;#&lt;/a&gt; 软件工程&lt;/h1&gt;
+&lt;h2 id=&#34;三张概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三张概念&#34;&gt;#&lt;/a&gt; 三张概念&lt;/h2&gt;
+&lt;h3 id=&#34;软件工程概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程概述&#34;&gt;#&lt;/a&gt; 软件工程概述&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/C3E00849B22E3F8293BB39509B22A521.png&#34; alt=&#34;软件工程概述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/1556EBAF262471A4230C157472597C91.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;软件的概念和特点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件的概念和特点&#34;&gt;#&lt;/a&gt; 软件的概念和特点&lt;/h4&gt;
+&lt;p&gt;软件 = 程序 + 数据 + 文档&lt;/p&gt;
+&lt;p&gt;软件测试，系统维护将占据工程的很大一部分成本&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;软件是一种产品&lt;/li&gt;
+&lt;li&gt;软件是开发其他软件产品的工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件的分类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统软件&lt;/li&gt;
+&lt;li&gt;支撑软件&lt;/li&gt;
+&lt;li&gt;应用软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么软件发展如此之快&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;计算需求：软件必须适应新的计算环境或技术&lt;/li&gt;
+&lt;li&gt;嵌入需求：软件必须扩展，以满足和新一代系统或数据库之间的互操作性&lt;/li&gt;
+&lt;li&gt;业务需求：软件必须改善，以实现新的业务需求&lt;/li&gt;
+&lt;li&gt;架构需求：软件必须重新设计，使其在新的网络环境可用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;软件危机的产生&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件危机的产生&#34;&gt;#&lt;/a&gt; 软件危机的产生&lt;/h4&gt;
+&lt;p&gt;软件工程概念的产生：目的是倡导以&lt;strong&gt;工程&lt;/strong&gt;的原理，原则和方法进行软件开发，以解决软件危机&lt;/p&gt;
+&lt;p&gt;软件危机：在计算机软件的开发和维护过程中所遇到的一系列严重问题 (效率和质量下降)&lt;/p&gt;
+&lt;p&gt;产生软件危机的原因&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;客观：软件本身特点：成本日益增加，规模庞大&lt;/li&gt;
+&lt;li&gt;客观：忽视需求分析，轻视软件维护，错误认为软件开发 = 程序编写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;软件工程的概念与发展过程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件工程的概念与发展过程&#34;&gt;#&lt;/a&gt; 软件工程的概念与发展过程&lt;/h4&gt;
+&lt;p&gt;概念：建立和使用合理的工程原则，以经济地获取可靠的，且在真实机器上可高效工作的软件&lt;/p&gt;
+&lt;p&gt;软件工程框架：目的，原则，活动&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目的：给出了软件所涉及软件工程的工程要素&lt;/li&gt;
+&lt;li&gt;原则：给出了各要素之间的关系&lt;/li&gt;
+&lt;li&gt;活动：给出了软件工程学科所研究的主要内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;软件开发模型：是软件开发全部过程，活动和任务的框架&lt;/p&gt;
+&lt;p&gt;软件开发方法：为构造软件提供技术上的解决方法，包括沟通，需求分析，设计建模&lt;/p&gt;
+&lt;p&gt;软件过程：为建造高质量的软件所需完成任务的框架&lt;/p&gt;
+&lt;p&gt;软件工程目标：生产具有正确性，可用性以及开销合宜的产品&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正确性：产品达到预期功能&lt;/li&gt;
+&lt;li&gt;可用性：软件基本结构，实现及文档为用户可用&lt;/li&gt;
+&lt;li&gt;开销事宜，软件开发运行整个过程开销满足用户要求的程度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;四张图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四张图&#34;&gt;#&lt;/a&gt; 四张图&lt;/h2&gt;
+&lt;h3 id=&#34;顺序图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#顺序图&#34;&gt;#&lt;/a&gt; 顺序图&lt;/h3&gt;
+&lt;h3 id=&#34;类图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类图&#34;&gt;#&lt;/a&gt; 类图&lt;/h3&gt;
+</content>
+        <category term="课内课程" />
+        <updated>2021-11-17T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/latex/</id>
+        <title>Latex</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/latex/"/>
+        <content type="html">&lt;h1 id=&#34;latex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#latex&#34;&gt;#&lt;/a&gt; Latex&lt;/h1&gt;
+&lt;p&gt;latex 命令多采用 &lt;code&gt;\   []{}&lt;/code&gt;  的格式&lt;/p&gt;
+&lt;p&gt;基本结构&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;UTF8&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;ctexart&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;字体&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#字体&#34;&gt;#&lt;/a&gt; 字体&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\textbf {文本内容}&lt;/code&gt; : 加粗文本内容&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\textit {文本内容}&lt;/code&gt; : 设置斜体&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\underline {文本内容}&lt;/code&gt; : 设置下划线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;章和节&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#章和节&#34;&gt;#&lt;/a&gt; 章和节&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;切换段落需要输入两个换行符 也就是按两次回车  一个换行符仅仅会显示一个空格&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\part {部名称}&lt;/code&gt; : 表示书籍中的第几部&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\chapter {章节名称}&lt;/code&gt;  通常用于表示章节中的第几章，大于 chapter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\section {章节名称}&lt;/code&gt; : 开启一个新的章节&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\subsection {章节名称}&lt;/code&gt; : 创建下一级的章节，要创建更下一级的章节就多加个 sub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片&#34;&gt;#&lt;/a&gt; 图片&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;第一步要先引用包  &lt;code&gt;\usepackage{grathicx}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\includegraphics [可选参数]{图片文件名字}&lt;/code&gt; : 在当前位置添加一张图片  可以省略图片后的扩展名称&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;width=0.5\textwidth&lt;/code&gt; :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给图片添加标题&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;    放在figure中
+&lt;span class=&#34;token function selector&#34;&gt;\centering&lt;/span&gt;   居中显示
+&lt;span class=&#34;token function selector&#34;&gt;\includegraphicx&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;head&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;哈哈哈&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;       标题名称
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表&#34;&gt;#&lt;/a&gt; 列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;切换到列表中的环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;无序列表:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;itemize&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项1
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项2
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;itemize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有序列表&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;enumerate&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项1
+&lt;span class=&#34;token function selector&#34;&gt;\item&lt;/span&gt; 列表项2
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;数学公式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数学公式&#34;&gt;#&lt;/a&gt; 数学公式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行内公式: &lt;code&gt;$   $&lt;/code&gt;  在行内直接显示公式&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单独显示一行公式&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;equation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;quation&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+
+可以简写为
+&lt;span class=&#34;token equation string&#34;&gt;\[
+
+\]&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;公式常用指令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\over&lt;/code&gt; : 表示分数  分子在前 分母在后&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\varphi&lt;/code&gt; : 小写的 φ&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\phi&lt;/code&gt; : 大写的 φ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以使用在线公式编辑器和 mathpix&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;http://latex.codecogs.com/eqneditor/editor.php&#34;&gt;latex.codecogs.com/eqneditor/editor.php&lt;/a&gt; 在线公式编辑器 也可以快速查阅公式的语法&lt;/p&gt;
+&lt;h2 id=&#34;表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格&#34;&gt;#&lt;/a&gt; 表格&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-latex&#34; data-language=&#34;latex&#34;&gt;&lt;code class=&#34;language-latex&#34;&gt;&lt;span class=&#34;token function selector&#34;&gt;\begin&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tabular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;传入参数|参数&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; c表示居中 l表示靠左 多少个字母就表示多少列    p&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;列宽&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt; 单独指定每一列的宽度
+&lt;span class=&#34;token function selector&#34;&gt;\hline&lt;/span&gt;
+1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 2 ^ 3 &lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\hline&lt;/span&gt;    水平方向边框
+1 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 3 &lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt; 2 &lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;      每一列数据用&lt;span class=&#34;token punctuation&#34;&gt;&amp;amp;&lt;/span&gt;分割
+				每一行的数据用&lt;span class=&#34;token function selector&#34;&gt;\\&lt;/span&gt;分割
+				
+&lt;span class=&#34;token function selector&#34;&gt;\caption&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;表格的标题&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token function selector&#34;&gt;\end&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tabular&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="Latex" />
+        <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>
         <id>http://s1mm.gitee.io/s1mm/2021/11/06/c-yu-yan/</id>
@@ -10815,6 +11828,113 @@ bool &lt;span class=&#34;token function&#34;&gt;DeQueue&lt;/span&gt;&lt;span cla
 &lt;p&gt;&lt;a href=&#34;https://imgtu.com/i/Tysdzj&#34;&gt;&lt;img src=&#34;https://s4.ax1x.com/2021/12/28/Tysdzj.png&#34; alt=&#34;Tysdzj.png&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </content>
         <category term="C语言" />
+        <updated>2021-11-05T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/css-xin/</id>
+        <title>Css新</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/css-xin/"/>
+        <content type="html">&lt;h1 id=&#34;css新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css新&#34;&gt;#&lt;/a&gt; CSS (新)&lt;/h1&gt;
+&lt;p&gt;复习 (好吧 太久没用忘了 其实是重新学习过程) CSS 时记忆的笔记&lt;/p&gt;
+&lt;h2 id=&#34;定位position&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位position&#34;&gt;#&lt;/a&gt; 定位 (position)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;static: 正常流定位&lt;/li&gt;
+&lt;li&gt;relative: 相对定位&lt;/li&gt;
+&lt;li&gt;absolute,fixed: 绝对定位&lt;/li&gt;
+&lt;li&gt;sticky: 粘性定位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;static正常流定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static正常流定位&#34;&gt;#&lt;/a&gt; Static 正常流定位&lt;/h3&gt;
+&lt;p&gt;按照从上到下文档刷新的方式，就是最默认的定位方式&lt;/p&gt;
+&lt;h3 id=&#34;relative相对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#relative相对定位&#34;&gt;#&lt;/a&gt; relative 相对定位&lt;/h3&gt;
+&lt;p&gt;相对于原位置的定位，可以相对于原位置进行位置的移动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;相对定位会保留原有的样式&lt;/strong&gt;，意思就是说相对定位移动后，原来那个位置的样式，不会被覆盖，可以理解为被隐藏了但是还在&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;relative&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;absolute绝对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#absolute绝对定位&#34;&gt;#&lt;/a&gt; absolute 绝对定位&lt;/h3&gt;
+&lt;p&gt;absolute 是相对于上一个&lt;strong&gt;非 static 定位&lt;/strong&gt;的祖宗节点的位置&lt;/p&gt;
+&lt;p&gt;意思就是说 absolute 会向上找，找到一个不会 static 定位的祖宗节点 (最上面是&lt;strong&gt; body&lt;/strong&gt;),top 相当于距离这个父节点顶部的距离，其他类似&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;absolute&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fixed固定定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fixed固定定位&#34;&gt;#&lt;/a&gt; fixed 固定定位&lt;/h3&gt;
+&lt;p&gt;fixed 是相对于&lt;strong&gt;整个视窗&lt;/strong&gt;的位移，也是固定不变的&lt;/p&gt;
+&lt;h3 id=&#34;static粘性定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static粘性定位&#34;&gt;#&lt;/a&gt; static 粘性定位&lt;/h3&gt;
+&lt;p&gt;当粘性定位的盒子的&lt;strong&gt;真实位置&lt;/strong&gt;在视窗内部的时候，他是正常显示的，但是当他要脱离视窗的时候，他会像固定定位一样，导致不脱离视窗&lt;/p&gt;
+&lt;h2 id=&#34;浮动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动&#34;&gt;#&lt;/a&gt; 浮动&lt;/h2&gt;
+&lt;p&gt;块是会自动换行的，加上 float 之后，可以放在一行的会放在一行，一行无法放下时再进行换行&lt;/p&gt;
+&lt;p&gt;新的未浮动块会在浮动块的上方而不是排布在后方，要排布在后方可以清除浮动块的影响 使用 clear&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left
+&lt;span class=&#34;token property&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left/right/both&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;flex布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flex布局&#34;&gt;#&lt;/a&gt; flex 布局&lt;/h2&gt;
+&lt;p&gt;弹性布局，也就是当拉伸视窗的时候，布局随着视窗的改变会自动变化&lt;/p&gt;
+&lt;p&gt;定义在&lt;strong&gt;父节点盒子上&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;flex-direction&lt;/code&gt; ： 属性指定了内部元素是如何在 flex 容器中&lt;strong&gt;布局&lt;/strong&gt;的，&lt;strong&gt;定义了主轴的方向&lt;/strong&gt; (正方向或反方向)。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;row&lt;/code&gt; :flex 容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;row-reverse&lt;/code&gt; : 表现和 row 相同，但是置换了主轴起点和主轴终点。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column&lt;/code&gt; :flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column-reverse&lt;/code&gt; : 表现和 column 相同，但是置换了主轴起点和主轴终点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-wrap&lt;/code&gt; : 指定 flex 元素&lt;strong&gt;单行显示还是多行显示&lt;/strong&gt;。如果允许换行，这个属性允许你控制行的堆叠方向。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nowrap&lt;/code&gt; : 默认值。不换行。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrap&lt;/code&gt; : 换行，第一行在上方。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrap-reverse&lt;/code&gt; : 换行，第一行在下方。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-flow&lt;/code&gt; : &lt;code&gt;flex-direction&lt;/code&gt;  和  &lt;code&gt;flex-wrap&lt;/code&gt;  的简写。默认值为： &lt;code&gt;row nowrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;justify-content&lt;/code&gt; : 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。也就是&lt;strong&gt;控制横向对齐方式&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：默认值。左对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：右对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-between&lt;/code&gt; ：左右两段对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-around&lt;/code&gt; ：在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-evenly&lt;/code&gt; ：flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-items&lt;/code&gt; ：控制&lt;strong&gt;纵轴 (交叉轴&lt;/strong&gt;对齐)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：元素向主轴起点对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：元素向主轴终点对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;center&lt;/code&gt; ：元素在侧轴居中。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stretch&lt;/code&gt; ：弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-content&lt;/code&gt; : 与 &lt;code&gt;align-items&lt;/code&gt;  类似但是有以下区别
+&lt;ul&gt;
+&lt;li&gt;前者会均匀分布，后者会使所有行紧贴在一起&lt;/li&gt;
+&lt;li&gt;当只有一行的时候，前者仍然会居中，后者会失去居中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;定义在&lt;strong&gt; flex 盒子内部元素中&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;order&lt;/code&gt; : 定义 &lt;code&gt;flex&lt;/code&gt;  项目的顺序，值越小越靠前。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-grow&lt;/code&gt; :CSS 属性 flex-grow CSS 设置 flex 项主尺寸 的 flex 增长系数。&lt;strong&gt;负值无效，默认为 0。&lt;/strong&gt; &lt;strong&gt;也就是当视窗变大的时候 块也等比例变大&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-shrink&lt;/code&gt; : 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。&lt;strong&gt;负值无效，默认为 1。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-basis&lt;/code&gt; : 设置默认宽度，&lt;strong&gt; 优先级大于默认 width&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex&lt;/code&gt; : &lt;code&gt;flex-grow&lt;/code&gt; 、 &lt;code&gt;flex-shrink&lt;/code&gt; 、 &lt;code&gt;flex-basis&lt;/code&gt;  的缩写。&lt;/p&gt;
+&lt;p&gt;常用取值： &lt;code&gt;flex: 1 1 auto&lt;/code&gt;        &lt;code&gt;flex: 0 0 auto&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="Css" />
         <updated>2021-11-05T16:00:00.000Z</updated>
     </entry>
     <entry>

@@ -17,6 +17,8 @@
     <category term="计算机组成原理" />
     <category term="算法啊" />
     <category term="java" />
+    <category term="Latex" />
+    <category term="课内课程" />
     <entry>
         <id>http://s1mm.gitee.io/s1mm/2022/09/10/vue/</id>
         <title>vue</title>
@@ -1044,8 +1046,559 @@ props&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#
 &lt;p&gt;localStorage 一直存储在浏览器&lt;/p&gt;
 &lt;p&gt;sessionstorage 关闭浏览器数据就消失&lt;/p&gt;
 &lt;h4 id=&#34;组件自定义事件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#组件自定义事件&#34;&gt;#&lt;/a&gt; 组件自定义事件&lt;/h4&gt;
-&lt;h5 id=&#34;绑定&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#绑定&#34;&gt;#&lt;/a&gt; 绑定&lt;/h5&gt;
-&lt;h5 id=&#34;解绑&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解绑&#34;&gt;#&lt;/a&gt; 解绑&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一种组件间的通信方式，适用于 &lt;strong&gt;子组件 ===&amp;gt; 父组件&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二种方式，在父组件中：&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;&amp;lt;Demo ref=&#34;xxx&#34;/&amp;gt;
+.......
+mounted () {
+	this.$ref.xxx.$on(&#39;自定义事件&#39;,this.test)
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果想让自定义时间只能触发一次，可以使用 &lt;code&gt;once&lt;/code&gt;  修饰符，或者 &lt;code&gt;$once&lt;/code&gt;  方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;触发自定义事件: &lt;code&gt;this.$emit(&#39;自定义事件&#39;,数据)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解绑自定义事件: &lt;code&gt;this.$off(&#39;自定义事件&#39;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组件上也可以绑定原生 DOM 事件，需要使用 &lt;code&gt;native&lt;/code&gt;  修饰符&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意：通过 this.&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;refs.xxx.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;on (‘自定义事件’, 回调函数) 绑定自定义事件时，回调&lt;strong&gt;要么配置在 methods 中，要么用箭头函数&lt;/strong&gt;，否则 this 指向会出问题！&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;全局事件总线globaleventbus&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#全局事件总线globaleventbus&#34;&gt;#&lt;/a&gt; 全局事件总线 (GlobalEventBus)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;可以实现任意&lt;strong&gt;组件之间的通信&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安装全局事件总线:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;beforecreate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token class-name&#34;&gt;Vue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;prototype&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$bus &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt; 
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+	&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用全局事件总线:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;接受数据：A 组件想接受数据，则在 A 组件中给 $bus 绑定自定义事件，事件的&lt;strong&gt;回调在 A 组件自身，&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;methods() {
+	demo(data){......}
+}
+......
+mounted() {
+	this.$bus.$on(&#39;xxx&#39;,this.demo)
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提供数据:this.&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;bus.&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;emit (‘xxx’, 数据)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最好在 beforeDestroy 钩子中，用 $off 解绑&lt;strong&gt;当前组件所用到的&lt;/strong&gt;事件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;消息订阅与发布_pubsub&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#消息订阅与发布_pubsub&#34;&gt;#&lt;/a&gt; 消息订阅与发布_pubsub&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一种组件间通信的方式，适用于&lt;strong&gt;任意组件间通信&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用步骤:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装 pubsub: &lt;code&gt;npm i pubsub-js&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;引入:  &lt;code&gt;import pubsub from &#39;pubsub-js&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接受数据: A 组件想接收数据，则在 A 组件中订阅消息，订阅的&lt;strong&gt;回调在 A 组件自身&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token function&#34;&gt;methods&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;demo&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;msgName&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;data&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;...&lt;/span&gt;
+&lt;span class=&#34;token function&#34;&gt;mounted&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pubId &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; pubsub&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;subscribe&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;xxx&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;demo&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//订阅消息&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提供数据:  &lt;code&gt;pubsub.public(&#39;xxx&#39;,数据)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最好在 beforeDestroy 钩子中，用 Pubsub.unsubscibe (pubId) 取消订阅&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;nexttick&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nexttick&#34;&gt;#&lt;/a&gt; nextTick&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;语法:  &lt;code&gt;this.$nextTick(function () { 代码})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;作用：在下一次 DOM 更新结束后执行其指定的回调函数&lt;/li&gt;
+&lt;li&gt;什么时候用：当改变数据后，要基于更新后的新 DOM 进行某些操作时，要在 nextTick 所指定的回调函数中执行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;过渡与动画&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#过渡与动画&#34;&gt;#&lt;/a&gt; 过渡与动画&lt;/h4&gt;
+&lt;p&gt;暂放&lt;/p&gt;
+&lt;h3 id=&#34;vue中的ajax&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue中的ajax&#34;&gt;#&lt;/a&gt; Vue 中的 ajax&lt;/h3&gt;
+&lt;h4 id=&#34;vue脚手架配置代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue脚手架配置代理&#34;&gt;#&lt;/a&gt; Vue 脚手架配置代理&lt;/h4&gt;
+&lt;h5 id=&#34;方法一&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法一&#34;&gt;#&lt;/a&gt; 方法一&lt;/h5&gt;
+&lt;p&gt;​	在 Vue.config.js 中添加如下配置:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;devServer&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	proxy&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;http://localhost:5000&#34;&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说明:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 优点:配置简单,请求资源时直接发给前端(8080)即可
+1. 缺点:不能配置多个代理,不能灵活的控制请求是否走代理.
+1. 工作方式:若按照上述配置代理,当请求了前端不存在的资源时,那么该请求会转发给服务器(优先匹配前端资源)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;方法二&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法二&#34;&gt;#&lt;/a&gt; 方法二&lt;/h5&gt;
+&lt;p&gt;编写 Vue.config.js 配置具体代理规则:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;moduel&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;exports &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	devServer&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		proxy&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+			&lt;span class=&#34;token string&#34;&gt;&#39;/api1&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//匹配所有以&#39;/api1/开头的请求路径&lt;/span&gt;
+				target&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;http://localhost:5000&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//代理目标的基础路径&lt;/span&gt;
+                changeOrigin&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+                pathRewrite&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;^api1&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+            &lt;span class=&#34;token string&#34;&gt;&#39;/api2&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//匹配所有以&#39;/api2/开头的请求路径&lt;/span&gt;
+				target&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;http://localhost:5000&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;//代理目标的基础路径&lt;/span&gt;
+                changeOrigin&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+                pathRewrite&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;^api2&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+			&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+		&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说明:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 优点：可以配置多个代理，且可以灵活的控制请求是否走代理。
+1. 缺点：配置略微繁琐，请求资源时必须加前缀
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;vue项目中常用的ajax库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue项目中常用的ajax库&#34;&gt;#&lt;/a&gt; vue 项目中常用的 ajax 库&lt;/h4&gt;
+&lt;h5 id=&#34;axios库使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#axios库使用&#34;&gt;#&lt;/a&gt; axios 库使用&lt;/h5&gt;
+&lt;p&gt;安装  &lt;code&gt;npm i axios&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//先引入&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; axios &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;axios&#39;&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//使用&lt;/span&gt;
+  axios&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token template-string&#34;&gt;&lt;span class=&#34;token template-punctuation string&#34;&gt;`&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;api&lt;/span&gt;&lt;span class=&#34;token template-punctuation string&#34;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;then&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;
+                &lt;span class=&#34;token parameter&#34;&gt;response&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                    
+                &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+                &lt;span class=&#34;token parameter&#34;&gt;error&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+                    
+                &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;vue-resource&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue-resource&#34;&gt;#&lt;/a&gt; vue-resource&lt;/h5&gt;
+&lt;p&gt;vue 自身的插件库，也封装了 ajax, 现在不常用 推荐还是使用 axios&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;this.$http.get(&#39; &#39;).then( Response =&amp;gt; { }, error =&amp;gt; {})&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;slot插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#slot插槽&#34;&gt;#&lt;/a&gt; Slot 插槽&lt;/h4&gt;
+&lt;h5 id=&#34;默认插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#默认插槽&#34;&gt;#&lt;/a&gt; 默认插槽&lt;/h5&gt;
+&lt;p&gt;slot 标签中包含的就是父组件中传入子组件标签中的内容&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//父组件中
+&amp;lt;Category&amp;gt;
+	&amp;lt;h1&amp;gt; 你好 &amp;lt;h1&amp;gt;
+&amp;lt;/Category&amp;gt;
+
+//Category标签中
+&amp;lt;slot&amp;gt;&amp;lt;/slot&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;具名插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#具名插槽&#34;&gt;#&lt;/a&gt; 具名插槽&lt;/h5&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//父组件中
+&amp;lt;Category&amp;gt;
+	&amp;lt;h1 slot=&#34;demo&#34;&amp;gt; 你好 &amp;lt;h1&amp;gt;
+	&amp;lt;h1 slot=&#34;demo2&#34;&amp;gt; 你好啊 &amp;lt;h1&amp;gt;
+&amp;lt;/Category&amp;gt;
+
+//Category标签中
+&amp;lt;slot name=&#34;demo&#34;&amp;gt;&amp;lt;/slot&amp;gt;
+&amp;lt;slot name=&#34;demo2&#34;&amp;gt;&amp;lt;/slot&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;slot&lt;/code&gt;  与 &lt;code&gt;name&lt;/code&gt;  相&lt;strong&gt;对应&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;template 标签中用 v-slot&lt;/p&gt;
+&lt;h5 id=&#34;作用域插槽&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#作用域插槽&#34;&gt;#&lt;/a&gt; 作用域插槽&lt;/h5&gt;
+&lt;p&gt;数据在组件自身，但根据数据生成的机构需要组件的使用者来决定&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;&amp;lt;Category&amp;gt;
+&amp;lt;template scope=&#34;nihao&#34;&amp;gt;
+	&amp;lt;h1&amp;gt; {{nihao.xxx}} &amp;lt;h1&amp;gt;  //相当于 games.xxx
+	&amp;lt;h1&amp;gt; 你好啊 &amp;lt;h1&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;/Category&amp;gt;
+
+//Category标签中
+&amp;lt;slot :game=&#34;games&#34;&amp;gt;&amp;lt;/slot&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;vuex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vuex&#34;&gt;#&lt;/a&gt; Vuex&lt;/h3&gt;
+&lt;p&gt;在 Vue 中实现集中式数据管理的一个 Vue&lt;strong&gt; 插件&lt;/strong&gt;，对 Vue 应用中多个组件的共享状态进行集中式的管理 (读 / 写), 也是一种组件间通信的方式，且使用于&lt;strong&gt;任何组件间&lt;/strong&gt;通信&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/vuex.png&#34; alt=&#34;vuex&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;搭建vuex环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搭建vuex环境&#34;&gt;#&lt;/a&gt; 搭建 Vuex 环境&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//在main.js中 传入store
+
+import Vue from &#34;vue&#34;;
+import App from &#34;./App.vue&#34;;
+import store from &#34;./store/index&#34;;
+
+new Vue({
+  render: (h) =&amp;gt; h(App),
+  store,
+  beforeCreate() {
+    Vue.prototype.$bus = this;
+  },
+}).$mount(&#34;#app&#34;);
+
+//在store文件夹中store.js中
+
+import Vue from &#34;vue&#34;;
+import Vuex from &#34;vuex&#34;;
+
+Vue.use(Vuex);
+//准备 actions 用于响应组件中的动作
+
+const actions = {} //响应组件中的数据
+const mutations = {} //用于操作数据
+const state = {} //存储数据
+
+const store = new Vuex.Store({actions,mutations,state}) //创建store
+
+export default store&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;基本使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基本使用&#34;&gt;#&lt;/a&gt; 基本使用&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;组件读取 Vuex 中的数据:  &lt;code&gt;$store.state.sum&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;组件修改 vuex 中的数据:  &lt;code&gt;$store.dispatch(&#39;action中的方法名&#39;,数据)&lt;/code&gt;  或者 &lt;code&gt;$store.commit(&#39;mutations中的方法名&#39;,数据)&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;getters配置项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#getters配置项&#34;&gt;#&lt;/a&gt; getters 配置项&lt;/h4&gt;
+&lt;p&gt;用于对 state 中的数据进行加工，相当于 vuex 中的计算属性&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;const&lt;/span&gt; getters &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	&lt;span class=&#34;token function&#34;&gt;bigSum&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;state&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+		&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; state&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sum &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;mapstate与mapgetters&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mapstate与mapgetters&#34;&gt;#&lt;/a&gt; mapState 与 mapGetters&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;mapState&lt;/strong&gt; 方法：帮助映射 state 中的数据成为计算属性&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;computed: {
+	//对象写法
+	...mapState({sum:&#39;sum&#39;})
+	//数组写法
+	...mapState([&#39;sum&#39;])
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mapGetters 方法：帮助我们映射 getters 中的数据成为计算属性&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;computed: {
+	//对象写法
+	...mapGetters({bigSum:&#39;bigSum&#39;})
+	//数组写法
+	...mapGetters([&#39;bigSum&#39;])
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;mapactions和mapmutations&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mapactions和mapmutations&#34;&gt;#&lt;/a&gt; mapActions 和 mapMutations&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mapActions&lt;/code&gt; : 帮助我们生成与 &lt;code&gt;actions&lt;/code&gt;  对话的方法，即：包含 &lt;code&gt;$store.dispatch(xxx)&lt;/code&gt;  的函数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;methods: {
+	//对象
+	mapActions({increment:&#34;jia&#34;})
+	//数组
+	mapActions([&#39;jia&#39;])
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mapMutations&lt;/code&gt; : 帮助生成与 &lt;code&gt;mutations&lt;/code&gt;  对话的方法&lt;/p&gt;
+&lt;p&gt;类似 略&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;，现在参数通过在标签中事件触发传递 &lt;code&gt;@click=&#34;increment(n)&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;vue模块化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue模块化&#34;&gt;#&lt;/a&gt; Vue 模块化&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;目的：让代码更好维护，让多种数据分类更加准确&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改 store.js&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;const countAbout = {
+	namespaced:true,
+	state:{}.
+	actions:{},
+	mutations:{},
+	getters:{
+	
+	}
+}
+
+const store = new Vuex.Store({moduels:{countAbout}})&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后，组件中读取 state 数据&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己读取
+this.$store.state.personAbout.list
+//方式二：借助mapState读取
+...mapState(&#39;personAbout&#39;,[&#39;sum&#39;,&#39;school&#39;,&#39;subject&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后读取 getters 中的数据&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己读取
+this.$store.getters[&#39;personAbout/firstPersonName&#39;]
+//方式二：借助mapGetters
+...mapGetters(&#39;countAbout&#39;,[&#39;bigSum&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后，组件中调用 dispatch&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己直接dispatch
+this.$store.dispatch(&#39;personAbout/addPerson&#39;,person)
+//方式二：借助mapActions读取
+...mapActions(&#39;countAbout&#39;,[&#39;jia&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开启命名空间后，组件中调用 commit\&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;//方式1 自己直接commit
+this.$store.commit(&#39;personAbout/ADD_PERSON&#39;,person)
+//方式二：借助mapActions读取
+...mapMutations(&#39;mapMutations&#39;,[&#39;JIA&#39;])&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;vue-router路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue-router路由&#34;&gt;#&lt;/a&gt; Vue-Router 路由&lt;/h3&gt;
+&lt;p&gt;Vue 的一个插件库，实现 Single Page Application&lt;/p&gt;
+&lt;h4 id=&#34;1基本使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1基本使用&#34;&gt;#&lt;/a&gt; 1. 基本使用&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装 &lt;code&gt;vue-router&lt;/code&gt; , 命令:  &lt;code&gt;npm i vue-router&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应用插件  &lt;code&gt;Vue.use(VueRouter)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编写 router 配置项&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-javascript&#34; data-language=&#34;javascript&#34;&gt;&lt;code class=&#34;language-javascript&#34;&gt;&lt;span class=&#34;token comment&#34;&gt;//创建整个应用的路由&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; VueRouter &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;vue-router&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; AboutView &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;../components/AboutView&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; HomeView &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;../components/HomeView&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token comment&#34;&gt;//创建一个路由器&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;VueRouter&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+  routes&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+      path&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/about&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      component&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; AboutView&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+      path&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/home&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+      component&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; HomeView&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+  &lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实现切换&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;router-link class=&#34;list-group-item&#34; active-class=&#34;active&#34; to=&#34;/about&#34;&amp;gt;About&amp;lt;/router-link&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指定展示位置&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;router-view&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;2几个注意点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2几个注意点&#34;&gt;#&lt;/a&gt; 2. 几个注意点&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;路由组件通常放在 pages 文件夹，一般组件通常存放在 components 文件夹&lt;/li&gt;
+&lt;li&gt;通过切换，隐藏了的路由组件，默认是被销毁了&lt;/li&gt;
+&lt;li&gt;每个组件都有自己的 $route 属性，里面存储着自己的路由信息&lt;/li&gt;
+&lt;li&gt;整个应用只有一个 router, 可以通过组件的 $router 属性获取&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;3嵌套路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3嵌套路由&#34;&gt;#&lt;/a&gt; 3. 嵌套路由&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置路由规则，使用&lt;strong&gt; children&lt;/strong&gt; 配置项&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;routes:[
+	{
+		path:&#39;/home&#39;
+		component:AboutView,
+		children:[
+			{
+				path:&#39;news&#39;,
+				component:NewsView
+			}
+		]
+	}
+]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;跳转 (要写&lt;strong&gt;完整路径&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;router-link to=&#34;/home/news&#34;&amp;gt; &amp;lt;router-link&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;4路由传参&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4路由传参&#34;&gt;#&lt;/a&gt; 4. 路由传参&lt;/h4&gt;
+&lt;h5 id=&#34;41-query参数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#41-query参数&#34;&gt;#&lt;/a&gt; 4.1 query 参数&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;传递参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;跳转并携带query参数,to的字符串写法
+&amp;lt;router-link :to=&#34;/home/message/detail?id=666&amp;amp;title=你好&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;
+
+to的对象写法
+&amp;lt;router-link :to=&#34;{
+	path:&#39;/home/message/detail&#39;,
+	query:{
+		id:666,
+		title:&#39;你好&#39;,
+	}
+}&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接收参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;$route.query.id
+$route.query.title&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;不打扰路由器的配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h5 id=&#34;42-命名路由&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#42-命名路由&#34;&gt;#&lt;/a&gt; 4.2 命名路由&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;作用：简化路由的跳转&lt;/li&gt;
+&lt;li&gt;如何使用:
+&lt;ol&gt;
+&lt;li&gt;给路由加上 &lt;code&gt;name:xxx&lt;/code&gt;  属性，给路由命名&lt;/li&gt;
+&lt;li&gt;在跳转的 to 的对象写法中 不写 path 直接写 &lt;code&gt;name:xxx&lt;/code&gt;  即可实现跳转&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;43-params参数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#43-params参数&#34;&gt;#&lt;/a&gt; 4.3 params 参数&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;配置路由，声明接受 params 参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;routes:[
+	{
+		path:&#39;/home&#39;
+		component:AboutView,
+		children:[
+			{
+				path:&#39;news/:id/:title&#39;,
+				component:NewsView
+			}
+		]
+	}
+]&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;传递参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;跳转并携带query参数,to的字符串写法
+&amp;lt;router-link :to=&#34;/home/message/detail/666/你好&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;
+
+to的对象写法
+&amp;lt;router-link :to=&#34;{
+	name:xxx      
+	params:{
+		id:666,
+		title:&#39;你好&#39;,
+	}
+}&#34;&amp;gt;跳转 &amp;lt;router-link&amp;gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;&lt;u&gt;使用 params 传递参数 不能使用 path 直接使用 name&lt;/u&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接受参数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;$route.params.id
+$route.params.title&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;44-路由的props配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#44-路由的props配置&#34;&gt;#&lt;/a&gt; 4.4 路由的 props 配置&lt;/h5&gt;
+&lt;p&gt;让路由组件更加方便地收到参数&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;props 的第一种写法 (对象)&lt;/p&gt;
+&lt;p&gt;该写法中的所有 key-value 都会以 props 的形式传给 Detail 组件&lt;/p&gt;
+&lt;p&gt;死数据 不常用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;props 的第二种写法，值为布尔值&lt;/p&gt;
+&lt;p&gt;若布尔值为真，就会把该路由组件收到的所有 params 组件以 props 的形式传给组件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;props 的第三种写法，值为函数&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;props($route) {
+	return {id:$route.query.id,title:$route.query.title}
+}
+
+props({query:{id,title}})
+{
+ return {id,title}
+}&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;5router-link的replace属性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5router-link的replace属性&#34;&gt;#&lt;/a&gt; 5.router-link 的 replace 属性&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;作用：控制路由跳转时操作浏览器历史记录的模式&lt;/li&gt;
+&lt;li&gt;浏览器历史记录有 2 种模式  &lt;code&gt;push&lt;/code&gt;  追加和 &lt;code&gt;replace&lt;/code&gt;  替换 默认为 &lt;code&gt;push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;&amp;lt;router-link&amp;gt;&amp;lt;/router-link&amp;gt;&lt;/code&gt;  标签加上 replace 则可以更改为 replace 模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;6-编程式路由导航&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-编程式路由导航&#34;&gt;#&lt;/a&gt; 6. 编程式路由导航&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;作用：不借助 &lt;code&gt;&amp;lt;router-link&amp;gt;&lt;/code&gt;  进行路由跳转，让路由跳转更灵活&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编码:&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+	name&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;xxx&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    params&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;replace&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    name&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;xxx&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;
+    params&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+        
+    &lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;forward&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;back&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;$router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;go&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;7-缓存路由组件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7-缓存路由组件&#34;&gt;#&lt;/a&gt; 7. 缓存路由组件&lt;/h4&gt;
+&lt;p&gt;让不展示的组件保持挂载，以保留其中的数据&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;keep-alive&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;include&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;组件名&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;:include&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;[&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;xxx&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;,&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;yyy&lt;span class=&#34;token punctuation&#34;&gt;&#39;&lt;/span&gt;]&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;router-link&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;router-link&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;keep-alive&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;8-两个新的生命周期钩子&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8-两个新的生命周期钩子&#34;&gt;#&lt;/a&gt; 8. 两个新的生命周期钩子&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;路由组件独有&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;activated(){}&lt;/code&gt; : 组件被激活时调用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deactivated() {}&lt;/code&gt; : 组件失活时调用&lt;/p&gt;
+&lt;h4 id=&#34;9路由守卫&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#9路由守卫&#34;&gt;#&lt;/a&gt; 9. 路由守卫&lt;/h4&gt;
+&lt;h5 id=&#34;91-全局前置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#91-全局前置&#34;&gt;#&lt;/a&gt; 9.1 全局前置&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;初始化的时候&lt;/strong&gt;调用&lt;/p&gt;
+&lt;p&gt;每次&lt;strong&gt;切换路由前&lt;/strong&gt;调用&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;beforeEach&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;to&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;from&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;next&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// to 去哪个路由 to.path to.name&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// from 来自哪个路由 &lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// next() 允许通行&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;meta:{isAuth:true}&lt;/code&gt; : 在路由器中 meta 中添加数据，表示是否需要鉴权&lt;/p&gt;
+&lt;h5 id=&#34;92-全局后置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#92-全局后置&#34;&gt;#&lt;/a&gt; 9.2 全局后置&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;初始化的时候&lt;/strong&gt;调用&lt;/p&gt;
+&lt;p&gt;每次&lt;strong&gt;切换路由后&lt;/strong&gt;调用&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-js&#34; data-language=&#34;js&#34;&gt;&lt;code class=&#34;language-js&#34;&gt;router&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;afterEach&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;to&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// to 去哪个路由 to.path to.name&lt;/span&gt;
+    &lt;span class=&#34;token comment&#34;&gt;// from 来自哪个路由 &lt;/span&gt;
+&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;93-独享路由守卫&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#93-独享路由守卫&#34;&gt;#&lt;/a&gt; 9.3 独享路由守卫&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;beforeEneter: (to,from,next) =&amp;gt; {}&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;94-组件内路由守卫&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#94-组件内路由守卫&#34;&gt;#&lt;/a&gt; 9.4 组件内路由守卫&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;beforeRouteEnter(to,from,next)&lt;/code&gt; : 进入该组件时被调用&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;beforeRouteLeave(to,from,next)&lt;/code&gt; : 离开该组件时被调用&lt;/p&gt;
+&lt;h4 id=&#34;10-history和hash模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-history和hash模式&#34;&gt;#&lt;/a&gt; 10. History 和 Hash 模式&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;mode:history&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;默认为 hash 模式 会带#&lt;/p&gt;
 &lt;h3 id=&#34;基础模板作者学习时候用来构建最基本html文件的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础模板作者学习时候用来构建最基本html文件的&#34;&gt;#&lt;/a&gt; 基础模板 (作者学习时候用来构建最基本 html 文件的)&lt;/h3&gt;
 &lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token doctype&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&#34;token doctype-tag&#34;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&#34;token name&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;

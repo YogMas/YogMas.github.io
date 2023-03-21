@@ -17,6 +17,115 @@
     <category term="计算机组成原理" />
     <category term="算法啊" />
     <category term="java" />
+    <category term="Latex" />
+    <category term="课内课程" />
+    <entry>
+        <id>http://s1mm.gitee.io/s1mm/2021/11/06/css-xin/</id>
+        <title>Css新</title>
+        <link rel="alternate" href="http://s1mm.gitee.io/s1mm/2021/11/06/css-xin/"/>
+        <content type="html">&lt;h1 id=&#34;css新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css新&#34;&gt;#&lt;/a&gt; CSS (新)&lt;/h1&gt;
+&lt;p&gt;复习 (好吧 太久没用忘了 其实是重新学习过程) CSS 时记忆的笔记&lt;/p&gt;
+&lt;h2 id=&#34;定位position&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#定位position&#34;&gt;#&lt;/a&gt; 定位 (position)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;static: 正常流定位&lt;/li&gt;
+&lt;li&gt;relative: 相对定位&lt;/li&gt;
+&lt;li&gt;absolute,fixed: 绝对定位&lt;/li&gt;
+&lt;li&gt;sticky: 粘性定位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;static正常流定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static正常流定位&#34;&gt;#&lt;/a&gt; Static 正常流定位&lt;/h3&gt;
+&lt;p&gt;按照从上到下文档刷新的方式，就是最默认的定位方式&lt;/p&gt;
+&lt;h3 id=&#34;relative相对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#relative相对定位&#34;&gt;#&lt;/a&gt; relative 相对定位&lt;/h3&gt;
+&lt;p&gt;相对于原位置的定位，可以相对于原位置进行位置的移动&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;相对定位会保留原有的样式&lt;/strong&gt;，意思就是说相对定位移动后，原来那个位置的样式，不会被覆盖，可以理解为被隐藏了但是还在&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;relative&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;absolute绝对定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#absolute绝对定位&#34;&gt;#&lt;/a&gt; absolute 绝对定位&lt;/h3&gt;
+&lt;p&gt;absolute 是相对于上一个&lt;strong&gt;非 static 定位&lt;/strong&gt;的祖宗节点的位置&lt;/p&gt;
+&lt;p&gt;意思就是说 absolute 会向上找，找到一个不会 static 定位的祖宗节点 (最上面是&lt;strong&gt; body&lt;/strong&gt;),top 相当于距离这个父节点顶部的距离，其他类似&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;absolute&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;right&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;
+&lt;span class=&#34;token property&#34;&gt;bottom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fixed固定定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fixed固定定位&#34;&gt;#&lt;/a&gt; fixed 固定定位&lt;/h3&gt;
+&lt;p&gt;fixed 是相对于&lt;strong&gt;整个视窗&lt;/strong&gt;的位移，也是固定不变的&lt;/p&gt;
+&lt;h3 id=&#34;static粘性定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#static粘性定位&#34;&gt;#&lt;/a&gt; static 粘性定位&lt;/h3&gt;
+&lt;p&gt;当粘性定位的盒子的&lt;strong&gt;真实位置&lt;/strong&gt;在视窗内部的时候，他是正常显示的，但是当他要脱离视窗的时候，他会像固定定位一样，导致不脱离视窗&lt;/p&gt;
+&lt;h2 id=&#34;浮动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#浮动&#34;&gt;#&lt;/a&gt; 浮动&lt;/h2&gt;
+&lt;p&gt;块是会自动换行的，加上 float 之后，可以放在一行的会放在一行，一行无法放下时再进行换行&lt;/p&gt;
+&lt;p&gt;新的未浮动块会在浮动块的上方而不是排布在后方，要排布在后方可以清除浮动块的影响 使用 clear&lt;/p&gt;
+&lt;pre class=&#34;line-numbers language-css&#34; data-language=&#34;css&#34;&gt;&lt;code class=&#34;language-css&#34;&gt;&lt;span class=&#34;token property&#34;&gt;float&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left
+&lt;span class=&#34;token property&#34;&gt;clear&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;left/right/both&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;flex布局&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#flex布局&#34;&gt;#&lt;/a&gt; flex 布局&lt;/h2&gt;
+&lt;p&gt;弹性布局，也就是当拉伸视窗的时候，布局随着视窗的改变会自动变化&lt;/p&gt;
+&lt;p&gt;定义在&lt;strong&gt;父节点盒子上&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;flex-direction&lt;/code&gt; ： 属性指定了内部元素是如何在 flex 容器中&lt;strong&gt;布局&lt;/strong&gt;的，&lt;strong&gt;定义了主轴的方向&lt;/strong&gt; (正方向或反方向)。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;row&lt;/code&gt; :flex 容器的主轴被定义为与文本方向相同。 主轴起点和主轴终点与内容方向相同。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;row-reverse&lt;/code&gt; : 表现和 row 相同，但是置换了主轴起点和主轴终点。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column&lt;/code&gt; :flex 容器的主轴和块轴相同。主轴起点与主轴终点和书写模式的前后点相同&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;column-reverse&lt;/code&gt; : 表现和 column 相同，但是置换了主轴起点和主轴终点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-wrap&lt;/code&gt; : 指定 flex 元素&lt;strong&gt;单行显示还是多行显示&lt;/strong&gt;。如果允许换行，这个属性允许你控制行的堆叠方向。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;nowrap&lt;/code&gt; : 默认值。不换行。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrap&lt;/code&gt; : 换行，第一行在上方。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;wrap-reverse&lt;/code&gt; : 换行，第一行在下方。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-flow&lt;/code&gt; : &lt;code&gt;flex-direction&lt;/code&gt;  和  &lt;code&gt;flex-wrap&lt;/code&gt;  的简写。默认值为： &lt;code&gt;row nowrap&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;justify-content&lt;/code&gt; : 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。也就是&lt;strong&gt;控制横向对齐方式&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：默认值。左对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：右对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-between&lt;/code&gt; ：左右两段对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-around&lt;/code&gt; ：在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素到行首的距离和每行最后一个元素到行尾的距离将会是相邻元素之间距离的一半。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;space-evenly&lt;/code&gt; ：flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-items&lt;/code&gt; ：控制&lt;strong&gt;纵轴 (交叉轴&lt;/strong&gt;对齐)
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;flex-start&lt;/code&gt; ：元素向主轴起点对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;flex-end&lt;/code&gt; ：元素向主轴终点对齐。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;center&lt;/code&gt; ：元素在侧轴居中。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stretch&lt;/code&gt; ：弹性元素被在侧轴方向被拉伸到与容器相同的高度或宽度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;align-content&lt;/code&gt; : 与 &lt;code&gt;align-items&lt;/code&gt;  类似但是有以下区别
+&lt;ul&gt;
+&lt;li&gt;前者会均匀分布，后者会使所有行紧贴在一起&lt;/li&gt;
+&lt;li&gt;当只有一行的时候，前者仍然会居中，后者会失去居中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;定义在&lt;strong&gt; flex 盒子内部元素中&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;order&lt;/code&gt; : 定义 &lt;code&gt;flex&lt;/code&gt;  项目的顺序，值越小越靠前。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-grow&lt;/code&gt; :CSS 属性 flex-grow CSS 设置 flex 项主尺寸 的 flex 增长系数。&lt;strong&gt;负值无效，默认为 0。&lt;/strong&gt; &lt;strong&gt;也就是当视窗变大的时候 块也等比例变大&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-shrink&lt;/code&gt; : 属性指定了 flex 元素的收缩规则。flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值。&lt;strong&gt;负值无效，默认为 1。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex-basis&lt;/code&gt; : 设置默认宽度，&lt;strong&gt; 优先级大于默认 width&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;flex&lt;/code&gt; : &lt;code&gt;flex-grow&lt;/code&gt; 、 &lt;code&gt;flex-shrink&lt;/code&gt; 、 &lt;code&gt;flex-basis&lt;/code&gt;  的缩写。&lt;/p&gt;
+&lt;p&gt;常用取值： &lt;code&gt;flex: 1 1 auto&lt;/code&gt;        &lt;code&gt;flex: 0 0 auto&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="Css" />
+        <updated>2021-11-05T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://s1mm.gitee.io/s1mm/2021/11/06/css1/</id>
         <title>Css-first</title>
