@@ -1599,6 +1599,21 @@ props({query:{id,title}})
 &lt;h4 id=&#34;10-history和hash模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-history和hash模式&#34;&gt;#&lt;/a&gt; 10. History 和 Hash 模式&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;mode:history&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;默认为 hash 模式 会带#&lt;/p&gt;
+&lt;h2 id=&#34;vue3&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue3&#34;&gt;#&lt;/a&gt; Vue3&lt;/h2&gt;
+&lt;h3 id=&#34;构建vue3项目&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#构建vue3项目&#34;&gt;#&lt;/a&gt; 构建 Vue3 项目&lt;/h3&gt;
+&lt;h4 id=&#34;vue-cli构建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vue-cli构建&#34;&gt;#&lt;/a&gt; vue-cli 构建&lt;/h4&gt;
+&lt;pre class=&#34;line-numbers language-vue&#34; data-language=&#34;vue&#34;&gt;&lt;code class=&#34;language-vue&#34;&gt;#构建
+vue create xxx
+
+cd xxx
+npm run serve&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;vite构建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vite构建&#34;&gt;#&lt;/a&gt; vite 构建&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;开发环境中，无需打包操作，可以快速冷启动&lt;/li&gt;
+&lt;li&gt;轻量快速的热重载&lt;/li&gt;
+&lt;li&gt;真正的按需编译，不再等待整个应用的编译完成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常用compoiton-api组合式api&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用compoiton-api组合式api&#34;&gt;#&lt;/a&gt; 常用 Compoiton Api (组合式 API)&lt;/h3&gt;
 &lt;h3 id=&#34;基础模板作者学习时候用来构建最基本html文件的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础模板作者学习时候用来构建最基本html文件的&#34;&gt;#&lt;/a&gt; 基础模板 (作者学习时候用来构建最基本 html 文件的)&lt;/h3&gt;
 &lt;pre class=&#34;line-numbers language-html&#34; data-language=&#34;html&#34;&gt;&lt;code class=&#34;language-html&#34;&gt;&lt;span class=&#34;token doctype&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&#34;token doctype-tag&#34;&gt;DOCTYPE&lt;/span&gt; &lt;span class=&#34;token name&#34;&gt;html&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;html&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;en&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;
