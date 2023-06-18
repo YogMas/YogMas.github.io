@@ -19,6 +19,7 @@
     <category term="icoding答案" />
     <category term="计算机组成原理" />
     <category term="课内课程" />
+    <category term="复习" />
     <entry>
         <id>https://github.com/YogMas/YogMas.github.io/2023/06/15/ji-suan-ji-wang-luo-qi-mo-fu-xi/</id>
         <title></title>
@@ -28,7 +29,7 @@
     </entry>
     <entry>
         <id>https://github.com/YogMas/YogMas.github.io/2023/06/15/cao-zuo-xi-tong-qi-mo-fu-xi/</id>
-        <title></title>
+        <title>操作系统期末复习</title>
         <link rel="alternate" href="https://github.com/YogMas/YogMas.github.io/2023/06/15/cao-zuo-xi-tong-qi-mo-fu-xi/"/>
         <content type="html">&lt;h1 id=&#34;操作系统期末复习&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统期末复习&#34;&gt;#&lt;/a&gt; 操作系统期末复习&lt;/h1&gt;
 &lt;p&gt;@author 摆摆哥 JoTang&lt;/p&gt;
@@ -351,8 +352,796 @@ semaphore chopstick&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&
 &lt;/ul&gt;
 &lt;h3 id=&#34;34-实时调度略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#34-实时调度略&#34;&gt;#&lt;/a&gt; 3.4 实时调度 (略)&lt;/h3&gt;
 &lt;h3 id=&#34;35-死锁&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#35-死锁&#34;&gt;#&lt;/a&gt; 3.5 死锁&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;死锁&lt;/strong&gt;：多个进程在运行过程中因争夺资源而造成的一种僵局），当进程处于这种僵持状态时，若无外力作用，它们都将无法再向前推进&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;死锁&lt;/strong&gt;：如果一组进程中的每一个进程都在等待仅由该组进程中的其他进程才能引发的事件，那么该组进程是死锁的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可重用资源：可供用户重复使用多次的资源&lt;/li&gt;
+&lt;li&gt;可消耗性资源：可消耗资源的单元数目在进程运行期间是可以不断变化的。(消息)&lt;/li&gt;
+&lt;li&gt;可抢占性资源：一个进程在使用某个资源时，系统可以剥夺其使用权，将该资源分配给其他进程 (CPU, 内存)&lt;/li&gt;
+&lt;li&gt;不可抢占性资源：某个资源一旦分配给某个进程，则系统不能剥夺进程的使用权，只能由进程释放资源，或者进程终止运行 (打印机)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;产生死锁的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;竞争资源：竞争可重用资源 (打印机等) 和可消耗性资源 (临时资源：比如信号量，消息等)&lt;/li&gt;
+&lt;li&gt;进程间推进顺序非法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;发生死锁的四个必要条件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;互斥条件:&lt;/li&gt;
+&lt;li&gt;请求和保持：进程已经保持了一个资源，又提出新的请求       (破坏：必须一次性申请在整个运行过程中的所有资源)&lt;/li&gt;
+&lt;li&gt;不剥夺：进程已获得的资源在未使用完之前 不能被剥夺        (破坏：当资源得不到满足时，必须释放已持有的资源)&lt;/li&gt;
+&lt;li&gt;环路等待：发生死锁时 必然存在一个进程 - 资源的环形链      (破坏：对资源赋予序号，必须严格按照资源递增的次序提出)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;处理死锁的方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;预防死锁：破坏四个必要条件中的一个或几个&lt;/li&gt;
+&lt;li&gt;避免死锁：防止系统进入不安全状态&lt;/li&gt;
+&lt;li&gt;检测死锁：及时地检测死锁是否发生 并定位进程和资源&lt;/li&gt;
+&lt;li&gt;解除死锁：将进程从死锁中脱离出来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;36-预防死锁&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#36-预防死锁&#34;&gt;#&lt;/a&gt; 3.6 预防死锁&lt;/h3&gt;
+&lt;p&gt;破坏四个必要条件第 2,3,4 其中的一个 前面已阐述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请求和保持：资源被严重浪费 进程延迟运行&lt;/li&gt;
+&lt;li&gt;不剥夺：反复申请释放，消耗大量系统资源，且释放后可能被导致前段时间的工作失效，实现起来也比较复杂&lt;/li&gt;
+&lt;li&gt;环路等待：限制了新设备的增加，增加了程序设计难度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;37-避免死锁&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#37-避免死锁&#34;&gt;#&lt;/a&gt; 3.7 避免死锁&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;安全状态&lt;/strong&gt;：指系统能按某种进程顺序，依次为 n 个进程分配其所需资源，直至其最大需求，使每个进程都可顺利地完成，称系统处于安全状态。&lt;/p&gt;
+&lt;p&gt;** 安全序列:** 能够满足安全状态中的序列就是安全序列&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;银行家算法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Available Max Need Allocation     拥有资源， 最大需求   现在需要  已经分配&lt;/p&gt;
+&lt;p&gt;先判断 Request (请求资源) 是否合法    需要不大于 Need  不大于 Available   申请的资源不能比需要的大  申请的资源不能大于系统有的资源&lt;/p&gt;
+&lt;p&gt;如果申请合法 则尝试分配&lt;/p&gt;
+&lt;p&gt;检查分配后 系统是否仍然是安全状态，如果是安全状态则分配 否则不予分配&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安全性检查算法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Work Finish&lt;/p&gt;
+&lt;p&gt;从集合中找到一个  &lt;code&gt;Finish[i]=false&lt;/code&gt;  (还没有完成)  &lt;code&gt;Need[i,j]≤work[j]&lt;/code&gt; (需求量没有超过系统所拥有量) 的进程，将资源分配给他，直到他执行完成并返回资源，然后继续寻找下一个进程，如果所有进程都满足 &lt;code&gt;Finish[i]=true&lt;/code&gt;  则表示系统处于安全状态&lt;/p&gt;
+&lt;p&gt;例题&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618131932575.png&#34; alt=&#34;例题&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618132009332.png&#34; alt=&#34;例题&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;四-存储器管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-存储器管理&#34;&gt;#&lt;/a&gt; 四 存储器管理&lt;/h2&gt;
+&lt;h3 id=&#34;41-存储器结构层次&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#41-存储器结构层次&#34;&gt;#&lt;/a&gt; 4.1  存储器结构层次&lt;/h3&gt;
+&lt;p&gt;寄存器 -&amp;gt; 高速缓存 -&amp;gt; 主存 -&amp;gt; 磁盘缓存 -&amp;gt; 磁盘&lt;/p&gt;
+&lt;p&gt;高速缓存：利用局部性原理 将主存中一些经常访问的信息存放在高速缓存中&lt;/p&gt;
+&lt;p&gt;磁盘缓存：利用局部性原理 …  磁盘缓存不是一种磁盘介质 而是利用主存中的存储空间来暂存从磁盘读入的信息&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CPU 只能从主存储器中取得指令和数据&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;42-程序的装入和链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#42-程序的装入和链接&#34;&gt;#&lt;/a&gt; 4.2 程序的装入和链接&lt;/h3&gt;
+&lt;p&gt;源程序 -&amp;gt; 可执行程序：编译 -&amp;gt; 链接 -&amp;gt; 装入&lt;/p&gt;
+&lt;p&gt;编译：由编译程序（Compiler）将用户源代码转换成若个目标模块&lt;/p&gt;
+&lt;p&gt;链接：由链接程序（Linker）将编译后形成的一组目标模块，以及它们所需要的库函数链接在一起， 形成一个完整的装入模块&lt;/p&gt;
+&lt;p&gt;装入：由装入程序（Loader）将装入模块装入内存&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618133141557.png&#34; alt=&#34;image-20230618133141557&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;421-程序的装入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#421-程序的装入&#34;&gt;#&lt;/a&gt; 4.2.1 程序的装入&lt;/h4&gt;
+&lt;p&gt;分为三种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;绝对装入方式&lt;/li&gt;
+&lt;li&gt;可重定位装入方式&lt;/li&gt;
+&lt;li&gt;动态运行时装入方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;绝对装入方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果知道程序将驻留在内存的什么位置，那么， 编译程序将产生&lt;strong&gt;绝对地址&lt;/strong&gt;的目标代码，此时逻辑地址和绝对地址完全相同，&lt;strong&gt;装入程序不需要对程序和数据的地址进行更改&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;只合适单道程序环境&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可重定位装入方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;装入程序将装入模块装入内存后，装入模块中程序所访问的所有逻辑地址与实际装入内存的物理地址不同 ，必须进行变换&lt;/p&gt;
+&lt;p&gt;把在装入时对目标程序中指令和数据的变换过程称为重定位。因为&lt;strong&gt;地址变换是在装入时一次完成的，以后不再改变&lt;/strong&gt;，故称为静态重定位&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;动态运行时装入&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;装入程序将目标模块装入内存后，并不立即把装入模块中的相对地址转换为绝对地址，而是把这种地址转换推迟到程序执行时进行，在硬件地址变换机构的支持下，随着对每条指令或数据的访 问自动进行地址变换，故称为动态重定位&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;422-程序的链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#422-程序的链接&#34;&gt;#&lt;/a&gt; 4.2.2 程序的链接&lt;/h4&gt;
+&lt;p&gt;分为三种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;静态链接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;装入时动态链接&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行时动态链接&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;静态链接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;直接将编译产生的模块和库函数模块链接在一起&lt;/p&gt;
+&lt;p&gt;然后对其中的&lt;strong&gt;相对位置进行修改&lt;/strong&gt;并&lt;strong&gt;变换外部调用符号&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;装入时动态链接&lt;/p&gt;
+&lt;p&gt;在装入时 边装入边链接&lt;/p&gt;
+&lt;p&gt;装入一个目标模块时，若发生一个外部模块调用事件，将引起装入程序去找出相应的外部目标模块，并将它装入内存&lt;/p&gt;
+&lt;p&gt;便于修改和更新&lt;/p&gt;
+&lt;p&gt;便于实现对目标模块的共享&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行时动态链接&lt;/p&gt;
+&lt;p&gt;指对某些目标模块的链接，是在程序执行中需要该目标模块时，由 OS 去找到该模块并将之装入内存并把它链接到调用者模块上&lt;/p&gt;
+&lt;p&gt;可以加快程序的装入过程，节省大量内存空间&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;43-连续分配方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#43-连续分配方式&#34;&gt;#&lt;/a&gt; 4.3 连续分配方式&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;单一连续分配&lt;/strong&gt;：将内存分为系统区和用户区 系统区给 OS 用户区给用户  用户区作为一整块给用户使用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;固定分区分配&lt;/strong&gt;：将内存用户空间划分成若若干个固定大小的区域，每个分区装入一道作业，有几个分区就可以同时有几道作业并发执行&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分区大小相等&lt;/li&gt;
+&lt;li&gt;分区大小不等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按分区大小排队，建立一张分区使用表&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内零头：分配给用户 但是用户没有使用&lt;/li&gt;
+&lt;li&gt;外零头：因为太小而无法分配给用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;动态分区分配&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;分区分配中 分为空闲分区表和空闲分区链&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分区分配算法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;首次适应算法&lt;/strong&gt;：分配内存时，从&lt;strong&gt;链首开始顺序查找&lt;/strong&gt;，直至找到一个大小能 满足要求的空闲分区为止；然后按照作业大小在该区划分所需空间，余下部分仍然放在空闲分区链中&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;循环首次适应算法&lt;/strong&gt;：不从链首开始，&lt;strong&gt;从上次找到的空闲分区的下一 个空闲分区开始查找&lt;/strong&gt;，找到为止； 将所有的空闲分区构成一个循环链表。采用 环查找方式，设置一个起始查寻指针，用于指示下一次起始查寻的空闲分区&lt;/p&gt;
+&lt;p&gt;最佳适应算法：该算法要求将所有的空闲分区&lt;strong&gt;按其容量以从小到大的顺序&lt;/strong&gt;形成一空闲分区链，每次找到刚好满足其容量的分区&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分区回收&lt;/strong&gt;：当进程运行完毕释放内存时，需合并相邻的空闲分区， 形成大的分区，称为合并技术。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;伙伴系统&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;无论已分配分区或空闲分区，其 大小均为 2 的 k 次幂，k 为整数&lt;/p&gt;
+&lt;p&gt;可重定位分区分配&lt;/p&gt;
+&lt;p&gt;紧凑：将内存中的所有作业进行移动，使它们全都相邻接，这样， 可把原来分散的多个小分区合成一 个大分区的方法&lt;/p&gt;
+&lt;p&gt;真正的访问地址 = 相对地址 + 重定位寄存器的地址 地址变换在访问时自动进行，所以称为动态重定位&lt;/p&gt;
+&lt;p&gt;动态重定位分区分配算法：动态分区分配算法 + 紧凑&lt;/p&gt;
+&lt;h3 id=&#34;44-对换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#44-对换&#34;&gt;#&lt;/a&gt; 4.4 对换&lt;/h3&gt;
+&lt;p&gt;对换：指把内存中暂时不能运行的进程或者暂时不用的程序和数据，调出到外存上， 以便腾出足够的内存空间，再把已具备运行条件的进程或进程所需要的程序和数据，调入内存&lt;/p&gt;
+&lt;p&gt;要实现三个方面的功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对换空间的管理&lt;/li&gt;
+&lt;li&gt;进程的换出&lt;/li&gt;
+&lt;li&gt;进程的换入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在外存中分为对换区和内存区，文件区采用&lt;strong&gt;离散分配方式&lt;/strong&gt; (提高存储空间的利用率), 对换区采用&lt;strong&gt;连续分配方式&lt;/strong&gt; (提高进程换入换出的速度)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进程的换出：系统选择处于阻塞（或就绪）状态且优先级最低的进程作为换出进程，将该进程的程序和数据传送到磁盘的对换区上。便可回收该进程所占用的内存空间， 并对该进程的进程控制块 (PCB) 做相应的修改&lt;/li&gt;
+&lt;li&gt;系统定时地查看所有进程的状态，从中找出 “就绪” 状态但已换出的进程，将其中换出时间最久的进程作为换入进程，将之换入&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;45-分页存储管理方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#45-分页存储管理方式&#34;&gt;#&lt;/a&gt; 4.5 分页存储管理方式&lt;/h3&gt;
+&lt;p&gt;页面：将一个进程的逻辑地址空间分成若干个大小相等的片&lt;/p&gt;
+&lt;p&gt;物理块：把内存空间分成与页面相同大小的若干个存储块&lt;/p&gt;
+&lt;p&gt;页面小：会提供内存利用率 但是会导致页面过长    使系统开销增大&lt;/p&gt;
+&lt;p&gt;页面大：会增大页内碎片&lt;/p&gt;
+&lt;p&gt;地址长度 32 位，0~11 位为页内地址，即每页大小为 4KB， 12~31 位为页号&lt;/p&gt;
+&lt;p&gt;页表：实现从页号到物理块号的地址映射&lt;/p&gt;
+&lt;p&gt;地址变换机构：实现从逻辑地址到物理地址的转换&lt;/p&gt;
+&lt;p&gt;基本的：在系统中只设置一个&lt;strong&gt;页表寄存器 PTR&lt;/strong&gt;，在其中存放页表在内存的始 址和页表的长度&lt;/p&gt;
+&lt;p&gt;具有快表的：企图少访问一次内存，现在快表中看是否有当前页号 没有再去内存中找&lt;/p&gt;
+&lt;p&gt;两级页表&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618145916929.png&#34; alt=&#34;两级页表&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;46-分段存储管理方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#46-分段存储管理方式&#34;&gt;#&lt;/a&gt; 4.6 分段存储管理方式&lt;/h3&gt;
+&lt;p&gt;满足用户和程序员的需要&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方便编程&lt;/li&gt;
+&lt;li&gt;信息共享：在实现对程序和数据的共享时，是以信息的逻辑单位为基础的。&lt;/li&gt;
+&lt;li&gt;信息保护：分段管理方式能更有效和方便地实现信息保护功能。&lt;/li&gt;
+&lt;li&gt;动态增长：分段存储管理方式却能较好地解决数据段增长 。&lt;/li&gt;
+&lt;li&gt;动态链接：先装入主程序段 然后当需要的时候才装入其他段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其逻辑地址由段号（段名）和 段内地址所组成&lt;/p&gt;
+&lt;p&gt;每个段在表中占有一个表项，其中记录了该段在 内存中的起始地址（又称为 “基址”）和段的长 度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618153845438.png&#34; alt=&#34;段&#34;&gt;&lt;/p&gt;
+&lt;p&gt;分页和分段的主要区别:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;页是信息的物理单位，分页是为实现离散分配方 式，以消减内存的外零头，提高内存的利用率&lt;/li&gt;
+&lt;li&gt;段则是信息的逻辑单位，它含有一组其意义相对 完整的信息。分段的目的是为了能更好地满足用 户的需要。&lt;/li&gt;
+&lt;li&gt;页的大小固定且由系统决定，** 由系统把逻辑地址划分为页号和页内地址两部分，是由机器硬件实现的，** 因而在系统中只能有一种大小的页面&lt;/li&gt;
+&lt;li&gt;段的长度却不固定，决定于用户所编写的程序， 通常由编译程序在对源程序进行编译时，根据信息的性质来划分。&lt;/li&gt;
+&lt;li&gt;分页的作业地址空间是一维的，即单一的线性地址空间，程序员只需利用一个记忆符， 即可表示一个地址&lt;/li&gt;
+&lt;li&gt;分段的作业地址空间则是二维的，程序员在 标识一个地址时，既需给出段名，又需给出 段内地址。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;段页式系统&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;先将用户程序分成若干个段，再把每个段分成若干个页，并为每一个段赋予一个段名&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;地址结构由段号、 段内页号 、页内地址三部分构成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618163642901.png&#34; alt=&#34;段页式&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618163730548.png&#34; alt=&#34;image-20230618163730548&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;47-虚拟存储期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#47-虚拟存储期&#34;&gt;#&lt;/a&gt; 4.7 虚拟存储期&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;局部性原理:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序执行时，除了少部分的转移和过程调用 指令外，在大多数情况下仍是顺序执行的&lt;/li&gt;
+&lt;li&gt;过程调用将会使程序的执行轨迹由一部分区域转至另一部分区域，但经研究看出，过程调用的深度在大多数情况下都不超过 5 层。这就是说， &lt;strong&gt;程序将会在一段时间内都局限在这些过程的范围内运行&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;程序中存在许多循环结构，这些虽然只 由少数指令构成，但是它们将多次执行&lt;/li&gt;
+&lt;li&gt;程序中还包括许多对数据结构的处理， 如对数组进行操作，它们往往都局限于很 小的范围内。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;局限性又分为&lt;strong&gt;时间局限性&lt;/strong&gt;和&lt;strong&gt;空间局限性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;时间局限因为程序存在大量的循环操作 空间局限程序在一定时间内所访问的地址都局限在小范围内&lt;/p&gt;
+&lt;p&gt;虚拟存储器：具有请求调入功能和置换功能，能从逻辑上对内存容量加以扩充的一种存储器系统，其逻辑容量由内存容量和外存容量之和所决定，其运行速度接近于内存速度，而每位的成本却又接近于外存&lt;/p&gt;
+&lt;p&gt;虚拟存储器的特征&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多次性:&lt;strong&gt; 一个作业被分成多次调入内存运行&lt;/strong&gt;，在作业运行时只需将当前要运行的那部分程序和数据装入内存即可；当要运行时尚未调入的那部分程序 时，再将它调入&lt;/li&gt;
+&lt;li&gt;对唤性:&lt;/li&gt;
+&lt;li&gt;虚拟性：从逻辑上扩充内存容量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;473-请求分页系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#473-请求分页系统&#34;&gt;#&lt;/a&gt; 4.7.3 请求分页系统&lt;/h4&gt;
+&lt;p&gt;程序只装入部分页面的程序和数据，然后启动运行，等运行到没有装入的程序和数据时再将页面装入内存&lt;/p&gt;
+&lt;p&gt;实现请求分页系统需要提供硬件和软件支持&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;页表机制增加若干项，表示页表的状态&lt;/li&gt;
+&lt;li&gt;缺页中断机制&lt;/li&gt;
+&lt;li&gt;地址变换机构&lt;/li&gt;
+&lt;li&gt;软件：页面置换和请求调页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;474-请求分段系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#474-请求分段系统&#34;&gt;#&lt;/a&gt; 4.7.4 请求分段系统&lt;/h4&gt;
+&lt;p&gt;先装入主程序段，然后通过调段功能和置换功能将不运行的段调出，再调入相应段&lt;/p&gt;
+&lt;p&gt;与请求分页类似的硬件和软件支持&lt;/p&gt;
+&lt;h3 id=&#34;48-请求分页存储管理方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#48-请求分页存储管理方式&#34;&gt;#&lt;/a&gt; 4.8 请求分页存储管理方式&lt;/h3&gt;
+&lt;p&gt;页表添加字段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;状态位 P: 指示该页是否调入内存&lt;/li&gt;
+&lt;li&gt;访问字段 A: 记录本页有多久未被访问&lt;/li&gt;
+&lt;li&gt;修改位 M: 调入内存后是否被修改过&lt;/li&gt;
+&lt;li&gt;外存地址：该页在外存上的地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;缺页中断与普通中断的区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在指令执行期间产生&lt;/li&gt;
+&lt;li&gt;一条指令执行期间可以产生多次缺页中断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;482-内存分配策略和分配算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#482-内存分配策略和分配算法&#34;&gt;#&lt;/a&gt; 4.8.2 内存分配策略和分配算法&lt;/h4&gt;
+&lt;p&gt;最小物理块数：最小为 2  有间接寻址最小为 3&lt;/p&gt;
+&lt;p&gt;物理块的分配策略&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;固定分配局部置换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可变分配全局置换&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可变分配局部置换&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;固定分配局部置换&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为每个进程分配确定数目的物理块，在整个运行期间都不再改变。&lt;/p&gt;
+&lt;p&gt;如果进程在运行中发现缺页，则只能从该进程在内 存的 n 个页面中选出一页换出，然后再调入一页， 保证分配给进程的内存空间总量不变&lt;/p&gt;
+&lt;p&gt;此时分配物理块，又包含了平均分配和按比例分配以及考虑优先权&lt;/p&gt;
+&lt;p&gt;平局分配：将物理块平均分配给进程&lt;/p&gt;
+&lt;p&gt;按比例分配：根据进程的大小按比例分配&lt;/p&gt;
+&lt;p&gt;优先权：一部分按比例分，另一部分根据优先权分&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可变分配全局置换&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;先为系统中的每个进程分配一定数目的物理块， 而 OS 自身也保持一个空闲物理块队列。&lt;/p&gt;
+&lt;p&gt;当某进程缺页时，由系统从空闲物理块队列中， 取出一个物理块分配给该进程，并将欲调入的 （缺）页装入其中。这样，凡产生缺页（中断） 的进程，都将获得新的物理块&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;可变分配局部置换&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为每个进程分配一定数目的物理块，但当某进程发现缺页时，只允许从该进程在内存的页面中选 出一页换出，这样就不会影响其它进程的运行。&lt;/p&gt;
+&lt;p&gt;如果进程在运行中频繁地发生缺页中断，则系统 须再为该进程分配若干附加的物理块，直至该进 程的缺页率减少到适当程度为止。 若一个进程在运行过程中的缺页率特别低，则此 时可适当减少分配给该进程的物理块数，但不应 引起其缺页率的明显增加。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;483-调页策略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#483-调页策略&#34;&gt;#&lt;/a&gt; 4.8.3 调页策略&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;何时调入页面&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;预调页：调入预计之后会访问的页面&lt;/li&gt;
+&lt;li&gt;请求调页：收到调页请求就调一页&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;从何处调入页面&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;从对换区调入：对换区充足时，从对换区调入加快速度&lt;/p&gt;
+&lt;p&gt;从文件区调入：对换区不充足时，如果没有修改从文件区调，修改了从对换区调&lt;/p&gt;
+&lt;p&gt;调页过程：发中断 -&amp;gt; 保留 CPU 环境 -&amp;gt; 内存满了就先换出再调 -&amp;gt; 修改页表项 P 为 1&lt;/p&gt;
+&lt;p&gt;缺页率 f = 访问页面失败次数 / 总的访问次数&lt;/p&gt;
+&lt;h3 id=&#34;49-页面置换算法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#49-页面置换算法&#34;&gt;#&lt;/a&gt; 4.9 页面置换算法&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;最佳置换算法&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;所选择被淘汰的页面，将是以后永不使用的，或许是在最长时间内不再被访问的页面。&lt;/p&gt;
+&lt;p&gt;性能好，但是难以实现&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先进先出算法:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;总是淘汰在内存中驻留最久的页面&lt;/p&gt;
+&lt;p&gt;把一个进程已调入内存的页面，按先后次序链接成一个队列，设置一个替换指针， 使它总是指向最老的页面&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最近最少使用置换算法&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;该算法赋予每个页面一个访问字段，用来记录一个页面自上次被访问以来所经历的时间 t，当需淘汰一 个页面时，选择现有页面中其 t 值最大的，即最近最久未使用的页面予以淘汰&lt;/p&gt;
+&lt;p&gt;寄存器:&lt;/p&gt;
+&lt;p&gt;用二进制，每 100ms 右移一位，每次访问将寄存器首位置 1, 如此最小的就是最近最少使用&lt;/p&gt;
+&lt;p&gt;栈:&lt;/p&gt;
+&lt;p&gt;每次被访问就从栈中取出并压入栈顶  栈底就是最近最少使用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Clock 置换算法&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;当采用简单 clock 算法时，只需为每页设置一位访问位， 再将内存中的所有页面都通过链接指针链接成一个循环队列。&lt;/p&gt;
+&lt;p&gt;当某页被访问时，其访问位被置 1。置换算法在选择一页淘汰时，只需检查页的访问位。如果是 0，就选择该页换出；若为 1，则重新将它置 0，暂不换出，而给该页第二次驻留内存的机会，再按照 FIFO 算法检查下一个页面。&lt;/p&gt;
+&lt;p&gt;相当于先进先出算法的更新版本，设置标志位给予继续驻留内存的机会&lt;/p&gt;
+&lt;p&gt;改进 Clock&lt;/p&gt;
+&lt;p&gt;设置标志位 A 和 M, 分别是访问过和修改过没&lt;/p&gt;
+&lt;p&gt;（1）从指针所指示的当前位置开始，扫描循环队列，寻找 A=0 且 M=0 的第一类页面，将所遇到的第一个页面作为所 选中的淘汰页。在第一次扫描期间不改变访问位 A。&lt;/p&gt;
+&lt;p&gt;（2）如果第一步失败，即查找一周后未遇到第一类页面， 则开始第二轮扫描，寻找 A=0 且 M＝1 的第二类页面，将 所遇到的第一个这类页面作为淘汰页。在第二轮扫描期间， 将所有扫描过的页面的访问位都置为 0。&lt;/p&gt;
+&lt;p&gt;（3）如果第二步也失败，亦即未找到第二类页面，则将指 针返回到开始的位置，并将所有的访问位复 0。然后重复 第一步，如果仍失败，必要时再重复第二步，此时就一定 能找到被淘汰的页&lt;/p&gt;
+&lt;h3 id=&#34;410-请求分段存储管理方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#410-请求分段存储管理方式&#34;&gt;#&lt;/a&gt; 4.10 请求分段存储管理方式&lt;/h3&gt;
+&lt;p&gt;同样扩展其段表设置标志位&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618172210353.png&#34; alt=&#34;image-20230618172210353&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分段的共享&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;添加共享段表，第一次申请共享段时，先给段分配物理区，并写入共享段表，第二次申请时候只需要将 count++ 并在共享段中增加表项&lt;/p&gt;
+&lt;p&gt;共享段的回收，将 count-1 若 count=0 则回收此物理区&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分段保护&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;越界检查 (通过段的长度)&lt;/p&gt;
+&lt;p&gt;存取控制检查&lt;/p&gt;
+&lt;p&gt;环保护机构&lt;/p&gt;
+&lt;h2 id=&#34;五-输入输出系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-输入输出系统&#34;&gt;#&lt;/a&gt; 五 输入输出系统&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618172748732.png&#34; alt=&#34;image-20230618172748732&#34;&gt;&lt;/p&gt;
+&lt;p&gt;IO 系统的基本功能&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设备分配&lt;/li&gt;
+&lt;li&gt;设备映射&lt;/li&gt;
+&lt;li&gt;设备驱动&lt;/li&gt;
+&lt;li&gt;I/O 缓冲区的管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618172832524.png&#34; alt=&#34;IO系统的层次结构&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618172900115.png&#34; alt=&#34;中断相关概念&#34;&gt;&lt;/p&gt;
+&lt;p&gt;中断：指令完成后执行测试是否有中断请求 -&amp;gt; 保存处理机环境 -&amp;gt; 转入相应执行程序 -&amp;gt; 执行中断处理 -&amp;gt; 恢复被中断的现场&lt;/p&gt;
+&lt;p&gt;对 I/O 设备的控制方式分为四种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用轮询的可编程 I/O&lt;/li&gt;
+&lt;li&gt;使用中断的可编程 I/O&lt;/li&gt;
+&lt;li&gt;直接存储器访问&lt;/li&gt;
+&lt;li&gt;I/O 通道控制方式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用轮询的可编程 I/O&lt;/p&gt;
+&lt;p&gt;处理机向控制器发出一条 I/O 指令启动输入设备输 入数据时，同时把 busy 置为 1，并不断循环测试 busy。当 busy 为 0 说明读取完毕完成一次 I/O&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618173339834.png&#34; alt=&#34;image-20230618173339834&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;中断方式&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618173400491.png&#34; alt=&#34;image-20230618173400491&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DMA 直接存储器访问&lt;/p&gt;
+&lt;p&gt;只有在开始传输和结束传输的时候才需要 CPU 干预，其他时候都由 DMA 控制传输，每次传送至少一个数据块&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I/O 通道控制方式&lt;/p&gt;
+&lt;p&gt;是 DMA 的发展，对一个数据块的读（或写）为单位的干预， 减少为对一组数据块的读（或写）及有关的控制和管理为单位的干预。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;读取磁盘时间分为 寻道时间 + 旋转延迟时间 + 传输时间&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;磁盘调度&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先来先服务：根据请求磁盘的先后顺序&lt;/li&gt;
+&lt;li&gt;最短寻道优先：访问与当前磁头所在磁道最近的磁道&lt;/li&gt;
+&lt;li&gt;扫描算法：先自里向外，直到没有更外面的需要访问再自外向里&lt;/li&gt;
+&lt;li&gt;循环扫描算法：单向自里向外一直移动，到达最外面后再到最里面&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;六-文件系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-文件系统&#34;&gt;#&lt;/a&gt; 六 文件系统&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;文件&lt;/strong&gt;：文件是由创建者所定义的、具有文件名的一组相关元素的集合&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件系统&lt;/strong&gt;的：操作系统中的各类文件、管理文件的软件，以及管理文件所涉及到的数据结构等信息的集合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件系统的功能&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有效地管理文件的存储空间；&lt;/li&gt;
+&lt;li&gt;管理文件目录；&lt;/li&gt;
+&lt;li&gt;完成文件的读 / 写操作；&lt;/li&gt;
+&lt;li&gt;实现文件共享与保护；&lt;/li&gt;
+&lt;li&gt;为用户提供交互式命令接口和程序调用接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文件的逻辑结构：从用户观点出发所观察到的文件组织形式&lt;/p&gt;
+&lt;p&gt;文件的物理结构：文件在外存上的存储组织形式&lt;/p&gt;
+&lt;p&gt;存储空间的管理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;连续分配’&lt;/p&gt;
+&lt;p&gt;每一个文件分配一组相邻的盘块   连续读写多个数据块内容时性能较好&lt;/p&gt;
+&lt;p&gt;优点：顺序访问容易，顺序访问速度快&lt;/p&gt;
+&lt;p&gt;缺点：必须实现知道文件的大小 不利于文件大小的变化&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;链接分配&lt;/p&gt;
+&lt;p&gt;采用链接分配方式时，可通过在每个盘块上的链接指针，将同属于一个文件的多个离散的盘块链接成一 个链表，把这样形成的物理文件称为链接文件&lt;/p&gt;
+&lt;p&gt;隐式链接：文件目录的每个目录项中 都含有指向第一个盘块和最后一个盘块的指针，在每个盘块中都含有指向下一个盘块的指针&lt;/p&gt;
+&lt;p&gt;显示链接：这是指把用于链接文件各物理块的指针，显式地存放在内存的一张链接表中。 整个磁盘仅设置一张文件分配表（FAT）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618175759390.png&#34; alt=&#34;image-20230618175759390&#34;&gt;&lt;/p&gt;
+&lt;p&gt;因为查找过程在内存中进行，提高了检索速度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引分配&lt;/p&gt;
+&lt;p&gt;FAT 不支持高效的直接存取 (需要顺序查找很多盘块号),FAT 占用较大的内存空间 (需要全部调入内存)&lt;/p&gt;
+&lt;p&gt;为每个文件分配一个索引表，将盘块号记录在索引表中，只需要在目录项中填上指向该索引块的指针&lt;/p&gt;
+&lt;p&gt;可以有多级索引&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;63-文件存储空间的管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#63-文件存储空间的管理&#34;&gt;#&lt;/a&gt; 6.3 文件存储空间的管理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;空闲分区表&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;系统也为外存上的所有空闲区建立一张空闲表，每个空闲区对应于一个空闲表项（对应连续分配）&lt;/p&gt;
+&lt;p&gt;顺序查找空闲分区表中的表项直到找到第一个大小适合的空闲分区&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618180346272.png&#34; alt=&#34;image-20230618180346272&#34;&gt;&lt;/p&gt;
+&lt;p&gt;优点：很快可以找到分区&lt;/p&gt;
+&lt;p&gt;缺点：空闲分区表可能很大&lt;/p&gt;
+&lt;p&gt;交换分区采用连续分配，文件较小采用连续分配，文件较大采用离散分配&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;空闲链表法&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;空闲链表法是将所有空闲盘区连成一条空闲链&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;空闲盘块链&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618180555164.png&#34; alt=&#34;image-20230618180555164&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;空闲盘区链&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618180632885.png&#34; alt=&#34;image-20230618180632885&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;位示图法：利用二进制位 0、1 表示存储空间中存储块的使用状 态。空闲分区：0，已分配分区：1（或者相反）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618180716069.png&#34; alt=&#34;image-20230618180716069&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618180728016.png&#34; alt=&#34;image-20230618180728016&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618180733876.png&#34; alt=&#34;image-20230618180733876&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;64-文件目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#64-文件目录&#34;&gt;#&lt;/a&gt; 6.4 文件目录&lt;/h3&gt;
+&lt;p&gt;文件控制块：用于描述和控制文件的数据结构&lt;/p&gt;
+&lt;p&gt;文件目录：文件控制块的有序集合&lt;/p&gt;
+&lt;p&gt;FCB 的内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基本信息&lt;/li&gt;
+&lt;li&gt;地址信息&lt;/li&gt;
+&lt;li&gt;访问控制信息&lt;/li&gt;
+&lt;li&gt;使用信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;文件的索引节点&lt;/p&gt;
+&lt;p&gt;磁盘上建立了一个 i 节点表，其中的每个 i 节点对应一个文件，用于存放文件的属性参数：大小、类型、保护 模式、所有者、修改时间等。 文件被打开使用时，将文件的 i 节点从磁盘调入内存。 内存 i 节点除了包含磁盘 i 节点的所有内容外，还包含文 件当前的状态信息：是否上锁、修改标志、访问计数等。 文件使用完毕后，将该文件在内存中的 i 节点写回到磁 盘上保存&lt;/p&gt;
+&lt;p&gt;目录的结构&lt;/p&gt;
+&lt;p&gt;目录文件：一个目录也被看做是一个文件，即目录文件。 目录文件是由多个文件的目录项构成的一种特殊文件&lt;/p&gt;
+&lt;p&gt;目录项的两种组织方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FCB 存储全部目录内容&lt;/li&gt;
+&lt;li&gt;存储部分内容，其他部分存储在索引节点中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目录的结构&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单极目录结构：所有用户的全部文件目录保存在一张目录表中， 每个文件的目录项占用一个表项&lt;/p&gt;
+&lt;p&gt;缺点：查找速度慢，不允许重名，不便于实现文件共享&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两级目录结构：包括主文件目录和用户文件目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多级目录结构：将目录将树一样组织起来&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相对路径：从当前目录开始的路径名&lt;/p&gt;
+&lt;p&gt;绝对路径：从根目录开始的路径名&lt;/p&gt;
+&lt;p&gt;目录查询技术：线性检索和 hash&lt;/p&gt;
+&lt;h3 id=&#34;65-文件共享和访问控制&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#65-文件共享和访问控制&#34;&gt;#&lt;/a&gt; 6.5 文件共享和访问控制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;控制同时存取：允许多个用户同时读，但不允许同时修改，修改文件时应该作为临界资源加锁&lt;/li&gt;
+&lt;li&gt;控制存取权限:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实现文件共享的方式&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;链接目录项实现法&lt;/li&gt;
+&lt;li&gt;索引节点实现法&lt;/li&gt;
+&lt;li&gt;符号链实现法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;链接目录项实现法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618204929542.png&#34; alt=&#34;image-20230618204929542&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引节点实现法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618205002483.png&#34; alt=&#34;image-20230618205002483&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;符号链实现法&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618205115062.png&#34; alt=&#34;image-20230618205115062&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;十一-进程与线程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#十一-进程与线程&#34;&gt;#&lt;/a&gt; 十一 进程与线程&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;进程：操作系统中拥有资源和独立运行的基本单位。&lt;/li&gt;
+&lt;li&gt;进程的引入：实现单处理机环境下多程序并发的功能。&lt;/li&gt;
+&lt;li&gt;线程的引入：提高多处理机环境下程序的并发程度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;线程是一个被调度和分派的基本单位并可独立运行的实体&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s1mimg.oss-cn-chengdu.aliyuncs.com/img/image-20230618210245189.png&#34; alt=&#34;image-20230618210245189&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;linux&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#linux&#34;&gt;#&lt;/a&gt; Linux&lt;/h1&gt;
+&lt;h2 id=&#34;常用指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用指令&#34;&gt;#&lt;/a&gt; 常用指令&lt;/h2&gt;
+&lt;p&gt;(1)  &lt;code&gt;ctrl c&lt;/code&gt; : 取消命令，并且换行&lt;br&gt;
+ (2)  &lt;code&gt;ctrl u&lt;/code&gt; : 清空本行命令&lt;br&gt;
+ (3)  &lt;code&gt;tab键&lt;/code&gt; ：可以补全命令和文件名，如果补全不了快速按两下 tab 键，可以显示备选选项&lt;br&gt;
+ (4)  &lt;code&gt;ls&lt;/code&gt; : 列出当前目录下所有文件，蓝色的是文件夹，白色的是普通文件，绿色的是可执行文件&lt;br&gt;
+ (5)  &lt;code&gt;pwd&lt;/code&gt; : 显示当前路径&lt;br&gt;
+ (6)  &lt;code&gt;cd XXX&lt;/code&gt; : 进入 XXX 目录下，cd … 返回上层目录&lt;br&gt;
+ (7)  &lt;code&gt;cp XXX YYY&lt;/code&gt; : 将 XXX 文件复制成 YYY，XXX 和 YYY 可以是一个路径，比如…/dir_c/a.txt，表示上层目录下的 dir_c 文件夹下的文件 a.txt&lt;br&gt;
+(8)  &lt;code&gt;mkdir XXX&lt;/code&gt; : 创建目录 XXX&lt;br&gt;
+(9)  &lt;code&gt;rm XXX&lt;/code&gt; : 删除普通文件；rm XXX -r: 删除文件夹&lt;br&gt;
+ (10)  &lt;code&gt;mv XXX YYY&lt;/code&gt; : 将 XXX 文件移动到 YYY，和 cp 命令一样，XXX 和 YYY 可以是一个路径；重命名也是用这个命令&lt;br&gt;
+ (11)  &lt;code&gt;touch XXX&lt;/code&gt; : 创建一个文件&lt;br&gt;
+ (12)  &lt;code&gt;cat XXX&lt;/code&gt; : 展示文件 XXX 中的内容&lt;/p&gt;
+&lt;h2 id=&#34;shell语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shell语法&#34;&gt;#&lt;/a&gt; shell 语法&lt;/h2&gt;
+&lt;pre class=&#34;line-numbers language-shell&#34; data-language=&#34;shell&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;if…then形式
+
+单层if
+命令格式：
+
+if condition
+then
+    语句1
+    语句2
+    ...
+fi
+示例：
+
+a=3
+b=4
+
+if [ &#34;$a&#34; -lt &#34;$b&#34; ] &amp;amp;&amp;amp; [ &#34;$a&#34; -gt 2 ]
+then
+    echo ${a}在范围内
+fi
+输出结果：
+
+3在范围内
+单层if-else
+命令格式
+
+if condition
+then
+    语句1
+    语句2
+    ...
+else
+    语句1
+    语句2
+    ...
+fi
+示例：
+
+a=3
+b=4
+
+if ! [ &#34;$a&#34; -lt &#34;$b&#34; ]
+then
+    echo ${a}不小于${b}
+else
+    echo ${a}小于${b}
+fi
+输出结果：
+
+3小于4
+多层if-elif-elif-else
+命令格式
+
+if condition
+then
+    语句1
+    语句2
+    ...
+elif condition
+then
+    语句1
+    语句2
+    ...
+elif condition
+then
+    语句1
+    语句2
+else
+    语句1
+    语句2
+    ...
+fi
+示例：
+
+a=4
+
+if [ $a -eq 1 ]
+then
+    echo ${a}等于1
+elif [ $a -eq 2 ]
+then
+    echo ${a}等于2
+elif [ $a -eq 3 ]
+then
+    echo ${a}等于3
+else
+    echo 其他
+fi
+输出结果：
+
+其他
+case…esac形式
+类似于C/C++中的switch语句。
+
+命令格式
+
+case $变量名称 in
+    值1)
+        语句1
+        语句2
+        ...
+        ;;  # 类似于C/C++中的break
+    值2)
+        语句1
+        语句2
+        ...
+        ;;
+    *)  # 类似于C/C++中的default
+        语句1
+        语句2
+        ...
+        ;;
+esac
+示例：
+
+a=4
+
+case $a in
+    1)
+        echo ${a}等于1
+        ;;  
+    2)
+        echo ${a}等于2
+        ;;  
+    3)                                                
+        echo ${a}等于3
+        ;;  
+    *)
+        echo 其他
+        ;;  
+esac&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;line-numbers language-shell&#34; data-language=&#34;shell&#34;&gt;&lt;code class=&#34;language-shell&#34;&gt;for…in…do…done
+命令格式：
+
+for var in val1 val2 val3
+do
+    语句1
+    语句2
+    ...
+done
+示例1，输出a 2 cc，每个元素一行：
+
+for i in a 2 cc
+do
+    echo $i
+done
+示例2，输出当前路径下的所有文件名，每个文件名一行：
+
+for file in `ls`
+do
+    echo $file
+done
+示例3，输出1-10
+
+for i in $(seq 1 10)
+do
+    echo $i
+done
+示例4，使用{1..10} 或者 {a..z}
+
+for i in {a..z}
+do
+    echo $i
+done
+for ((…;…;…)) do…done
+命令格式：
+
+for ((expression; condition; expression))
+do
+    语句1
+    语句2
+done
+示例，输出1-10，每个数占一行：
+
+for ((i=1; i&amp;lt;=10; i++))
+do
+    echo $i
+done
+while…do…done循环
+命令格式：
+
+while condition
+do
+    语句1
+    语句2
+    ...
+done
+示例，文件结束符为Ctrl+d，输入文件结束符后read指令返回false。
+
+while read name
+do
+    echo $name
+done
+until…do…done循环
+当条件为真时结束。
+
+命令格式：
+
+until condition
+do
+    语句1
+    语句2
+    ...
+done
+示例，当用户输入yes或者YES时结束，否则一直等待读入。
+
+until [ &#34;${word}&#34; == &#34;yes&#34; ] || [ &#34;${word}&#34; == &#34;YES&#34; ]
+do
+    read -p &#34;Please input yes/YES to stop this program: &#34; word
+done
+break命令
+跳出当前一层循环，注意与C/C++不同的是：break不能跳出case语句。
+
+示例
+
+while read name
+do
+    for ((i=1;i&amp;lt;=10;i++))
+    do
+        case $i in
+            8)
+                break
+                ;;
+            *)
+                echo $i
+                ;;
+        esac
+    done
+done
+该示例每读入非EOF的字符串，会输出一遍1-7。
+该程序可以输入Ctrl+d文件结束符来结束，也可以直接用Ctrl+c杀掉该进程。
+
+continue命令
+跳出当前循环。
+
+示例：
+
+for ((i=1;i&amp;lt;=10;i++))
+do
+    if [ `expr $i % 2` -eq 0 ]
+    then
+        continue
+    fi
+    echo $i
+done&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;line-numbers language-none&#34;&gt;&lt;code class=&#34;language-none&#34;&gt;每个进程默认打开3个文件描述符：
+
+stdin标准输入，从命令行读取数据，文件描述符为0
+stdout标准输出，向命令行输出数据，文件描述符为1
+stderr标准错误输出，向命令行输出数据，文件描述符为2
+可以用文件重定向将这三个文件重定向到其他文件中。
+
+重定向命令列表
+命令	说明
+command &amp;gt; file	将stdout重定向到file中
+command &amp;lt; file	将stdin重定向到file中
+command &amp;gt;&amp;gt; file	将stdout以追加方式重定向到file中
+command n&amp;gt; file	将文件描述符n重定向到file中
+command n&amp;gt;&amp;gt; file	将文件描述符n以追加方式重定向到file中
+输入和输出重定向
+echo -e &#34;Hello \c&#34; &amp;gt; output.txt  # 将stdout重定向到output.txt中
+echo &#34;World&#34; &amp;gt;&amp;gt; output.txt  # 将字符串追加到output.txt中
+
+read str &amp;lt; output.txt  # 从output.txt中读取字符串
+
+echo $str  # 输出结果：Hello World
+同时重定向stdin和stdout
+创建bash脚本：
+
+#! /bin/bash
+
+read a
+read b
+
+echo $(expr &#34;$a&#34; + &#34;$b&#34;)
+创建input.txt，里面的内容为：
+
+3
+4
+执行命令：
+
+acs@9e0ebfcd82d7:~$ chmod +x test.sh  # 添加可执行权限
+acs@9e0ebfcd82d7:~$ ./test.sh &amp;lt; input.txt &amp;gt; output.txt  # 从input.txt中读取内容，将输出写入output.txt中
+acs@9e0ebfcd82d7:~$ cat output.txt  # 查看output.txt中的内容
+7&lt;span aria-hidden=&#34;true&#34; class=&#34;line-numbers-rows&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 </content>
-        <updated>2023-06-15T15:33:01.216Z</updated>
+        <category term="复习" />
+        <updated>2023-06-14T16:00:00.000Z</updated>
     </entry>
     <entry>
         <id>https://github.com/YogMas/YogMas.github.io/2023/06/03/ruan-jian-ce-shi-gai-nian-ti/</id>
